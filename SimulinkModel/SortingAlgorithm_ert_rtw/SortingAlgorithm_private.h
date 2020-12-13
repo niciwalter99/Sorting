@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortingAlgorithm'.
  *
- * Model version                  : 1.16
+ * Model version                  : 1.18
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Thu Dec 10 17:39:51 2020
+ * C/C++ source code generated on : Sun Dec 13 12:42:36 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -32,6 +32,15 @@
 
 #ifndef rtmSetTPtr
 # define rtmSetTPtr(rtm, val)          ((rtm)->Timing.t = (val))
+#endif
+
+/* Used by FromWorkspace Block: '<S2>/FromWs' */
+#ifndef rtInterpolate
+# define rtInterpolate(v1,v2,f1,f2)    (((v1)==(v2))?((double)(v1)): (((f1)*((double)(v1)))+((f2)*((double)(v2)))))
+#endif
+
+#ifndef rtRound
+# define rtRound(v)                    ( ((v) >= 0) ? floor((v) + 0.5) : ceil((v) - 0.5) )
 #endif
 
 void config_ADC_A(uint16_T maxconvReg , uint16_T adcChselSEQ1Reg, uint16_T

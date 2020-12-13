@@ -99,6 +99,9 @@ void init_board ()
   InitPieVectTable();
   InitCpuTimers();
 
+  /* initial ePWM GPIO assignment... */
+  config_ePWM_GPIO();
+
   /* initial GPIO qualification settings.... */
   EALLOW;
   GpioCtrlRegs.GPAQSEL1.all = 0x0;

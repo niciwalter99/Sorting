@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortingAlgorithm'.
  *
- * Model version                  : 1.16
+ * Model version                  : 1.18
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Thu Dec 10 17:39:51 2020
+ * C/C++ source code generated on : Sun Dec 13 12:42:36 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -19,6 +19,7 @@
 
 #ifndef RTW_HEADER_SortingAlgorithm_h_
 #define RTW_HEADER_SortingAlgorithm_h_
+#include <math.h>
 #include <string.h>
 #include <stddef.h>
 #ifndef SortingAlgorithm_COMMON_INCLUDES_
@@ -30,10 +31,13 @@
 #include "c2000BoardSupport.h"
 #include "DSP2833x_Device.h"
 #include "DSP2833x_Examples.h"
+#include "DSP2833x_Gpio.h"
+#include "IQmathLib.h"
 #endif                                 /* SortingAlgorithm_COMMON_INCLUDES_ */
 
 #include "SortingAlgorithm_types.h"
 #include "MW_target_hardware_resources.h"
+#include "mw_C28x_addsub_s32.h"
 
 /* Macros for accessing real-time model data structure */
 #ifndef rtmGetErrorStatus
@@ -52,14 +56,19 @@
 # define rtmGetTPtr(rtm)               ((rtm)->Timing.t)
 #endif
 
+extern void config_ePWM_GPIO (void);
+
 /* Block signals (default storage) */
 typedef struct {
-  real_T m1;                           /* '<Root>/Chart' */
-  real_T m2;                           /* '<Root>/Chart' */
+  real_T FromWs;                       /* '<S2>/FromWs' */
   real_T m5;                           /* '<Root>/Chart' */
   real_T m4;                           /* '<Root>/Chart' */
   real_T m3;                           /* '<Root>/Chart' */
   real_T m0;                           /* '<Root>/Chart' */
+  real_T kDirection;                   /* '<Root>/Chart' */
+  real_T kPWM;                         /* '<Root>/Chart' */
+  int32_T m1;                          /* '<Root>/Chart' */
+  int32_T m2;                          /* '<Root>/Chart' */
   uint16_T ADC;                        /* '<Root>/ADC' */
 } B_SortingAlgorithm_T;
 
@@ -67,10 +76,28 @@ typedef struct {
 typedef struct {
   real_T m2_LC;                        /* '<Root>/Chart' */
   real_T m1_LC;                        /* '<Root>/Chart' */
+  struct {
+    void *TimePtr;
+    void *DataPtr;
+    void *RSimInfoPtr;
+  } FromWs_PWORK;                      /* '<S2>/FromWs' */
+
   real_T magacin;
+  struct {
+    int_T PrevIndex;
+  } FromWs_IWORK;                      /* '<S2>/FromWs' */
+
+  uint16_T temporalCounter_i1;         /* '<Root>/Chart' */
   uint16_T is_active_c3_SortingAlgorithm;/* '<Root>/Chart' */
   uint16_T is_c3_SortingAlgorithm;     /* '<Root>/Chart' */
 } DW_SortingAlgorithm_T;
+
+/* Parameters (default storage) */
+struct P_SortingAlgorithm_T_ {
+  real_T Constant1_Value;              /* Expression: 200
+                                        * Referenced by: '<Root>/Constant1'
+                                        */
+};
 
 /* Real-time Model Data Structure */
 struct tag_RTM_SortingAlgorithm_T {
@@ -92,6 +119,9 @@ struct tag_RTM_SortingAlgorithm_T {
   } Timing;
 };
 
+/* Block parameters (default storage) */
+extern P_SortingAlgorithm_T SortingAlgorithm_P;
+
 /* Block signals (default storage) */
 extern B_SortingAlgorithm_T SortingAlgorithm_B;
 
@@ -110,7 +140,7 @@ extern RT_MODEL_SortingAlgorithm_T *const SortingAlgorithm_M;
  * These blocks were eliminated from the model due to optimizations:
  *
  * Block '<Root>/Scope1' : Unused code path elimination
- * Block '<S2>/FromWs' : Unused code path elimination
+ * Block '<Root>/Scope2' : Unused code path elimination
  */
 
 /*-
@@ -129,7 +159,7 @@ extern RT_MODEL_SortingAlgorithm_T *const SortingAlgorithm_M;
  *
  * '<Root>' : 'SortingAlgorithm'
  * '<S1>'   : 'SortingAlgorithm/Chart'
- * '<S2>'   : 'SortingAlgorithm/Signal Builder'
+ * '<S2>'   : 'SortingAlgorithm/Signal Builder1'
  */
 #endif                                 /* RTW_HEADER_SortingAlgorithm_h_ */
 

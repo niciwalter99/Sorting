@@ -114,6 +114,8 @@
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\supportpackages\tic2000\src\c2833xPeripherals.cmd">
 </listOptionValue>
+<listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\toolbox\target\extensions\processor\tic2000\lib\SFO_TI_Build_V5_fpu.lib">
+</listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\supportpackages\tic2000\src\c28335.cmd">
 </listOptionValue>
 <listOptionValue builtIn="false" value="rts2800_fpu32.lib">
@@ -259,6 +261,8 @@
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\supportpackages\tic2000\rtlib\IQmath_fpu32.lib">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\supportpackages\tic2000\src\c2833xPeripherals.cmd">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\toolbox\target\extensions\processor\tic2000\lib\SFO_TI_Build_V5_fpu.lib">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\supportpackages\tic2000\src\c28335.cmd">
 </listOptionValue>
