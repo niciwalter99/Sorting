@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.4
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sun Dec 13 17:16:48 2020
+ * C/C++ source code generated on : Sun Dec 13 18:02:49 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -73,6 +73,7 @@ typedef struct {
   real_T RL;                           /* '<S2>/MATLAB Function2' */
   real_T rechts;                       /* '<Root>/Chart' */
   real_T stop;                         /* '<Root>/Chart' */
+  real_T w;                            /* '<Root>/Chart' */
   boolean_T RelationalOperator1;       /* '<S12>/Relational Operator1' */
   boolean_T RelationalOperator1_e;     /* '<S11>/Relational Operator1' */
   boolean_T RelationalOperator1_c;     /* '<S10>/Relational Operator1' */
@@ -239,6 +240,7 @@ extern RT_MODEL_PoluluSortierenWinke_T *const PoluluSortierenWinkel_M;
  * Block '<Root>/Scope' : Unused code path elimination
  * Block '<S3>/FromWs' : Unused code path elimination
  * Block '<Root>/Rate Transition3' : Eliminated since input and output rates are identical
+ * Block '<Root>/Rate Transition4' : Eliminated since input and output rates are identical
  * Block '<Root>/Rate Transition5' : Eliminated since input and output rates are identical
  */
 
