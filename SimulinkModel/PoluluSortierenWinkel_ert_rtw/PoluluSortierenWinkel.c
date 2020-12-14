@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.4
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sun Dec 13 17:16:48 2020
+ * C/C++ source code generated on : Sun Dec 13 18:02:49 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -664,6 +664,7 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
       PoluluSortierenWinkel_DW.is_c3_PoluluSortierenWinkel =
         PoluluSortiere_IN_Startposition;
       PoluluSortierenWinkel_B.stop = 100.0;
+      PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
       break;
 
      case PoluluSortierenW_IN_Linksdrehen:
@@ -675,6 +676,7 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
       } else {
         PoluluSortierenWinkel_B.rechts = 0.0;
         PoluluSortierenWinkel_B.stop = 100.0;
+        PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
       }
       break;
 
@@ -687,6 +689,7 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
       } else {
         PoluluSortierenWinkel_B.rechts = 1.0;
         PoluluSortierenWinkel_B.stop = 100.0;
+        PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
       }
       break;
 
@@ -698,6 +701,7 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
         PoluluSortierenWinkel_B.stop = 0.0;
       } else {
         PoluluSortierenWinkel_B.stop = 100.0;
+        PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
       }
       break;
 
@@ -723,12 +727,14 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
           PoluluSortierenW_IN_Linksdrehen;
         PoluluSortierenWinkel_B.rechts = 0.0;
         PoluluSortierenWinkel_B.stop = 100.0;
+        PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
       } else {
         if (PoluluSortierenWinkel_B.RateTransition1 == 1.0) {
           PoluluSortierenWinkel_DW.is_c3_PoluluSortierenWinkel =
             PoluluSortieren_IN_Rechtsdrehen;
           PoluluSortierenWinkel_B.rechts = 1.0;
           PoluluSortierenWinkel_B.stop = 100.0;
+          PoluluSortierenWinkel_B.w = PoluluSortierenWinkel_B.RateTransition2;
         }
       }
       break;
@@ -750,6 +756,14 @@ void PoluluSortierenWinkel_step2(void) /* Sample time: [0.01s, 0.0s] */
   /* S-Function (c280xgpio_do): '<Root>/Digital Output1' */
   {
     if (PoluluSortierenWinkel_B.rechts)
+      GpioDataRegs.GPASET.bit.GPIO21 = 1;
+    else
+      GpioDataRegs.GPACLEAR.bit.GPIO21 = 1;
+  }
+
+  /* S-Function (c280xgpio_do): '<Root>/Digital Output2' */
+  {
+    if (PoluluSortierenWinkel_B.w)
       GpioDataRegs.GPASET.bit.GPIO21 = 1;
     else
       GpioDataRegs.GPACLEAR.bit.GPIO21 = 1;
@@ -816,6 +830,12 @@ void PoluluSortierenWinkel_initialize(void)
   config_ADC_A (1U, 16U, 0U, 0U, 0U);
 
   /* Start for S-Function (c280xgpio_do): '<Root>/Digital Output1' */
+  EALLOW;
+  GpioCtrlRegs.GPAMUX2.all &= 0xFFFFF3FF;
+  GpioCtrlRegs.GPADIR.all |= 0x200000;
+  EDIS;
+
+  /* Start for S-Function (c280xgpio_do): '<Root>/Digital Output2' */
   EALLOW;
   GpioCtrlRegs.GPAMUX2.all &= 0xFFFFF3FF;
   GpioCtrlRegs.GPADIR.all |= 0x200000;

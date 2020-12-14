@@ -35,6 +35,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["PoluluSortierenWinkel:47"] = {rtwname: "<Root>/Constant"};
 	this.rtwnameHashMap["<Root>/Digital Output1"] = {sid: "PoluluSortierenWinkel:4"};
 	this.sidHashMap["PoluluSortierenWinkel:4"] = {rtwname: "<Root>/Digital Output1"};
+	this.rtwnameHashMap["<Root>/Digital Output2"] = {sid: "PoluluSortierenWinkel:54"};
+	this.sidHashMap["PoluluSortierenWinkel:54"] = {rtwname: "<Root>/Digital Output2"};
 	this.rtwnameHashMap["<Root>/Messung des absoluten Winkels -  Auswertung der Encodersignale"] = {sid: "PoluluSortierenWinkel:12"};
 	this.sidHashMap["PoluluSortierenWinkel:12"] = {rtwname: "<Root>/Messung des absoluten Winkels -  Auswertung der Encodersignale"};
 	this.rtwnameHashMap["<Root>/PWM Vorgabe für einen Motor "] = {sid: "PoluluSortierenWinkel:2"};
@@ -47,6 +49,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["PoluluSortierenWinkel:53"] = {rtwname: "<Root>/Rate Transition2"};
 	this.rtwnameHashMap["<Root>/Rate Transition3"] = {sid: "PoluluSortierenWinkel:51"};
 	this.sidHashMap["PoluluSortierenWinkel:51"] = {rtwname: "<Root>/Rate Transition3"};
+	this.rtwnameHashMap["<Root>/Rate Transition4"] = {sid: "PoluluSortierenWinkel:55"};
+	this.sidHashMap["PoluluSortierenWinkel:55"] = {rtwname: "<Root>/Rate Transition4"};
 	this.rtwnameHashMap["<Root>/Rate Transition5"] = {sid: "PoluluSortierenWinkel:52"};
 	this.sidHashMap["PoluluSortierenWinkel:52"] = {rtwname: "<Root>/Rate Transition5"};
 	this.rtwnameHashMap["<Root>/Scope"] = {sid: "PoluluSortierenWinkel:48"};
