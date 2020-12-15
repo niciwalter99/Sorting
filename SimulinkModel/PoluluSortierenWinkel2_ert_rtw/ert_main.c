@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PoluluSortierenWinkel2'.
  *
- * Model version                  : 1.8
+ * Model version                  : 1.9
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Dec 14 14:11:34 2020
+ * C/C++ source code generated on : Mon Dec 14 17:02:16 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -21,14 +21,13 @@
 #include "rtwtypes.h"
 
 volatile int IsrOverrun = 0;
-boolean_T isRateRunning[4] = { 0, 0, 0, 0 };
+boolean_T isRateRunning[3] = { 0, 0, 0 };
 
-boolean_T need2runFlags[4] = { 0, 0, 0, 0 };
+boolean_T need2runFlags[3] = { 0, 0, 0 };
 
 void rt_OneStep(void)
 {
-  boolean_T eventFlags[4];
-  int_T i;
+  boolean_T eventFlags[3];
 
   /* Check base rate for overrun */
   if (isRateRunning[0]++) {
@@ -52,49 +51,39 @@ void rt_OneStep(void)
   /* Get model outputs here */
   disableTimer0Interrupt();
   isRateRunning[0]--;
-  for (i = 1; i < 4; i++) {
-    if (eventFlags[i]) {
-      if (need2runFlags[i]++) {
-        IsrOverrun = 1;
-        need2runFlags[i]--;            /* allow future iterations to succeed*/
-        break;
-      }
+  if (eventFlags[2]) {
+    if (need2runFlags[2]++) {
+      IsrOverrun = 1;
+      need2runFlags[2]--;              /* allow future iterations to succeed*/
+      return;
     }
   }
 
-  for (i = 2; i < 4; i++) {
-    if (isRateRunning[i]) {
+  if (need2runFlags[2]) {
+    if (isRateRunning[1]) {
       /* Yield to higher priority*/
       return;
     }
 
-    if (need2runFlags[i]) {
-      isRateRunning[i]++;
-      enableTimer0Interrupt();
+    isRateRunning[2]++;
+    enableTimer0Interrupt();
 
-      /* Step the model for subrate "i" */
-      switch (i)
-      {
-       case 2 :
-        PoluluSortierenWinkel2_step2();
+    /* Step the model for subrate "2" */
+    switch (2)
+    {
+     case 2 :
+      PoluluSortierenWinkel2_step2();
 
-        /* Get model outputs here */
-        break;
+      /* Get model outputs here */
+      break;
 
-       case 3 :
-        PoluluSortierenWinkel2_step3();
-
-        /* Get model outputs here */
-        break;
-
-       default :
-        break;
-      }
-
-      disableTimer0Interrupt();
-      need2runFlags[i]--;
-      isRateRunning[i]--;
+     default :
+      break;
     }
+
+    disableTimer0Interrupt();
+    need2runFlags[2]--;
+    isRateRunning[2]--;
   }
 }
 

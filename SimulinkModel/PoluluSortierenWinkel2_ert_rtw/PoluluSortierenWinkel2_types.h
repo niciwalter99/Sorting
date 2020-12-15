@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'PoluluSortierenWinkel2'.
  *
- * Model version                  : 1.8
+ * Model version                  : 1.9
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Dec 14 14:11:34 2020
+ * C/C++ source code generated on : Mon Dec 14 17:02:16 2020
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -20,19 +20,11 @@
 #ifndef RTW_HEADER_PoluluSortierenWinkel2_types_h_
 #define RTW_HEADER_PoluluSortierenWinkel2_types_h_
 #include "rtwtypes.h"
-#ifndef typedef_comm_internal_RandomIntegerGe_T
-#define typedef_comm_internal_RandomIntegerGe_T
 
-typedef struct {
-  int32_T isInitialized;
-} comm_internal_RandomIntegerGe_T;
-
-#endif                                 /*typedef_comm_internal_RandomIntegerGe_T*/
-
-/* Parameters for system: '<S5>/NEGATIVE Edge' */
+/* Parameters for system: '<S6>/NEGATIVE Edge' */
 typedef struct P_NEGATIVEEdge_PoluluSortiere_T_ P_NEGATIVEEdge_PoluluSortiere_T;
 
-/* Parameters for system: '<S5>/POSITIVE Edge' */
+/* Parameters for system: '<S6>/POSITIVE Edge' */
 typedef struct P_POSITIVEEdge_PoluluSortiere_T_ P_POSITIVEEdge_PoluluSortiere_T;
 
 /* Parameters (default storage) */
