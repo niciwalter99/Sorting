@@ -1,0 +1,5 @@
+Dokumentation Matlab:
+
+Chart 1 beschreibt den Sortieralgorithmus und gibt aus, welches Magazin angefahren werden soll.
+Chart 2 wandelt das angegeben Magazin dann in einen konkreten Winkel um und fährt diesen an. Die ganze Motorsteuerung
+findet also getrennt vom Algorithmus statt. 
