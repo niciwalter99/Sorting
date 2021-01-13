@@ -29,11 +29,11 @@
 <tr name="9" id="9">
 <td><a id="l9" class='ln'>9</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
-<td><a id="l10" class='ln'>10</a></td><td><span class="ct"> * Model version                  : 1.47</span></td></tr>
+<td><a id="l10" class='ln'>10</a></td><td><span class="ct"> * Model version                  : 1.48</span></td></tr>
 <tr name="11" id="11">
 <td><a id="l11" class='ln'>11</a></td><td><span class="ct"> * Simulink Coder version         : 9.0 (R2018b) 24-May-2018</span></td></tr>
 <tr name="12" id="12">
-<td><a id="l12" class='ln'>12</a></td><td><span class="ct"> * C/C++ source code generated on : Wed Jan 13 17:27:09 2021</span></td></tr>
+<td><a id="l12" class='ln'>12</a></td><td><span class="ct"> * C/C++ source code generated on : Wed Jan 13 17:47:54 2021</span></td></tr>
 <tr name="13" id="13">
 <td><a id="l13" class='ln'>13</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="14" id="14">
@@ -55,59 +55,57 @@
 <tr name="22" id="22">
 <td><a id="l22" class='ln'>22</a></td><td><span class="pp">#include "rtwtypes.h"</span></td></tr>
 <tr name="23" id="23">
-<td><a id="l23" class='ln'>23</a></td><td><span class="pp">#include "zero_crossing_types.h"</span></td></tr>
+<td><a id="l23" class='ln'>23</a></td><td><span class="pp">#include "SortierAlgorithmusEchtSystem.h"</span></td></tr>
 <tr name="24" id="24">
-<td><a id="l24" class='ln'>24</a></td><td><span class="pp">#include "SortierAlgorithmusEchtSystem.h"</span></td></tr>
+<td><a id="l24" class='ln'>24</a></td><td></td></tr>
 <tr name="25" id="25">
-<td><a id="l25" class='ln'>25</a></td><td></td></tr>
+<td><a id="l25" class='ln'>25</a></td><td><span class="kw">void</span> <a id="25c6" class="tk">config_ADC_A</a>(<a id="25c19" class="tk">uint16_T</a> <a id="25c28" class="tk">maxconvReg</a> , <a id="25c41" class="tk">uint16_T</a> <a id="25c50" class="tk">adcChselSEQ1Reg</a>, <a id="25c67" class="tk">uint16_T</a></td></tr>
 <tr name="26" id="26">
-<td><a id="l26" class='ln'>26</a></td><td><span class="kw">void</span> <a id="26c6" class="tk">config_ADC_A</a>(<a id="26c19" class="tk">uint16_T</a> <a id="26c28" class="tk">maxconvReg</a> , <a id="26c41" class="tk">uint16_T</a> <a id="26c50" class="tk">adcChselSEQ1Reg</a>, <a id="26c67" class="tk">uint16_T</a></td></tr>
+<td><a id="l26" class='ln'>26</a></td><td>                  <a id="26c19" class="tk">adcChselSEQ2Reg</a>, <a id="26c36" class="tk">uint16_T</a> <a id="26c45" class="tk">adcChselSEQ3Reg</a>, <a id="26c62" class="tk">uint16_T</a></td></tr>
 <tr name="27" id="27">
-<td><a id="l27" class='ln'>27</a></td><td>                  <a id="27c19" class="tk">adcChselSEQ2Reg</a>, <a id="27c36" class="tk">uint16_T</a> <a id="27c45" class="tk">adcChselSEQ3Reg</a>, <a id="27c62" class="tk">uint16_T</a></td></tr>
+<td><a id="l27" class='ln'>27</a></td><td>                  <a id="27c19" class="tk">adcChselSEQ4Reg</a>);</td></tr>
 <tr name="28" id="28">
-<td><a id="l28" class='ln'>28</a></td><td>                  <a id="28c19" class="tk">adcChselSEQ4Reg</a>);</td></tr>
+<td><a id="l28" class='ln'>28</a></td><td><span class="kw">extern</span> <a id="28c8" class="tk">real_T</a> <a id="28c15" class="tk">look1_binlxpw</a>(<a id="28c29" class="tk">real_T</a> <a id="28c36" class="tk">u0</a>, <span class="kw">const</span> <a id="28c46" class="tk">real_T</a> <a id="28c53" class="tk">bp0</a>[], <span class="kw">const</span> <a id="28c66" class="tk">real_T</a> <a id="28c73" class="tk">table</a>[],</td></tr>
 <tr name="29" id="29">
-<td><a id="l29" class='ln'>29</a></td><td><span class="kw">extern</span> <a id="29c8" class="tk">real_T</a> <a id="29c15" class="tk">look1_binlxpw</a>(<a id="29c29" class="tk">real_T</a> <a id="29c36" class="tk">u0</a>, <span class="kw">const</span> <a id="29c46" class="tk">real_T</a> <a id="29c53" class="tk">bp0</a>[], <span class="kw">const</span> <a id="29c66" class="tk">real_T</a> <a id="29c73" class="tk">table</a>[],</td></tr>
+<td><a id="l29" class='ln'>29</a></td><td>  <a id="29c3" class="tk">uint32_T</a> <a id="29c12" class="tk">maxIndex</a>);</td></tr>
 <tr name="30" id="30">
-<td><a id="l30" class='ln'>30</a></td><td>  <a id="30c3" class="tk">uint32_T</a> <a id="30c12" class="tk">maxIndex</a>);</td></tr>
+<td><a id="l30" class='ln'>30</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="30c13" class="tk">SortierAl_NEGATIVEEdge_Init</a>(<a id="30c41" class="tk">boolean_T</a> <a id="30c51" class="tk">*</a><a id="30c52" class="tk">rty_OUT</a>,</td></tr>
 <tr name="31" id="31">
-<td><a id="l31" class='ln'>31</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="31c13" class="tk">SortierAl_NEGATIVEEdge_Init</a>(<a id="31c41" class="tk">boolean_T</a> <a id="31c51" class="tk">*</a><a id="31c52" class="tk">rty_OUT</a>,</td></tr>
+<td><a id="l31" class='ln'>31</a></td><td>  <a id="31c3" class="tk">P_NEGATIVEEdge_SortierAlgorit_T</a> <a id="31c35" class="tk">*</a><a id="31c36" class="tk">localP</a>);</td></tr>
 <tr name="32" id="32">
-<td><a id="l32" class='ln'>32</a></td><td>  <a id="32c3" class="tk">P_NEGATIVEEdge_SortierAlgorit_T</a> <a id="32c35" class="tk">*</a><a id="32c36" class="tk">localP</a>);</td></tr>
+<td><a id="l32" class='ln'>32</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="32c13" class="tk">SortierAlgorit_NEGATIVEEdge</a>(<a id="32c41" class="tk">real_T</a> <a id="32c48" class="tk">rtu_Enable</a>, <a id="32c60" class="tk">boolean_T</a> <a id="32c70" class="tk">rtu_IN</a>,</td></tr>
 <tr name="33" id="33">
-<td><a id="l33" class='ln'>33</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="33c13" class="tk">SortierAlgorit_NEGATIVEEdge</a>(<a id="33c41" class="tk">real_T</a> <a id="33c48" class="tk">rtu_Enable</a>, <a id="33c60" class="tk">boolean_T</a> <a id="33c70" class="tk">rtu_IN</a>,</td></tr>
+<td><a id="l33" class='ln'>33</a></td><td>  <a id="33c3" class="tk">boolean_T</a> <a id="33c13" class="tk">rtu_INprevious</a>, <a id="33c29" class="tk">boolean_T</a> <a id="33c39" class="tk">*</a><a id="33c40" class="tk">rty_OUT</a>);</td></tr>
 <tr name="34" id="34">
-<td><a id="l34" class='ln'>34</a></td><td>  <a id="34c3" class="tk">boolean_T</a> <a id="34c13" class="tk">rtu_INprevious</a>, <a id="34c29" class="tk">boolean_T</a> <a id="34c39" class="tk">*</a><a id="34c40" class="tk">rty_OUT</a>);</td></tr>
+<td><a id="l34" class='ln'>34</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="34c13" class="tk">SortierAl_POSITIVEEdge_Init</a>(<a id="34c41" class="tk">boolean_T</a> <a id="34c51" class="tk">*</a><a id="34c52" class="tk">rty_OUT</a>,</td></tr>
 <tr name="35" id="35">
-<td><a id="l35" class='ln'>35</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="35c13" class="tk">SortierAl_POSITIVEEdge_Init</a>(<a id="35c41" class="tk">boolean_T</a> <a id="35c51" class="tk">*</a><a id="35c52" class="tk">rty_OUT</a>,</td></tr>
+<td><a id="l35" class='ln'>35</a></td><td>  <a id="35c3" class="tk">P_POSITIVEEdge_SortierAlgorit_T</a> <a id="35c35" class="tk">*</a><a id="35c36" class="tk">localP</a>);</td></tr>
 <tr name="36" id="36">
-<td><a id="l36" class='ln'>36</a></td><td>  <a id="36c3" class="tk">P_POSITIVEEdge_SortierAlgorit_T</a> <a id="36c35" class="tk">*</a><a id="36c36" class="tk">localP</a>);</td></tr>
+<td><a id="l36" class='ln'>36</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="36c13" class="tk">SortierAlgorit_POSITIVEEdge</a>(<a id="36c41" class="tk">real_T</a> <a id="36c48" class="tk">rtu_Enable</a>, <a id="36c60" class="tk">boolean_T</a> <a id="36c70" class="tk">rtu_IN</a>,</td></tr>
 <tr name="37" id="37">
-<td><a id="l37" class='ln'>37</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="37c13" class="tk">SortierAlgorit_POSITIVEEdge</a>(<a id="37c41" class="tk">real_T</a> <a id="37c48" class="tk">rtu_Enable</a>, <a id="37c60" class="tk">boolean_T</a> <a id="37c70" class="tk">rtu_IN</a>,</td></tr>
+<td><a id="l37" class='ln'>37</a></td><td>  <a id="37c3" class="tk">boolean_T</a> <a id="37c13" class="tk">rtu_INprevious</a>, <a id="37c29" class="tk">boolean_T</a> <a id="37c39" class="tk">*</a><a id="37c40" class="tk">rty_OUT</a>);</td></tr>
 <tr name="38" id="38">
-<td><a id="l38" class='ln'>38</a></td><td>  <a id="38c3" class="tk">boolean_T</a> <a id="38c13" class="tk">rtu_INprevious</a>, <a id="38c29" class="tk">boolean_T</a> <a id="38c39" class="tk">*</a><a id="38c40" class="tk">rty_OUT</a>);</td></tr>
+<td><a id="l38" class='ln'>38</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="38c13" class="tk">SortierAlgo_MATLABFunction1</a>(<a id="38c41" class="tk">real_T</a> <a id="38c48" class="tk">rtu_u</a>, <a id="38c55" class="tk">real32_T</a> <a id="38c64" class="tk">rtu_yalt</a>,</td></tr>
 <tr name="39" id="39">
-<td><a id="l39" class='ln'>39</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="39c13" class="tk">SortierAlgo_MATLABFunction1</a>(<a id="39c41" class="tk">real_T</a> <a id="39c48" class="tk">rtu_u</a>, <a id="39c55" class="tk">real32_T</a> <a id="39c64" class="tk">rtu_yalt</a>,</td></tr>
+<td><a id="l39" class='ln'>39</a></td><td>  <a id="39c3" class="tk">real32_T</a> <a id="39c12" class="tk">*</a><a id="39c13" class="tk">rty_y</a>);</td></tr>
 <tr name="40" id="40">
-<td><a id="l40" class='ln'>40</a></td><td>  <a id="40c3" class="tk">real32_T</a> <a id="40c12" class="tk">*</a><a id="40c13" class="tk">rty_y</a>);</td></tr>
+<td><a id="l40" class='ln'>40</a></td><td></td></tr>
 <tr name="41" id="41">
-<td><a id="l41" class='ln'>41</a></td><td></td></tr>
+<td><a id="l41" class='ln'>41</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* RTW_HEADER_SortierAlgorithmusEchtSystem_private_h_ */</span></td></tr>
 <tr name="42" id="42">
-<td><a id="l42" class='ln'>42</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* RTW_HEADER_SortierAlgorithmusEchtSystem_private_h_ */</span></td></tr>
+<td><a id="l42" class='ln'>42</a></td><td></td></tr>
 <tr name="43" id="43">
-<td><a id="l43" class='ln'>43</a></td><td></td></tr>
+<td><a id="l43" class='ln'>43</a></td><td><span class="ct">/*</span></td></tr>
 <tr name="44" id="44">
-<td><a id="l44" class='ln'>44</a></td><td><span class="ct">/*</span></td></tr>
+<td><a id="l44" class='ln'>44</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
 <tr name="45" id="45">
-<td><a id="l45" class='ln'>45</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
+<td><a id="l45" class='ln'>45</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="46" id="46">
-<td><a id="l46" class='ln'>46</a></td><td><span class="ct"> *</span></td></tr>
+<td><a id="l46" class='ln'>46</a></td><td><span class="ct"> * [EOF]</span></td></tr>
 <tr name="47" id="47">
-<td><a id="l47" class='ln'>47</a></td><td><span class="ct"> * [EOF]</span></td></tr>
+<td><a id="l47" class='ln'>47</a></td><td><span class="ct"> */</span></td></tr>
 <tr name="48" id="48">
-<td><a id="l48" class='ln'>48</a></td><td><span class="ct"> */</span></td></tr>
-<tr name="49" id="49">
-<td><a id="l49" class='ln'>49</a></td><td></td></tr>
+<td><a id="l48" class='ln'>48</a></td><td></td></tr>
 </table>
 </pre>
 </body>
