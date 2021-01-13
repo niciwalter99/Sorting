@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusVirtuelleTestumgebung'.
  *
- * Model version                  : 1.28
+ * Model version                  : 1.37
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Dec 16 15:51:27 2020
+ * C/C++ source code generated on : Wed Jan 13 17:12:00 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -20,14 +20,6 @@
 #ifndef RTW_HEADER_SortierAlgorithmusVirtuelleTestumgebung_types_h_
 #define RTW_HEADER_SortierAlgorithmusVirtuelleTestumgebung_types_h_
 #include "rtwtypes.h"
-#ifndef typedef_comm_internal_RandomIntegerGe_T
-#define typedef_comm_internal_RandomIntegerGe_T
-
-typedef struct {
-  int32_T isInitialized;
-} comm_internal_RandomIntegerGe_T;
-
-#endif                                 /*typedef_comm_internal_RandomIntegerGe_T*/
 
 /* Parameters (default storage) */
 typedef struct P_SortierAlgorithmusVirtuelle_T_ P_SortierAlgorithmusVirtuelle_T;

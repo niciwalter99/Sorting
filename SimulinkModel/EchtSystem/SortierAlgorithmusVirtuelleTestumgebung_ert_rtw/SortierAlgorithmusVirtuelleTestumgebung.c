@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusVirtuelleTestumgebung'.
  *
- * Model version                  : 1.28
+ * Model version                  : 1.37
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Dec 16 15:51:27 2020
+ * C/C++ source code generated on : Wed Jan 13 17:12:00 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -19,40 +19,21 @@
 
 #include "SortierAlgorithmusVirtuelleTestumgebung.h"
 #include "SortierAlgorithmusVirtuelleTestumgebung_private.h"
-#define SortierAlg_IN_SchrankeAktiviert (5U)
+#define IN_photoelectricBarrierActivate (6U)
 #define SortierAlgor_IN_NO_ACTIVE_CHILD (0U)
 #define SortierAlgorit_IN_setupVariable (7U)
 #define SortierAlgorith_IN_DetectedCube (3U)
-#define SortierAlgorith_IN_Linksdrehen1 (2U)
-#define SortierAlgorith_IN_Linksdrehen2 (3U)
-#define SortierAlgorith_IN_Linksdrehen3 (4U)
-#define SortierAlgorith_IN_Linksdrehen4 (5U)
-#define SortierAlgorith_IN_Linksdrehen5 (6U)
-#define SortierAlgorith_IN_Rechtsdrehen (7U)
-#define SortierAlgorithm_IN_Linksdrehen (1U)
-#define SortierAlgorithm_IN_closeKlappe (8U)
-#define SortierAlgorithm_IN_waitForCube (25U)
-#define SortierAlgorithmu_IN_cubeLoaded (6U)
-#define SortierAlgorithmu_IN_firstEntry (9U)
-#define SortierAlgorithmu_IN_openKlappe (17U)
+#define SortierAlgorithm_IN_goToMagacin (3U)
+#define SortierAlgorithm_IN_waitForCube (7U)
+#define SortierAlgorithmu_IN_cubeLoaded (5U)
+#define SortierAlgorithmu_IN_firstEntry (2U)
 #define SortierAlgorithmusV_IN_BlueCube (2U)
+#define SortierAlgorithmusV_IN_goToZero (4U)
+#define SortierAlgorithmusV_IN_openGate (5U)
 #define SortierAlgorithmusVi_IN_RedCube (4U)
-#define SortierAlgorithmusVir_IN_wait_l (8U)
 #define SortierAlgorithmusVirt_IN_Black (1U)
-#define SortierAlgorithmusVirt_IN_wait1 (19U)
-#define SortierAlgorithmusVirt_IN_wait2 (20U)
-#define SortierAlgorithmusVirt_IN_wait3 (21U)
-#define SortierAlgorithmusVirt_IN_wait4 (22U)
-#define SortierAlgorithmusVirt_IN_wait5 (23U)
-#define SortierAlgorithmusVirt_IN_wait6 (24U)
-#define SortierAlgorithmusVirtu_IN_wait (18U)
-#define SortierAlgorithmus_IN_goToZero1 (10U)
-#define SortierAlgorithmus_IN_goToZero2 (11U)
-#define SortierAlgorithmus_IN_goToZero3 (12U)
-#define SortierAlgorithmus_IN_goToZero4 (13U)
-#define SortierAlgorithmus_IN_goToZero5 (14U)
-#define SortierAlgorithmus_IN_goToZero6 (15U)
-#define SortierAlgorithmus_IN_goToZero7 (16U)
+#define SortierAlgorithmusVirtu_IN_wait (6U)
+#define SortierAlgorithmus_IN_closeGate (1U)
 
 /* Block signals (default storage) */
 B_SortierAlgorithmusVirtuelle_T SortierAlgorithmusVirtuelleTe_B;
@@ -66,446 +47,433 @@ RT_MODEL_SortierAlgorithmusVi_T *const SortierAlgorithmusVirtuelleT_M =
   &SortierAlgorithmusVirtuelleT_M_;
 
 /* Forward declaration for local functions */
-static void SortierAlgorithmusV_waitForCube(void);
-static void SortierAlgor_eml_rand_mt19937ar(const uint32_T state[625], uint32_T
-  b_state[625], real_T *r);
-static real_T SortierAlgorithmusVirtuell_rand(void);
-static uint32_T SortierAlgorith_eml_rand_str2id(void);
+static real_T SortierAlgorit_findPlaceForBlue(void);
+static real_T SortierAlgorith_findPlaceForRed(void);
+static void rate_monotonic_scheduler(void);
 
-/* Function for Chart: '<Root>/Chart1' */
-static void SortierAlgorithmusV_waitForCube(void)
+/*
+ * Set which subrates need to run this base step (base rate always runs).
+ * This function must be called prior to calling the model step function
+ * in order to "remember" which rates need to run this base step.  The
+ * buffering of events allows for overlapping preemption.
+ */
+void SortierAlgorithmusVirtuelleTestumgebung_SetEventsForThisBaseStep(boolean_T *
+  eventFlags)
 {
-  if (SortierAlgorithmusVirtuelleTe_B.magacin == 0.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero1;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 1.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero2;
-    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 6.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero7;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 5.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero6;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 4.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero5;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 3.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero4;
-  } else if (SortierAlgorithmusVirtuelleTe_B.magacin == 2.0) {
-    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-      SortierAlgorithmus_IN_goToZero3;
-  } else {
-    if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 5U) {
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithm_IN_waitForCube;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-    }
+  /* Task runs when its counter is zero, computed via rtmStepTask macro */
+  eventFlags[2] = ((boolean_T)rtmStepTask(SortierAlgorithmusVirtuelleT_M, 2));
+}
+
+/*
+ *   This function updates active task flag for each subrate
+ * and rate transition flags for tasks that exchange data.
+ * The function assumes rate-monotonic multitasking scheduler.
+ * The function must be called at model base rate so that
+ * the generated code self-manages all its subrates and rate
+ * transition flags.
+ */
+static void rate_monotonic_scheduler(void)
+{
+  /* To ensure a deterministic data transfer between two rates,
+   * data is transferred at the priority of a fast task and the frequency
+   * of the slow task.  The following flags indicate when the data transfer
+   * happens.  That is, a rate interaction flag is set true when both rates
+   * will run, and false otherwise.
+   */
+
+  /* tid 1 shares data with slower tid rate: 2 */
+  if (SortierAlgorithmusVirtuelleT_M->Timing.TaskCounters.TID[1] == 0) {
+    SortierAlgorithmusVirtuelleT_M->Timing.RateInteraction.TID1_2 =
+      (SortierAlgorithmusVirtuelleT_M->Timing.TaskCounters.TID[2] == 0);
+  }
+
+  /* Compute which subrates run during the next base time step.  Subrates
+   * are an integer multiple of the base rate counter.  Therefore, the subtask
+   * counter is reset when it reaches its limit (zero means run).
+   */
+  (SortierAlgorithmusVirtuelleT_M->Timing.TaskCounters.TID[2])++;
+  if ((SortierAlgorithmusVirtuelleT_M->Timing.TaskCounters.TID[2]) > 99) {/* Sample time: [1.0s, 0.0s] */
+    SortierAlgorithmusVirtuelleT_M->Timing.TaskCounters.TID[2] = 0;
   }
 }
 
-static void SortierAlgor_eml_rand_mt19937ar(const uint32_T state[625], uint32_T
-  b_state[625], real_T *r)
+/* Function for Chart: '<Root>/Sortieralgorithmus' */
+static real_T SortierAlgorit_findPlaceForBlue(void)
 {
-  uint32_T b_u[2];
-  uint32_T mti;
-  uint32_T y;
-  int16_T b_j;
-  int16_T b_kk;
-  memcpy(&b_state[0], &state[0], 625U * sizeof(uint32_T));
-
-  /* ========================= COPYRIGHT NOTICE ============================ */
-  /*  This is a uniform (0,1) pseudorandom number generator based on:        */
-  /*                                                                         */
-  /*  A C-program for MT19937, with initialization improved 2002/1/26.       */
-  /*  Coded by Takuji Nishimura and Makoto Matsumoto.                        */
-  /*                                                                         */
-  /*  Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,      */
-  /*  All rights reserved.                                                   */
-  /*                                                                         */
-  /*  Redistribution and use in source and binary forms, with or without     */
-  /*  modification, are permitted provided that the following conditions     */
-  /*  are met:                                                               */
-  /*                                                                         */
-  /*    1. Redistributions of source code must retain the above copyright    */
-  /*       notice, this list of conditions and the following disclaimer.     */
-  /*                                                                         */
-  /*    2. Redistributions in binary form must reproduce the above copyright */
-  /*       notice, this list of conditions and the following disclaimer      */
-  /*       in the documentation and/or other materials provided with the     */
-  /*       distribution.                                                     */
-  /*                                                                         */
-  /*    3. The names of its contributors may not be used to endorse or       */
-  /*       promote products derived from this software without specific      */
-  /*       prior written permission.                                         */
-  /*                                                                         */
-  /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS    */
-  /*  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT      */
-  /*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  */
-  /*  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT  */
-  /*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,  */
-  /*  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT       */
-  /*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  */
-  /*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  */
-  /*  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    */
-  /*  (INCLUDING  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE */
-  /*  OF THIS  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  */
-  /*                                                                         */
-  /* =============================   END   ================================= */
-  do {
-    for (b_j = 0; b_j < 2; b_j++) {
-      mti = b_state[624] + 1UL;
-      if (mti >= 625UL) {
-        for (b_kk = 0; b_kk < 227; b_kk++) {
-          y = (b_state[b_kk + 1] & 2147483647UL) | (b_state[b_kk] & 2147483648UL);
-          if ((uint16_T)((int16_T)y & 1) == 0U) {
-            y >>= 1;
-          } else {
-            y = y >> 1 ^ 2567483615UL;
-          }
-
-          b_state[b_kk] = b_state[b_kk + 397] ^ y;
-        }
-
-        for (b_kk = 0; b_kk < 396; b_kk++) {
-          y = (b_state[b_kk + 227] & 2147483648UL) | (b_state[b_kk + 228] &
-            2147483647UL);
-          if ((uint16_T)((int16_T)y & 1) == 0U) {
-            y >>= 1;
-          } else {
-            y = y >> 1 ^ 2567483615UL;
-          }
-
-          b_state[b_kk + 227] = b_state[b_kk] ^ y;
-        }
-
-        y = (b_state[623] & 2147483648UL) | (b_state[0] & 2147483647UL);
-        if ((uint16_T)((int16_T)y & 1) == 0U) {
-          y >>= 1;
-        } else {
-          y = y >> 1 ^ 2567483615UL;
-        }
-
-        b_state[623] = b_state[396] ^ y;
-        mti = 1UL;
-      }
-
-      y = b_state[(int16_T)mti - 1];
-      b_state[624] = mti;
-      y ^= y >> 11;
-      y ^= y << 7UL & 2636928640UL;
-      y ^= y << 15UL & 4022730752UL;
-      b_u[b_j] = y >> 18 ^ y;
-    }
-
-    *r = ((real_T)(b_u[0] >> 5) * 6.7108864E+7 + (real_T)(b_u[1] >> 6)) *
-      1.1102230246251565E-16;
-  } while (*r == 0.0);
-}
-
-static real_T SortierAlgorithmusVirtuell_rand(void)
-{
-  real_T r;
-  uint32_T r_0;
-  int16_T b_mti;
-  uint16_T hi;
-  uint32_T test2;
-  if (SortierAlgorithmusVirtuelleT_DW.method == 4UL) {
-    /* Start for MATLABSystem: '<Root>/Random Integer Generator' */
-    hi = (uint16_T)(SortierAlgorithmusVirtuelleT_DW.state / 127773UL);
-    r_0 = (uint32_T)((SortierAlgorithmusVirtuelleT_DW.state - (uint32_T)(hi *
-      127773ULL)) * 16807ULL);
-    test2 = (uint32_T)(2836ULL * hi);
-    if (r_0 < test2) {
-      SortierAlgorithmusVirtuelleT_DW.state = ~(test2 - r_0) & 2147483647UL;
-    } else {
-      SortierAlgorithmusVirtuelleT_DW.state = r_0 - test2;
-    }
-
-    r = (real_T)SortierAlgorithmusVirtuelleT_DW.state * 4.6566128752457969E-10;
-  } else if (SortierAlgorithmusVirtuelleT_DW.method == 5UL) {
-    /* Start for MATLABSystem: '<Root>/Random Integer Generator' */
-    r_0 = (uint32_T)(69069ULL * SortierAlgorithmusVirtuelleT_DW.state_a[0]) +
-      1234567UL;
-    test2 = SortierAlgorithmusVirtuelleT_DW.state_a[1] << 13U ^
-      SortierAlgorithmusVirtuelleT_DW.state_a[1];
-    test2 ^= test2 >> 17U;
-    test2 ^= test2 << 5U;
-    SortierAlgorithmusVirtuelleT_DW.state_a[0] = r_0;
-    SortierAlgorithmusVirtuelleT_DW.state_a[1] = test2;
-    r = (real_T)(r_0 + test2) * 2.328306436538696E-10;
+  real_T magacinOut;
+  magacinOut = 5.0;
+  if (SortierAlgorithmusVirtuelleT_DW.magacin0 == 0.0) {
+    magacinOut = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin0++;
+  } else if ((SortierAlgorithmusVirtuelleT_DW.magacin2 == 0L) ||
+             ((SortierAlgorithmusVirtuelleT_DW.magacin2_LastCube == 2.0) &&
+              (SortierAlgorithmusVirtuelleT_DW.magacin2 < 5L))) {
+    magacinOut = 2.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin2 = c28x_add_s32_s32_s32_sat
+      (SortierAlgorithmusVirtuelleT_DW.magacin2, 1L);
+    SortierAlgorithmusVirtuelleT_DW.magacin2_LastCube = 1.0;
+  } else if ((SortierAlgorithmusVirtuelleT_DW.magacin1_LastCube == 2.0) &&
+             (SortierAlgorithmusVirtuelleT_DW.magacin1 < 5L)) {
+    magacinOut = 1.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin1 = c28x_add_s32_s32_s32_sat
+      (SortierAlgorithmusVirtuelleT_DW.magacin1, 1L);
+    SortierAlgorithmusVirtuelleT_DW.magacin1_LastCube = 1.0;
+  } else if (SortierAlgorithmusVirtuelleT_DW.magacin3 < 5.0) {
+    magacinOut = 3.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin3++;
   } else {
-    if (!SortierAlgorithmusVirtuelleT_DW.state_not_empty_a) {
-      memset(&SortierAlgorithmusVirtuelleT_DW.state_h[0], 0, 625U * sizeof
-             (uint32_T));
-      r_0 = 5489UL;
-      SortierAlgorithmusVirtuelleT_DW.state_h[0] = 5489UL;
-      for (b_mti = 0; b_mti < 623; b_mti++) {
-        r_0 = (uint32_T)((r_0 >> 30 ^ r_0) * 1812433253ULL) + (b_mti + 1);
-        SortierAlgorithmusVirtuelleT_DW.state_h[b_mti + 1] = r_0;
-      }
-
-      SortierAlgorithmusVirtuelleT_DW.state_h[624] = 624UL;
-      SortierAlgorithmusVirtuelleT_DW.state_not_empty_a = true;
+    if (SortierAlgorithmusVirtuelleT_DW.magacin4 < 5.0) {
+      magacinOut = 4.0;
+      SortierAlgorithmusVirtuelleT_DW.magacin4++;
     }
-
-    memcpy(&SortierAlgorithmusVirtuelleTe_B.uv0[0],
-           &SortierAlgorithmusVirtuelleT_DW.state_h[0], 625U * sizeof(uint32_T));
-    SortierAlgor_eml_rand_mt19937ar(SortierAlgorithmusVirtuelleTe_B.uv0,
-      SortierAlgorithmusVirtuelleT_DW.state_h, &r);
   }
 
-  return r;
+  return magacinOut;
 }
 
-static uint32_T SortierAlgorith_eml_rand_str2id(void)
+/* Function for Chart: '<Root>/Sortieralgorithmus' */
+static real_T SortierAlgorith_findPlaceForRed(void)
 {
-  return 7UL;
+  real_T magacinOut;
+  if ((SortierAlgorithmusVirtuelleT_DW.magacin1 == 0L) ||
+      ((SortierAlgorithmusVirtuelleT_DW.magacin1_LastCube == 1.0) &&
+       (SortierAlgorithmusVirtuelleT_DW.magacin1 < 5L))) {
+    magacinOut = 1.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin1 = c28x_add_s32_s32_s32_sat
+      (SortierAlgorithmusVirtuelleT_DW.magacin1, 1L);
+    SortierAlgorithmusVirtuelleT_DW.magacin1_LastCube = 2.0;
+  } else if ((SortierAlgorithmusVirtuelleT_DW.magacin2_LastCube == 1.0) &&
+             (SortierAlgorithmusVirtuelleT_DW.magacin2 < 5L)) {
+    magacinOut = 2.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin2 = c28x_add_s32_s32_s32_sat
+      (SortierAlgorithmusVirtuelleT_DW.magacin2, 1L);
+    SortierAlgorithmusVirtuelleT_DW.magacin2_LastCube = 2.0;
+  } else if ((SortierAlgorithmusVirtuelleT_DW.magacin0 < 5.0) &&
+             (SortierAlgorithmusVirtuelleT_DW.magacin0 > 0.0)) {
+    magacinOut = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin0++;
+  } else {
+    magacinOut = 3.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin3++;
+  }
+
+  return magacinOut;
 }
 
-/* Model step function */
-void SortierAlgorithmusVirtuelleTestumgebung_step(void)
+/* Model step function for TID0 */
+void SortierAlgorithmusVirtuelleTestumgebung_step0(void) /* Sample time: [0.0s, 0.0s] */
 {
+  {                                    /* Sample time: [0.0s, 0.0s] */
+    rate_monotonic_scheduler();
+  }
+
+  /* RateTransition: '<Root>/Rate Transition' */
+  if (SortierAlgorithmusVirtuelleT_M->Timing.RateInteraction.TID1_2) {
+    SortierAlgorithmusVirtuelleTe_B.RateTransition =
+      SortierAlgorithmusVirtuelleT_DW.RateTransition_Buffer0;
+  }
+
+  /* End of RateTransition: '<Root>/Rate Transition' */
+
   /* Chart: '<Root>/Sortieralgorithmus' incorporates:
    *  Constant: '<Root>/Constant'
-   *  Constant: '<Root>/Constant1'
    */
-  if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 < 31U) {
-    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = ((int16_T)
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 + 1) & 255U;
+  if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a < 255U) {
+    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a = ((int16_T)
+      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a + 1) & 255U;
   }
 
   if (SortierAlgorithmusVirtuelleT_DW.is_active_c3_SortierAlgorithmus == 0U) {
     SortierAlgorithmusVirtuelleT_DW.is_active_c3_SortierAlgorithmus = 1U;
     SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
       SortierAlgorit_IN_setupVariable;
-    SortierAlgorithmusVirtuelleTe_B.magacin = -1.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin0 = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin1 = 0L;
+    SortierAlgorithmusVirtuelleT_DW.magacin2 = 0L;
+    SortierAlgorithmusVirtuelleT_DW.magacin3 = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin4 = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin1_LastCube = 0.0;
+    SortierAlgorithmusVirtuelleT_DW.magacin2_LastCube = 0.0;
   } else {
     switch (SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel) {
      case SortierAlgorithmusVirt_IN_Black:
-      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
-      break;
-
-     case SortierAlgorithmusV_IN_BlueCube:
-      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
-      break;
-
-     case SortierAlgorith_IN_DetectedCube:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 >= 20U) {
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a >= 150U) {
         SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlgorithmu_IN_cubeLoaded;
-        SortierAlgorithmusVirtuelleTe_B.magacin = -1.0;
+          SortierAlgorith_IN_DetectedCube;
       }
       break;
 
-     case SortierAlgorithmusVi_IN_RedCube:
-      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
+     case SortierAlgorithmusV_IN_BlueCube:
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a >= 150U) {
+        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+          SortierAlgorith_IN_DetectedCube;
+      }
       break;
 
-     case SortierAlg_IN_SchrankeAktiviert:
-      if (SortierAlgorithmusVirtuelleTe_P.Constant1_Value > 2050.0) {
+     case SortierAlgorith_IN_DetectedCube:
+      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+        SortierAlgorithmu_IN_cubeLoaded;
+      break;
+
+     case SortierAlgorithmusVi_IN_RedCube:
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a >= 150U) {
         SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlgorithmusVirt_IN_Black;
-        SortierAlgorithmusVirtuelleTe_B.magacin = 7.0;
-      } else if (SortierAlgorithmusVirtuelleTe_P.Constant1_Value < 1000.0) {
-        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlgorithmusVi_IN_RedCube;
-        SortierAlgorithmusVirtuelleTe_B.magacin = 7.0;
-      } else {
-        if ((SortierAlgorithmusVirtuelleTe_P.Constant1_Value >= 1000.0) &&
-            (SortierAlgorithmusVirtuelleTe_P.Constant1_Value <= 2050.0)) {
-          SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-            SortierAlgorithmusV_IN_BlueCube;
-          SortierAlgorithmusVirtuelleTe_B.magacin = 1.0;
-        }
+          SortierAlgorith_IN_DetectedCube;
       }
       break;
 
      case SortierAlgorithmu_IN_cubeLoaded:
-      if (SortierAlgorithmusVirtuelleTe_P.Constant_Value > 400.0) {
+      if (SortierAlgorithmusVirtuelleTe_P.Constant_Value < 400.0) {
         SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlgorithmusVir_IN_wait_l;
-        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
-      } else if (SortierAlgorithmusVirtuelleTe_P.Constant_Value < 400.0) {
-        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlg_IN_SchrankeAktiviert;
-      } else {
-        SortierAlgorithmusVirtuelleTe_B.magacin = -1.0;
+          IN_photoelectricBarrierActivate;
       }
       break;
 
-     case SortierAlgorit_IN_setupVariable:
-      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-        SortierAlgorithmu_IN_cubeLoaded;
-      SortierAlgorithmusVirtuelleTe_B.magacin = -1.0;
+     case IN_photoelectricBarrierActivate:
+      if (SortierAlgorithmusVirtuelleTe_B.RateTransition > 2050.0) {
+        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+          SortierAlgorithmusVirt_IN_Black;
+        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a = 0U;
+      } else if ((SortierAlgorithmusVirtuelleTe_B.RateTransition > 0.0) &&
+                 (SortierAlgorithmusVirtuelleTe_B.RateTransition < 1000.0)) {
+        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+          SortierAlgorithmusVi_IN_RedCube;
+        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a = 0U;
+        SortierAlgorith_findPlaceForRed();
+      } else {
+        if ((SortierAlgorithmusVirtuelleTe_B.RateTransition >= 1000.0) &&
+            (SortierAlgorithmusVirtuelleTe_B.RateTransition <= 2050.0)) {
+          SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+            SortierAlgorithmusV_IN_BlueCube;
+          SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a = 0U;
+          SortierAlgorit_findPlaceForBlue();
+        }
+      }
       break;
 
      default:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 >= 3U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-          SortierAlgorithmu_IN_cubeLoaded;
-        SortierAlgorithmusVirtuelleTe_B.magacin = -1.0;
-      }
+      SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+        SortierAlgorithmu_IN_cubeLoaded;
       break;
     }
   }
 
   /* End of Chart: '<Root>/Sortieralgorithmus' */
 
-  /* Chart: '<Root>/Chart1' */
-  if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f < 63U) {
-    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = ((int16_T)
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f + 1) & 255U;
+  /* Chart: '<Root>/Schieberbewegung' */
+  if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 < 511U) {
+    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1++;
   }
 
   if (SortierAlgorithmusVirtuelleT_DW.is_active_c1_SortierAlgorithmus == 0U) {
     SortierAlgorithmusVirtuelleT_DW.is_active_c1_SortierAlgorithmus = 1U;
     SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
       SortierAlgorithmu_IN_firstEntry;
-    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
+    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
   } else {
     switch (SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel) {
-     case SortierAlgorithm_IN_Linksdrehen:
-     case SortierAlgorith_IN_Linksdrehen1:
-     case SortierAlgorith_IN_Linksdrehen2:
-     case SortierAlgorith_IN_Linksdrehen3:
-     case SortierAlgorith_IN_Linksdrehen4:
-     case SortierAlgorith_IN_Linksdrehen5:
-     case SortierAlgorith_IN_Rechtsdrehen:
-      break;
-
-     case SortierAlgorithm_IN_closeKlappe:
+     case SortierAlgorithmus_IN_closeGate:
       SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
         SortierAlgorithm_IN_waitForCube;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
+      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
       break;
 
      case SortierAlgorithmu_IN_firstEntry:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 50U) {
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 >= 300U) {
         SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
           SortierAlgorithm_IN_waitForCube;
-        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
+        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
       }
       break;
 
-     case SortierAlgorithmus_IN_goToZero1:
+     case SortierAlgorithm_IN_goToMagacin:
       SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait2;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
+        SortierAlgorithmusV_IN_openGate;
+      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
       break;
 
-     case SortierAlgorithmus_IN_goToZero2:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 10U) {
+     case SortierAlgorithmusV_IN_goToZero:
+      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
+        SortierAlgorithmusVirtu_IN_wait;
+      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
+      break;
+
+     case SortierAlgorithmusV_IN_openGate:
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 >= 70U) {
         SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorithmusVirtu_IN_wait;
-        SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      }
-      break;
-
-     case SortierAlgorithmus_IN_goToZero3:
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait1;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      break;
-
-     case SortierAlgorithmus_IN_goToZero4:
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait3;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      break;
-
-     case SortierAlgorithmus_IN_goToZero5:
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait4;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      break;
-
-     case SortierAlgorithmus_IN_goToZero6:
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait5;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      break;
-
-     case SortierAlgorithmus_IN_goToZero7:
-      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-        SortierAlgorithmusVirt_IN_wait6;
-      SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-      break;
-
-     case SortierAlgorithmu_IN_openKlappe:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 7U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorithm_IN_closeKlappe;
+          SortierAlgorithmus_IN_closeGate;
       }
       break;
 
      case SortierAlgorithmusVirtu_IN_wait:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
+      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 >= 10U) {
         SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorithm_IN_Linksdrehen;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait1:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Linksdrehen1;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait2:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Rechtsdrehen;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait3:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Linksdrehen2;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait4:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Linksdrehen3;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait5:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Linksdrehen4;
-      }
-      break;
-
-     case SortierAlgorithmusVirt_IN_wait6:
-      if (SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f >= 1U) {
-        SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-          SortierAlgorith_IN_Linksdrehen5;
+          SortierAlgorithm_IN_goToMagacin;
       }
       break;
 
      default:
-      SortierAlgorithmusV_waitForCube();
+      SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
+        SortierAlgorithmusV_IN_goToZero;
       break;
     }
   }
 
-  /* End of Chart: '<Root>/Chart1' */
+  /* End of Chart: '<Root>/Schieberbewegung' */
 
-  /* MATLABSystem: '<Root>/Random Integer Generator' */
-  SortierAlgorithmusVirtuell_rand();
+  /* FromWorkspace: '<S4>/FromWs' */
+  {
+    real_T *pDataValues = (real_T *)
+      SortierAlgorithmusVirtuelleT_DW.FromWs_PWORK.DataPtr;
+    real_T *pTimeValues = (real_T *)
+      SortierAlgorithmusVirtuelleT_DW.FromWs_PWORK.TimePtr;
+    int_T currTimeIndex = SortierAlgorithmusVirtuelleT_DW.FromWs_IWORK.PrevIndex;
+    real_T t = SortierAlgorithmusVirtuelleT_M->Timing.t[0];
+
+    /* Get index */
+    if (t <= pTimeValues[0]) {
+      currTimeIndex = 0;
+    } else if (t >= pTimeValues[29]) {
+      currTimeIndex = 28;
+    } else {
+      if (t < pTimeValues[currTimeIndex]) {
+        while (t < pTimeValues[currTimeIndex]) {
+          currTimeIndex--;
+        }
+      } else {
+        while (t >= pTimeValues[currTimeIndex + 1]) {
+          currTimeIndex++;
+        }
+      }
+    }
+
+    SortierAlgorithmusVirtuelleT_DW.FromWs_IWORK.PrevIndex = currTimeIndex;
+
+    /* Post output */
+    {
+      real_T t1 = pTimeValues[currTimeIndex];
+      real_T t2 = pTimeValues[currTimeIndex + 1];
+      if (t1 == t2) {
+        if (t < t1) {
+          SortierAlgorithmusVirtuelleTe_B.FromWs = pDataValues[currTimeIndex];
+        } else {
+          SortierAlgorithmusVirtuelleTe_B.FromWs = pDataValues[currTimeIndex + 1];
+        }
+      } else {
+        real_T f1 = (t2 - t) / (t2 - t1);
+        real_T f2 = 1.0 - f1;
+        real_T d1;
+        real_T d2;
+        int_T TimeIndex= currTimeIndex;
+        d1 = pDataValues[TimeIndex];
+        d2 = pDataValues[TimeIndex + 1];
+        SortierAlgorithmusVirtuelleTe_B.FromWs = (real_T) rtInterpolate(d1, d2,
+          f1, f2);
+        pDataValues += 30;
+      }
+    }
+  }
+
+  /* RateTransition: '<S1>/TmpRTBAtDelayInport1' */
+  if (SortierAlgorithmusVirtuelleT_M->Timing.RateInteraction.TID1_2) {
+    SortierAlgorithmusVirtuelleTe_B.TmpRTBAtDelayInport1 =
+      SortierAlgorithmusVirtuelleTe_B.FromWs;
+  }
+
+  /* End of RateTransition: '<S1>/TmpRTBAtDelayInport1' */
+
+  /* Update absolute time */
+  /* The "clockTick0" counts the number of times the code of this task has
+   * been executed. The absolute time is the multiplication of "clockTick0"
+   * and "Timing.stepSize0". Size of "clockTick0" ensures timer will not
+   * overflow during the application lifespan selected.
+   */
+  SortierAlgorithmusVirtuelleT_M->Timing.t[0] =
+    (++SortierAlgorithmusVirtuelleT_M->Timing.clockTick0) *
+    SortierAlgorithmusVirtuelleT_M->Timing.stepSize0;
+
+  /* Update absolute time */
+  /* The "clockTick1" counts the number of times the code of this task has
+   * been executed. The resolution of this integer timer is 0.01, which is the step size
+   * of the task. Size of "clockTick1" ensures timer will not overflow during the
+   * application lifespan selected.
+   */
+  SortierAlgorithmusVirtuelleT_M->Timing.clockTick1++;
+}
+
+/* Model step function for TID2 */
+void SortierAlgorithmusVirtuelleTestumgebung_step2(void) /* Sample time: [1.0s, 0.0s] */
+{
+  /* local block i/o variables */
+  real_T rtb_Delay;
+  real_T rtb_Delay1;
+  real_T rtb_Delay2;
+  real_T rtb_Delay3;
+  real_T rtb_Sum3;
+  int_T idxDelay;
+
+  /* Delay: '<S1>/Delay' */
+  rtb_Delay = SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[0];
+
+  /* Delay: '<S1>/Delay1' */
+  rtb_Delay1 = SortierAlgorithmusVirtuelleT_DW.Delay1_DSTATE[0];
+
+  /* Delay: '<S1>/Delay2' */
+  rtb_Delay2 = SortierAlgorithmusVirtuelleT_DW.Delay2_DSTATE[0];
+
+  /* Delay: '<S1>/Delay3' */
+  rtb_Delay3 = SortierAlgorithmusVirtuelleT_DW.Delay3_DSTATE[0];
+
+  /* Sum: '<S1>/Sum3' incorporates:
+   *  Delay: '<S1>/Delay4'
+   *  Sum: '<S1>/Sum'
+   *  Sum: '<S1>/Sum1'
+   *  Sum: '<S1>/Sum2'
+   */
+  rtb_Sum3 = (((rtb_Delay + rtb_Delay1) + rtb_Delay2) + rtb_Delay3) +
+    SortierAlgorithmusVirtuelleT_DW.Delay4_DSTATE[0];
+
+  /* Update for RateTransition: '<Root>/Rate Transition' */
+  SortierAlgorithmusVirtuelleT_DW.RateTransition_Buffer0 = rtb_Sum3;
+
+  /* Update for Delay: '<S1>/Delay' */
+  SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[0] =
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[1];
+  SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[1] =
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[2];
+  SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[2] =
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[3];
+  SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[3] =
+    SortierAlgorithmusVirtuelleTe_B.TmpRTBAtDelayInport1;
+  for (idxDelay = 0; idxDelay < 17; idxDelay++) {
+    /* Update for Delay: '<S1>/Delay1' */
+    SortierAlgorithmusVirtuelleT_DW.Delay1_DSTATE[idxDelay] =
+      SortierAlgorithmusVirtuelleT_DW.Delay1_DSTATE[idxDelay + 1];
+
+    /* Update for Delay: '<S1>/Delay2' */
+    SortierAlgorithmusVirtuelleT_DW.Delay2_DSTATE[idxDelay] =
+      SortierAlgorithmusVirtuelleT_DW.Delay2_DSTATE[idxDelay + 1];
+
+    /* Update for Delay: '<S1>/Delay3' */
+    SortierAlgorithmusVirtuelleT_DW.Delay3_DSTATE[idxDelay] =
+      SortierAlgorithmusVirtuelleT_DW.Delay3_DSTATE[idxDelay + 1];
+
+    /* Update for Delay: '<S1>/Delay4' */
+    SortierAlgorithmusVirtuelleT_DW.Delay4_DSTATE[idxDelay] =
+      SortierAlgorithmusVirtuelleT_DW.Delay4_DSTATE[idxDelay + 1];
+  }
+
+  /* Update for Delay: '<S1>/Delay1' */
+  SortierAlgorithmusVirtuelleT_DW.Delay1_DSTATE[17] = rtb_Delay;
+
+  /* Update for Delay: '<S1>/Delay2' */
+  SortierAlgorithmusVirtuelleT_DW.Delay2_DSTATE[17] = rtb_Delay1;
+
+  /* Update for Delay: '<S1>/Delay3' */
+  SortierAlgorithmusVirtuelleT_DW.Delay3_DSTATE[17] = rtb_Delay2;
+
+  /* Update for Delay: '<S1>/Delay4' */
+  SortierAlgorithmusVirtuelleT_DW.Delay4_DSTATE[17] = rtb_Delay3;
 }
 
 /* Model initialize function */
@@ -513,8 +481,31 @@ void SortierAlgorithmusVirtuelleTestumgebung_initialize(void)
 {
   /* Registration code */
 
-  /* initialize error status */
-  rtmSetErrorStatus(SortierAlgorithmusVirtuelleT_M, (NULL));
+  /* initialize real-time model */
+  (void) memset((void *)SortierAlgorithmusVirtuelleT_M, 0,
+                sizeof(RT_MODEL_SortierAlgorithmusVi_T));
+
+  {
+    /* Setup solver object */
+    rtsiSetSimTimeStepPtr(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                          &SortierAlgorithmusVirtuelleT_M->Timing.simTimeStep);
+    rtsiSetTPtr(&SortierAlgorithmusVirtuelleT_M->solverInfo, &rtmGetTPtr
+                (SortierAlgorithmusVirtuelleT_M));
+    rtsiSetStepSizePtr(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                       &SortierAlgorithmusVirtuelleT_M->Timing.stepSize0);
+    rtsiSetErrorStatusPtr(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                          (&rtmGetErrorStatus(SortierAlgorithmusVirtuelleT_M)));
+    rtsiSetRTModelPtr(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                      SortierAlgorithmusVirtuelleT_M);
+  }
+
+  rtsiSetSimTimeStep(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                     MAJOR_TIME_STEP);
+  rtsiSetSolverName(&SortierAlgorithmusVirtuelleT_M->solverInfo,
+                    "FixedStepDiscrete");
+  rtmSetTPtr(SortierAlgorithmusVirtuelleT_M,
+             &SortierAlgorithmusVirtuelleT_M->Timing.tArray[0]);
+  SortierAlgorithmusVirtuelleT_M->Timing.stepSize0 = 0.01;
 
   /* block I/O */
   (void) memset(((void *) &SortierAlgorithmusVirtuelleTe_B), 0,
@@ -524,26 +515,77 @@ void SortierAlgorithmusVirtuelleTestumgebung_initialize(void)
   (void) memset((void *)&SortierAlgorithmusVirtuelleT_DW, 0,
                 sizeof(DW_SortierAlgorithmusVirtuell_T));
 
-  /* Machine initializer */
-  SortierAlgorithmusVirtuelleT_DW.magacin = 0.0;
+  {
+    int16_T i;
 
-  /* Start for MATLABSystem: '<Root>/Random Integer Generator' */
-  SortierAlgorithmusVirtuelleT_DW.method = SortierAlgorith_eml_rand_str2id();
-  SortierAlgorithmusVirtuelleT_DW.state = 1144108930UL;
-  SortierAlgorithmusVirtuelleT_DW.state_a[0] = 362436069UL;
-  SortierAlgorithmusVirtuelleT_DW.state_a[1] = 521288629UL;
+    /* Machine initializer */
+    SortierAlgorithmusVirtuelleT_DW.magacin = 0.0;
 
-  /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus' */
-  SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
-  SortierAlgorithmusVirtuelleT_DW.is_active_c3_SortierAlgorithmus = 0U;
-  SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
+    /* Start for RateTransition: '<Root>/Rate Transition' */
+    SortierAlgorithmusVirtuelleTe_B.RateTransition =
+      SortierAlgorithmusVirtuelleTe_P.RateTransition_InitialCondition;
 
-  /* SystemInitialize for Chart: '<Root>/Chart1' */
-  SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_f = 0U;
-  SortierAlgorithmusVirtuelleT_DW.is_active_c1_SortierAlgorithmus = 0U;
-  SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
+    /* Start for FromWorkspace: '<S4>/FromWs' */
+    {
+      static real_T pTimeValues0[] = { 0.0, 1.0, 1.0, 3.0, 3.0, 4.0, 4.0, 6.0,
+        6.0, 7.0, 7.0, 9.0, 9.0, 10.0, 10.0, 12.0, 12.0, 13.0, 13.0, 15.0, 15.0,
+        16.0, 16.0, 21.5, 23.3, 24.55, 25.55, 26.700000000000003, 28.05, 30.0 } ;
+
+      static real_T pDataValues0[] = { 1800.0, 1800.0, 0.0, 0.0, 1800.0, 1800.0,
+        0.0, 0.0, 2700.0, 2700.0, 0.0, 0.0, 200.0, 200.0, 0.0, 0.0, 1800.0,
+        1800.0, 0.0, 0.0, 1800.0, 1800.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+      } ;
+
+      SortierAlgorithmusVirtuelleT_DW.FromWs_PWORK.TimePtr = (void *)
+        pTimeValues0;
+      SortierAlgorithmusVirtuelleT_DW.FromWs_PWORK.DataPtr = (void *)
+        pDataValues0;
+      SortierAlgorithmusVirtuelleT_DW.FromWs_IWORK.PrevIndex = 0;
+    }
+
+    /* InitializeConditions for RateTransition: '<Root>/Rate Transition' */
+    SortierAlgorithmusVirtuelleT_DW.RateTransition_Buffer0 =
+      SortierAlgorithmusVirtuelleTe_P.RateTransition_InitialCondition;
+
+    /* InitializeConditions for Delay: '<S1>/Delay' */
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[0] =
+      SortierAlgorithmusVirtuelleTe_P.Delay_InitialCondition;
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[1] =
+      SortierAlgorithmusVirtuelleTe_P.Delay_InitialCondition;
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[2] =
+      SortierAlgorithmusVirtuelleTe_P.Delay_InitialCondition;
+    SortierAlgorithmusVirtuelleT_DW.Delay_DSTATE[3] =
+      SortierAlgorithmusVirtuelleTe_P.Delay_InitialCondition;
+    for (i = 0; i < 18; i++) {
+      /* InitializeConditions for Delay: '<S1>/Delay1' */
+      SortierAlgorithmusVirtuelleT_DW.Delay1_DSTATE[i] =
+        SortierAlgorithmusVirtuelleTe_P.Delay1_InitialCondition;
+
+      /* InitializeConditions for Delay: '<S1>/Delay2' */
+      SortierAlgorithmusVirtuelleT_DW.Delay2_DSTATE[i] =
+        SortierAlgorithmusVirtuelleTe_P.Delay2_InitialCondition;
+
+      /* InitializeConditions for Delay: '<S1>/Delay3' */
+      SortierAlgorithmusVirtuelleT_DW.Delay3_DSTATE[i] =
+        SortierAlgorithmusVirtuelleTe_P.Delay3_InitialCondition;
+
+      /* InitializeConditions for Delay: '<S1>/Delay4' */
+      SortierAlgorithmusVirtuelleT_DW.Delay4_DSTATE[i] =
+        SortierAlgorithmusVirtuelleTe_P.Delay4_InitialCondition;
+    }
+
+    /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus' */
+    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1_a = 0U;
+    SortierAlgorithmusVirtuelleT_DW.is_active_c3_SortierAlgorithmus = 0U;
+    SortierAlgorithmusVirtuelleT_DW.is_c3_SortierAlgorithmusVirtuel =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<Root>/Schieberbewegung' */
+    SortierAlgorithmusVirtuelleT_DW.temporalCounter_i1 = 0U;
+    SortierAlgorithmusVirtuelleT_DW.is_active_c1_SortierAlgorithmus = 0U;
+    SortierAlgorithmusVirtuelleT_DW.is_c1_SortierAlgorithmusVirtuel =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
+  }
 }
 
 /* Model terminate function */
