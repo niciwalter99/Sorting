@@ -3,12 +3,21 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap = new Array();
 	this.rtwnameHashMap["<Root>"] = {sid: "SortierAlgorithmusEchtSystem"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem"] = {rtwname: "<Root>"};
+<<<<<<< HEAD
+	this.rtwnameHashMap["<S1>"] = {sid: "SortierAlgorithmusEchtSystem:1"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<S2>"] = {sid: "SortierAlgorithmusEchtSystem:51"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51"] = {rtwname: "<S2>"};
+	this.rtwnameHashMap["<S3>"] = {sid: "SortierAlgorithmusEchtSystem:104"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:104"] = {rtwname: "<S3>"};
+=======
 	this.rtwnameHashMap["<S1>"] = {sid: "SortierAlgorithmusEchtSystem:51"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:51"] = {rtwname: "<S1>"};
 	this.rtwnameHashMap["<S2>"] = {sid: "SortierAlgorithmusEchtSystem:104"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:104"] = {rtwname: "<S2>"};
 	this.rtwnameHashMap["<S3>"] = {sid: "SortierAlgorithmusEchtSystem:107"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:107"] = {rtwname: "<S3>"};
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 	this.rtwnameHashMap["<S4>"] = {sid: "SortierAlgorithmusEchtSystem:99"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:99"] = {rtwname: "<S4>"};
 	this.rtwnameHashMap["<S5>"] = {sid: "SortierAlgorithmusEchtSystem:79"};
@@ -39,6 +48,11 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["SortierAlgorithmusEchtSystem:58:8"] = {rtwname: "<S17>"};
 	this.rtwnameHashMap["<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv"] = {sid: "SortierAlgorithmusEchtSystem:50"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:50"] = {rtwname: "<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv"};
+<<<<<<< HEAD
+	this.rtwnameHashMap["<Root>/Chart"] = {sid: "SortierAlgorithmusEchtSystem:1"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1"] = {rtwname: "<Root>/Chart"};
+=======
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 	this.rtwnameHashMap["<Root>/Chart1"] = {sid: "SortierAlgorithmusEchtSystem:51"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:51"] = {rtwname: "<Root>/Chart1"};
 	this.rtwnameHashMap["<Root>/Drehrichtungsvorgabe für einen Motor1"] = {sid: "SortierAlgorithmusEchtSystem:95"};
@@ -47,6 +61,112 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["SortierAlgorithmusEchtSystem:104"] = {rtwname: "<Root>/P-Regler mit Output"};
 	this.rtwnameHashMap["<Root>/PWM Vorgabe für einen Motor 1"] = {sid: "SortierAlgorithmusEchtSystem:94"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:94"] = {rtwname: "<Root>/PWM Vorgabe für einen Motor 1"};
+<<<<<<< HEAD
+	this.rtwnameHashMap["<Root>/Rate Transition1"] = {sid: "SortierAlgorithmusEchtSystem:93"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:93"] = {rtwname: "<Root>/Rate Transition1"};
+	this.rtwnameHashMap["<Root>/getAngle"] = {sid: "SortierAlgorithmusEchtSystem:99"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:99"] = {rtwname: "<Root>/getAngle"};
+	this.rtwnameHashMap["<S1>:40"] = {sid: "SortierAlgorithmusEchtSystem:1:40"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:40"] = {rtwname: "<S1>:40"};
+	this.rtwnameHashMap["<S1>:10"] = {sid: "SortierAlgorithmusEchtSystem:1:10"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:10"] = {rtwname: "<S1>:10"};
+	this.rtwnameHashMap["<S1>:50"] = {sid: "SortierAlgorithmusEchtSystem:1:50"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:50"] = {rtwname: "<S1>:50"};
+	this.rtwnameHashMap["<S1>:12"] = {sid: "SortierAlgorithmusEchtSystem:1:12"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:12"] = {rtwname: "<S1>:12"};
+	this.rtwnameHashMap["<S1>:8"] = {sid: "SortierAlgorithmusEchtSystem:1:8"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:8"] = {rtwname: "<S1>:8"};
+	this.rtwnameHashMap["<S1>:49"] = {sid: "SortierAlgorithmusEchtSystem:1:49"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:49"] = {rtwname: "<S1>:49"};
+	this.rtwnameHashMap["<S1>:42"] = {sid: "SortierAlgorithmusEchtSystem:1:42"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:42"] = {rtwname: "<S1>:42"};
+	this.rtwnameHashMap["<S1>:3"] = {sid: "SortierAlgorithmusEchtSystem:1:3"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:3"] = {rtwname: "<S1>:3"};
+	this.rtwnameHashMap["<S1>:1"] = {sid: "SortierAlgorithmusEchtSystem:1:1"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:1"] = {rtwname: "<S1>:1"};
+	this.rtwnameHashMap["<S1>:72"] = {sid: "SortierAlgorithmusEchtSystem:1:72"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:72"] = {rtwname: "<S1>:72"};
+	this.rtwnameHashMap["<S1>:2"] = {sid: "SortierAlgorithmusEchtSystem:1:2"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:2"] = {rtwname: "<S1>:2"};
+	this.rtwnameHashMap["<S1>:7"] = {sid: "SortierAlgorithmusEchtSystem:1:7"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:7"] = {rtwname: "<S1>:7"};
+	this.rtwnameHashMap["<S1>:9"] = {sid: "SortierAlgorithmusEchtSystem:1:9"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:9"] = {rtwname: "<S1>:9"};
+	this.rtwnameHashMap["<S1>:73"] = {sid: "SortierAlgorithmusEchtSystem:1:73"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:73"] = {rtwname: "<S1>:73"};
+	this.rtwnameHashMap["<S1>:74"] = {sid: "SortierAlgorithmusEchtSystem:1:74"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:74"] = {rtwname: "<S1>:74"};
+	this.rtwnameHashMap["<S1>:65"] = {sid: "SortierAlgorithmusEchtSystem:1:65"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:65"] = {rtwname: "<S1>:65"};
+	this.rtwnameHashMap["<S1>:11"] = {sid: "SortierAlgorithmusEchtSystem:1:11"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:11"] = {rtwname: "<S1>:11"};
+	this.rtwnameHashMap["<S1>:13"] = {sid: "SortierAlgorithmusEchtSystem:1:13"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:13"] = {rtwname: "<S1>:13"};
+	this.rtwnameHashMap["<S1>:41"] = {sid: "SortierAlgorithmusEchtSystem:1:41"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:41"] = {rtwname: "<S1>:41"};
+	this.rtwnameHashMap["<S1>:53"] = {sid: "SortierAlgorithmusEchtSystem:1:53"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:53"] = {rtwname: "<S1>:53"};
+	this.rtwnameHashMap["<S1>:51"] = {sid: "SortierAlgorithmusEchtSystem:1:51"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:51"] = {rtwname: "<S1>:51"};
+	this.rtwnameHashMap["<S1>:52"] = {sid: "SortierAlgorithmusEchtSystem:1:52"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:1:52"] = {rtwname: "<S1>:52"};
+	this.rtwnameHashMap["<S2>:1"] = {sid: "SortierAlgorithmusEchtSystem:51:1"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:1"] = {rtwname: "<S2>:1"};
+	this.rtwnameHashMap["<S2>:83"] = {sid: "SortierAlgorithmusEchtSystem:51:83"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:83"] = {rtwname: "<S2>:83"};
+	this.rtwnameHashMap["<S2>:3"] = {sid: "SortierAlgorithmusEchtSystem:51:3"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:3"] = {rtwname: "<S2>:3"};
+	this.rtwnameHashMap["<S2>:73"] = {sid: "SortierAlgorithmusEchtSystem:51:73"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:73"] = {rtwname: "<S2>:73"};
+	this.rtwnameHashMap["<S2>:69"] = {sid: "SortierAlgorithmusEchtSystem:51:69"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:69"] = {rtwname: "<S2>:69"};
+	this.rtwnameHashMap["<S2>:59"] = {sid: "SortierAlgorithmusEchtSystem:51:59"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:59"] = {rtwname: "<S2>:59"};
+	this.rtwnameHashMap["<S2>:62"] = {sid: "SortierAlgorithmusEchtSystem:51:62"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:62"] = {rtwname: "<S2>:62"};
+	this.rtwnameHashMap["<S2>:79"] = {sid: "SortierAlgorithmusEchtSystem:51:79"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:79"] = {rtwname: "<S2>:79"};
+	this.rtwnameHashMap["<S2>:72"] = {sid: "SortierAlgorithmusEchtSystem:51:72"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:72"] = {rtwname: "<S2>:72"};
+	this.rtwnameHashMap["<S2>:29"] = {sid: "SortierAlgorithmusEchtSystem:51:29"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:29"] = {rtwname: "<S2>:29"};
+	this.rtwnameHashMap["<S2>:70"] = {sid: "SortierAlgorithmusEchtSystem:51:70"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:70"] = {rtwname: "<S2>:70"};
+	this.rtwnameHashMap["<S2>:84"] = {sid: "SortierAlgorithmusEchtSystem:51:84"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:84"] = {rtwname: "<S2>:84"};
+	this.rtwnameHashMap["<S2>:82"] = {sid: "SortierAlgorithmusEchtSystem:51:82"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:82"] = {rtwname: "<S2>:82"};
+	this.rtwnameHashMap["<S2>:71"] = {sid: "SortierAlgorithmusEchtSystem:51:71"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:71"] = {rtwname: "<S2>:71"};
+	this.rtwnameHashMap["<S2>:65"] = {sid: "SortierAlgorithmusEchtSystem:51:65"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:65"] = {rtwname: "<S2>:65"};
+	this.rtwnameHashMap["<S2>:64"] = {sid: "SortierAlgorithmusEchtSystem:51:64"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:64"] = {rtwname: "<S2>:64"};
+	this.rtwnameHashMap["<S2>:76"] = {sid: "SortierAlgorithmusEchtSystem:51:76"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:76"] = {rtwname: "<S2>:76"};
+	this.rtwnameHashMap["<S2>:60"] = {sid: "SortierAlgorithmusEchtSystem:51:60"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:60"] = {rtwname: "<S2>:60"};
+	this.rtwnameHashMap["<S2>:85"] = {sid: "SortierAlgorithmusEchtSystem:51:85"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:85"] = {rtwname: "<S2>:85"};
+	this.rtwnameHashMap["<S2>:75"] = {sid: "SortierAlgorithmusEchtSystem:51:75"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:75"] = {rtwname: "<S2>:75"};
+	this.rtwnameHashMap["<S2>:67"] = {sid: "SortierAlgorithmusEchtSystem:51:67"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:67"] = {rtwname: "<S2>:67"};
+	this.rtwnameHashMap["<S2>:61"] = {sid: "SortierAlgorithmusEchtSystem:51:61"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:61"] = {rtwname: "<S2>:61"};
+	this.rtwnameHashMap["<S2>:66"] = {sid: "SortierAlgorithmusEchtSystem:51:66"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:51:66"] = {rtwname: "<S2>:66"};
+	this.rtwnameHashMap["<S3>/Ist-Wert"] = {sid: "SortierAlgorithmusEchtSystem:105"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:105"] = {rtwname: "<S3>/Ist-Wert"};
+	this.rtwnameHashMap["<S3>/Soll-Wert"] = {sid: "SortierAlgorithmusEchtSystem:106"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:106"] = {rtwname: "<S3>/Soll-Wert"};
+	this.rtwnameHashMap["<S3>/Drehrichtungsvorgabe für einen Motor"] = {sid: "SortierAlgorithmusEchtSystem:52"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:52"] = {rtwname: "<S3>/Drehrichtungsvorgabe für einen Motor"};
+	this.rtwnameHashMap["<S3>/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01"] = {sid: "SortierAlgorithmusEchtSystem:79"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:79"] = {rtwname: "<S3>/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01"};
+	this.rtwnameHashMap["<S3>/PWM Vorgabe für einen Motor "] = {sid: "SortierAlgorithmusEchtSystem:90"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:90"] = {rtwname: "<S3>/PWM Vorgabe für einen Motor "};
+=======
 	this.rtwnameHashMap["<Root>/Rate Transition2"] = {sid: "SortierAlgorithmusEchtSystem:113"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:113"] = {rtwname: "<Root>/Rate Transition2"};
 	this.rtwnameHashMap["<Root>/Rate Transition3"] = {sid: "SortierAlgorithmusEchtSystem:114"};
@@ -169,14 +289,20 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["SortierAlgorithmusEchtSystem:107:51"] = {rtwname: "<S3>:51"};
 	this.rtwnameHashMap["<S3>:52"] = {sid: "SortierAlgorithmusEchtSystem:107:52"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:107:52"] = {rtwname: "<S3>:52"};
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 	this.rtwnameHashMap["<S4>/Encoder2"] = {sid: "SortierAlgorithmusEchtSystem:101"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:101"] = {rtwname: "<S4>/Encoder2"};
 	this.rtwnameHashMap["<S4>/Encoder1"] = {sid: "SortierAlgorithmusEchtSystem:100"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:100"] = {rtwname: "<S4>/Encoder1"};
 	this.rtwnameHashMap["<S4>/Messung des absoluten Winkels -  Auswertung der Encodersignale"] = {sid: "SortierAlgorithmusEchtSystem:53"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:53"] = {rtwname: "<S4>/Messung des absoluten Winkels -  Auswertung der Encodersignale"};
+<<<<<<< HEAD
+	this.rtwnameHashMap["<S4>/Rate Transition4"] = {sid: "SortierAlgorithmusEchtSystem:91"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:91"] = {rtwname: "<S4>/Rate Transition4"};
+=======
 	this.rtwnameHashMap["<S4>/Rate Transition3"] = {sid: "SortierAlgorithmusEchtSystem:116"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:116"] = {rtwname: "<S4>/Rate Transition3"};
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 	this.rtwnameHashMap["<S4>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an"] = {sid: "SortierAlgorithmusEchtSystem:92"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:92"] = {rtwname: "<S4>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an"};
 	this.rtwnameHashMap["<S4>/Winkel"] = {sid: "SortierAlgorithmusEchtSystem:102"};

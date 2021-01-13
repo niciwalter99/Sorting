@@ -28,6 +28,33 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH.1515724014" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH" valueType="includePath">
 <listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include">
 </listOptionValue>
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/SortierAlgorithmusEchtSystem_ert_rtw">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/EchtSystem">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/extern/include">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/simulink/include">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/src">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/src/ext_mode/common">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/ert">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/inc">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/toolbox/shared/can/src/scanutil">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/toolbox/rtw/targets/common/can/blocks/tlc_c">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/shared/externalmode_daemon/include">
+=======
 <listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\Programming\SortingAlgorithm\SimulinkModel">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\Programming\SortingAlgorithm\SimulinkModel\SortierAlgorithmusEchtSystem_ert_rtw">
@@ -53,6 +80,7 @@
 <listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\toolbox\rtw\targets\common\can\blocks\tlc_c">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\shared\externalmode_daemon\include">
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </listOptionValue>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1045084510" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
@@ -100,7 +128,11 @@
 </listOptionValue>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.OTHER_FLAGS.1292182979" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.OTHER_FLAGS" valueType="stringList">
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value=" -s -v28 -ml  --large_memory_model --silicon_version=28 --define=LARGE_MODEL -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0 -DF28335 -DBOOT_FROM_FLASH=0">
+=======
 <listOptionValue builtIn="false" value=" -s -v28 -ml  --large_memory_model --silicon_version=28 --define=LARGE_MODEL -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0">
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </listOptionValue>
 </option>
 </tool>
@@ -132,6 +164,17 @@
 </listOptionValue>
 <listOptionValue builtIn="false" value="BOOT_USING_BL=0">
 </listOptionValue>
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value="F28335">
+</listOptionValue>
+<listOptionValue builtIn="false" value="PWM_DMAACCESS=0">
+</listOptionValue>
+<listOptionValue builtIn="false" value="BOOT_FROM_FLASH=0">
+</listOptionValue>
+<listOptionValue builtIn="false" value="BOOT_USING_BL=0">
+</listOptionValue>
+=======
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.linkerID.OTHER_FLAGS.14752160" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.linkerID.OTHER_FLAGS" valueType="stringList">
 <listOptionValue builtIn="false" value=" -z  --stack_size=512 --warn_sections --heap_size=1024 --reread_libs --rom_model -mSortierAlgorithmusEchtSystem.map">
@@ -178,6 +221,33 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH.899964030" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH" valueType="includePath">
 <listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include">
 </listOptionValue>
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/SortierAlgorithmusEchtSystem_ert_rtw">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/EchtSystem">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/extern/include">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/simulink/include">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/src">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/src/ext_mode/common">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/rtw/c/ert">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/inc">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/toolbox/shared/can/src/scanutil">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/Program Files/MATLAB/R2018b/toolbox/rtw/targets/common/can/blocks/tlc_c">
+</listOptionValue>
+<listOptionValue builtIn="false" value="C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/shared/externalmode_daemon/include">
+=======
 <listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\Programming\SortingAlgorithm\SimulinkModel">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\Programming\SortingAlgorithm\SimulinkModel\SortierAlgorithmusEchtSystem_ert_rtw">
@@ -203,6 +273,7 @@
 <listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\toolbox\rtw\targets\common\can\blocks\tlc_c">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\ProgramData\MATLAB\SupportPackages\R2018b\toolbox\target\shared\externalmode_daemon\include">
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </listOptionValue>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1616953459" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
@@ -250,7 +321,11 @@
 </listOptionValue>
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.OTHER_FLAGS.1292182979" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.OTHER_FLAGS" valueType="stringList">
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value=" -s -v28 -ml  --large_memory_model --silicon_version=28 --define=LARGE_MODEL -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0 -DF28335 -DBOOT_FROM_FLASH=0">
+=======
 <listOptionValue builtIn="false" value=" -s -v28 -ml  --large_memory_model --silicon_version=28 --define=LARGE_MODEL -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0">
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </listOptionValue>
 </option>
 </tool>
@@ -282,6 +357,17 @@
 </listOptionValue>
 <listOptionValue builtIn="false" value="BOOT_USING_BL=0">
 </listOptionValue>
+<<<<<<< HEAD
+<listOptionValue builtIn="false" value="F28335">
+</listOptionValue>
+<listOptionValue builtIn="false" value="PWM_DMAACCESS=0">
+</listOptionValue>
+<listOptionValue builtIn="false" value="BOOT_FROM_FLASH=0">
+</listOptionValue>
+<listOptionValue builtIn="false" value="BOOT_USING_BL=0">
+</listOptionValue>
+=======
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 </option>
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.linkerID.OTHER_FLAGS.14752160" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.linkerID.OTHER_FLAGS" valueType="stringList">
 <listOptionValue builtIn="false" value=" -z  --stack_size=512 --warn_sections --heap_size=1024 --reread_libs --rom_model -mSortierAlgorithmusEchtSystem.map">

@@ -2,7 +2,11 @@
 ## Makefile generated for Simulink model 'SortierAlgorithmusEchtSystem'. 
 ## 
 ## Makefile     : SortierAlgorithmusEchtSystem.mk
+<<<<<<< HEAD
+## Generated on : Tue Jan 12 19:03:31 2021
+=======
 ## Generated on : Tue Dec 15 20:19:59 2020
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -29,7 +33,11 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2018b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2018b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
+<<<<<<< HEAD
+START_DIR                 = C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel
+=======
 START_DIR                 = C:/Users/Nici/Desktop/Programming/SortingAlgorithm/SimulinkModel
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -278,7 +286,11 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
+<<<<<<< HEAD
+CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0 -DF28335 -DBOOT_FROM_FLASH=0
+=======
 CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -287,7 +299,11 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
+<<<<<<< HEAD
+CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0 -DF28335 -DBOOT_FROM_FLASH=0
+=======
 CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
@@ -296,7 +312,11 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
+<<<<<<< HEAD
+CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+=======
 CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -304,7 +324,11 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
+<<<<<<< HEAD
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+=======
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -312,7 +336,11 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
+<<<<<<< HEAD
+LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+=======
 LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -320,7 +348,11 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
+<<<<<<< HEAD
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+=======
 SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=0 --define BOOT_USING_BL=0
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
