@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'SortierAlgorithmusEchtSystem'. 
 ## 
 ## Makefile     : SortierAlgorithmusEchtSystem.mk
-## Generated on : Wed Jan 13 17:24:52 2021
+## Generated on : Wed Jan 13 17:45:59 2021
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -224,11 +224,11 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=SortierAlgorithmusEchtSystem -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=1 -DDAEMON_MODE=1 -DMW_PIL_SCIFIFOLEN=16 -DSTACK_SIZE=512 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DF28335 -DBOOT_FROM_FLASH=0
+DEFINES_ = -DMODEL=SortierAlgorithmusEchtSystem -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=1 -DDAEMON_MODE=1 -DMW_PIL_SCIFIFOLEN=16 -DSTACK_SIZE=512 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DF28335 -DBOOT_FROM_FLASH=0
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=1
 DEFINES_IMPLIED = -DTID01EQ=0
 DEFINES_SKIPFORSIL = -DDAEMON_MODE=1 -DMW_PIL_SCIFIFOLEN=16 -DSTACK_SIZE=512 -DRT -DF28335 -DBOOT_FROM_FLASH=0
-DEFINES_STANDARD = -DMODEL=SortierAlgorithmusEchtSystem -DNUMST=3 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=SortierAlgorithmusEchtSystem -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
 
@@ -236,7 +236,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_SKIPFOR
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_board.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_adc.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_csl.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_pwm.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/rt_zcfcn.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xBoard_Realtime_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_MemCopy.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CpuTimers.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DefaultIsr.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_GlobalVariableDefs.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieVect.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_SysCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_usDelay.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CodeStartBranch.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_ADC_cal.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DMA.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/profiler_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xSchedulerTimer0.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_Adc.c
+SRCS = $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_board.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_adc.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_csl.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_pwm.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xBoard_Realtime_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_MemCopy.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CpuTimers.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DefaultIsr.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_GlobalVariableDefs.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieVect.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_SysCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_usDelay.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CodeStartBranch.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_ADC_cal.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DMA.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/profiler_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xSchedulerTimer0.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_Adc.c
 
 MAIN_SRC = $(START_DIR)/SortierAlgorithmusEchtSystem_ert_rtw/ert_main.c
 
@@ -246,7 +246,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = MW_c28xx_board.obj MW_c28xx_adc.obj MW_c28xx_csl.obj MW_c28xx_pwm.obj SortierAlgorithmusEchtSystem.obj SortierAlgorithmusEchtSystem_data.obj rt_zcfcn.obj c2833xBoard_Realtime_Support.obj DSP2833x_MemCopy.obj DSP2833x_CpuTimers.obj DSP2833x_DefaultIsr.obj DSP2833x_GlobalVariableDefs.obj DSP2833x_PieCtrl.obj DSP2833x_PieVect.obj DSP2833x_SysCtrl.obj DSP2833x_usDelay.obj DSP2833x_CodeStartBranch.obj DSP2833x_ADC_cal.obj DSP2833x_DMA.obj profiler_Support.obj c2833xSchedulerTimer0.obj DSP2833x_Adc.obj
+OBJS = MW_c28xx_board.obj MW_c28xx_adc.obj MW_c28xx_csl.obj MW_c28xx_pwm.obj SortierAlgorithmusEchtSystem.obj SortierAlgorithmusEchtSystem_data.obj c2833xBoard_Realtime_Support.obj DSP2833x_MemCopy.obj DSP2833x_CpuTimers.obj DSP2833x_DefaultIsr.obj DSP2833x_GlobalVariableDefs.obj DSP2833x_PieCtrl.obj DSP2833x_PieVect.obj DSP2833x_SysCtrl.obj DSP2833x_usDelay.obj DSP2833x_CodeStartBranch.obj DSP2833x_ADC_cal.obj DSP2833x_DMA.obj profiler_Support.obj c2833xSchedulerTimer0.obj DSP2833x_Adc.obj
 
 MAIN_OBJ = ert_main.obj
 

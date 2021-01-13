@@ -56,7 +56,7 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1045084510" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
 <listOptionValue builtIn="false" value="MODEL=SortierAlgorithmusEchtSystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="NUMST=3">
+<listOptionValue builtIn="false" value="NUMST=2">
 </listOptionValue>
 <listOptionValue builtIn="false" value="NCSTATES=0">
 </listOptionValue>
@@ -204,7 +204,7 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1616953459" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
 <listOptionValue builtIn="false" value="MODEL=SortierAlgorithmusEchtSystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="NUMST=3">
+<listOptionValue builtIn="false" value="NUMST=2">
 </listOptionValue>
 <listOptionValue builtIn="false" value="NCSTATES=0">
 </listOptionValue>
