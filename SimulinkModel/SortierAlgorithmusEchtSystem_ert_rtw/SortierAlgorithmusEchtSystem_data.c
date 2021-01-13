@@ -9,7 +9,11 @@
  *
  * Model version                  : 1.23
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+<<<<<<< HEAD
  * C/C++ source code generated on : Tue Jan 12 19:02:16 2021
+=======
+ * C/C++ source code generated on : Tue Dec 15 20:26:45 2020
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -107,10 +111,17 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    */
   1.0,
 
+<<<<<<< HEAD
   /* Expression: 0.6
    * Referenced by: '<S5>/Verstaerkung'
    */
   0.6,
+=======
+  /* Expression: 1
+   * Referenced by: '<S5>/Verstaerkung'
+   */
+  1.0,
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
   /* Computed Parameter: UnitDelay2_InitialCondition
    * Referenced by: '<S8>/Unit Delay2'

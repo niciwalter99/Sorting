@@ -9,7 +9,11 @@
  *
  * Model version                  : 1.23
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+<<<<<<< HEAD
  * C/C++ source code generated on : Tue Jan 12 19:02:16 2021
+=======
+ * C/C++ source code generated on : Tue Dec 15 20:26:45 2020
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -19,22 +23,41 @@
 
 #include "SortierAlgorithmusEchtSystem.h"
 #include "SortierAlgorithmusEchtSystem_private.h"
+<<<<<<< HEAD
+=======
+#define SortierAlg_IN_SchrankeAktiviert (5U)
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 #define SortierAlgor_IN_NO_ACTIVE_CHILD (0U)
 #define SortierAlgorit_IN_setupVariable (7U)
 #define SortierAlgorith_IN_DetectedCube (3U)
 #define SortierAlgorith_IN_Linksdrehen1 (2U)
 #define SortierAlgorith_IN_Rechtsdrehen (3U)
+<<<<<<< HEAD
 #define SortierAlgorith_IN_noCubeLoaded (6U)
 #define SortierAlgorithm_IN_Linksdrehen (1U)
 #define SortierAlgorithm_IN_closeKlappe (4U)
 #define SortierAlgorithm_IN_waitForCube (10U)
 #define SortierAlgorithmu_IN_cubeLoaded (5U)
+=======
+#define SortierAlgorithm_IN_Linksdrehen (1U)
+#define SortierAlgorithm_IN_closeKlappe (4U)
+#define SortierAlgorithm_IN_waitForCube (13U)
+#define SortierAlgorithmu_IN_cubeLoaded (6U)
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 #define SortierAlgorithmu_IN_firstEntry (5U)
 #define SortierAlgorithmu_IN_openKlappe (9U)
 #define SortierAlgorithmusE_IN_BlueCube (2U)
 #define SortierAlgorithmusEc_IN_RedCube (4U)
+<<<<<<< HEAD
 #define SortierAlgorithmusEchtS_IN_wait (8U)
 #define SortierAlgorithmusEcht_IN_Black (1U)
+=======
+#define SortierAlgorithmusEch_IN_wait_b (8U)
+#define SortierAlgorithmusEchtS_IN_wait (10U)
+#define SortierAlgorithmusEcht_IN_Black (1U)
+#define SortierAlgorithmusEcht_IN_wait1 (11U)
+#define SortierAlgorithmusEcht_IN_wait2 (12U)
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 #define SortierAlgorithmus_IN_goToZero1 (6U)
 #define SortierAlgorithmus_IN_goToZero2 (7U)
 #define SortierAlgorithmus_IN_goToZero3 (8U)
@@ -172,7 +195,11 @@ void SortierAlgo_MATLABFunction1(real_T rtu_u, real32_T rtu_yalt, real32_T
   *rty_y = rtu_yalt + (real32_T)rtu_u;
 }
 
+<<<<<<< HEAD
 /* Function for Chart: '<Root>/Chart' */
+=======
+/* Function for Chart: '<Root>/Sortieralgorithmus' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 static real_T SortierAlgorit_findPlaceForBlue(void)
 {
   real_T magacinOut;
@@ -204,7 +231,11 @@ static real_T SortierAlgorit_findPlaceForBlue(void)
   return magacinOut;
 }
 
+<<<<<<< HEAD
 /* Function for Chart: '<Root>/Chart' */
+=======
+/* Function for Chart: '<Root>/Sortieralgorithmus' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 static real_T SortierAlgorith_findPlaceForRed(void)
 {
   real_T magacinOut;
@@ -494,6 +525,7 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
   rtb_MultiportSwitch_idx_0 += SortierAlgorithmusEchtSystem_DW.UnitDelay2_DSTATE
     * SortierAlgorithmusEchtSystem_P.WinkelFlankePolulo3416V022Polul;
 
+<<<<<<< HEAD
   /* RateTransition: '<S4>/Rate Transition4' */
   if (SortierAlgorithmusEchtSystem_M->Timing.RateInteraction.TID0_1) {
     SortierAlgorithmusEchtSystem_B.RateTransition4 = rtb_MultiportSwitch_idx_0;
@@ -504,6 +536,59 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
   /* Chart: '<Root>/Chart' */
   if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d < MAX_uint16_T) {
     SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d++;
+=======
+  /* RateTransition: '<S4>/Rate Transition3' */
+  if (SortierAlgorithmusEchtSystem_M->Timing.RateInteraction.TID0_1) {
+    SortierAlgorithmusEchtSystem_B.RateTransition3 = rtb_MultiportSwitch_idx_0;
+
+    /* RateTransition: '<Root>/Rate Transition2' */
+    SortierAlgorithmusEchtSystem_B.RateTransition2 =
+      SortierAlgorithmusEchtSystem_B.AnalogDigitalWandlungSampleti_a;
+
+    /* RateTransition: '<Root>/Rate Transition3' */
+    SortierAlgorithmusEchtSystem_B.RateTransition3_l =
+      SortierAlgorithmusEchtSystem_B.AnalogDigitalWandlungSampleti_o;
+  }
+
+  /* End of RateTransition: '<S4>/Rate Transition3' */
+
+  /* S-Function (c280xgpio_do): '<S4>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
+  {
+    if (SortierAlgorithmusEchtSystem_B.RL)
+      GpioDataRegs.GPBSET.bit.GPIO34 = 1;
+    else
+      GpioDataRegs.GPBCLEAR.bit.GPIO34 = 1;
+  }
+
+  /* Update for Memory: '<S10>/Memory' */
+  SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput =
+    rtb_VergleichmitSchwellwert;
+
+  /* Update for UnitDelay: '<S8>/Unit Delay3' */
+  SortierAlgorithmusEchtSystem_DW.UnitDelay3_DSTATE =
+    rtb_VergleichmitSchwellwert_j;
+
+  /* Update for UnitDelay: '<S8>/Unit Delay4' */
+  SortierAlgorithmusEchtSystem_DW.UnitDelay4_DSTATE =
+    rtb_VergleichmitSchwellwert;
+
+  /* Update for Memory: '<S9>/Memory' */
+  SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput_b =
+    rtb_VergleichmitSchwellwert_j;
+}
+
+/* Model step function for TID1 */
+void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
+{
+  /* local block i/o variables */
+  real_T rtb_y_f;
+  real_T rtb_DeadZone;
+
+  /* Chart: '<Root>/Sortieralgorithmus' */
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m < 255U) {
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = ((int16_T)
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m + 1) & 255U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   }
 
   if (SortierAlgorithmusEchtSystem_DW.is_active_c3_SortierAlgorithmus == 0U) {
@@ -523,12 +608,17 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
      case SortierAlgorithmusEcht_IN_Black:
       SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
         SortierAlgorith_IN_DetectedCube;
+<<<<<<< HEAD
       SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
+=======
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       break;
 
      case SortierAlgorithmusE_IN_BlueCube:
       SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
         SortierAlgorith_IN_DetectedCube;
+<<<<<<< HEAD
       SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
       break;
 
@@ -537,12 +627,23 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.blau = -1.0;
+=======
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = 0U;
+      break;
+
+     case SortierAlgorith_IN_DetectedCube:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m >= 200U) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmu_IN_cubeLoaded;
+        SortierAlgorithmusEchtSystem_B.farbe = -1.0;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       }
       break;
 
      case SortierAlgorithmusEc_IN_RedCube:
       SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
         SortierAlgorith_IN_DetectedCube;
+<<<<<<< HEAD
       SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
       break;
 
@@ -586,10 +687,48 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
       SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
         SortierAlgorithmu_IN_cubeLoaded;
       SortierAlgorithmusEchtSystem_B.blau = -1.0;
+=======
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = 0U;
+      break;
+
+     case SortierAlg_IN_SchrankeAktiviert:
+      if (SortierAlgorithmusEchtSystem_B.RateTransition2 > 2050.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEcht_IN_Black;
+        SortierAlgorithmusEchtSystem_B.farbe = 2.0;
+      } else if (SortierAlgorithmusEchtSystem_B.RateTransition2 < 1000.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEc_IN_RedCube;
+        SortierAlgorith_findPlaceForRed();
+        SortierAlgorithmusEchtSystem_B.farbe = 0.0;
+      } else {
+        if ((SortierAlgorithmusEchtSystem_B.RateTransition2 >= 1000.0) &&
+            (SortierAlgorithmusEchtSystem_B.RateTransition2 <= 2050.0)) {
+          SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+            SortierAlgorithmusE_IN_BlueCube;
+          SortierAlgorit_findPlaceForBlue();
+          SortierAlgorithmusEchtSystem_B.farbe = 1.0;
+        }
+      }
+      break;
+
+     case SortierAlgorithmu_IN_cubeLoaded:
+      if (SortierAlgorithmusEchtSystem_B.RateTransition3_l > 400.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEch_IN_wait_b;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = 0U;
+      } else if (SortierAlgorithmusEchtSystem_B.RateTransition3_l < 400.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlg_IN_SchrankeAktiviert;
+      } else {
+        SortierAlgorithmusEchtSystem_B.farbe = -1.0;
+      }
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       break;
 
      case SortierAlgorit_IN_setupVariable:
       SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+<<<<<<< HEAD
         SortierAlgorith_IN_noCubeLoaded;
       break;
 
@@ -598,15 +737,33 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.blau = -1.0;
+=======
+        SortierAlgorithmu_IN_cubeLoaded;
+      SortierAlgorithmusEchtSystem_B.farbe = -1.0;
+      break;
+
+     default:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m >= 30U) {
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmu_IN_cubeLoaded;
+        SortierAlgorithmusEchtSystem_B.farbe = -1.0;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       }
       break;
     }
   }
 
+<<<<<<< HEAD
   /* End of Chart: '<Root>/Chart' */
 
   /* Chart: '<Root>/Chart1' */
   if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 < 131071UL) {
+=======
+  /* End of Chart: '<Root>/Sortieralgorithmus' */
+
+  /* Chart: '<Root>/Chart1' */
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 < 511U) {
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
     SortierAlgorithmusEchtSystem_DW.temporalCounter_i1++;
   }
 
@@ -614,6 +771,7 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
     SortierAlgorithmusEchtSystem_DW.is_active_c1_SortierAlgorithmus = 1U;
     SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
       SortierAlgorithmu_IN_firstEntry;
+<<<<<<< HEAD
     SortierAlgorithmusEchtSystem_B.winkel = 100.0;
   } else {
     switch (SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys) {
@@ -622,32 +780,61 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_openKlappe;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
+=======
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+    SortierAlgorithmusEchtSystem_B.winkel = 300.0;
+  } else {
+    switch (SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys) {
+     case SortierAlgorithm_IN_Linksdrehen:
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 < -440.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 > -450.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmu_IN_openKlappe;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
         SortierAlgorithmusEchtSystem_B.klappenPWM = 50.0;
         SortierAlgorithmusEchtSystem_B.klappenD = 1.0;
       }
       break;
 
      case SortierAlgorith_IN_Linksdrehen1:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 70000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_openKlappe;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
+=======
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 > 425.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 < 435.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmu_IN_openKlappe;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
         SortierAlgorithmusEchtSystem_B.klappenPWM = 50.0;
         SortierAlgorithmusEchtSystem_B.klappenD = 1.0;
       }
       break;
 
      case SortierAlgorith_IN_Rechtsdrehen:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 70000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_openKlappe;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
+=======
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 > 215.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 < 225.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmu_IN_openKlappe;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
         SortierAlgorithmusEchtSystem_B.klappenPWM = 50.0;
         SortierAlgorithmusEchtSystem_B.klappenD = 1.0;
       }
       break;
 
      case SortierAlgorithm_IN_closeKlappe:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 50000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithm_IN_waitForCube;
@@ -669,38 +856,82 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
           SortierAlgorith_IN_Rechtsdrehen;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
         SortierAlgorithmusEchtSystem_B.winkel = 220.0;
+=======
+      SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+        SortierAlgorithm_IN_waitForCube;
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+      break;
+
+     case SortierAlgorithmu_IN_firstEntry:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 500U) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithm_IN_waitForCube;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+      }
+      break;
+
+     case SortierAlgorithmus_IN_goToZero1:
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 > -5.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 < 5.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEcht_IN_wait2;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       } else {
         SortierAlgorithmusEchtSystem_B.winkel = 0.0;
       }
       break;
 
      case SortierAlgorithmus_IN_goToZero2:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 100000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithm_IN_Linksdrehen;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
         SortierAlgorithmusEchtSystem_B.winkel = -445.0;
+=======
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 > -5.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 < 5.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEchtS_IN_wait;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       } else {
         SortierAlgorithmusEchtSystem_B.winkel = 0.0;
       }
       break;
 
      case SortierAlgorithmus_IN_goToZero3:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 100000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorith_IN_Linksdrehen1;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
         SortierAlgorithmusEchtSystem_B.winkel = 430.0;
+=======
+      if ((SortierAlgorithmusEchtSystem_B.RateTransition3 > -5.0) &&
+          (SortierAlgorithmusEchtSystem_B.RateTransition3 < 5.0)) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEcht_IN_wait1;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_B.klappenPWM = 0.0;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       } else {
         SortierAlgorithmusEchtSystem_B.winkel = 0.0;
       }
       break;
 
      case SortierAlgorithmu_IN_openKlappe:
+<<<<<<< HEAD
       if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 55000UL) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
           SortierAlgorithm_IN_closeKlappe;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
+=======
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 70U) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithm_IN_closeKlappe;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
         SortierAlgorithmusEchtSystem_B.klappenD = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.klappenPWM = 50.0;
@@ -708,6 +939,7 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
       }
       break;
 
+<<<<<<< HEAD
      default:
       if (SortierAlgorithmusEchtSystem_B.blau == 1.0) {
         SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
@@ -726,6 +958,54 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
         SortierAlgorithmusEchtSystem_B.winkel = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.klappenPWM = 0.0;
+=======
+     case SortierAlgorithmusEchtS_IN_wait:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 10U) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithm_IN_Linksdrehen;
+        SortierAlgorithmusEchtSystem_B.winkel = -445.0;
+      }
+      break;
+
+     case SortierAlgorithmusEcht_IN_wait1:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 10U) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorith_IN_Linksdrehen1;
+        SortierAlgorithmusEchtSystem_B.winkel = 430.0;
+      } else {
+        SortierAlgorithmusEchtSystem_B.klappenPWM = 0.0;
+      }
+      break;
+
+     case SortierAlgorithmusEcht_IN_wait2:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 10U) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorith_IN_Rechtsdrehen;
+        SortierAlgorithmusEchtSystem_B.winkel = 220.0;
+      }
+      break;
+
+     default:
+      if (SortierAlgorithmusEchtSystem_B.farbe == 1.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmus_IN_goToZero1;
+        SortierAlgorithmusEchtSystem_B.winkel = 0.0;
+      } else if (SortierAlgorithmusEchtSystem_B.farbe == 0.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmus_IN_goToZero2;
+        SortierAlgorithmusEchtSystem_B.winkel = 0.0;
+      } else if (SortierAlgorithmusEchtSystem_B.farbe == 2.0) {
+        SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+          SortierAlgorithmus_IN_goToZero3;
+        SortierAlgorithmusEchtSystem_B.winkel = 0.0;
+      } else {
+        if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 50U) {
+          SortierAlgorithmusEchtSystem_B.klappenPWM = 0.0;
+          SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+            SortierAlgorithm_IN_waitForCube;
+          SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        }
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
       }
       break;
     }
@@ -733,6 +1013,7 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
 
   /* End of Chart: '<Root>/Chart1' */
 
+<<<<<<< HEAD
   /* RateTransition: '<Root>/Rate Transition1' */
   if (SortierAlgorithmusEchtSystem_M->Timing.RateInteraction.TID0_1) {
     SortierAlgorithmusEchtSystem_B.RateTransition1 =
@@ -741,6 +1022,8 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
 
   /* End of RateTransition: '<Root>/Rate Transition1' */
 
+=======
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   /* S-Function (c280xgpio_do): '<Root>/Drehrichtungsvorgabe für einen Motor1' */
   {
     if (SortierAlgorithmusEchtSystem_B.klappenD)
@@ -749,6 +1032,7 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
       GpioDataRegs.GPACLEAR.bit.GPIO17 = 1;
   }
 
+<<<<<<< HEAD
   /* S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 1' */
 
   /*-- Update CMPB value for ePWM3 --*/
@@ -792,6 +1076,11 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* Sum: '<S5>/Sum' */
   rtb_DeadZone = SortierAlgorithmusEchtSystem_B.RateTransition1 -
     SortierAlgorithmusEchtSystem_B.RateTransition4;
+=======
+  /* Sum: '<S5>/Sum' */
+  rtb_DeadZone = SortierAlgorithmusEchtSystem_B.winkel -
+    SortierAlgorithmusEchtSystem_B.RateTransition3;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
   /* DeadZone: '<S5>/Dead Zone' */
   if (rtb_DeadZone > SortierAlgorithmusEchtSystem_P.DeadZone_End) {
@@ -810,7 +1099,11 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* MATLAB Function: '<S5>/Richtung' */
   SortierAlgorithmusEchtSystem_B.y = (rtb_DeadZone > 0.0);
 
+<<<<<<< HEAD
   /* S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor' */
+=======
+  /* S-Function (c280xgpio_do): '<S2>/Drehrichtungsvorgabe für einen Motor' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   {
     if (SortierAlgorithmusEchtSystem_B.y)
       GpioDataRegs.GPASET.bit.GPIO21 = 1;
@@ -834,12 +1127,27 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
 
   /* End of MATLAB Function: '<S5>/Betrag' */
 
+<<<<<<< HEAD
   /* S-Function (c280xpwm): '<S3>/PWM Vorgabe für einen Motor ' */
+=======
+  /* S-Function (c280xpwm): '<S2>/PWM Vorgabe für einen Motor ' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
   /*-- Update CMPB value for ePWM2 --*/
   {
     EPwm2Regs.CMPB = (uint16_T)((uint32_T)EPwm2Regs.TBPRD * rtb_y_f * 0.01);
   }
+<<<<<<< HEAD
+=======
+
+  /* S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 1' */
+
+  /*-- Update CMPB value for ePWM3 --*/
+  {
+    EPwm3Regs.CMPB = (uint16_T)((uint32_T)EPwm3Regs.TBPRD *
+      SortierAlgorithmusEchtSystem_B.klappenPWM * 0.01);
+  }
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 }
 
 /* Model initialize function */
@@ -876,13 +1184,21 @@ void SortierAlgorithmusEchtSystem_initialize(void)
   GpioCtrlRegs.GPADIR.all |= 0x20000;
   EDIS;
 
+<<<<<<< HEAD
   /* Start for S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor' */
+=======
+  /* Start for S-Function (c280xgpio_do): '<S2>/Drehrichtungsvorgabe für einen Motor' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   EALLOW;
   GpioCtrlRegs.GPAMUX2.all &= 0xFFFFF3FF;
   GpioCtrlRegs.GPADIR.all |= 0x200000;
   EDIS;
 
+<<<<<<< HEAD
   /* Start for S-Function (c280xpwm): '<S3>/PWM Vorgabe für einen Motor ' */
+=======
+  /* Start for S-Function (c280xpwm): '<S2>/PWM Vorgabe für einen Motor ' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
 
   /*** Initialize ePWM2 modules ***/
   {
@@ -1148,14 +1464,23 @@ void SortierAlgorithmusEchtSystem_initialize(void)
 
   /* End of SystemInitialize for SubSystem: '<S9>/NEGATIVE Edge' */
 
+<<<<<<< HEAD
   /* SystemInitialize for Chart: '<Root>/Chart' */
   SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
+=======
+  /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus' */
+  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_m = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   SortierAlgorithmusEchtSystem_DW.is_active_c3_SortierAlgorithmus = 0U;
   SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
     SortierAlgor_IN_NO_ACTIVE_CHILD;
 
   /* SystemInitialize for Chart: '<Root>/Chart1' */
+<<<<<<< HEAD
   SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0UL;
+=======
+  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   SortierAlgorithmusEchtSystem_DW.is_active_c1_SortierAlgorithmus = 0U;
   SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
     SortierAlgor_IN_NO_ACTIVE_CHILD;

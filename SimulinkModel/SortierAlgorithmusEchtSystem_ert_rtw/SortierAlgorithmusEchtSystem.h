@@ -9,7 +9,11 @@
  *
  * Model version                  : 1.23
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+<<<<<<< HEAD
  * C/C++ source code generated on : Tue Jan 12 19:02:16 2021
+=======
+ * C/C++ source code generated on : Tue Dec 15 20:26:45 2020
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -64,14 +68,25 @@ typedef struct {
   real_T AnalogDigitalWandlungSampleti_l;/* '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
   real_T AnalogDigitalWandlungSampleti_a;/* '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
   real_T AnalogDigitalWandlungSampleti_o;/* '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
+<<<<<<< HEAD
   real_T RateTransition4;              /* '<S4>/Rate Transition4' */
   real_T RateTransition1;              /* '<Root>/Rate Transition1' */
   real_T RL;                           /* '<S8>/MATLAB Function2' */
+=======
+  real_T RateTransition3;              /* '<S4>/Rate Transition3' */
+  real_T RateTransition2;              /* '<Root>/Rate Transition2' */
+  real_T RateTransition3_l;            /* '<Root>/Rate Transition3' */
+  real_T RL;                           /* '<S8>/MATLAB Function2' */
+  real_T farbe;                        /* '<Root>/Sortieralgorithmus' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   real_T y;                            /* '<S5>/Richtung' */
   real_T winkel;                       /* '<Root>/Chart1' */
   real_T klappenPWM;                   /* '<Root>/Chart1' */
   real_T klappenD;                     /* '<Root>/Chart1' */
+<<<<<<< HEAD
   real_T blau;                         /* '<Root>/Chart' */
+=======
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   boolean_T RelationalOperator1;       /* '<S17>/Relational Operator1' */
   boolean_T RelationalOperator1_f;     /* '<S16>/Relational Operator1' */
   boolean_T RelationalOperator1_b;     /* '<S15>/Relational Operator1' */
@@ -81,6 +96,7 @@ typedef struct {
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   real_T UnitDelay5_DSTATE;            /* '<S8>/Unit Delay5' */
+<<<<<<< HEAD
   real_T m2_LC;                        /* '<Root>/Chart' */
   real_T m1_LC;                        /* '<Root>/Chart' */
   real_T m0;                           /* '<Root>/Chart' */
@@ -100,6 +116,27 @@ typedef struct {
   uint16_T is_c1_SortierAlgorithmusEchtSys;/* '<Root>/Chart1' */
   uint16_T is_active_c3_SortierAlgorithmus;/* '<Root>/Chart' */
   uint16_T is_c3_SortierAlgorithmusEchtSys;/* '<Root>/Chart' */
+=======
+  real_T m2_LC;                        /* '<Root>/Sortieralgorithmus' */
+  real_T m1_LC;                        /* '<Root>/Sortieralgorithmus' */
+  real_T m0;                           /* '<Root>/Sortieralgorithmus' */
+  real_T m3;                           /* '<Root>/Sortieralgorithmus' */
+  real_T m4;                           /* '<Root>/Sortieralgorithmus' */
+  real_T m5;                           /* '<Root>/Sortieralgorithmus' */
+  real_T magacin;
+  real32_T UnitDelay2_DSTATE;          /* '<S8>/Unit Delay2' */
+  real32_T UnitDelay1_DSTATE;          /* '<S8>/Unit Delay1' */
+  int32_T m1;                          /* '<Root>/Sortieralgorithmus' */
+  int32_T m2;                          /* '<Root>/Sortieralgorithmus' */
+  uint16_T temporalCounter_i1;         /* '<Root>/Chart1' */
+  boolean_T UnitDelay3_DSTATE;         /* '<S8>/Unit Delay3' */
+  boolean_T UnitDelay4_DSTATE;         /* '<S8>/Unit Delay4' */
+  uint16_T is_active_c3_SortierAlgorithmus;/* '<Root>/Sortieralgorithmus' */
+  uint16_T is_c3_SortierAlgorithmusEchtSys;/* '<Root>/Sortieralgorithmus' */
+  uint16_T temporalCounter_i1_m;       /* '<Root>/Sortieralgorithmus' */
+  uint16_T is_active_c1_SortierAlgorithmus;/* '<Root>/Chart1' */
+  uint16_T is_c1_SortierAlgorithmusEchtSys;/* '<Root>/Chart1' */
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
   boolean_T Memory_PreviousInput;      /* '<S10>/Memory' */
   boolean_T Memory_PreviousInput_b;    /* '<S9>/Memory' */
 } DW_SortierAlgorithmusEchtSyst_T;
@@ -171,7 +208,11 @@ struct P_SortierAlgorithmusEchtSyste_T_ {
   real_T DeadZone_End;                 /* Expression: 1
                                         * Referenced by: '<S5>/Dead Zone'
                                         */
+<<<<<<< HEAD
   real_T Verstaerkung_Gain;            /* Expression: 0.6
+=======
+  real_T Verstaerkung_Gain;            /* Expression: 1
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
                                         * Referenced by: '<S5>/Verstaerkung'
                                         */
   real32_T UnitDelay2_InitialCondition;/* Computed Parameter: UnitDelay2_InitialCondition
@@ -251,9 +292,15 @@ extern RT_MODEL_SortierAlgorithmusEc_T *const SortierAlgorithmusEchtSystem_M;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'SortierAlgorithmusEchtSystem'
+<<<<<<< HEAD
  * '<S1>'   : 'SortierAlgorithmusEchtSystem/Chart'
  * '<S2>'   : 'SortierAlgorithmusEchtSystem/Chart1'
  * '<S3>'   : 'SortierAlgorithmusEchtSystem/P-Regler mit Output'
+=======
+ * '<S1>'   : 'SortierAlgorithmusEchtSystem/Chart1'
+ * '<S2>'   : 'SortierAlgorithmusEchtSystem/P-Regler mit Output'
+ * '<S3>'   : 'SortierAlgorithmusEchtSystem/Sortieralgorithmus'
+>>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
  * '<S4>'   : 'SortierAlgorithmusEchtSystem/getAngle'
  * '<S5>'   : 'SortierAlgorithmusEchtSystem/P-Regler mit Output/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01'
  * '<S6>'   : 'SortierAlgorithmusEchtSystem/P-Regler mit Output/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01/Betrag'
