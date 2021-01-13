@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.35
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Jan 12 18:49:07 2021
+ * C/C++ source code generated on : Wed Jan 13 17:27:09 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -20,11 +20,14 @@
 #ifndef RTW_HEADER_SortierAlgorithmusEchtSystem_private_h_
 #define RTW_HEADER_SortierAlgorithmusEchtSystem_private_h_
 #include "rtwtypes.h"
+#include "zero_crossing_types.h"
 #include "SortierAlgorithmusEchtSystem.h"
 
 void config_ADC_A(uint16_T maxconvReg , uint16_T adcChselSEQ1Reg, uint16_T
                   adcChselSEQ2Reg, uint16_T adcChselSEQ3Reg, uint16_T
                   adcChselSEQ4Reg);
+extern real_T look1_binlxpw(real_T u0, const real_T bp0[], const real_T table[],
+  uint32_T maxIndex);
 extern void SortierAl_NEGATIVEEdge_Init(boolean_T *rty_OUT,
   P_NEGATIVEEdge_SortierAlgorit_T *localP);
 extern void SortierAlgorit_NEGATIVEEdge(real_T rtu_Enable, boolean_T rtu_IN,
