@@ -55,6 +55,8 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["SortierAlgorithmusEchtSystem:114"] = {rtwname: "<Root>/Rate Transition3"};
 	this.rtwnameHashMap["<Root>/Sortieralgorithmus"] = {sid: "SortierAlgorithmusEchtSystem:107"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:107"] = {rtwname: "<Root>/Sortieralgorithmus"};
+	this.rtwnameHashMap["<Root>/ePWM"] = {sid: "SortierAlgorithmusEchtSystem:176"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:176"] = {rtwname: "<Root>/ePWM"};
 	this.rtwnameHashMap["<Root>/getAngle"] = {sid: "SortierAlgorithmusEchtSystem:99"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:99"] = {rtwname: "<Root>/getAngle"};
 	this.rtwnameHashMap["<S1>:73"] = {sid: "SortierAlgorithmusEchtSystem:51:73"};

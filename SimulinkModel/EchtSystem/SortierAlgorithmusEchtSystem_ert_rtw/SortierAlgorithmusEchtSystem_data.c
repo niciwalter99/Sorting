@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.48
+ * Model version                  : 1.49
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 13 17:47:54 2021
+ * C/C++ source code generated on : Thu Jan 14 15:03:57 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -97,15 +97,15 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    */
   0.076,
 
-  /* Expression: [-440,-295,-170,-40,85,220,430]
+  /* Expression: [-1,-440,-295,-170,-40,85,220,430]
    * Referenced by: '<Root>/1-D Lookup Table'
    */
-  { -440.0, -295.0, -170.0, -40.0, 85.0, 220.0, 430.0 },
+  { -1.0, -440.0, -295.0, -170.0, -40.0, 85.0, 220.0, 430.0 },
 
-  /* Expression: [1,2,3,4,5,6,7]
+  /* Expression: [-1,0,1,2,3,4,5,6]
    * Referenced by: '<Root>/1-D Lookup Table'
    */
-  { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0 },
+  { -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 },
 
   /* Expression: -1
    * Referenced by: '<S5>/Dead Zone'
