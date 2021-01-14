@@ -29,11 +29,11 @@
 <tr name="9" id="9">
 <td><a id="l9" class='ln'>9</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
-<td><a id="l10" class='ln'>10</a></td><td><span class="ct"> * Model version                  : 1.48</span></td></tr>
+<td><a id="l10" class='ln'>10</a></td><td><span class="ct"> * Model version                  : 1.49</span></td></tr>
 <tr name="11" id="11">
 <td><a id="l11" class='ln'>11</a></td><td><span class="ct"> * Simulink Coder version         : 9.0 (R2018b) 24-May-2018</span></td></tr>
 <tr name="12" id="12">
-<td><a id="l12" class='ln'>12</a></td><td><span class="ct"> * C/C++ source code generated on : Wed Jan 13 17:47:54 2021</span></td></tr>
+<td><a id="l12" class='ln'>12</a></td><td><span class="ct"> * C/C++ source code generated on : Thu Jan 14 15:03:57 2021</span></td></tr>
 <tr name="13" id="13">
 <td><a id="l13" class='ln'>13</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="14" id="14">
@@ -1187,7 +1187,7 @@
 <tr name="588" id="588">
 <td><a id="l588" class='ln'>588</a></td><td>  <a id="588c3" class="tk">real_T</a> <a id="588c10" class="tk">rtb_y_f</a>;</td></tr>
 <tr name="589" id="589">
-<td><a id="l589" class='ln'>589</a></td><td>  <a id="589c3" class="tk">real_T</a> <a id="589c10" class="tk">rtb_DeadZone</a>;</td></tr>
+<td><a id="l589" class='ln'>589</a></td><td>  <a id="589c3" class="tk">real_T</a> <a id="589c10" class="tk">rtb_uDLookupTable</a>;</td></tr>
 <tr name="590" id="590">
 <td><a id="l590" class='ln'>590</a></td><td></td></tr>
 <tr name="591" id="591">
@@ -1239,175 +1239,175 @@
 <tr name="614" id="614">
 <td><a id="l614" class='ln'>614</a></td><td>          <a id="614c11" class="tk">SortierAlgorith_IN_DetectedCube</a>;</td></tr>
 <tr name="615" id="615">
-<td><a id="l615" class='ln'>615</a></td><td>        <a id="615c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="615c40" class="tk">magacin</a> = <a id="615c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l615" class='ln'>615</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="616" id="616">
-<td><a id="l616" class='ln'>616</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l616" class='ln'>616</a></td><td>        <a id="616c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="616c40" class="tk">magacin</a> = 6.0;</td></tr>
 <tr name="617" id="617">
-<td><a id="l617" class='ln'>617</a></td><td>        <a id="617c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="617c40" class="tk">magacin</a> = 6.0;</td></tr>
+<td><a id="l617" class='ln'>617</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="618" id="618">
-<td><a id="l618" class='ln'>618</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l618" class='ln'>618</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="619" id="619">
-<td><a id="l619" class='ln'>619</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l619" class='ln'>619</a></td><td></td></tr>
 <tr name="620" id="620">
-<td><a id="l620" class='ln'>620</a></td><td></td></tr>
+<td><a id="l620" class='ln'>620</a></td><td>     <span class="kw">case</span> <a id="620c11" class="tk">SortierAlgorithmusE_IN_BlueCube</a><a id="620c42" class="tk">:</a></td></tr>
 <tr name="621" id="621">
-<td><a id="l621" class='ln'>621</a></td><td>     <span class="kw">case</span> <a id="621c11" class="tk">SortierAlgorithmusE_IN_BlueCube</a><a id="621c42" class="tk">:</a></td></tr>
+<td><a id="l621" class='ln'>621</a></td><td>      <span class="kw">if</span> (<a id="621c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="621c43" class="tk">temporalCounter_i1</a> <a id="621c62" class="tk">&gt;=</a> 150U) <span class="br">{</span></td></tr>
 <tr name="622" id="622">
-<td><a id="l622" class='ln'>622</a></td><td>      <span class="kw">if</span> (<a id="622c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="622c43" class="tk">temporalCounter_i1</a> <a id="622c62" class="tk">&gt;=</a> 150U) <span class="br">{</span></td></tr>
+<td><a id="l622" class='ln'>622</a></td><td>        <a id="622c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="622c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="623" id="623">
-<td><a id="l623" class='ln'>623</a></td><td>        <a id="623c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="623c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l623" class='ln'>623</a></td><td>          <a id="623c11" class="tk">SortierAlgorith_IN_DetectedCube</a>;</td></tr>
 <tr name="624" id="624">
-<td><a id="l624" class='ln'>624</a></td><td>          <a id="624c11" class="tk">SortierAlgorith_IN_DetectedCube</a>;</td></tr>
+<td><a id="l624" class='ln'>624</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="625" id="625">
-<td><a id="l625" class='ln'>625</a></td><td>        <a id="625c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="625c40" class="tk">magacin</a> = <a id="625c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l625" class='ln'>625</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="626" id="626">
-<td><a id="l626" class='ln'>626</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l626" class='ln'>626</a></td><td></td></tr>
 <tr name="627" id="627">
-<td><a id="l627" class='ln'>627</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l627" class='ln'>627</a></td><td>     <span class="kw">case</span> <a id="627c11" class="tk">SortierAlgorith_IN_DetectedCube</a><a id="627c42" class="tk">:</a></td></tr>
 <tr name="628" id="628">
-<td><a id="l628" class='ln'>628</a></td><td></td></tr>
+<td><a id="l628" class='ln'>628</a></td><td>      <a id="628c7" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="628c39" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="629" id="629">
-<td><a id="l629" class='ln'>629</a></td><td>     <span class="kw">case</span> <a id="629c11" class="tk">SortierAlgorith_IN_DetectedCube</a><a id="629c42" class="tk">:</a></td></tr>
+<td><a id="l629" class='ln'>629</a></td><td>        <a id="629c9" class="tk">SortierAlgorithmu_IN_cubeLoaded</a>;</td></tr>
 <tr name="630" id="630">
-<td><a id="l630" class='ln'>630</a></td><td>      <a id="630c7" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="630c39" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l630" class='ln'>630</a></td><td>      <a id="630c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="630c38" class="tk">magacin</a> = <a id="630c48" class="tk">-</a>1.0;</td></tr>
 <tr name="631" id="631">
-<td><a id="l631" class='ln'>631</a></td><td>        <a id="631c9" class="tk">SortierAlgorithmu_IN_cubeLoaded</a>;</td></tr>
+<td><a id="l631" class='ln'>631</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="632" id="632">
-<td><a id="l632" class='ln'>632</a></td><td>      <a id="632c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="632c38" class="tk">magacin</a> = <a id="632c48" class="tk">-</a>1.0;</td></tr>
+<td><a id="l632" class='ln'>632</a></td><td></td></tr>
 <tr name="633" id="633">
-<td><a id="l633" class='ln'>633</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l633" class='ln'>633</a></td><td>     <span class="kw">case</span> <a id="633c11" class="tk">SortierAlgorithmusEc_IN_RedCube</a><a id="633c42" class="tk">:</a></td></tr>
 <tr name="634" id="634">
-<td><a id="l634" class='ln'>634</a></td><td></td></tr>
+<td><a id="l634" class='ln'>634</a></td><td>      <span class="kw">if</span> (<a id="634c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="634c43" class="tk">temporalCounter_i1</a> <a id="634c62" class="tk">&gt;=</a> 150U) <span class="br">{</span></td></tr>
 <tr name="635" id="635">
-<td><a id="l635" class='ln'>635</a></td><td>     <span class="kw">case</span> <a id="635c11" class="tk">SortierAlgorithmusEc_IN_RedCube</a><a id="635c42" class="tk">:</a></td></tr>
+<td><a id="l635" class='ln'>635</a></td><td>        <a id="635c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="635c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="636" id="636">
-<td><a id="l636" class='ln'>636</a></td><td>      <span class="kw">if</span> (<a id="636c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="636c43" class="tk">temporalCounter_i1</a> <a id="636c62" class="tk">&gt;=</a> 150U) <span class="br">{</span></td></tr>
+<td><a id="l636" class='ln'>636</a></td><td>          <a id="636c11" class="tk">SortierAlgorith_IN_DetectedCube</a>;</td></tr>
 <tr name="637" id="637">
-<td><a id="l637" class='ln'>637</a></td><td>        <a id="637c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="637c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l637" class='ln'>637</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="638" id="638">
-<td><a id="l638" class='ln'>638</a></td><td>          <a id="638c11" class="tk">SortierAlgorith_IN_DetectedCube</a>;</td></tr>
+<td><a id="l638" class='ln'>638</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="639" id="639">
-<td><a id="l639" class='ln'>639</a></td><td>        <a id="639c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="639c40" class="tk">magacin</a> = <a id="639c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l639" class='ln'>639</a></td><td></td></tr>
 <tr name="640" id="640">
-<td><a id="l640" class='ln'>640</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l640" class='ln'>640</a></td><td>     <span class="kw">case</span> <a id="640c11" class="tk">SortierAlgorithmu_IN_cubeLoaded</a><a id="640c42" class="tk">:</a></td></tr>
 <tr name="641" id="641">
-<td><a id="l641" class='ln'>641</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l641" class='ln'>641</a></td><td>      <span class="kw">if</span> (<a id="641c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="641c42" class="tk">RateTransition3_l</a> <a id="641c60" class="tk">&lt;</a> 400.0) <span class="br">{</span></td></tr>
 <tr name="642" id="642">
-<td><a id="l642" class='ln'>642</a></td><td></td></tr>
+<td><a id="l642" class='ln'>642</a></td><td>        <a id="642c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="642c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="643" id="643">
-<td><a id="l643" class='ln'>643</a></td><td>     <span class="kw">case</span> <a id="643c11" class="tk">SortierAlgorithmu_IN_cubeLoaded</a><a id="643c42" class="tk">:</a></td></tr>
+<td><a id="l643" class='ln'>643</a></td><td>          <a id="643c11" class="tk">IN_photoelectricBarrierActivate</a>;</td></tr>
 <tr name="644" id="644">
-<td><a id="l644" class='ln'>644</a></td><td>      <span class="kw">if</span> (<a id="644c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="644c42" class="tk">RateTransition3_l</a> <a id="644c60" class="tk">&lt;</a> 400.0) <span class="br">{</span></td></tr>
+<td><a id="l644" class='ln'>644</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="645" id="645">
-<td><a id="l645" class='ln'>645</a></td><td>        <a id="645c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="645c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l645" class='ln'>645</a></td><td>        <a id="645c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="645c40" class="tk">magacin</a> = <a id="645c50" class="tk">-</a>1.0;</td></tr>
 <tr name="646" id="646">
-<td><a id="l646" class='ln'>646</a></td><td>          <a id="646c11" class="tk">IN_photoelectricBarrierActivate</a>;</td></tr>
+<td><a id="l646" class='ln'>646</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="647" id="647">
-<td><a id="l647" class='ln'>647</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l647" class='ln'>647</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="648" id="648">
-<td><a id="l648" class='ln'>648</a></td><td>        <a id="648c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="648c40" class="tk">magacin</a> = <a id="648c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l648" class='ln'>648</a></td><td></td></tr>
 <tr name="649" id="649">
-<td><a id="l649" class='ln'>649</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l649" class='ln'>649</a></td><td>     <span class="kw">case</span> <a id="649c11" class="tk">IN_photoelectricBarrierActivate</a><a id="649c42" class="tk">:</a></td></tr>
 <tr name="650" id="650">
-<td><a id="l650" class='ln'>650</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l650" class='ln'>650</a></td><td>      <span class="kw">if</span> (<a id="650c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="650c42" class="tk">RateTransition2</a> <a id="650c58" class="tk">&gt;</a> 2050.0) <span class="br">{</span></td></tr>
 <tr name="651" id="651">
-<td><a id="l651" class='ln'>651</a></td><td></td></tr>
+<td><a id="l651" class='ln'>651</a></td><td>        <a id="651c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="651c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="652" id="652">
-<td><a id="l652" class='ln'>652</a></td><td>     <span class="kw">case</span> <a id="652c11" class="tk">IN_photoelectricBarrierActivate</a><a id="652c42" class="tk">:</a></td></tr>
+<td><a id="l652" class='ln'>652</a></td><td>          <a id="652c11" class="tk">SortierAlgorithmusEcht_IN_Black</a>;</td></tr>
 <tr name="653" id="653">
-<td><a id="l653" class='ln'>653</a></td><td>      <span class="kw">if</span> (<a id="653c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="653c42" class="tk">RateTransition2</a> <a id="653c58" class="tk">&gt;</a> 2050.0) <span class="br">{</span></td></tr>
+<td><a id="l653" class='ln'>653</a></td><td>        <a id="653c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="653c41" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
 <tr name="654" id="654">
-<td><a id="l654" class='ln'>654</a></td><td>        <a id="654c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="654c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l654" class='ln'>654</a></td><td>        <a id="654c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="654c40" class="tk">magacin</a> = 6.0;</td></tr>
 <tr name="655" id="655">
-<td><a id="l655" class='ln'>655</a></td><td>          <a id="655c11" class="tk">SortierAlgorithmusEcht_IN_Black</a>;</td></tr>
+<td><a id="l655" class='ln'>655</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="655c18" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="655c49" class="tk">RateTransition2</a> <a id="655c65" class="tk">&lt;</a> 1000.0) <span class="br">{</span></td></tr>
 <tr name="656" id="656">
-<td><a id="l656" class='ln'>656</a></td><td>        <a id="656c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="656c41" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
+<td><a id="l656" class='ln'>656</a></td><td>        <a id="656c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="656c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="657" id="657">
-<td><a id="l657" class='ln'>657</a></td><td>        <a id="657c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="657c40" class="tk">magacin</a> = 6.0;</td></tr>
+<td><a id="l657" class='ln'>657</a></td><td>          <a id="657c11" class="tk">SortierAlgorithmusEc_IN_RedCube</a>;</td></tr>
 <tr name="658" id="658">
-<td><a id="l658" class='ln'>658</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="658c18" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="658c49" class="tk">RateTransition2</a> <a id="658c65" class="tk">&lt;</a> 1000.0) <span class="br">{</span></td></tr>
+<td><a id="l658" class='ln'>658</a></td><td>        <a id="658c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="658c41" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
 <tr name="659" id="659">
-<td><a id="l659" class='ln'>659</a></td><td>        <a id="659c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="659c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l659" class='ln'>659</a></td><td>        <a id="659c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="659c40" class="tk">magacin</a> = <a id="659c50" class="tk">SortierAlgorith_findPlaceForRed</a></td></tr>
 <tr name="660" id="660">
-<td><a id="l660" class='ln'>660</a></td><td>          <a id="660c11" class="tk">SortierAlgorithmusEc_IN_RedCube</a>;</td></tr>
+<td><a id="l660" class='ln'>660</a></td><td>          ();</td></tr>
 <tr name="661" id="661">
-<td><a id="l661" class='ln'>661</a></td><td>        <a id="661c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="661c41" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
+<td><a id="l661" class='ln'>661</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="662" id="662">
-<td><a id="l662" class='ln'>662</a></td><td>        <a id="662c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="662c40" class="tk">magacin</a> = <a id="662c50" class="tk">SortierAlgorith_findPlaceForRed</a></td></tr>
+<td><a id="l662" class='ln'>662</a></td><td>        <span class="kw">if</span> ((<a id="662c14" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="662c45" class="tk">RateTransition2</a> <a id="662c61" class="tk">&gt;=</a> 1000.0) <a id="662c72" class="tk">&amp;&amp;</a></td></tr>
 <tr name="663" id="663">
-<td><a id="l663" class='ln'>663</a></td><td>          ();</td></tr>
+<td><a id="l663" class='ln'>663</a></td><td>            (<a id="663c14" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="663c45" class="tk">RateTransition2</a> <a id="663c61" class="tk">&lt;=</a> 2050.0)) <span class="br">{</span></td></tr>
 <tr name="664" id="664">
-<td><a id="l664" class='ln'>664</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l664" class='ln'>664</a></td><td>          <a id="664c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="664c43" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="665" id="665">
-<td><a id="l665" class='ln'>665</a></td><td>        <span class="kw">if</span> ((<a id="665c14" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="665c45" class="tk">RateTransition2</a> <a id="665c61" class="tk">&gt;=</a> 1000.0) <a id="665c72" class="tk">&amp;&amp;</a></td></tr>
+<td><a id="l665" class='ln'>665</a></td><td>            <a id="665c13" class="tk">SortierAlgorithmusE_IN_BlueCube</a>;</td></tr>
 <tr name="666" id="666">
-<td><a id="l666" class='ln'>666</a></td><td>            (<a id="666c14" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="666c45" class="tk">RateTransition2</a> <a id="666c61" class="tk">&lt;=</a> 2050.0)) <span class="br">{</span></td></tr>
+<td><a id="l666" class='ln'>666</a></td><td>          <a id="666c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="666c43" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
 <tr name="667" id="667">
-<td><a id="l667" class='ln'>667</a></td><td>          <a id="667c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="667c43" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l667" class='ln'>667</a></td><td>          <a id="667c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="667c42" class="tk">magacin</a> =</td></tr>
 <tr name="668" id="668">
-<td><a id="l668" class='ln'>668</a></td><td>            <a id="668c13" class="tk">SortierAlgorithmusE_IN_BlueCube</a>;</td></tr>
+<td><a id="l668" class='ln'>668</a></td><td>            <a id="668c13" class="tk">SortierAlgorit_findPlaceForBlue</a>();</td></tr>
 <tr name="669" id="669">
-<td><a id="l669" class='ln'>669</a></td><td>          <a id="669c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="669c43" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
+<td><a id="l669" class='ln'>669</a></td><td>        <span class="br">}</span></td></tr>
 <tr name="670" id="670">
-<td><a id="l670" class='ln'>670</a></td><td>          <a id="670c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="670c42" class="tk">magacin</a> =</td></tr>
+<td><a id="l670" class='ln'>670</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="671" id="671">
-<td><a id="l671" class='ln'>671</a></td><td>            <a id="671c13" class="tk">SortierAlgorit_findPlaceForBlue</a>();</td></tr>
+<td><a id="l671" class='ln'>671</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="672" id="672">
-<td><a id="l672" class='ln'>672</a></td><td>        <span class="br">}</span></td></tr>
+<td><a id="l672" class='ln'>672</a></td><td></td></tr>
 <tr name="673" id="673">
-<td><a id="l673" class='ln'>673</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l673" class='ln'>673</a></td><td>     <span class="kw">default</span><a id="673c13" class="tk">:</a></td></tr>
 <tr name="674" id="674">
-<td><a id="l674" class='ln'>674</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l674" class='ln'>674</a></td><td>      <span class="kw">if</span> (<a id="674c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="674c43" class="tk">temporalCounter_i1</a> <a id="674c62" class="tk">&gt;=</a> 300U) <span class="br">{</span></td></tr>
 <tr name="675" id="675">
-<td><a id="l675" class='ln'>675</a></td><td></td></tr>
+<td><a id="l675" class='ln'>675</a></td><td>        <a id="675c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="675c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="676" id="676">
-<td><a id="l676" class='ln'>676</a></td><td>     <span class="kw">default</span><a id="676c13" class="tk">:</a></td></tr>
+<td><a id="l676" class='ln'>676</a></td><td>          <a id="676c11" class="tk">SortierAlgorithmu_IN_cubeLoaded</a>;</td></tr>
 <tr name="677" id="677">
-<td><a id="l677" class='ln'>677</a></td><td>      <span class="kw">if</span> (<a id="677c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="677c43" class="tk">temporalCounter_i1</a> <a id="677c62" class="tk">&gt;=</a> 300U) <span class="br">{</span></td></tr>
+<td><a id="l677" class='ln'>677</a></td><td>        <a id="677c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="677c40" class="tk">magacin</a> = <a id="677c50" class="tk">-</a>1.0;</td></tr>
 <tr name="678" id="678">
-<td><a id="l678" class='ln'>678</a></td><td>        <a id="678c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="678c41" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l678" class='ln'>678</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="679" id="679">
-<td><a id="l679" class='ln'>679</a></td><td>          <a id="679c11" class="tk">SortierAlgorithmu_IN_cubeLoaded</a>;</td></tr>
+<td><a id="l679" class='ln'>679</a></td><td>        <a id="679c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="679c41" class="tk">magacin0</a> = 0.0;</td></tr>
 <tr name="680" id="680">
-<td><a id="l680" class='ln'>680</a></td><td>        <a id="680c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="680c40" class="tk">magacin</a> = <a id="680c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l680" class='ln'>680</a></td><td>        <a id="680c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="680c41" class="tk">magacin1</a> = 0.0;</td></tr>
 <tr name="681" id="681">
-<td><a id="l681" class='ln'>681</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l681" class='ln'>681</a></td><td>        <a id="681c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="681c41" class="tk">magacin2</a> = 0.0;</td></tr>
 <tr name="682" id="682">
-<td><a id="l682" class='ln'>682</a></td><td>        <a id="682c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="682c41" class="tk">magacin0</a> = 0.0;</td></tr>
+<td><a id="l682" class='ln'>682</a></td><td>        <a id="682c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="682c41" class="tk">magacin3</a> = 0.0;</td></tr>
 <tr name="683" id="683">
-<td><a id="l683" class='ln'>683</a></td><td>        <a id="683c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="683c41" class="tk">magacin1</a> = 0.0;</td></tr>
+<td><a id="l683" class='ln'>683</a></td><td>        <a id="683c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="683c41" class="tk">magacin4</a> = 0.0;</td></tr>
 <tr name="684" id="684">
-<td><a id="l684" class='ln'>684</a></td><td>        <a id="684c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="684c41" class="tk">magacin2</a> = 0.0;</td></tr>
+<td><a id="l684" class='ln'>684</a></td><td>        <a id="684c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="684c41" class="tk">magacin1_LastCube</a> = 0.0;</td></tr>
 <tr name="685" id="685">
-<td><a id="l685" class='ln'>685</a></td><td>        <a id="685c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="685c41" class="tk">magacin3</a> = 0.0;</td></tr>
+<td><a id="l685" class='ln'>685</a></td><td>        <a id="685c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="685c41" class="tk">magacin2_LastCube</a> = 0.0;</td></tr>
 <tr name="686" id="686">
-<td><a id="l686" class='ln'>686</a></td><td>        <a id="686c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="686c41" class="tk">magacin4</a> = 0.0;</td></tr>
+<td><a id="l686" class='ln'>686</a></td><td>        <a id="686c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="686c40" class="tk">magacin</a> = <a id="686c50" class="tk">-</a>1.0;</td></tr>
 <tr name="687" id="687">
-<td><a id="l687" class='ln'>687</a></td><td>        <a id="687c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="687c41" class="tk">magacin1_LastCube</a> = 0.0;</td></tr>
+<td><a id="l687" class='ln'>687</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="688" id="688">
-<td><a id="l688" class='ln'>688</a></td><td>        <a id="688c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="688c41" class="tk">magacin2_LastCube</a> = 0.0;</td></tr>
+<td><a id="l688" class='ln'>688</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="689" id="689">
-<td><a id="l689" class='ln'>689</a></td><td>        <a id="689c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="689c40" class="tk">magacin</a> = <a id="689c50" class="tk">-</a>1.0;</td></tr>
+<td><a id="l689" class='ln'>689</a></td><td>    <span class="br">}</span></td></tr>
 <tr name="690" id="690">
-<td><a id="l690" class='ln'>690</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l690" class='ln'>690</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="691" id="691">
-<td><a id="l691" class='ln'>691</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l691" class='ln'>691</a></td><td></td></tr>
 <tr name="692" id="692">
-<td><a id="l692" class='ln'>692</a></td><td>    <span class="br">}</span></td></tr>
+<td><a id="l692" class='ln'>692</a></td><td>  <span class="ct">/* End of Chart: '<a class="ct blk" blk_line="692">&lt;Root&gt;/Sortieralgorithmus</a>' */</span></td></tr>
 <tr name="693" id="693">
-<td><a id="l693" class='ln'>693</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l693" class='ln'>693</a></td><td></td></tr>
 <tr name="694" id="694">
-<td><a id="l694" class='ln'>694</a></td><td></td></tr>
+<td><a id="l694" class='ln'>694</a></td><td>  <span class="ct">/* Lookup_n-D: '<a class="ct blk" blk_line="694">&lt;Root&gt;/1-D Lookup Table</a>' */</span></td></tr>
 <tr name="695" id="695">
-<td><a id="l695" class='ln'>695</a></td><td>  <span class="ct">/* End of Chart: '<a class="ct blk" blk_line="695">&lt;Root&gt;/Sortieralgorithmus</a>' */</span></td></tr>
+<td><a id="l695" class='ln'>695</a></td><td>  <a id="695c3" class="tk">rtb_uDLookupTable</a> = <a id="695c23" class="tk">look1_binlxpw</a>(<a id="695c37" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="695c68" class="tk">magacin</a>,</td></tr>
 <tr name="696" id="696">
-<td><a id="l696" class='ln'>696</a></td><td></td></tr>
+<td><a id="l696" class='ln'>696</a></td><td>    <a id="696c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="696c36" class="tk">uDLookupTable_bp01Data</a>,</td></tr>
 <tr name="697" id="697">
-<td><a id="l697" class='ln'>697</a></td><td>  <span class="ct">/* Chart: '<a class="ct blk" blk_line="697">&lt;Root&gt;/Chart1</a>' incorporates:</span></td></tr>
+<td><a id="l697" class='ln'>697</a></td><td>    <a id="697c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="697c36" class="tk">uDLookupTable_tableData</a>, 7UL);</td></tr>
 <tr name="698" id="698">
-<td><a id="l698" class='ln'>698</a></td><td><span class="ct">   *  Lookup_n-D: '<a class="ct blk" blk_line="698">&lt;Root&gt;/1-D Lookup Table</a>'</span></td></tr>
+<td><a id="l698" class='ln'>698</a></td><td></td></tr>
 <tr name="699" id="699">
-<td><a id="l699" class='ln'>699</a></td><td><span class="ct">   */</span></td></tr>
+<td><a id="l699" class='ln'>699</a></td><td>  <span class="ct">/* Chart: '<a class="ct blk" blk_line="699">&lt;Root&gt;/Chart1</a>' */</span></td></tr>
 <tr name="700" id="700">
 <td><a id="l700" class='ln'>700</a></td><td>  <span class="kw">if</span> (<a id="700c7" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="700c39" class="tk">temporalCounter_i1_o</a> <a id="700c60" class="tk">&lt;</a> 511U) <span class="br">{</span></td></tr>
 <tr name="701" id="701">
@@ -1463,917 +1463,1139 @@
 <tr name="726" id="726">
 <td><a id="l726" class='ln'>726</a></td><td>     <span class="kw">case</span> <a id="726c11" class="tk">SortierAlgorithm_IN_goToMagacin</a><a id="726c42" class="tk">:</a></td></tr>
 <tr name="727" id="727">
-<td><a id="l727" class='ln'>727</a></td><td>      <span class="kw">if</span> ((<a id="727c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="727c43" class="tk">RateTransition3</a> <a id="727c59" class="tk">&gt;</a> <a id="727c61" class="tk">-</a>445.0) <a id="727c69" class="tk">&amp;&amp;</a></td></tr>
+<td><a id="l727" class='ln'>727</a></td><td>      <span class="kw">if</span> ((<a id="727c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="727c43" class="tk">RateTransition3</a> <a id="727c59" class="tk">&gt;</a></td></tr>
 <tr name="728" id="728">
-<td><a id="l728" class='ln'>728</a></td><td>          (<a id="728c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="728c43" class="tk">RateTransition3</a> <a id="728c59" class="tk">&lt;</a> <a id="728c61" class="tk">-</a>435.0)) <span class="br">{</span></td></tr>
+<td><a id="l728" class='ln'>728</a></td><td>           <a id="728c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="728c43" class="tk">angle</a> <a id="728c49" class="tk">-</a> 5.0) <a id="728c56" class="tk">&amp;&amp;</a></td></tr>
 <tr name="729" id="729">
-<td><a id="l729" class='ln'>729</a></td><td>        <a id="729c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="729c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l729" class='ln'>729</a></td><td>          (<a id="729c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="729c43" class="tk">RateTransition3</a> <a id="729c59" class="tk">&lt;</a></td></tr>
 <tr name="730" id="730">
-<td><a id="l730" class='ln'>730</a></td><td>          <a id="730c11" class="tk">SortierAlgorithmusE_IN_openGate</a>;</td></tr>
+<td><a id="l730" class='ln'>730</a></td><td>           <a id="730c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="730c43" class="tk">angle</a> <a id="730c49" class="tk">+</a> 5.0)) <span class="br">{</span></td></tr>
 <tr name="731" id="731">
-<td><a id="l731" class='ln'>731</a></td><td>        <a id="731c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="731c41" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
+<td><a id="l731" class='ln'>731</a></td><td>        <a id="731c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="731c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="732" id="732">
-<td><a id="l732" class='ln'>732</a></td><td>        <a id="732c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="732c40" class="tk">gatePWM</a> = 50.0;</td></tr>
+<td><a id="l732" class='ln'>732</a></td><td>          <a id="732c11" class="tk">SortierAlgorithmusE_IN_openGate</a>;</td></tr>
 <tr name="733" id="733">
-<td><a id="l733" class='ln'>733</a></td><td>        <a id="733c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="733c40" class="tk">gateDirection</a> = 1.0;</td></tr>
+<td><a id="l733" class='ln'>733</a></td><td>        <a id="733c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="733c41" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
 <tr name="734" id="734">
-<td><a id="l734" class='ln'>734</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l734" class='ln'>734</a></td><td>        <a id="734c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="734c40" class="tk">gatePWM</a> = 50.0;</td></tr>
 <tr name="735" id="735">
-<td><a id="l735" class='ln'>735</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l735" class='ln'>735</a></td><td>        <a id="735c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="735c40" class="tk">gateDirection</a> = 1.0;</td></tr>
 <tr name="736" id="736">
-<td><a id="l736" class='ln'>736</a></td><td></td></tr>
+<td><a id="l736" class='ln'>736</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="737" id="737">
-<td><a id="l737" class='ln'>737</a></td><td>     <span class="kw">case</span> <a id="737c11" class="tk">SortierAlgorithmusE_IN_goToZero</a><a id="737c42" class="tk">:</a></td></tr>
+<td><a id="l737" class='ln'>737</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="738" id="738">
-<td><a id="l738" class='ln'>738</a></td><td>      <span class="kw">if</span> ((<a id="738c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="738c43" class="tk">RateTransition3</a> <a id="738c59" class="tk">&gt;</a> <a id="738c61" class="tk">-</a>5.0) <a id="738c67" class="tk">&amp;&amp;</a></td></tr>
+<td><a id="l738" class='ln'>738</a></td><td></td></tr>
 <tr name="739" id="739">
-<td><a id="l739" class='ln'>739</a></td><td>          (<a id="739c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="739c43" class="tk">RateTransition3</a> <a id="739c59" class="tk">&lt;</a> 5.0)) <span class="br">{</span></td></tr>
+<td><a id="l739" class='ln'>739</a></td><td>     <span class="kw">case</span> <a id="739c11" class="tk">SortierAlgorithmusE_IN_goToZero</a><a id="739c42" class="tk">:</a></td></tr>
 <tr name="740" id="740">
-<td><a id="l740" class='ln'>740</a></td><td>        <a id="740c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="740c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l740" class='ln'>740</a></td><td>      <span class="kw">if</span> ((<a id="740c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="740c43" class="tk">RateTransition3</a> <a id="740c59" class="tk">&gt;</a> <a id="740c61" class="tk">-</a>5.0) <a id="740c67" class="tk">&amp;&amp;</a></td></tr>
 <tr name="741" id="741">
-<td><a id="l741" class='ln'>741</a></td><td>          <a id="741c11" class="tk">SortierAlgorithmusEchtS_IN_wait</a>;</td></tr>
+<td><a id="l741" class='ln'>741</a></td><td>          (<a id="741c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="741c43" class="tk">RateTransition3</a> <a id="741c59" class="tk">&lt;</a> 5.0)) <span class="br">{</span></td></tr>
 <tr name="742" id="742">
-<td><a id="l742" class='ln'>742</a></td><td>        <a id="742c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="742c41" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
+<td><a id="l742" class='ln'>742</a></td><td>        <a id="742c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="742c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="743" id="743">
-<td><a id="l743" class='ln'>743</a></td><td>        <a id="743c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="743c40" class="tk">gatePWM</a> = 0.0;</td></tr>
+<td><a id="l743" class='ln'>743</a></td><td>          <a id="743c11" class="tk">SortierAlgorithmusEchtS_IN_wait</a>;</td></tr>
 <tr name="744" id="744">
-<td><a id="l744" class='ln'>744</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l744" class='ln'>744</a></td><td>        <a id="744c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="744c41" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
 <tr name="745" id="745">
-<td><a id="l745" class='ln'>745</a></td><td>        <a id="745c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="745c40" class="tk">angle</a> = 0.0;</td></tr>
+<td><a id="l745" class='ln'>745</a></td><td>        <a id="745c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="745c40" class="tk">gatePWM</a> = 0.0;</td></tr>
 <tr name="746" id="746">
-<td><a id="l746" class='ln'>746</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l746" class='ln'>746</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="747" id="747">
-<td><a id="l747" class='ln'>747</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l747" class='ln'>747</a></td><td>        <a id="747c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="747c40" class="tk">angle</a> = 0.0;</td></tr>
 <tr name="748" id="748">
-<td><a id="l748" class='ln'>748</a></td><td></td></tr>
+<td><a id="l748" class='ln'>748</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="749" id="749">
-<td><a id="l749" class='ln'>749</a></td><td>     <span class="kw">case</span> <a id="749c11" class="tk">SortierAlgorithmusE_IN_openGate</a><a id="749c42" class="tk">:</a></td></tr>
+<td><a id="l749" class='ln'>749</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="750" id="750">
-<td><a id="l750" class='ln'>750</a></td><td>      <span class="kw">if</span> (<a id="750c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="750c43" class="tk">temporalCounter_i1_o</a> <a id="750c64" class="tk">&gt;=</a> 70U) <span class="br">{</span></td></tr>
+<td><a id="l750" class='ln'>750</a></td><td></td></tr>
 <tr name="751" id="751">
-<td><a id="l751" class='ln'>751</a></td><td>        <a id="751c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="751c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l751" class='ln'>751</a></td><td>     <span class="kw">case</span> <a id="751c11" class="tk">SortierAlgorithmusE_IN_openGate</a><a id="751c42" class="tk">:</a></td></tr>
 <tr name="752" id="752">
-<td><a id="l752" class='ln'>752</a></td><td>          <a id="752c11" class="tk">SortierAlgorithmus_IN_closeGate</a>;</td></tr>
+<td><a id="l752" class='ln'>752</a></td><td>      <span class="kw">if</span> (<a id="752c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="752c43" class="tk">temporalCounter_i1_o</a> <a id="752c64" class="tk">&gt;=</a> 70U) <span class="br">{</span></td></tr>
 <tr name="753" id="753">
-<td><a id="l753" class='ln'>753</a></td><td>        <a id="753c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="753c40" class="tk">gateDirection</a> = 0.0;</td></tr>
+<td><a id="l753" class='ln'>753</a></td><td>        <a id="753c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="753c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="754" id="754">
-<td><a id="l754" class='ln'>754</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l754" class='ln'>754</a></td><td>          <a id="754c11" class="tk">SortierAlgorithmus_IN_closeGate</a>;</td></tr>
 <tr name="755" id="755">
-<td><a id="l755" class='ln'>755</a></td><td>        <a id="755c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="755c40" class="tk">gatePWM</a> = 50.0;</td></tr>
+<td><a id="l755" class='ln'>755</a></td><td>        <a id="755c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="755c40" class="tk">gateDirection</a> = 0.0;</td></tr>
 <tr name="756" id="756">
-<td><a id="l756" class='ln'>756</a></td><td>        <a id="756c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="756c40" class="tk">gateDirection</a> = 1.0;</td></tr>
+<td><a id="l756" class='ln'>756</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="757" id="757">
-<td><a id="l757" class='ln'>757</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l757" class='ln'>757</a></td><td>        <a id="757c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="757c40" class="tk">gatePWM</a> = 50.0;</td></tr>
 <tr name="758" id="758">
-<td><a id="l758" class='ln'>758</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l758" class='ln'>758</a></td><td>        <a id="758c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="758c40" class="tk">gateDirection</a> = 1.0;</td></tr>
 <tr name="759" id="759">
-<td><a id="l759" class='ln'>759</a></td><td></td></tr>
+<td><a id="l759" class='ln'>759</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="760" id="760">
-<td><a id="l760" class='ln'>760</a></td><td>     <span class="kw">case</span> <a id="760c11" class="tk">SortierAlgorithmusEchtS_IN_wait</a><a id="760c42" class="tk">:</a></td></tr>
+<td><a id="l760" class='ln'>760</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="761" id="761">
-<td><a id="l761" class='ln'>761</a></td><td>      <span class="kw">if</span> (<a id="761c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="761c43" class="tk">temporalCounter_i1_o</a> <a id="761c64" class="tk">&gt;=</a> 10U) <span class="br">{</span></td></tr>
+<td><a id="l761" class='ln'>761</a></td><td></td></tr>
 <tr name="762" id="762">
-<td><a id="l762" class='ln'>762</a></td><td>        <a id="762c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="762c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l762" class='ln'>762</a></td><td>     <span class="kw">case</span> <a id="762c11" class="tk">SortierAlgorithmusEchtS_IN_wait</a><a id="762c42" class="tk">:</a></td></tr>
 <tr name="763" id="763">
-<td><a id="l763" class='ln'>763</a></td><td>          <a id="763c11" class="tk">SortierAlgorithm_IN_goToMagacin</a>;</td></tr>
+<td><a id="l763" class='ln'>763</a></td><td>      <span class="kw">if</span> (<a id="763c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="763c43" class="tk">temporalCounter_i1_o</a> <a id="763c64" class="tk">&gt;=</a> 10U) <span class="br">{</span></td></tr>
 <tr name="764" id="764">
-<td><a id="l764" class='ln'>764</a></td><td>        <a id="764c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="764c40" class="tk">angle</a> = <a id="764c48" class="tk">look1_binlxpw</a></td></tr>
+<td><a id="l764" class='ln'>764</a></td><td>        <a id="764c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="764c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="765" id="765">
-<td><a id="l765" class='ln'>765</a></td><td>          (<a id="765c12" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="765c43" class="tk">magacin</a>,</td></tr>
+<td><a id="l765" class='ln'>765</a></td><td>          <a id="765c11" class="tk">SortierAlgorithm_IN_goToMagacin</a>;</td></tr>
 <tr name="766" id="766">
-<td><a id="l766" class='ln'>766</a></td><td>           <a id="766c12" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="766c43" class="tk">uDLookupTable_bp01Data</a>,</td></tr>
+<td><a id="l766" class='ln'>766</a></td><td>        <a id="766c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="766c40" class="tk">angle</a> = <a id="766c48" class="tk">rtb_uDLookupTable</a>;</td></tr>
 <tr name="767" id="767">
-<td><a id="l767" class='ln'>767</a></td><td>           <a id="767c12" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="767c43" class="tk">uDLookupTable_tableData</a>, 6UL);</td></tr>
+<td><a id="l767" class='ln'>767</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="768" id="768">
-<td><a id="l768" class='ln'>768</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l768" class='ln'>768</a></td><td>        <a id="768c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="768c40" class="tk">gatePWM</a> = 0.0;</td></tr>
 <tr name="769" id="769">
-<td><a id="l769" class='ln'>769</a></td><td>        <a id="769c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="769c40" class="tk">gatePWM</a> = 0.0;</td></tr>
+<td><a id="l769" class='ln'>769</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="770" id="770">
-<td><a id="l770" class='ln'>770</a></td><td>      <span class="br">}</span></td></tr>
+<td><a id="l770" class='ln'>770</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="771" id="771">
-<td><a id="l771" class='ln'>771</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l771" class='ln'>771</a></td><td></td></tr>
 <tr name="772" id="772">
-<td><a id="l772" class='ln'>772</a></td><td></td></tr>
+<td><a id="l772" class='ln'>772</a></td><td>     <span class="kw">default</span><a id="772c13" class="tk">:</a></td></tr>
 <tr name="773" id="773">
-<td><a id="l773" class='ln'>773</a></td><td>     <span class="kw">default</span><a id="773c13" class="tk">:</a></td></tr>
+<td><a id="l773" class='ln'>773</a></td><td>      <span class="kw">if</span> (<a id="773c11" class="tk">rtb_uDLookupTable</a> <a id="773c29" class="tk">!=</a> <a id="773c32" class="tk">-</a>1.0) <span class="br">{</span></td></tr>
 <tr name="774" id="774">
-<td><a id="l774" class='ln'>774</a></td><td>      <a id="774c7" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="774c39" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l774" class='ln'>774</a></td><td>        <a id="774c9" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="774c41" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="775" id="775">
-<td><a id="l775" class='ln'>775</a></td><td>        <a id="775c9" class="tk">SortierAlgorithmusE_IN_goToZero</a>;</td></tr>
+<td><a id="l775" class='ln'>775</a></td><td>          <a id="775c11" class="tk">SortierAlgorithmusE_IN_goToZero</a>;</td></tr>
 <tr name="776" id="776">
-<td><a id="l776" class='ln'>776</a></td><td>      <a id="776c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="776c38" class="tk">angle</a> = 0.0;</td></tr>
+<td><a id="l776" class='ln'>776</a></td><td>        <a id="776c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="776c40" class="tk">angle</a> = 0.0;</td></tr>
 <tr name="777" id="777">
-<td><a id="l777" class='ln'>777</a></td><td>      <span class="kw">break</span>;</td></tr>
+<td><a id="l777" class='ln'>777</a></td><td>      <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="778" id="778">
-<td><a id="l778" class='ln'>778</a></td><td>    <span class="br">}</span></td></tr>
+<td><a id="l778" class='ln'>778</a></td><td>        <span class="kw">if</span> (<a id="778c13" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="778c45" class="tk">temporalCounter_i1_o</a> <a id="778c66" class="tk">&gt;=</a> 50U) <span class="br">{</span></td></tr>
 <tr name="779" id="779">
-<td><a id="l779" class='ln'>779</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l779" class='ln'>779</a></td><td>          <a id="779c11" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="779c42" class="tk">gatePWM</a> = 0.0;</td></tr>
 <tr name="780" id="780">
-<td><a id="l780" class='ln'>780</a></td><td></td></tr>
+<td><a id="l780" class='ln'>780</a></td><td>          <a id="780c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="780c43" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
 <tr name="781" id="781">
-<td><a id="l781" class='ln'>781</a></td><td>  <span class="ct">/* End of Chart: '<a class="ct blk" blk_line="781">&lt;Root&gt;/Chart1</a>' */</span></td></tr>
+<td><a id="l781" class='ln'>781</a></td><td>            <a id="781c13" class="tk">SortierAlgorithm_IN_waitForCube</a>;</td></tr>
 <tr name="782" id="782">
-<td><a id="l782" class='ln'>782</a></td><td></td></tr>
+<td><a id="l782" class='ln'>782</a></td><td>          <a id="782c11" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="782c43" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
 <tr name="783" id="783">
-<td><a id="l783" class='ln'>783</a></td><td>  <span class="ct">/* S-Function (c280xgpio_do): '<a class="ct blk" blk_line="783">&lt;Root&gt;/Drehrichtungsvorgabe für einen Motor1</a>' */</span></td></tr>
+<td><a id="l783" class='ln'>783</a></td><td>        <span class="br">}</span></td></tr>
 <tr name="784" id="784">
-<td><a id="l784" class='ln'>784</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l784" class='ln'>784</a></td><td>      <span class="br">}</span></td></tr>
 <tr name="785" id="785">
-<td><a id="l785" class='ln'>785</a></td><td>    <span class="kw">if</span> (<a id="785c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="785c40" class="tk">gateDirection</a>)</td></tr>
+<td><a id="l785" class='ln'>785</a></td><td>      <span class="kw">break</span>;</td></tr>
 <tr name="786" id="786">
-<td><a id="l786" class='ln'>786</a></td><td>      <a id="786c7" class="tk">GpioDataRegs</a>.<a id="786c20" class="tk">GPASET</a>.<a id="786c27" class="tk">bit</a>.<a id="786c31" class="tk">GPIO17</a> = 1;</td></tr>
+<td><a id="l786" class='ln'>786</a></td><td>    <span class="br">}</span></td></tr>
 <tr name="787" id="787">
-<td><a id="l787" class='ln'>787</a></td><td>    <span class="kw">else</span></td></tr>
+<td><a id="l787" class='ln'>787</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="788" id="788">
-<td><a id="l788" class='ln'>788</a></td><td>      <a id="788c7" class="tk">GpioDataRegs</a>.<a id="788c20" class="tk">GPACLEAR</a>.<a id="788c29" class="tk">bit</a>.<a id="788c33" class="tk">GPIO17</a> = 1;</td></tr>
+<td><a id="l788" class='ln'>788</a></td><td></td></tr>
 <tr name="789" id="789">
-<td><a id="l789" class='ln'>789</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l789" class='ln'>789</a></td><td>  <span class="ct">/* End of Chart: '<a class="ct blk" blk_line="789">&lt;Root&gt;/Chart1</a>' */</span></td></tr>
 <tr name="790" id="790">
 <td><a id="l790" class='ln'>790</a></td><td></td></tr>
 <tr name="791" id="791">
-<td><a id="l791" class='ln'>791</a></td><td>  <span class="ct">/* Sum: '<a class="ct blk" blk_line="791">&lt;S5&gt;/Sum</a>' */</span></td></tr>
+<td><a id="l791" class='ln'>791</a></td><td>  <span class="ct">/* S-Function (c280xgpio_do): '<a class="ct blk" blk_line="791">&lt;Root&gt;/Drehrichtungsvorgabe für einen Motor1</a>' */</span></td></tr>
 <tr name="792" id="792">
-<td><a id="l792" class='ln'>792</a></td><td>  <a id="792c3" class="tk">rtb_DeadZone</a> = <a id="792c18" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="792c49" class="tk">angle</a> <a id="792c55" class="tk">-</a></td></tr>
+<td><a id="l792" class='ln'>792</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="793" id="793">
-<td><a id="l793" class='ln'>793</a></td><td>    <a id="793c5" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="793c36" class="tk">RateTransition3</a>;</td></tr>
+<td><a id="l793" class='ln'>793</a></td><td>    <span class="kw">if</span> (<a id="793c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="793c40" class="tk">gateDirection</a>)</td></tr>
 <tr name="794" id="794">
-<td><a id="l794" class='ln'>794</a></td><td></td></tr>
+<td><a id="l794" class='ln'>794</a></td><td>      <a id="794c7" class="tk">GpioDataRegs</a>.<a id="794c20" class="tk">GPASET</a>.<a id="794c27" class="tk">bit</a>.<a id="794c31" class="tk">GPIO17</a> = 1;</td></tr>
 <tr name="795" id="795">
-<td><a id="l795" class='ln'>795</a></td><td>  <span class="ct">/* DeadZone: '<a class="ct blk" blk_line="795">&lt;S5&gt;/Dead Zone</a>' */</span></td></tr>
+<td><a id="l795" class='ln'>795</a></td><td>    <span class="kw">else</span></td></tr>
 <tr name="796" id="796">
-<td><a id="l796" class='ln'>796</a></td><td>  <span class="kw">if</span> (<a id="796c7" class="tk">rtb_DeadZone</a> <a id="796c20" class="tk">&gt;</a> <a id="796c22" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="796c53" class="tk">DeadZone_End</a>) <span class="br">{</span></td></tr>
+<td><a id="l796" class='ln'>796</a></td><td>      <a id="796c7" class="tk">GpioDataRegs</a>.<a id="796c20" class="tk">GPACLEAR</a>.<a id="796c29" class="tk">bit</a>.<a id="796c33" class="tk">GPIO17</a> = 1;</td></tr>
 <tr name="797" id="797">
-<td><a id="l797" class='ln'>797</a></td><td>    <a id="797c5" class="tk">rtb_DeadZone</a> <a id="797c18" class="tk">-=</a> <a id="797c21" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="797c52" class="tk">DeadZone_End</a>;</td></tr>
+<td><a id="l797" class='ln'>797</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="798" id="798">
-<td><a id="l798" class='ln'>798</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="798c14" class="tk">rtb_DeadZone</a> <a id="798c27" class="tk">&gt;=</a> <a id="798c30" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="798c61" class="tk">DeadZone_Start</a>) <span class="br">{</span></td></tr>
+<td><a id="l798" class='ln'>798</a></td><td></td></tr>
 <tr name="799" id="799">
-<td><a id="l799" class='ln'>799</a></td><td>    <a id="799c5" class="tk">rtb_DeadZone</a> = 0.0;</td></tr>
+<td><a id="l799" class='ln'>799</a></td><td>  <span class="ct">/* Sum: '<a class="ct blk" blk_line="799">&lt;S5&gt;/Sum</a>' */</span></td></tr>
 <tr name="800" id="800">
-<td><a id="l800" class='ln'>800</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l800" class='ln'>800</a></td><td>  <a id="800c3" class="tk">rtb_uDLookupTable</a> = <a id="800c23" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="800c54" class="tk">angle</a> <a id="800c60" class="tk">-</a></td></tr>
 <tr name="801" id="801">
-<td><a id="l801" class='ln'>801</a></td><td>    <a id="801c5" class="tk">rtb_DeadZone</a> <a id="801c18" class="tk">-=</a> <a id="801c21" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="801c52" class="tk">DeadZone_Start</a>;</td></tr>
+<td><a id="l801" class='ln'>801</a></td><td>    <a id="801c5" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="801c36" class="tk">RateTransition3</a>;</td></tr>
 <tr name="802" id="802">
-<td><a id="l802" class='ln'>802</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l802" class='ln'>802</a></td><td></td></tr>
 <tr name="803" id="803">
-<td><a id="l803" class='ln'>803</a></td><td></td></tr>
+<td><a id="l803" class='ln'>803</a></td><td>  <span class="ct">/* DeadZone: '<a class="ct blk" blk_line="803">&lt;S5&gt;/Dead Zone</a>' */</span></td></tr>
 <tr name="804" id="804">
-<td><a id="l804" class='ln'>804</a></td><td>  <span class="ct">/* End of DeadZone: '<a class="ct blk" blk_line="804">&lt;S5&gt;/Dead Zone</a>' */</span></td></tr>
+<td><a id="l804" class='ln'>804</a></td><td>  <span class="kw">if</span> (<a id="804c7" class="tk">rtb_uDLookupTable</a> <a id="804c25" class="tk">&gt;</a> <a id="804c27" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="804c58" class="tk">DeadZone_End</a>) <span class="br">{</span></td></tr>
 <tr name="805" id="805">
-<td><a id="l805" class='ln'>805</a></td><td></td></tr>
+<td><a id="l805" class='ln'>805</a></td><td>    <a id="805c5" class="tk">rtb_uDLookupTable</a> <a id="805c23" class="tk">-=</a> <a id="805c26" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="805c57" class="tk">DeadZone_End</a>;</td></tr>
 <tr name="806" id="806">
-<td><a id="l806" class='ln'>806</a></td><td>  <span class="ct">/* Gain: '<a class="ct blk" blk_line="806">&lt;S5&gt;/Verstaerkung</a>' */</span></td></tr>
+<td><a id="l806" class='ln'>806</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="806c14" class="tk">rtb_uDLookupTable</a> <a id="806c32" class="tk">&gt;=</a> <a id="806c35" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="806c66" class="tk">DeadZone_Start</a>)</td></tr>
 <tr name="807" id="807">
-<td><a id="l807" class='ln'>807</a></td><td>  <a id="807c3" class="tk">rtb_DeadZone</a> <a id="807c16" class="tk">*=</a> <a id="807c19" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="807c50" class="tk">Verstaerkung_Gain</a>;</td></tr>
+<td><a id="l807" class='ln'>807</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="808" id="808">
-<td><a id="l808" class='ln'>808</a></td><td></td></tr>
+<td><a id="l808" class='ln'>808</a></td><td>    <a id="808c5" class="tk">rtb_uDLookupTable</a> = 0.0;</td></tr>
 <tr name="809" id="809">
-<td><a id="l809" class='ln'>809</a></td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="809">&lt;S5&gt;/Richtung</a>' */</span></td></tr>
+<td><a id="l809" class='ln'>809</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="810" id="810">
-<td><a id="l810" class='ln'>810</a></td><td>  <a id="810c3" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="810c34" class="tk">y</a> = (<a id="810c39" class="tk">rtb_DeadZone</a> <a id="810c52" class="tk">&gt;</a> 0.0);</td></tr>
+<td><a id="l810" class='ln'>810</a></td><td>    <a id="810c5" class="tk">rtb_uDLookupTable</a> <a id="810c23" class="tk">-=</a> <a id="810c26" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="810c57" class="tk">DeadZone_Start</a>;</td></tr>
 <tr name="811" id="811">
-<td><a id="l811" class='ln'>811</a></td><td></td></tr>
+<td><a id="l811" class='ln'>811</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="812" id="812">
-<td><a id="l812" class='ln'>812</a></td><td>  <span class="ct">/* S-Function (c280xgpio_do): '<a class="ct blk" blk_line="812">&lt;S2&gt;/Drehrichtungsvorgabe für einen Motor</a>' */</span></td></tr>
+<td><a id="l812" class='ln'>812</a></td><td></td></tr>
 <tr name="813" id="813">
-<td><a id="l813" class='ln'>813</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l813" class='ln'>813</a></td><td>  <span class="ct">/* End of DeadZone: '<a class="ct blk" blk_line="813">&lt;S5&gt;/Dead Zone</a>' */</span></td></tr>
 <tr name="814" id="814">
-<td><a id="l814" class='ln'>814</a></td><td>    <span class="kw">if</span> (<a id="814c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="814c40" class="tk">y</a>)</td></tr>
+<td><a id="l814" class='ln'>814</a></td><td></td></tr>
 <tr name="815" id="815">
-<td><a id="l815" class='ln'>815</a></td><td>      <a id="815c7" class="tk">GpioDataRegs</a>.<a id="815c20" class="tk">GPASET</a>.<a id="815c27" class="tk">bit</a>.<a id="815c31" class="tk">GPIO21</a> = 1;</td></tr>
+<td><a id="l815" class='ln'>815</a></td><td>  <span class="ct">/* Gain: '<a class="ct blk" blk_line="815">&lt;S5&gt;/Verstaerkung</a>' */</span></td></tr>
 <tr name="816" id="816">
-<td><a id="l816" class='ln'>816</a></td><td>    <span class="kw">else</span></td></tr>
+<td><a id="l816" class='ln'>816</a></td><td>  <a id="816c3" class="tk">rtb_uDLookupTable</a> <a id="816c21" class="tk">*=</a> <a id="816c24" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="816c55" class="tk">Verstaerkung_Gain</a>;</td></tr>
 <tr name="817" id="817">
-<td><a id="l817" class='ln'>817</a></td><td>      <a id="817c7" class="tk">GpioDataRegs</a>.<a id="817c20" class="tk">GPACLEAR</a>.<a id="817c29" class="tk">bit</a>.<a id="817c33" class="tk">GPIO21</a> = 1;</td></tr>
+<td><a id="l817" class='ln'>817</a></td><td></td></tr>
 <tr name="818" id="818">
-<td><a id="l818" class='ln'>818</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l818" class='ln'>818</a></td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="818">&lt;S5&gt;/Richtung</a>' */</span></td></tr>
 <tr name="819" id="819">
-<td><a id="l819" class='ln'>819</a></td><td></td></tr>
+<td><a id="l819" class='ln'>819</a></td><td>  <a id="819c3" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="819c34" class="tk">y</a> = (<a id="819c39" class="tk">rtb_uDLookupTable</a> <a id="819c57" class="tk">&gt;</a> 0.0);</td></tr>
 <tr name="820" id="820">
-<td><a id="l820" class='ln'>820</a></td><td>  <span class="ct">/* Abs: '<a class="ct blk" blk_line="820">&lt;S5&gt;/Abs</a>' */</span></td></tr>
+<td><a id="l820" class='ln'>820</a></td><td></td></tr>
 <tr name="821" id="821">
-<td><a id="l821" class='ln'>821</a></td><td>  <a id="821c3" class="tk">rtb_y_f</a> = <a id="821c13" class="tk">fabs</a>(<a id="821c18" class="tk">rtb_DeadZone</a>);</td></tr>
+<td><a id="l821" class='ln'>821</a></td><td>  <span class="ct">/* S-Function (c280xgpio_do): '<a class="ct blk" blk_line="821">&lt;S2&gt;/Drehrichtungsvorgabe für einen Motor</a>' */</span></td></tr>
 <tr name="822" id="822">
-<td><a id="l822" class='ln'>822</a></td><td></td></tr>
+<td><a id="l822" class='ln'>822</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="823" id="823">
-<td><a id="l823" class='ln'>823</a></td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="823">&lt;S5&gt;/Betrag</a>' */</span></td></tr>
+<td><a id="l823" class='ln'>823</a></td><td>    <span class="kw">if</span> (<a id="823c9" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="823c40" class="tk">y</a>)</td></tr>
 <tr name="824" id="824">
-<td><a id="l824" class='ln'>824</a></td><td>  <span class="kw">if</span> ((0.5 <a id="824c12" class="tk">&lt;</a> <a id="824c14" class="tk">rtb_y_f</a>) <a id="824c23" class="tk">&amp;&amp;</a> (<a id="824c27" class="tk">rtb_y_f</a> <a id="824c35" class="tk">&lt;</a> 60.0)) <span class="br">{</span></td></tr>
+<td><a id="l824" class='ln'>824</a></td><td>      <a id="824c7" class="tk">GpioDataRegs</a>.<a id="824c20" class="tk">GPASET</a>.<a id="824c27" class="tk">bit</a>.<a id="824c31" class="tk">GPIO21</a> = 1;</td></tr>
 <tr name="825" id="825">
-<td><a id="l825" class='ln'>825</a></td><td>    <a id="825c5" class="tk">rtb_y_f</a> = 60.0;</td></tr>
+<td><a id="l825" class='ln'>825</a></td><td>    <span class="kw">else</span></td></tr>
 <tr name="826" id="826">
-<td><a id="l826" class='ln'>826</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="826c14" class="tk">rtb_y_f</a> <a id="826c22" class="tk">&lt;=</a> 0.5) <span class="br">{</span></td></tr>
+<td><a id="l826" class='ln'>826</a></td><td>      <a id="826c7" class="tk">GpioDataRegs</a>.<a id="826c20" class="tk">GPACLEAR</a>.<a id="826c29" class="tk">bit</a>.<a id="826c33" class="tk">GPIO21</a> = 1;</td></tr>
 <tr name="827" id="827">
-<td><a id="l827" class='ln'>827</a></td><td>    <a id="827c5" class="tk">rtb_y_f</a> = 0.0;</td></tr>
+<td><a id="l827" class='ln'>827</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="828" id="828">
-<td><a id="l828" class='ln'>828</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
+<td><a id="l828" class='ln'>828</a></td><td></td></tr>
 <tr name="829" id="829">
-<td><a id="l829" class='ln'>829</a></td><td>    <span class="kw">if</span> (<a id="829c9" class="tk">rtb_y_f</a> <a id="829c17" class="tk">&gt;=</a> 100.0) <span class="br">{</span></td></tr>
+<td><a id="l829" class='ln'>829</a></td><td>  <span class="ct">/* Abs: '<a class="ct blk" blk_line="829">&lt;S5&gt;/Abs</a>' */</span></td></tr>
 <tr name="830" id="830">
-<td><a id="l830" class='ln'>830</a></td><td>      <a id="830c7" class="tk">rtb_y_f</a> = 100.0;</td></tr>
+<td><a id="l830" class='ln'>830</a></td><td>  <a id="830c3" class="tk">rtb_y_f</a> = <a id="830c13" class="tk">fabs</a>(<a id="830c18" class="tk">rtb_uDLookupTable</a>);</td></tr>
 <tr name="831" id="831">
-<td><a id="l831" class='ln'>831</a></td><td>    <span class="br">}</span></td></tr>
+<td><a id="l831" class='ln'>831</a></td><td></td></tr>
 <tr name="832" id="832">
-<td><a id="l832" class='ln'>832</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l832" class='ln'>832</a></td><td>  <span class="ct">/* MATLAB Function: '<a class="ct blk" blk_line="832">&lt;S5&gt;/Betrag</a>' */</span></td></tr>
 <tr name="833" id="833">
-<td><a id="l833" class='ln'>833</a></td><td></td></tr>
+<td><a id="l833" class='ln'>833</a></td><td>  <span class="kw">if</span> ((0.5 <a id="833c12" class="tk">&lt;</a> <a id="833c14" class="tk">rtb_y_f</a>) <a id="833c23" class="tk">&amp;&amp;</a> (<a id="833c27" class="tk">rtb_y_f</a> <a id="833c35" class="tk">&lt;</a> 60.0)) <span class="br">{</span></td></tr>
 <tr name="834" id="834">
-<td><a id="l834" class='ln'>834</a></td><td>  <span class="ct">/* End of MATLAB Function: '<a class="ct blk" blk_line="834">&lt;S5&gt;/Betrag</a>' */</span></td></tr>
+<td><a id="l834" class='ln'>834</a></td><td>    <a id="834c5" class="tk">rtb_y_f</a> = 60.0;</td></tr>
 <tr name="835" id="835">
-<td><a id="l835" class='ln'>835</a></td><td></td></tr>
+<td><a id="l835" class='ln'>835</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="kw">if</span> (<a id="835c14" class="tk">rtb_y_f</a> <a id="835c22" class="tk">&lt;=</a> 0.5) <span class="br">{</span></td></tr>
 <tr name="836" id="836">
-<td><a id="l836" class='ln'>836</a></td><td>  <span class="ct">/* S-Function (c280xpwm): '<a class="ct blk" blk_line="836">&lt;S2&gt;/PWM Vorgabe für einen Motor </a>' */</span></td></tr>
+<td><a id="l836" class='ln'>836</a></td><td>    <a id="836c5" class="tk">rtb_y_f</a> = 0.0;</td></tr>
 <tr name="837" id="837">
-<td><a id="l837" class='ln'>837</a></td><td></td></tr>
+<td><a id="l837" class='ln'>837</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="838" id="838">
-<td><a id="l838" class='ln'>838</a></td><td>  <span class="ct">/*-- Update CMPB value for ePWM2 --*/</span></td></tr>
+<td><a id="l838" class='ln'>838</a></td><td>    <span class="kw">if</span> (<a id="838c9" class="tk">rtb_y_f</a> <a id="838c17" class="tk">&gt;=</a> 100.0) <span class="br">{</span></td></tr>
 <tr name="839" id="839">
-<td><a id="l839" class='ln'>839</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l839" class='ln'>839</a></td><td>      <a id="839c7" class="tk">rtb_y_f</a> = 100.0;</td></tr>
 <tr name="840" id="840">
-<td><a id="l840" class='ln'>840</a></td><td>    <a id="840c5" class="tk">EPwm2Regs</a>.<a id="840c15" class="tk">CMPB</a> = (<a id="840c23" class="tk">uint16_T</a>)((<a id="840c34" class="tk">uint32_T</a>)<a id="840c43" class="tk">EPwm2Regs</a>.<a id="840c53" class="tk">TBPRD</a> <a id="840c59" class="tk">*</a> <a id="840c61" class="tk">rtb_y_f</a> <a id="840c69" class="tk">*</a> 0.01);</td></tr>
+<td><a id="l840" class='ln'>840</a></td><td>    <span class="br">}</span></td></tr>
 <tr name="841" id="841">
 <td><a id="l841" class='ln'>841</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="842" id="842">
 <td><a id="l842" class='ln'>842</a></td><td></td></tr>
 <tr name="843" id="843">
-<td><a id="l843" class='ln'>843</a></td><td>  <span class="ct">/* S-Function (c280xpwm): '<a class="ct blk" blk_line="843">&lt;Root&gt;/PWM Vorgabe für einen Motor 1</a>' */</span></td></tr>
+<td><a id="l843" class='ln'>843</a></td><td>  <span class="ct">/* End of MATLAB Function: '<a class="ct blk" blk_line="843">&lt;S5&gt;/Betrag</a>' */</span></td></tr>
 <tr name="844" id="844">
 <td><a id="l844" class='ln'>844</a></td><td></td></tr>
 <tr name="845" id="845">
-<td><a id="l845" class='ln'>845</a></td><td>  <span class="ct">/*-- Update CMPB value for ePWM3 --*/</span></td></tr>
+<td><a id="l845" class='ln'>845</a></td><td>  <span class="ct">/* S-Function (c280xpwm): '<a class="ct blk" blk_line="845">&lt;S2&gt;/PWM Vorgabe für einen Motor </a>' */</span></td></tr>
 <tr name="846" id="846">
-<td><a id="l846" class='ln'>846</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l846" class='ln'>846</a></td><td></td></tr>
 <tr name="847" id="847">
-<td><a id="l847" class='ln'>847</a></td><td>    <a id="847c5" class="tk">EPwm3Regs</a>.<a id="847c15" class="tk">CMPB</a> = (<a id="847c23" class="tk">uint16_T</a>)((<a id="847c34" class="tk">uint32_T</a>)<a id="847c43" class="tk">EPwm3Regs</a>.<a id="847c53" class="tk">TBPRD</a> <a id="847c59" class="tk">*</a></td></tr>
+<td><a id="l847" class='ln'>847</a></td><td>  <span class="ct">/*-- Update CMPB value for ePWM2 --*/</span></td></tr>
 <tr name="848" id="848">
-<td><a id="l848" class='ln'>848</a></td><td>      <a id="848c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="848c38" class="tk">gatePWM</a> <a id="848c46" class="tk">*</a> 0.01);</td></tr>
+<td><a id="l848" class='ln'>848</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="849" id="849">
-<td><a id="l849" class='ln'>849</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l849" class='ln'>849</a></td><td>    <a id="849c5" class="tk">EPwm2Regs</a>.<a id="849c15" class="tk">CMPB</a> = (<a id="849c23" class="tk">uint16_T</a>)((<a id="849c34" class="tk">uint32_T</a>)<a id="849c43" class="tk">EPwm2Regs</a>.<a id="849c53" class="tk">TBPRD</a> <a id="849c59" class="tk">*</a> <a id="849c61" class="tk">rtb_y_f</a> <a id="849c69" class="tk">*</a> 0.01);</td></tr>
 <tr name="850" id="850">
-<td><a id="l850" class='ln'>850</a></td><td><span class="br">}</span></td></tr>
+<td><a id="l850" class='ln'>850</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="851" id="851">
 <td><a id="l851" class='ln'>851</a></td><td></td></tr>
 <tr name="852" id="852">
-<td><a id="l852" class='ln'>852</a></td><td><span class="ct">/* Model initialize function */</span></td></tr>
+<td><a id="l852" class='ln'>852</a></td><td>  <span class="ct">/* S-Function (c280xpwm): '<a class="ct blk" blk_line="852">&lt;Root&gt;/PWM Vorgabe für einen Motor 1</a>' */</span></td></tr>
 <tr name="853" id="853">
-<td><a id="l853" class='ln'>853</a></td><td><span class="kw">void</span> <a id="853c6" class="tk">SortierAlgorithmusEchtSystem_initialize</a>(<span class="kw">void</span>)</td></tr>
+<td><a id="l853" class='ln'>853</a></td><td></td></tr>
 <tr name="854" id="854">
-<td><a id="l854" class='ln'>854</a></td><td><span class="br">{</span></td></tr>
+<td><a id="l854" class='ln'>854</a></td><td>  <span class="ct">/*-- Update CMPB value for ePWM3 --*/</span></td></tr>
 <tr name="855" id="855">
-<td><a id="l855" class='ln'>855</a></td><td>  <span class="ct">/* Registration code */</span></td></tr>
+<td><a id="l855" class='ln'>855</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="856" id="856">
-<td><a id="l856" class='ln'>856</a></td><td></td></tr>
+<td><a id="l856" class='ln'>856</a></td><td>    <a id="856c5" class="tk">EPwm3Regs</a>.<a id="856c15" class="tk">CMPB</a> = (<a id="856c23" class="tk">uint16_T</a>)((<a id="856c34" class="tk">uint32_T</a>)<a id="856c43" class="tk">EPwm3Regs</a>.<a id="856c53" class="tk">TBPRD</a> <a id="856c59" class="tk">*</a></td></tr>
 <tr name="857" id="857">
-<td><a id="l857" class='ln'>857</a></td><td>  <span class="ct">/* initialize real-time model */</span></td></tr>
+<td><a id="l857" class='ln'>857</a></td><td>      <a id="857c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="857c38" class="tk">gatePWM</a> <a id="857c46" class="tk">*</a> 0.01);</td></tr>
 <tr name="858" id="858">
-<td><a id="l858" class='ln'>858</a></td><td>  (<span class="kw">void</span>) <a id="858c10" class="tk">memset</a>((<span class="kw">void</span> <a id="858c23" class="tk">*</a>)<a id="858c25" class="tk">SortierAlgorithmusEchtSystem_M</a>, 0,</td></tr>
+<td><a id="l858" class='ln'>858</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="859" id="859">
-<td><a id="l859" class='ln'>859</a></td><td>                <span class="kw">sizeof</span>(<a id="859c24" class="tk">RT_MODEL_SortierAlgorithmusEc_T</a>));</td></tr>
+<td><a id="l859" class='ln'>859</a></td><td><span class="br">}</span></td></tr>
 <tr name="860" id="860">
 <td><a id="l860" class='ln'>860</a></td><td></td></tr>
 <tr name="861" id="861">
-<td><a id="l861" class='ln'>861</a></td><td>  <span class="ct">/* block I/O */</span></td></tr>
+<td><a id="l861" class='ln'>861</a></td><td><span class="ct">/* Model initialize function */</span></td></tr>
 <tr name="862" id="862">
-<td><a id="l862" class='ln'>862</a></td><td>  (<span class="kw">void</span>) <a id="862c10" class="tk">memset</a>(((<span class="kw">void</span> <a id="862c24" class="tk">*</a>) <a id="862c27" class="tk">&amp;</a><a id="862c28" class="tk">SortierAlgorithmusEchtSystem_B</a>), 0,</td></tr>
+<td><a id="l862" class='ln'>862</a></td><td><span class="kw">void</span> <a id="862c6" class="tk">SortierAlgorithmusEchtSystem_initialize</a>(<span class="kw">void</span>)</td></tr>
 <tr name="863" id="863">
-<td><a id="l863" class='ln'>863</a></td><td>                <span class="kw">sizeof</span>(<a id="863c24" class="tk">B_SortierAlgorithmusEchtSyste_T</a>));</td></tr>
+<td><a id="l863" class='ln'>863</a></td><td><span class="br">{</span></td></tr>
 <tr name="864" id="864">
-<td><a id="l864" class='ln'>864</a></td><td></td></tr>
+<td><a id="l864" class='ln'>864</a></td><td>  <span class="ct">/* Registration code */</span></td></tr>
 <tr name="865" id="865">
-<td><a id="l865" class='ln'>865</a></td><td>  <span class="ct">/* states (dwork) */</span></td></tr>
+<td><a id="l865" class='ln'>865</a></td><td></td></tr>
 <tr name="866" id="866">
-<td><a id="l866" class='ln'>866</a></td><td>  (<span class="kw">void</span>) <a id="866c10" class="tk">memset</a>((<span class="kw">void</span> <a id="866c23" class="tk">*</a>)<a id="866c25" class="tk">&amp;</a><a id="866c26" class="tk">SortierAlgorithmusEchtSystem_DW</a>, 0,</td></tr>
+<td><a id="l866" class='ln'>866</a></td><td>  <span class="ct">/* initialize real-time model */</span></td></tr>
 <tr name="867" id="867">
-<td><a id="l867" class='ln'>867</a></td><td>                <span class="kw">sizeof</span>(<a id="867c24" class="tk">DW_SortierAlgorithmusEchtSyst_T</a>));</td></tr>
+<td><a id="l867" class='ln'>867</a></td><td>  (<span class="kw">void</span>) <a id="867c10" class="tk">memset</a>((<span class="kw">void</span> <a id="867c23" class="tk">*</a>)<a id="867c25" class="tk">SortierAlgorithmusEchtSystem_M</a>, 0,</td></tr>
 <tr name="868" id="868">
-<td><a id="l868" class='ln'>868</a></td><td></td></tr>
+<td><a id="l868" class='ln'>868</a></td><td>                <span class="kw">sizeof</span>(<a id="868c24" class="tk">RT_MODEL_SortierAlgorithmusEc_T</a>));</td></tr>
 <tr name="869" id="869">
-<td><a id="l869" class='ln'>869</a></td><td>  <span class="ct">/* Machine initializer */</span></td></tr>
+<td><a id="l869" class='ln'>869</a></td><td></td></tr>
 <tr name="870" id="870">
-<td><a id="l870" class='ln'>870</a></td><td>  <a id="870c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="870c35" class="tk">magacin</a> = 0.0;</td></tr>
+<td><a id="l870" class='ln'>870</a></td><td>  <span class="ct">/* block I/O */</span></td></tr>
 <tr name="871" id="871">
-<td><a id="l871" class='ln'>871</a></td><td></td></tr>
+<td><a id="l871" class='ln'>871</a></td><td>  (<span class="kw">void</span>) <a id="871c10" class="tk">memset</a>(((<span class="kw">void</span> <a id="871c24" class="tk">*</a>) <a id="871c27" class="tk">&amp;</a><a id="871c28" class="tk">SortierAlgorithmusEchtSystem_B</a>), 0,</td></tr>
 <tr name="872" id="872">
-<td><a id="l872" class='ln'>872</a></td><td>  <span class="ct">/* Start for S-Function (c280xadc): '<a class="ct blk" blk_line="872">&lt;Root&gt;/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv</a>' */</span></td></tr>
+<td><a id="l872" class='ln'>872</a></td><td>                <span class="kw">sizeof</span>(<a id="872c24" class="tk">B_SortierAlgorithmusEchtSyste_T</a>));</td></tr>
 <tr name="873" id="873">
-<td><a id="l873" class='ln'>873</a></td><td>  <span class="kw">if</span> (<a id="873c7" class="tk">adcInitFlag</a> <a id="873c19" class="tk">==</a> 0) <span class="br">{</span></td></tr>
+<td><a id="l873" class='ln'>873</a></td><td></td></tr>
 <tr name="874" id="874">
-<td><a id="l874" class='ln'>874</a></td><td>    <a id="874c5" class="tk">InitAdc</a>();</td></tr>
+<td><a id="l874" class='ln'>874</a></td><td>  <span class="ct">/* states (dwork) */</span></td></tr>
 <tr name="875" id="875">
-<td><a id="l875" class='ln'>875</a></td><td>    <a id="875c5" class="tk">adcInitFlag</a> = 1;</td></tr>
+<td><a id="l875" class='ln'>875</a></td><td>  (<span class="kw">void</span>) <a id="875c10" class="tk">memset</a>((<span class="kw">void</span> <a id="875c23" class="tk">*</a>)<a id="875c25" class="tk">&amp;</a><a id="875c26" class="tk">SortierAlgorithmusEchtSystem_DW</a>, 0,</td></tr>
 <tr name="876" id="876">
-<td><a id="l876" class='ln'>876</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l876" class='ln'>876</a></td><td>                <span class="kw">sizeof</span>(<a id="876c24" class="tk">DW_SortierAlgorithmusEchtSyst_T</a>));</td></tr>
 <tr name="877" id="877">
 <td><a id="l877" class='ln'>877</a></td><td></td></tr>
 <tr name="878" id="878">
-<td><a id="l878" class='ln'>878</a></td><td>  <a id="878c3" class="tk">config_ADC_A</a> (3U, 4146U, 0U, 0U, 0U);</td></tr>
+<td><a id="l878" class='ln'>878</a></td><td>  <span class="ct">/* Machine initializer */</span></td></tr>
 <tr name="879" id="879">
-<td><a id="l879" class='ln'>879</a></td><td></td></tr>
+<td><a id="l879" class='ln'>879</a></td><td>  <a id="879c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="879c35" class="tk">magacin</a> = 0.0;</td></tr>
 <tr name="880" id="880">
-<td><a id="l880" class='ln'>880</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="880">&lt;Root&gt;/Drehrichtungsvorgabe für einen Motor1</a>' */</span></td></tr>
+<td><a id="l880" class='ln'>880</a></td><td></td></tr>
 <tr name="881" id="881">
-<td><a id="l881" class='ln'>881</a></td><td>  <a id="881c3" class="tk">EALLOW</a>;</td></tr>
+<td><a id="l881" class='ln'>881</a></td><td>  <span class="ct">/* Start for S-Function (c280xadc): '<a class="ct blk" blk_line="881">&lt;Root&gt;/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv</a>' */</span></td></tr>
 <tr name="882" id="882">
-<td><a id="l882" class='ln'>882</a></td><td>  <a id="882c3" class="tk">GpioCtrlRegs</a>.<a id="882c16" class="tk">GPAMUX2</a>.<a id="882c24" class="tk">all</a> <a id="882c28" class="tk">&amp;=</a> 0xFFFFFFF3;</td></tr>
+<td><a id="l882" class='ln'>882</a></td><td>  <span class="kw">if</span> (<a id="882c7" class="tk">adcInitFlag</a> <a id="882c19" class="tk">==</a> 0) <span class="br">{</span></td></tr>
 <tr name="883" id="883">
-<td><a id="l883" class='ln'>883</a></td><td>  <a id="883c3" class="tk">GpioCtrlRegs</a>.<a id="883c16" class="tk">GPADIR</a>.<a id="883c23" class="tk">all</a> <a id="883c27" class="tk">|=</a> 0x20000;</td></tr>
+<td><a id="l883" class='ln'>883</a></td><td>    <a id="883c5" class="tk">InitAdc</a>();</td></tr>
 <tr name="884" id="884">
-<td><a id="l884" class='ln'>884</a></td><td>  <a id="884c3" class="tk">EDIS</a>;</td></tr>
+<td><a id="l884" class='ln'>884</a></td><td>    <a id="884c5" class="tk">adcInitFlag</a> = 1;</td></tr>
 <tr name="885" id="885">
-<td><a id="l885" class='ln'>885</a></td><td></td></tr>
+<td><a id="l885" class='ln'>885</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="886" id="886">
-<td><a id="l886" class='ln'>886</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="886">&lt;S2&gt;/Drehrichtungsvorgabe für einen Motor</a>' */</span></td></tr>
+<td><a id="l886" class='ln'>886</a></td><td></td></tr>
 <tr name="887" id="887">
-<td><a id="l887" class='ln'>887</a></td><td>  <a id="887c3" class="tk">EALLOW</a>;</td></tr>
+<td><a id="l887" class='ln'>887</a></td><td>  <a id="887c3" class="tk">config_ADC_A</a> (3U, 4146U, 0U, 0U, 0U);</td></tr>
 <tr name="888" id="888">
-<td><a id="l888" class='ln'>888</a></td><td>  <a id="888c3" class="tk">GpioCtrlRegs</a>.<a id="888c16" class="tk">GPAMUX2</a>.<a id="888c24" class="tk">all</a> <a id="888c28" class="tk">&amp;=</a> 0xFFFFF3FF;</td></tr>
+<td><a id="l888" class='ln'>888</a></td><td></td></tr>
 <tr name="889" id="889">
-<td><a id="l889" class='ln'>889</a></td><td>  <a id="889c3" class="tk">GpioCtrlRegs</a>.<a id="889c16" class="tk">GPADIR</a>.<a id="889c23" class="tk">all</a> <a id="889c27" class="tk">|=</a> 0x200000;</td></tr>
+<td><a id="l889" class='ln'>889</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="889">&lt;Root&gt;/Drehrichtungsvorgabe für einen Motor1</a>' */</span></td></tr>
 <tr name="890" id="890">
-<td><a id="l890" class='ln'>890</a></td><td>  <a id="890c3" class="tk">EDIS</a>;</td></tr>
+<td><a id="l890" class='ln'>890</a></td><td>  <a id="890c3" class="tk">EALLOW</a>;</td></tr>
 <tr name="891" id="891">
-<td><a id="l891" class='ln'>891</a></td><td></td></tr>
+<td><a id="l891" class='ln'>891</a></td><td>  <a id="891c3" class="tk">GpioCtrlRegs</a>.<a id="891c16" class="tk">GPAMUX2</a>.<a id="891c24" class="tk">all</a> <a id="891c28" class="tk">&amp;=</a> 0xFFFFFFF3;</td></tr>
 <tr name="892" id="892">
-<td><a id="l892" class='ln'>892</a></td><td>  <span class="ct">/* Start for S-Function (c280xpwm): '<a class="ct blk" blk_line="892">&lt;S2&gt;/PWM Vorgabe für einen Motor </a>' */</span></td></tr>
+<td><a id="l892" class='ln'>892</a></td><td>  <a id="892c3" class="tk">GpioCtrlRegs</a>.<a id="892c16" class="tk">GPADIR</a>.<a id="892c23" class="tk">all</a> <a id="892c27" class="tk">|=</a> 0x20000;</td></tr>
 <tr name="893" id="893">
-<td><a id="l893" class='ln'>893</a></td><td></td></tr>
+<td><a id="l893" class='ln'>893</a></td><td>  <a id="893c3" class="tk">EDIS</a>;</td></tr>
 <tr name="894" id="894">
-<td><a id="l894" class='ln'>894</a></td><td>  <span class="ct">/*** Initialize ePWM2 modules ***/</span></td></tr>
+<td><a id="l894" class='ln'>894</a></td><td></td></tr>
 <tr name="895" id="895">
-<td><a id="l895" class='ln'>895</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l895" class='ln'>895</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="895">&lt;S2&gt;/Drehrichtungsvorgabe für einen Motor</a>' */</span></td></tr>
 <tr name="896" id="896">
-<td><a id="l896" class='ln'>896</a></td><td>    <span class="ct">/*-- Setup Time-Base (TB) Submodule --*/</span></td></tr>
+<td><a id="l896" class='ln'>896</a></td><td>  <a id="896c3" class="tk">EALLOW</a>;</td></tr>
 <tr name="897" id="897">
-<td><a id="l897" class='ln'>897</a></td><td>    <a id="897c5" class="tk">EPwm2Regs</a>.<a id="897c15" class="tk">TBPRD</a> = 64000;</td></tr>
+<td><a id="l897" class='ln'>897</a></td><td>  <a id="897c3" class="tk">GpioCtrlRegs</a>.<a id="897c16" class="tk">GPAMUX2</a>.<a id="897c24" class="tk">all</a> <a id="897c28" class="tk">&amp;=</a> 0xFFFFF3FF;</td></tr>
 <tr name="898" id="898">
-<td><a id="l898" class='ln'>898</a></td><td></td></tr>
+<td><a id="l898" class='ln'>898</a></td><td>  <a id="898c3" class="tk">GpioCtrlRegs</a>.<a id="898c16" class="tk">GPADIR</a>.<a id="898c23" class="tk">all</a> <a id="898c27" class="tk">|=</a> 0x200000;</td></tr>
 <tr name="899" id="899">
-<td><a id="l899" class='ln'>899</a></td><td>    <span class="ct">/* // Time-Base Control Register</span></td></tr>
+<td><a id="l899" class='ln'>899</a></td><td>  <a id="899c3" class="tk">EDIS</a>;</td></tr>
 <tr name="900" id="900">
-<td><a id="l900" class='ln'>900</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode</span></td></tr>
+<td><a id="l900" class='ln'>900</a></td><td></td></tr>
 <tr name="901" id="901">
-<td><a id="l901" class='ln'>901</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select</span></td></tr>
+<td><a id="l901" class='ln'>901</a></td><td>  <span class="ct">/* Start for S-Function (c280xpwm): '<a class="ct blk" blk_line="901">&lt;S2&gt;/PWM Vorgabe für einen Motor </a>' */</span></td></tr>
 <tr name="902" id="902">
-<td><a id="l902" class='ln'>902</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select</span></td></tr>
+<td><a id="l902" class='ln'>902</a></td><td></td></tr>
 <tr name="903" id="903">
-<td><a id="l903" class='ln'>903</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable</span></td></tr>
+<td><a id="l903" class='ln'>903</a></td><td>  <span class="ct">/*** Initialize ePWM2 modules ***/</span></td></tr>
 <tr name="904" id="904">
-<td><a id="l904" class='ln'>904</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction</span></td></tr>
+<td><a id="l904" class='ln'>904</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="905" id="905">
-<td><a id="l905" class='ln'>905</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale</span></td></tr>
+<td><a id="l905" class='ln'>905</a></td><td>    <span class="ct">/*-- Setup Time-Base (TB) Submodule --*/</span></td></tr>
 <tr name="906" id="906">
-<td><a id="l906" class='ln'>906</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale</span></td></tr>
+<td><a id="l906" class='ln'>906</a></td><td>    <a id="906c5" class="tk">EPwm2Regs</a>.<a id="906c15" class="tk">TBPRD</a> = 64000;</td></tr>
 <tr name="907" id="907">
-<td><a id="l907" class='ln'>907</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l907" class='ln'>907</a></td><td></td></tr>
 <tr name="908" id="908">
-<td><a id="l908" class='ln'>908</a></td><td>    <a id="908c5" class="tk">EPwm2Regs</a>.<a id="908c15" class="tk">TBCTL</a>.<a id="908c21" class="tk">all</a> = (<a id="908c28" class="tk">EPwm2Regs</a>.<a id="908c38" class="tk">TBCTL</a>.<a id="908c44" class="tk">all</a> <a id="908c48" class="tk">&amp;</a> <a id="908c50" class="tk">~</a>0x3FBF) <a id="908c59" class="tk">|</a> 0x30;</td></tr>
+<td><a id="l908" class='ln'>908</a></td><td>    <span class="ct">/* // Time-Base Control Register</span></td></tr>
 <tr name="909" id="909">
-<td><a id="l909" class='ln'>909</a></td><td></td></tr>
+<td><a id="l909" class='ln'>909</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode</span></td></tr>
 <tr name="910" id="910">
-<td><a id="l910" class='ln'>910</a></td><td>    <span class="ct">/* // Time-Base Phase Register</span></td></tr>
+<td><a id="l910" class='ln'>910</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select</span></td></tr>
 <tr name="911" id="911">
-<td><a id="l911" class='ln'>911</a></td><td><span class="ct">       EPwm2Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register</span></td></tr>
+<td><a id="l911" class='ln'>911</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select</span></td></tr>
 <tr name="912" id="912">
-<td><a id="l912" class='ln'>912</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l912" class='ln'>912</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable</span></td></tr>
 <tr name="913" id="913">
-<td><a id="l913" class='ln'>913</a></td><td>    <a id="913c5" class="tk">EPwm2Regs</a>.<a id="913c15" class="tk">TBPHS</a>.<a id="913c21" class="tk">all</a> = (<a id="913c28" class="tk">EPwm2Regs</a>.<a id="913c38" class="tk">TBPHS</a>.<a id="913c44" class="tk">all</a> <a id="913c48" class="tk">&amp;</a> <a id="913c50" class="tk">~</a>0xFFFF0000) <a id="913c63" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l913" class='ln'>913</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction</span></td></tr>
 <tr name="914" id="914">
-<td><a id="l914" class='ln'>914</a></td><td>    <a id="914c5" class="tk">EPwm2Regs</a>.<a id="914c15" class="tk">TBCTR</a> = 0x0000;          <span class="ct">/* Clear counter*/</span></td></tr>
+<td><a id="l914" class='ln'>914</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale</span></td></tr>
 <tr name="915" id="915">
-<td><a id="l915" class='ln'>915</a></td><td></td></tr>
+<td><a id="l915" class='ln'>915</a></td><td><span class="ct">       EPwm2Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale</span></td></tr>
 <tr name="916" id="916">
-<td><a id="l916" class='ln'>916</a></td><td>    <span class="ct">/*-- Setup Counter_Compare (CC) Submodule --*/</span></td></tr>
+<td><a id="l916" class='ln'>916</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="917" id="917">
-<td><a id="l917" class='ln'>917</a></td><td>    <span class="ct">/* // Counter-Compare Control Register</span></td></tr>
+<td><a id="l917" class='ln'>917</a></td><td>    <a id="917c5" class="tk">EPwm2Regs</a>.<a id="917c15" class="tk">TBCTL</a>.<a id="917c21" class="tk">all</a> = (<a id="917c28" class="tk">EPwm2Regs</a>.<a id="917c38" class="tk">TBCTL</a>.<a id="917c44" class="tk">all</a> <a id="917c48" class="tk">&amp;</a> <a id="917c50" class="tk">~</a>0x3FBF) <a id="917c59" class="tk">|</a> 0x30;</td></tr>
 <tr name="918" id="918">
-<td><a id="l918" class='ln'>918</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.</span></td></tr>
+<td><a id="l918" class='ln'>918</a></td><td></td></tr>
 <tr name="919" id="919">
-<td><a id="l919" class='ln'>919</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.</span></td></tr>
+<td><a id="l919" class='ln'>919</a></td><td>    <span class="ct">/* // Time-Base Phase Register</span></td></tr>
 <tr name="920" id="920">
-<td><a id="l920" class='ln'>920</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A</span></td></tr>
+<td><a id="l920" class='ln'>920</a></td><td><span class="ct">       EPwm2Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register</span></td></tr>
 <tr name="921" id="921">
-<td><a id="l921" class='ln'>921</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A</span></td></tr>
+<td><a id="l921" class='ln'>921</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="922" id="922">
-<td><a id="l922" class='ln'>922</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l922" class='ln'>922</a></td><td>    <a id="922c5" class="tk">EPwm2Regs</a>.<a id="922c15" class="tk">TBPHS</a>.<a id="922c21" class="tk">all</a> = (<a id="922c28" class="tk">EPwm2Regs</a>.<a id="922c38" class="tk">TBPHS</a>.<a id="922c44" class="tk">all</a> <a id="922c48" class="tk">&amp;</a> <a id="922c50" class="tk">~</a>0xFFFF0000) <a id="922c63" class="tk">|</a> 0x0;</td></tr>
 <tr name="923" id="923">
-<td><a id="l923" class='ln'>923</a></td><td>    <a id="923c5" class="tk">EPwm2Regs</a>.<a id="923c15" class="tk">CMPCTL</a>.<a id="923c22" class="tk">all</a> = (<a id="923c29" class="tk">EPwm2Regs</a>.<a id="923c39" class="tk">CMPCTL</a>.<a id="923c46" class="tk">all</a> <a id="923c50" class="tk">&amp;</a> <a id="923c52" class="tk">~</a>0x5F) <a id="923c59" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l923" class='ln'>923</a></td><td>    <a id="923c5" class="tk">EPwm2Regs</a>.<a id="923c15" class="tk">TBCTR</a> = 0x0000;          <span class="ct">/* Clear counter*/</span></td></tr>
 <tr name="924" id="924">
-<td><a id="l924" class='ln'>924</a></td><td>    <a id="924c5" class="tk">EPwm2Regs</a>.<a id="924c15" class="tk">CMPA</a>.<a id="924c20" class="tk">half</a>.<a id="924c25" class="tk">CMPA</a> = 32000;</td></tr>
+<td><a id="l924" class='ln'>924</a></td><td></td></tr>
 <tr name="925" id="925">
-<td><a id="l925" class='ln'>925</a></td><td>    <a id="925c5" class="tk">EPwm2Regs</a>.<a id="925c15" class="tk">CMPB</a> = 0;</td></tr>
+<td><a id="l925" class='ln'>925</a></td><td>    <span class="ct">/*-- Setup Counter_Compare (CC) Submodule --*/</span></td></tr>
 <tr name="926" id="926">
-<td><a id="l926" class='ln'>926</a></td><td></td></tr>
+<td><a id="l926" class='ln'>926</a></td><td>    <span class="ct">/* // Counter-Compare Control Register</span></td></tr>
 <tr name="927" id="927">
-<td><a id="l927" class='ln'>927</a></td><td>    <span class="ct">/*-- Setup Action-Qualifier (AQ) Submodule --*/</span></td></tr>
+<td><a id="l927" class='ln'>927</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.</span></td></tr>
 <tr name="928" id="928">
-<td><a id="l928" class='ln'>928</a></td><td>    <a id="928c5" class="tk">EPwm2Regs</a>.<a id="928c15" class="tk">AQCTLA</a>.<a id="928c22" class="tk">all</a> = 36;</td></tr>
+<td><a id="l928" class='ln'>928</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.</span></td></tr>
 <tr name="929" id="929">
-<td><a id="l929" class='ln'>929</a></td><td>    <a id="929c5" class="tk">EPwm2Regs</a>.<a id="929c15" class="tk">AQCTLB</a>.<a id="929c22" class="tk">all</a> = 264;</td></tr>
+<td><a id="l929" class='ln'>929</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A</span></td></tr>
 <tr name="930" id="930">
-<td><a id="l930" class='ln'>930</a></td><td></td></tr>
+<td><a id="l930" class='ln'>930</a></td><td><span class="ct">       EPwm2Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A</span></td></tr>
 <tr name="931" id="931">
-<td><a id="l931" class='ln'>931</a></td><td>    <span class="ct">/* // Action-Qualifier Software Force Register</span></td></tr>
+<td><a id="l931" class='ln'>931</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="932" id="932">
-<td><a id="l932" class='ln'>932</a></td><td><span class="ct">       EPwm2Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options</span></td></tr>
+<td><a id="l932" class='ln'>932</a></td><td>    <a id="932c5" class="tk">EPwm2Regs</a>.<a id="932c15" class="tk">CMPCTL</a>.<a id="932c22" class="tk">all</a> = (<a id="932c29" class="tk">EPwm2Regs</a>.<a id="932c39" class="tk">CMPCTL</a>.<a id="932c46" class="tk">all</a> <a id="932c50" class="tk">&amp;</a> <a id="932c52" class="tk">~</a>0x5F) <a id="932c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="933" id="933">
-<td><a id="l933" class='ln'>933</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l933" class='ln'>933</a></td><td>    <a id="933c5" class="tk">EPwm2Regs</a>.<a id="933c15" class="tk">CMPA</a>.<a id="933c20" class="tk">half</a>.<a id="933c25" class="tk">CMPA</a> = 32000;</td></tr>
 <tr name="934" id="934">
-<td><a id="l934" class='ln'>934</a></td><td>    <a id="934c5" class="tk">EPwm2Regs</a>.<a id="934c15" class="tk">AQSFRC</a>.<a id="934c22" class="tk">all</a> = (<a id="934c29" class="tk">EPwm2Regs</a>.<a id="934c39" class="tk">AQSFRC</a>.<a id="934c46" class="tk">all</a> <a id="934c50" class="tk">&amp;</a> <a id="934c52" class="tk">~</a>0xC0) <a id="934c59" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l934" class='ln'>934</a></td><td>    <a id="934c5" class="tk">EPwm2Regs</a>.<a id="934c15" class="tk">CMPB</a> = 0;</td></tr>
 <tr name="935" id="935">
 <td><a id="l935" class='ln'>935</a></td><td></td></tr>
 <tr name="936" id="936">
-<td><a id="l936" class='ln'>936</a></td><td>    <span class="ct">/* // Action-Qualifier Continuous S/W Force Register Set</span></td></tr>
+<td><a id="l936" class='ln'>936</a></td><td>    <span class="ct">/*-- Setup Action-Qualifier (AQ) Submodule --*/</span></td></tr>
 <tr name="937" id="937">
-<td><a id="l937" class='ln'>937</a></td><td><span class="ct">       EPwm2Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A</span></td></tr>
+<td><a id="l937" class='ln'>937</a></td><td>    <a id="937c5" class="tk">EPwm2Regs</a>.<a id="937c15" class="tk">AQCTLA</a>.<a id="937c22" class="tk">all</a> = 36;</td></tr>
 <tr name="938" id="938">
-<td><a id="l938" class='ln'>938</a></td><td><span class="ct">       EPwm2Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B</span></td></tr>
+<td><a id="l938" class='ln'>938</a></td><td>    <a id="938c5" class="tk">EPwm2Regs</a>.<a id="938c15" class="tk">AQCTLB</a>.<a id="938c22" class="tk">all</a> = 264;</td></tr>
 <tr name="939" id="939">
-<td><a id="l939" class='ln'>939</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l939" class='ln'>939</a></td><td></td></tr>
 <tr name="940" id="940">
-<td><a id="l940" class='ln'>940</a></td><td>    <a id="940c5" class="tk">EPwm2Regs</a>.<a id="940c15" class="tk">AQCSFRC</a>.<a id="940c23" class="tk">all</a> = (<a id="940c30" class="tk">EPwm2Regs</a>.<a id="940c40" class="tk">AQCSFRC</a>.<a id="940c48" class="tk">all</a> <a id="940c52" class="tk">&amp;</a> <a id="940c54" class="tk">~</a>0xF) <a id="940c60" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l940" class='ln'>940</a></td><td>    <span class="ct">/* // Action-Qualifier Software Force Register</span></td></tr>
 <tr name="941" id="941">
-<td><a id="l941" class='ln'>941</a></td><td></td></tr>
+<td><a id="l941" class='ln'>941</a></td><td><span class="ct">       EPwm2Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options</span></td></tr>
 <tr name="942" id="942">
-<td><a id="l942" class='ln'>942</a></td><td>    <span class="ct">/*-- Setup Dead-Band Generator (DB) Submodule --*/</span></td></tr>
+<td><a id="l942" class='ln'>942</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="943" id="943">
-<td><a id="l943" class='ln'>943</a></td><td>    <span class="ct">/* // Dead-Band Generator Control Register</span></td></tr>
+<td><a id="l943" class='ln'>943</a></td><td>    <a id="943c5" class="tk">EPwm2Regs</a>.<a id="943c15" class="tk">AQSFRC</a>.<a id="943c22" class="tk">all</a> = (<a id="943c29" class="tk">EPwm2Regs</a>.<a id="943c39" class="tk">AQSFRC</a>.<a id="943c46" class="tk">all</a> <a id="943c50" class="tk">&amp;</a> <a id="943c52" class="tk">~</a>0xC0) <a id="943c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="944" id="944">
-<td><a id="l944" class='ln'>944</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control</span></td></tr>
+<td><a id="l944" class='ln'>944</a></td><td></td></tr>
 <tr name="945" id="945">
-<td><a id="l945" class='ln'>945</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control</span></td></tr>
+<td><a id="l945" class='ln'>945</a></td><td>    <span class="ct">/* // Action-Qualifier Continuous S/W Force Register Set</span></td></tr>
 <tr name="946" id="946">
-<td><a id="l946" class='ln'>946</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control</span></td></tr>
+<td><a id="l946" class='ln'>946</a></td><td><span class="ct">       EPwm2Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A</span></td></tr>
 <tr name="947" id="947">
-<td><a id="l947" class='ln'>947</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l947" class='ln'>947</a></td><td><span class="ct">       EPwm2Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B</span></td></tr>
 <tr name="948" id="948">
-<td><a id="l948" class='ln'>948</a></td><td>    <a id="948c5" class="tk">EPwm2Regs</a>.<a id="948c15" class="tk">DBCTL</a>.<a id="948c21" class="tk">all</a> = (<a id="948c28" class="tk">EPwm2Regs</a>.<a id="948c38" class="tk">DBCTL</a>.<a id="948c44" class="tk">all</a> <a id="948c48" class="tk">&amp;</a> <a id="948c50" class="tk">~</a>0x3F) <a id="948c57" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l948" class='ln'>948</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="949" id="949">
-<td><a id="l949" class='ln'>949</a></td><td>    <a id="949c5" class="tk">EPwm2Regs</a>.<a id="949c15" class="tk">DBRED</a> = 0;</td></tr>
+<td><a id="l949" class='ln'>949</a></td><td>    <a id="949c5" class="tk">EPwm2Regs</a>.<a id="949c15" class="tk">AQCSFRC</a>.<a id="949c23" class="tk">all</a> = (<a id="949c30" class="tk">EPwm2Regs</a>.<a id="949c40" class="tk">AQCSFRC</a>.<a id="949c48" class="tk">all</a> <a id="949c52" class="tk">&amp;</a> <a id="949c54" class="tk">~</a>0xF) <a id="949c60" class="tk">|</a> 0x0;</td></tr>
 <tr name="950" id="950">
-<td><a id="l950" class='ln'>950</a></td><td>    <a id="950c5" class="tk">EPwm2Regs</a>.<a id="950c15" class="tk">DBFED</a> = 0;</td></tr>
+<td><a id="l950" class='ln'>950</a></td><td></td></tr>
 <tr name="951" id="951">
-<td><a id="l951" class='ln'>951</a></td><td></td></tr>
+<td><a id="l951" class='ln'>951</a></td><td>    <span class="ct">/*-- Setup Dead-Band Generator (DB) Submodule --*/</span></td></tr>
 <tr name="952" id="952">
-<td><a id="l952" class='ln'>952</a></td><td>    <span class="ct">/*-- Setup Event-Trigger (ET) Submodule --*/</span></td></tr>
+<td><a id="l952" class='ln'>952</a></td><td>    <span class="ct">/* // Dead-Band Generator Control Register</span></td></tr>
 <tr name="953" id="953">
-<td><a id="l953" class='ln'>953</a></td><td>    <span class="ct">/* // Event-Trigger Selection and Event-Trigger Pre-Scale Register</span></td></tr>
+<td><a id="l953" class='ln'>953</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control</span></td></tr>
 <tr name="954" id="954">
-<td><a id="l954" class='ln'>954</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable</span></td></tr>
+<td><a id="l954" class='ln'>954</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control</span></td></tr>
 <tr name="955" id="955">
-<td><a id="l955" class='ln'>955</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select</span></td></tr>
+<td><a id="l955" class='ln'>955</a></td><td><span class="ct">       EPwm2Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control</span></td></tr>
 <tr name="956" id="956">
-<td><a id="l956" class='ln'>956</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM2SOCA Period Select</span></td></tr>
+<td><a id="l956" class='ln'>956</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="957" id="957">
-<td><a id="l957" class='ln'>957</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable</span></td></tr>
+<td><a id="l957" class='ln'>957</a></td><td>    <a id="957c5" class="tk">EPwm2Regs</a>.<a id="957c15" class="tk">DBCTL</a>.<a id="957c21" class="tk">all</a> = (<a id="957c28" class="tk">EPwm2Regs</a>.<a id="957c38" class="tk">DBCTL</a>.<a id="957c44" class="tk">all</a> <a id="957c48" class="tk">&amp;</a> <a id="957c50" class="tk">~</a>0x3F) <a id="957c57" class="tk">|</a> 0x0;</td></tr>
 <tr name="958" id="958">
-<td><a id="l958" class='ln'>958</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select</span></td></tr>
+<td><a id="l958" class='ln'>958</a></td><td>    <a id="958c5" class="tk">EPwm2Regs</a>.<a id="958c15" class="tk">DBRED</a> = 0;</td></tr>
 <tr name="959" id="959">
-<td><a id="l959" class='ln'>959</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM2SOCB Period Select</span></td></tr>
+<td><a id="l959" class='ln'>959</a></td><td>    <a id="959c5" class="tk">EPwm2Regs</a>.<a id="959c15" class="tk">DBFED</a> = 0;</td></tr>
 <tr name="960" id="960">
-<td><a id="l960" class='ln'>960</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.INTEN      = 0;          // EPWM2INTn Enable</span></td></tr>
+<td><a id="l960" class='ln'>960</a></td><td></td></tr>
 <tr name="961" id="961">
-<td><a id="l961" class='ln'>961</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.INTSEL     = 1;          // EPWM2INTn Select</span></td></tr>
+<td><a id="l961" class='ln'>961</a></td><td>    <span class="ct">/*-- Setup Event-Trigger (ET) Submodule --*/</span></td></tr>
 <tr name="962" id="962">
-<td><a id="l962" class='ln'>962</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.INTPRD      = 1;          // EPWM2INTn Period Select</span></td></tr>
+<td><a id="l962" class='ln'>962</a></td><td>    <span class="ct">/* // Event-Trigger Selection and Event-Trigger Pre-Scale Register</span></td></tr>
 <tr name="963" id="963">
-<td><a id="l963" class='ln'>963</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l963" class='ln'>963</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable</span></td></tr>
 <tr name="964" id="964">
-<td><a id="l964" class='ln'>964</a></td><td>    <a id="964c5" class="tk">EPwm2Regs</a>.<a id="964c15" class="tk">ETSEL</a>.<a id="964c21" class="tk">all</a> = (<a id="964c28" class="tk">EPwm2Regs</a>.<a id="964c38" class="tk">ETSEL</a>.<a id="964c44" class="tk">all</a> <a id="964c48" class="tk">&amp;</a> <a id="964c50" class="tk">~</a>0xFF0F) <a id="964c59" class="tk">|</a> 0x1101;</td></tr>
+<td><a id="l964" class='ln'>964</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select</span></td></tr>
 <tr name="965" id="965">
-<td><a id="l965" class='ln'>965</a></td><td>    <a id="965c5" class="tk">EPwm2Regs</a>.<a id="965c15" class="tk">ETPS</a>.<a id="965c20" class="tk">all</a> = (<a id="965c27" class="tk">EPwm2Regs</a>.<a id="965c37" class="tk">ETPS</a>.<a id="965c42" class="tk">all</a> <a id="965c46" class="tk">&amp;</a> <a id="965c48" class="tk">~</a>0x3303) <a id="965c57" class="tk">|</a> 0x1101;</td></tr>
+<td><a id="l965" class='ln'>965</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM2SOCA Period Select</span></td></tr>
 <tr name="966" id="966">
-<td><a id="l966" class='ln'>966</a></td><td></td></tr>
+<td><a id="l966" class='ln'>966</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable</span></td></tr>
 <tr name="967" id="967">
-<td><a id="l967" class='ln'>967</a></td><td>    <span class="ct">/*-- Setup PWM-Chopper (PC) Submodule --*/</span></td></tr>
+<td><a id="l967" class='ln'>967</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select</span></td></tr>
 <tr name="968" id="968">
-<td><a id="l968" class='ln'>968</a></td><td>    <span class="ct">/* // PWM-Chopper Control Register</span></td></tr>
+<td><a id="l968" class='ln'>968</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM2SOCB Period Select</span></td></tr>
 <tr name="969" id="969">
-<td><a id="l969" class='ln'>969</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable</span></td></tr>
+<td><a id="l969" class='ln'>969</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.INTEN      = 0;          // EPWM2INTn Enable</span></td></tr>
 <tr name="970" id="970">
-<td><a id="l970" class='ln'>970</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency</span></td></tr>
+<td><a id="l970" class='ln'>970</a></td><td><span class="ct">       EPwm2Regs.ETSEL.bit.INTSEL     = 1;          // EPWM2INTn Select</span></td></tr>
 <tr name="971" id="971">
-<td><a id="l971" class='ln'>971</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width</span></td></tr>
+<td><a id="l971" class='ln'>971</a></td><td><span class="ct">       EPwm2Regs.ETPS.bit.INTPRD      = 1;          // EPWM2INTn Period Select</span></td></tr>
 <tr name="972" id="972">
-<td><a id="l972" class='ln'>972</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle</span></td></tr>
+<td><a id="l972" class='ln'>972</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="973" id="973">
-<td><a id="l973" class='ln'>973</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l973" class='ln'>973</a></td><td>    <a id="973c5" class="tk">EPwm2Regs</a>.<a id="973c15" class="tk">ETSEL</a>.<a id="973c21" class="tk">all</a> = (<a id="973c28" class="tk">EPwm2Regs</a>.<a id="973c38" class="tk">ETSEL</a>.<a id="973c44" class="tk">all</a> <a id="973c48" class="tk">&amp;</a> <a id="973c50" class="tk">~</a>0xFF0F) <a id="973c59" class="tk">|</a> 0x1101;</td></tr>
 <tr name="974" id="974">
-<td><a id="l974" class='ln'>974</a></td><td>    <a id="974c5" class="tk">EPwm2Regs</a>.<a id="974c15" class="tk">PCCTL</a>.<a id="974c21" class="tk">all</a> = (<a id="974c28" class="tk">EPwm2Regs</a>.<a id="974c38" class="tk">PCCTL</a>.<a id="974c44" class="tk">all</a> <a id="974c48" class="tk">&amp;</a> <a id="974c50" class="tk">~</a>0x7FF) <a id="974c58" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l974" class='ln'>974</a></td><td>    <a id="974c5" class="tk">EPwm2Regs</a>.<a id="974c15" class="tk">ETPS</a>.<a id="974c20" class="tk">all</a> = (<a id="974c27" class="tk">EPwm2Regs</a>.<a id="974c37" class="tk">ETPS</a>.<a id="974c42" class="tk">all</a> <a id="974c46" class="tk">&amp;</a> <a id="974c48" class="tk">~</a>0x3303) <a id="974c57" class="tk">|</a> 0x1101;</td></tr>
 <tr name="975" id="975">
 <td><a id="l975" class='ln'>975</a></td><td></td></tr>
 <tr name="976" id="976">
-<td><a id="l976" class='ln'>976</a></td><td>    <span class="ct">/*-- Set up Trip-Zone (TZ) Submodule --*/</span></td></tr>
+<td><a id="l976" class='ln'>976</a></td><td>    <span class="ct">/*-- Setup PWM-Chopper (PC) Submodule --*/</span></td></tr>
 <tr name="977" id="977">
-<td><a id="l977" class='ln'>977</a></td><td>    <a id="977c5" class="tk">EALLOW</a>;</td></tr>
+<td><a id="l977" class='ln'>977</a></td><td>    <span class="ct">/* // PWM-Chopper Control Register</span></td></tr>
 <tr name="978" id="978">
-<td><a id="l978" class='ln'>978</a></td><td>    <a id="978c5" class="tk">EPwm2Regs</a>.<a id="978c15" class="tk">TZSEL</a>.<a id="978c21" class="tk">all</a> = 0;</td></tr>
+<td><a id="l978" class='ln'>978</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable</span></td></tr>
 <tr name="979" id="979">
-<td><a id="l979" class='ln'>979</a></td><td></td></tr>
+<td><a id="l979" class='ln'>979</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency</span></td></tr>
 <tr name="980" id="980">
-<td><a id="l980" class='ln'>980</a></td><td>    <span class="ct">/* // Trip-Zone Control Register</span></td></tr>
+<td><a id="l980" class='ln'>980</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width</span></td></tr>
 <tr name="981" id="981">
-<td><a id="l981" class='ln'>981</a></td><td><span class="ct">       EPwm2Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM2A</span></td></tr>
+<td><a id="l981" class='ln'>981</a></td><td><span class="ct">       EPwm2Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle</span></td></tr>
 <tr name="982" id="982">
-<td><a id="l982" class='ln'>982</a></td><td><span class="ct">       EPwm2Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM2B</span></td></tr>
+<td><a id="l982" class='ln'>982</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="983" id="983">
-<td><a id="l983" class='ln'>983</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l983" class='ln'>983</a></td><td>    <a id="983c5" class="tk">EPwm2Regs</a>.<a id="983c15" class="tk">PCCTL</a>.<a id="983c21" class="tk">all</a> = (<a id="983c28" class="tk">EPwm2Regs</a>.<a id="983c38" class="tk">PCCTL</a>.<a id="983c44" class="tk">all</a> <a id="983c48" class="tk">&amp;</a> <a id="983c50" class="tk">~</a>0x7FF) <a id="983c58" class="tk">|</a> 0x0;</td></tr>
 <tr name="984" id="984">
-<td><a id="l984" class='ln'>984</a></td><td>    <a id="984c5" class="tk">EPwm2Regs</a>.<a id="984c15" class="tk">TZCTL</a>.<a id="984c21" class="tk">all</a> = (<a id="984c28" class="tk">EPwm2Regs</a>.<a id="984c38" class="tk">TZCTL</a>.<a id="984c44" class="tk">all</a> <a id="984c48" class="tk">&amp;</a> <a id="984c50" class="tk">~</a>0xF) <a id="984c56" class="tk">|</a> 0xF;</td></tr>
+<td><a id="l984" class='ln'>984</a></td><td></td></tr>
 <tr name="985" id="985">
-<td><a id="l985" class='ln'>985</a></td><td></td></tr>
+<td><a id="l985" class='ln'>985</a></td><td>    <span class="ct">/*-- Set up Trip-Zone (TZ) Submodule --*/</span></td></tr>
 <tr name="986" id="986">
-<td><a id="l986" class='ln'>986</a></td><td>    <span class="ct">/* // Trip-Zone Enable Interrupt Register</span></td></tr>
+<td><a id="l986" class='ln'>986</a></td><td>    <a id="986c5" class="tk">EALLOW</a>;</td></tr>
 <tr name="987" id="987">
-<td><a id="l987" class='ln'>987</a></td><td><span class="ct">       EPwm2Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable</span></td></tr>
+<td><a id="l987" class='ln'>987</a></td><td>    <a id="987c5" class="tk">EPwm2Regs</a>.<a id="987c15" class="tk">TZSEL</a>.<a id="987c21" class="tk">all</a> = 0;</td></tr>
 <tr name="988" id="988">
-<td><a id="l988" class='ln'>988</a></td><td><span class="ct">       EPwm2Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable</span></td></tr>
+<td><a id="l988" class='ln'>988</a></td><td></td></tr>
 <tr name="989" id="989">
-<td><a id="l989" class='ln'>989</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l989" class='ln'>989</a></td><td>    <span class="ct">/* // Trip-Zone Control Register</span></td></tr>
 <tr name="990" id="990">
-<td><a id="l990" class='ln'>990</a></td><td>    <a id="990c5" class="tk">EPwm2Regs</a>.<a id="990c15" class="tk">TZEINT</a>.<a id="990c22" class="tk">all</a> = (<a id="990c29" class="tk">EPwm2Regs</a>.<a id="990c39" class="tk">TZEINT</a>.<a id="990c46" class="tk">all</a> <a id="990c50" class="tk">&amp;</a> <a id="990c52" class="tk">~</a>0x6) <a id="990c58" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l990" class='ln'>990</a></td><td><span class="ct">       EPwm2Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM2A</span></td></tr>
 <tr name="991" id="991">
-<td><a id="l991" class='ln'>991</a></td><td>    <a id="991c5" class="tk">EDIS</a>;</td></tr>
+<td><a id="l991" class='ln'>991</a></td><td><span class="ct">       EPwm2Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM2B</span></td></tr>
 <tr name="992" id="992">
-<td><a id="l992" class='ln'>992</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l992" class='ln'>992</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="993" id="993">
-<td><a id="l993" class='ln'>993</a></td><td></td></tr>
+<td><a id="l993" class='ln'>993</a></td><td>    <a id="993c5" class="tk">EPwm2Regs</a>.<a id="993c15" class="tk">TZCTL</a>.<a id="993c21" class="tk">all</a> = (<a id="993c28" class="tk">EPwm2Regs</a>.<a id="993c38" class="tk">TZCTL</a>.<a id="993c44" class="tk">all</a> <a id="993c48" class="tk">&amp;</a> <a id="993c50" class="tk">~</a>0xF) <a id="993c56" class="tk">|</a> 0xF;</td></tr>
 <tr name="994" id="994">
-<td><a id="l994" class='ln'>994</a></td><td>  <span class="ct">/* Start for S-Function (c280xpwm): '<a class="ct blk" blk_line="994">&lt;Root&gt;/PWM Vorgabe für einen Motor 1</a>' */</span></td></tr>
+<td><a id="l994" class='ln'>994</a></td><td></td></tr>
 <tr name="995" id="995">
-<td><a id="l995" class='ln'>995</a></td><td></td></tr>
+<td><a id="l995" class='ln'>995</a></td><td>    <span class="ct">/* // Trip-Zone Enable Interrupt Register</span></td></tr>
 <tr name="996" id="996">
-<td><a id="l996" class='ln'>996</a></td><td>  <span class="ct">/*** Initialize ePWM3 modules ***/</span></td></tr>
+<td><a id="l996" class='ln'>996</a></td><td><span class="ct">       EPwm2Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable</span></td></tr>
 <tr name="997" id="997">
-<td><a id="l997" class='ln'>997</a></td><td>  <span class="br">{</span></td></tr>
+<td><a id="l997" class='ln'>997</a></td><td><span class="ct">       EPwm2Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable</span></td></tr>
 <tr name="998" id="998">
-<td><a id="l998" class='ln'>998</a></td><td>    <span class="ct">/*-- Setup Time-Base (TB) Submodule --*/</span></td></tr>
+<td><a id="l998" class='ln'>998</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="999" id="999">
-<td><a id="l999" class='ln'>999</a></td><td>    <a id="999c5" class="tk">EPwm3Regs</a>.<a id="999c15" class="tk">TBPRD</a> = 64000;</td></tr>
+<td><a id="l999" class='ln'>999</a></td><td>    <a id="999c5" class="tk">EPwm2Regs</a>.<a id="999c15" class="tk">TZEINT</a>.<a id="999c22" class="tk">all</a> = (<a id="999c29" class="tk">EPwm2Regs</a>.<a id="999c39" class="tk">TZEINT</a>.<a id="999c46" class="tk">all</a> <a id="999c50" class="tk">&amp;</a> <a id="999c52" class="tk">~</a>0x6) <a id="999c58" class="tk">|</a> 0x0;</td></tr>
 <tr name="1000" id="1000">
-<td><a id="l1000" class='ln'>1000</a></td><td></td></tr>
+<td><a id="l1000" class='ln'>1000</a></td><td>    <a id="1000c5" class="tk">EDIS</a>;</td></tr>
 <tr name="1001" id="1001">
-<td><a id="l1001" class='ln'>1001</a></td><td>    <span class="ct">/* // Time-Base Control Register</span></td></tr>
+<td><a id="l1001" class='ln'>1001</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="1002" id="1002">
-<td><a id="l1002" class='ln'>1002</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode</span></td></tr>
+<td><a id="l1002" class='ln'>1002</a></td><td></td></tr>
 <tr name="1003" id="1003">
-<td><a id="l1003" class='ln'>1003</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select</span></td></tr>
+<td><a id="l1003" class='ln'>1003</a></td><td>  <span class="ct">/* Start for S-Function (c280xpwm): '<a class="ct blk" blk_line="1003">&lt;Root&gt;/PWM Vorgabe für einen Motor 1</a>' */</span></td></tr>
 <tr name="1004" id="1004">
-<td><a id="l1004" class='ln'>1004</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select</span></td></tr>
+<td><a id="l1004" class='ln'>1004</a></td><td></td></tr>
 <tr name="1005" id="1005">
-<td><a id="l1005" class='ln'>1005</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable</span></td></tr>
+<td><a id="l1005" class='ln'>1005</a></td><td>  <span class="ct">/*** Initialize ePWM3 modules ***/</span></td></tr>
 <tr name="1006" id="1006">
-<td><a id="l1006" class='ln'>1006</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction</span></td></tr>
+<td><a id="l1006" class='ln'>1006</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="1007" id="1007">
-<td><a id="l1007" class='ln'>1007</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale</span></td></tr>
+<td><a id="l1007" class='ln'>1007</a></td><td>    <span class="ct">/*-- Setup Time-Base (TB) Submodule --*/</span></td></tr>
 <tr name="1008" id="1008">
-<td><a id="l1008" class='ln'>1008</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale</span></td></tr>
+<td><a id="l1008" class='ln'>1008</a></td><td>    <a id="1008c5" class="tk">EPwm3Regs</a>.<a id="1008c15" class="tk">TBPRD</a> = 64000;</td></tr>
 <tr name="1009" id="1009">
-<td><a id="l1009" class='ln'>1009</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1009" class='ln'>1009</a></td><td></td></tr>
 <tr name="1010" id="1010">
-<td><a id="l1010" class='ln'>1010</a></td><td>    <a id="1010c5" class="tk">EPwm3Regs</a>.<a id="1010c15" class="tk">TBCTL</a>.<a id="1010c21" class="tk">all</a> = (<a id="1010c28" class="tk">EPwm3Regs</a>.<a id="1010c38" class="tk">TBCTL</a>.<a id="1010c44" class="tk">all</a> <a id="1010c48" class="tk">&amp;</a> <a id="1010c50" class="tk">~</a>0x3FBF) <a id="1010c59" class="tk">|</a> 0x30;</td></tr>
+<td><a id="l1010" class='ln'>1010</a></td><td>    <span class="ct">/* // Time-Base Control Register</span></td></tr>
 <tr name="1011" id="1011">
-<td><a id="l1011" class='ln'>1011</a></td><td></td></tr>
+<td><a id="l1011" class='ln'>1011</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode</span></td></tr>
 <tr name="1012" id="1012">
-<td><a id="l1012" class='ln'>1012</a></td><td>    <span class="ct">/* // Time-Base Phase Register</span></td></tr>
+<td><a id="l1012" class='ln'>1012</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select</span></td></tr>
 <tr name="1013" id="1013">
-<td><a id="l1013" class='ln'>1013</a></td><td><span class="ct">       EPwm3Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register</span></td></tr>
+<td><a id="l1013" class='ln'>1013</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select</span></td></tr>
 <tr name="1014" id="1014">
-<td><a id="l1014" class='ln'>1014</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1014" class='ln'>1014</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable</span></td></tr>
 <tr name="1015" id="1015">
-<td><a id="l1015" class='ln'>1015</a></td><td>    <a id="1015c5" class="tk">EPwm3Regs</a>.<a id="1015c15" class="tk">TBPHS</a>.<a id="1015c21" class="tk">all</a> = (<a id="1015c28" class="tk">EPwm3Regs</a>.<a id="1015c38" class="tk">TBPHS</a>.<a id="1015c44" class="tk">all</a> <a id="1015c48" class="tk">&amp;</a> <a id="1015c50" class="tk">~</a>0xFFFF0000) <a id="1015c63" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1015" class='ln'>1015</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction</span></td></tr>
 <tr name="1016" id="1016">
-<td><a id="l1016" class='ln'>1016</a></td><td>    <a id="1016c5" class="tk">EPwm3Regs</a>.<a id="1016c15" class="tk">TBCTR</a> = 0x0000;          <span class="ct">/* Clear counter*/</span></td></tr>
+<td><a id="l1016" class='ln'>1016</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale</span></td></tr>
 <tr name="1017" id="1017">
-<td><a id="l1017" class='ln'>1017</a></td><td></td></tr>
+<td><a id="l1017" class='ln'>1017</a></td><td><span class="ct">       EPwm3Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale</span></td></tr>
 <tr name="1018" id="1018">
-<td><a id="l1018" class='ln'>1018</a></td><td>    <span class="ct">/*-- Setup Counter_Compare (CC) Submodule --*/</span></td></tr>
+<td><a id="l1018" class='ln'>1018</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1019" id="1019">
-<td><a id="l1019" class='ln'>1019</a></td><td>    <span class="ct">/* // Counter-Compare Control Register</span></td></tr>
+<td><a id="l1019" class='ln'>1019</a></td><td>    <a id="1019c5" class="tk">EPwm3Regs</a>.<a id="1019c15" class="tk">TBCTL</a>.<a id="1019c21" class="tk">all</a> = (<a id="1019c28" class="tk">EPwm3Regs</a>.<a id="1019c38" class="tk">TBCTL</a>.<a id="1019c44" class="tk">all</a> <a id="1019c48" class="tk">&amp;</a> <a id="1019c50" class="tk">~</a>0x3FBF) <a id="1019c59" class="tk">|</a> 0x30;</td></tr>
 <tr name="1020" id="1020">
-<td><a id="l1020" class='ln'>1020</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.</span></td></tr>
+<td><a id="l1020" class='ln'>1020</a></td><td></td></tr>
 <tr name="1021" id="1021">
-<td><a id="l1021" class='ln'>1021</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.</span></td></tr>
+<td><a id="l1021" class='ln'>1021</a></td><td>    <span class="ct">/* // Time-Base Phase Register</span></td></tr>
 <tr name="1022" id="1022">
-<td><a id="l1022" class='ln'>1022</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A</span></td></tr>
+<td><a id="l1022" class='ln'>1022</a></td><td><span class="ct">       EPwm3Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register</span></td></tr>
 <tr name="1023" id="1023">
-<td><a id="l1023" class='ln'>1023</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A</span></td></tr>
+<td><a id="l1023" class='ln'>1023</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1024" id="1024">
-<td><a id="l1024" class='ln'>1024</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1024" class='ln'>1024</a></td><td>    <a id="1024c5" class="tk">EPwm3Regs</a>.<a id="1024c15" class="tk">TBPHS</a>.<a id="1024c21" class="tk">all</a> = (<a id="1024c28" class="tk">EPwm3Regs</a>.<a id="1024c38" class="tk">TBPHS</a>.<a id="1024c44" class="tk">all</a> <a id="1024c48" class="tk">&amp;</a> <a id="1024c50" class="tk">~</a>0xFFFF0000) <a id="1024c63" class="tk">|</a> 0x0;</td></tr>
 <tr name="1025" id="1025">
-<td><a id="l1025" class='ln'>1025</a></td><td>    <a id="1025c5" class="tk">EPwm3Regs</a>.<a id="1025c15" class="tk">CMPCTL</a>.<a id="1025c22" class="tk">all</a> = (<a id="1025c29" class="tk">EPwm3Regs</a>.<a id="1025c39" class="tk">CMPCTL</a>.<a id="1025c46" class="tk">all</a> <a id="1025c50" class="tk">&amp;</a> <a id="1025c52" class="tk">~</a>0x5F) <a id="1025c59" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1025" class='ln'>1025</a></td><td>    <a id="1025c5" class="tk">EPwm3Regs</a>.<a id="1025c15" class="tk">TBCTR</a> = 0x0000;          <span class="ct">/* Clear counter*/</span></td></tr>
 <tr name="1026" id="1026">
-<td><a id="l1026" class='ln'>1026</a></td><td>    <a id="1026c5" class="tk">EPwm3Regs</a>.<a id="1026c15" class="tk">CMPA</a>.<a id="1026c20" class="tk">half</a>.<a id="1026c25" class="tk">CMPA</a> = 32000;</td></tr>
+<td><a id="l1026" class='ln'>1026</a></td><td></td></tr>
 <tr name="1027" id="1027">
-<td><a id="l1027" class='ln'>1027</a></td><td>    <a id="1027c5" class="tk">EPwm3Regs</a>.<a id="1027c15" class="tk">CMPB</a> = 0;</td></tr>
+<td><a id="l1027" class='ln'>1027</a></td><td>    <span class="ct">/*-- Setup Counter_Compare (CC) Submodule --*/</span></td></tr>
 <tr name="1028" id="1028">
-<td><a id="l1028" class='ln'>1028</a></td><td></td></tr>
+<td><a id="l1028" class='ln'>1028</a></td><td>    <span class="ct">/* // Counter-Compare Control Register</span></td></tr>
 <tr name="1029" id="1029">
-<td><a id="l1029" class='ln'>1029</a></td><td>    <span class="ct">/*-- Setup Action-Qualifier (AQ) Submodule --*/</span></td></tr>
+<td><a id="l1029" class='ln'>1029</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.</span></td></tr>
 <tr name="1030" id="1030">
-<td><a id="l1030" class='ln'>1030</a></td><td>    <a id="1030c5" class="tk">EPwm3Regs</a>.<a id="1030c15" class="tk">AQCTLA</a>.<a id="1030c22" class="tk">all</a> = 36;</td></tr>
+<td><a id="l1030" class='ln'>1030</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.</span></td></tr>
 <tr name="1031" id="1031">
-<td><a id="l1031" class='ln'>1031</a></td><td>    <a id="1031c5" class="tk">EPwm3Regs</a>.<a id="1031c15" class="tk">AQCTLB</a>.<a id="1031c22" class="tk">all</a> = 264;</td></tr>
+<td><a id="l1031" class='ln'>1031</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A</span></td></tr>
 <tr name="1032" id="1032">
-<td><a id="l1032" class='ln'>1032</a></td><td></td></tr>
+<td><a id="l1032" class='ln'>1032</a></td><td><span class="ct">       EPwm3Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A</span></td></tr>
 <tr name="1033" id="1033">
-<td><a id="l1033" class='ln'>1033</a></td><td>    <span class="ct">/* // Action-Qualifier Software Force Register</span></td></tr>
+<td><a id="l1033" class='ln'>1033</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1034" id="1034">
-<td><a id="l1034" class='ln'>1034</a></td><td><span class="ct">       EPwm3Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options</span></td></tr>
+<td><a id="l1034" class='ln'>1034</a></td><td>    <a id="1034c5" class="tk">EPwm3Regs</a>.<a id="1034c15" class="tk">CMPCTL</a>.<a id="1034c22" class="tk">all</a> = (<a id="1034c29" class="tk">EPwm3Regs</a>.<a id="1034c39" class="tk">CMPCTL</a>.<a id="1034c46" class="tk">all</a> <a id="1034c50" class="tk">&amp;</a> <a id="1034c52" class="tk">~</a>0x5F) <a id="1034c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="1035" id="1035">
-<td><a id="l1035" class='ln'>1035</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1035" class='ln'>1035</a></td><td>    <a id="1035c5" class="tk">EPwm3Regs</a>.<a id="1035c15" class="tk">CMPA</a>.<a id="1035c20" class="tk">half</a>.<a id="1035c25" class="tk">CMPA</a> = 32000;</td></tr>
 <tr name="1036" id="1036">
-<td><a id="l1036" class='ln'>1036</a></td><td>    <a id="1036c5" class="tk">EPwm3Regs</a>.<a id="1036c15" class="tk">AQSFRC</a>.<a id="1036c22" class="tk">all</a> = (<a id="1036c29" class="tk">EPwm3Regs</a>.<a id="1036c39" class="tk">AQSFRC</a>.<a id="1036c46" class="tk">all</a> <a id="1036c50" class="tk">&amp;</a> <a id="1036c52" class="tk">~</a>0xC0) <a id="1036c59" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1036" class='ln'>1036</a></td><td>    <a id="1036c5" class="tk">EPwm3Regs</a>.<a id="1036c15" class="tk">CMPB</a> = 0;</td></tr>
 <tr name="1037" id="1037">
 <td><a id="l1037" class='ln'>1037</a></td><td></td></tr>
 <tr name="1038" id="1038">
-<td><a id="l1038" class='ln'>1038</a></td><td>    <span class="ct">/* // Action-Qualifier Continuous S/W Force Register Set</span></td></tr>
+<td><a id="l1038" class='ln'>1038</a></td><td>    <span class="ct">/*-- Setup Action-Qualifier (AQ) Submodule --*/</span></td></tr>
 <tr name="1039" id="1039">
-<td><a id="l1039" class='ln'>1039</a></td><td><span class="ct">       EPwm3Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A</span></td></tr>
+<td><a id="l1039" class='ln'>1039</a></td><td>    <a id="1039c5" class="tk">EPwm3Regs</a>.<a id="1039c15" class="tk">AQCTLA</a>.<a id="1039c22" class="tk">all</a> = 36;</td></tr>
 <tr name="1040" id="1040">
-<td><a id="l1040" class='ln'>1040</a></td><td><span class="ct">       EPwm3Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B</span></td></tr>
+<td><a id="l1040" class='ln'>1040</a></td><td>    <a id="1040c5" class="tk">EPwm3Regs</a>.<a id="1040c15" class="tk">AQCTLB</a>.<a id="1040c22" class="tk">all</a> = 264;</td></tr>
 <tr name="1041" id="1041">
-<td><a id="l1041" class='ln'>1041</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1041" class='ln'>1041</a></td><td></td></tr>
 <tr name="1042" id="1042">
-<td><a id="l1042" class='ln'>1042</a></td><td>    <a id="1042c5" class="tk">EPwm3Regs</a>.<a id="1042c15" class="tk">AQCSFRC</a>.<a id="1042c23" class="tk">all</a> = (<a id="1042c30" class="tk">EPwm3Regs</a>.<a id="1042c40" class="tk">AQCSFRC</a>.<a id="1042c48" class="tk">all</a> <a id="1042c52" class="tk">&amp;</a> <a id="1042c54" class="tk">~</a>0xF) <a id="1042c60" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1042" class='ln'>1042</a></td><td>    <span class="ct">/* // Action-Qualifier Software Force Register</span></td></tr>
 <tr name="1043" id="1043">
-<td><a id="l1043" class='ln'>1043</a></td><td></td></tr>
+<td><a id="l1043" class='ln'>1043</a></td><td><span class="ct">       EPwm3Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options</span></td></tr>
 <tr name="1044" id="1044">
-<td><a id="l1044" class='ln'>1044</a></td><td>    <span class="ct">/*-- Setup Dead-Band Generator (DB) Submodule --*/</span></td></tr>
+<td><a id="l1044" class='ln'>1044</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1045" id="1045">
-<td><a id="l1045" class='ln'>1045</a></td><td>    <span class="ct">/* // Dead-Band Generator Control Register</span></td></tr>
+<td><a id="l1045" class='ln'>1045</a></td><td>    <a id="1045c5" class="tk">EPwm3Regs</a>.<a id="1045c15" class="tk">AQSFRC</a>.<a id="1045c22" class="tk">all</a> = (<a id="1045c29" class="tk">EPwm3Regs</a>.<a id="1045c39" class="tk">AQSFRC</a>.<a id="1045c46" class="tk">all</a> <a id="1045c50" class="tk">&amp;</a> <a id="1045c52" class="tk">~</a>0xC0) <a id="1045c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="1046" id="1046">
-<td><a id="l1046" class='ln'>1046</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control</span></td></tr>
+<td><a id="l1046" class='ln'>1046</a></td><td></td></tr>
 <tr name="1047" id="1047">
-<td><a id="l1047" class='ln'>1047</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control</span></td></tr>
+<td><a id="l1047" class='ln'>1047</a></td><td>    <span class="ct">/* // Action-Qualifier Continuous S/W Force Register Set</span></td></tr>
 <tr name="1048" id="1048">
-<td><a id="l1048" class='ln'>1048</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control</span></td></tr>
+<td><a id="l1048" class='ln'>1048</a></td><td><span class="ct">       EPwm3Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A</span></td></tr>
 <tr name="1049" id="1049">
-<td><a id="l1049" class='ln'>1049</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1049" class='ln'>1049</a></td><td><span class="ct">       EPwm3Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B</span></td></tr>
 <tr name="1050" id="1050">
-<td><a id="l1050" class='ln'>1050</a></td><td>    <a id="1050c5" class="tk">EPwm3Regs</a>.<a id="1050c15" class="tk">DBCTL</a>.<a id="1050c21" class="tk">all</a> = (<a id="1050c28" class="tk">EPwm3Regs</a>.<a id="1050c38" class="tk">DBCTL</a>.<a id="1050c44" class="tk">all</a> <a id="1050c48" class="tk">&amp;</a> <a id="1050c50" class="tk">~</a>0x3F) <a id="1050c57" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1050" class='ln'>1050</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1051" id="1051">
-<td><a id="l1051" class='ln'>1051</a></td><td>    <a id="1051c5" class="tk">EPwm3Regs</a>.<a id="1051c15" class="tk">DBRED</a> = 0;</td></tr>
+<td><a id="l1051" class='ln'>1051</a></td><td>    <a id="1051c5" class="tk">EPwm3Regs</a>.<a id="1051c15" class="tk">AQCSFRC</a>.<a id="1051c23" class="tk">all</a> = (<a id="1051c30" class="tk">EPwm3Regs</a>.<a id="1051c40" class="tk">AQCSFRC</a>.<a id="1051c48" class="tk">all</a> <a id="1051c52" class="tk">&amp;</a> <a id="1051c54" class="tk">~</a>0xF) <a id="1051c60" class="tk">|</a> 0x0;</td></tr>
 <tr name="1052" id="1052">
-<td><a id="l1052" class='ln'>1052</a></td><td>    <a id="1052c5" class="tk">EPwm3Regs</a>.<a id="1052c15" class="tk">DBFED</a> = 0;</td></tr>
+<td><a id="l1052" class='ln'>1052</a></td><td></td></tr>
 <tr name="1053" id="1053">
-<td><a id="l1053" class='ln'>1053</a></td><td></td></tr>
+<td><a id="l1053" class='ln'>1053</a></td><td>    <span class="ct">/*-- Setup Dead-Band Generator (DB) Submodule --*/</span></td></tr>
 <tr name="1054" id="1054">
-<td><a id="l1054" class='ln'>1054</a></td><td>    <span class="ct">/*-- Setup Event-Trigger (ET) Submodule --*/</span></td></tr>
+<td><a id="l1054" class='ln'>1054</a></td><td>    <span class="ct">/* // Dead-Band Generator Control Register</span></td></tr>
 <tr name="1055" id="1055">
-<td><a id="l1055" class='ln'>1055</a></td><td>    <span class="ct">/* // Event-Trigger Selection and Event-Trigger Pre-Scale Register</span></td></tr>
+<td><a id="l1055" class='ln'>1055</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control</span></td></tr>
 <tr name="1056" id="1056">
-<td><a id="l1056" class='ln'>1056</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable</span></td></tr>
+<td><a id="l1056" class='ln'>1056</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control</span></td></tr>
 <tr name="1057" id="1057">
-<td><a id="l1057" class='ln'>1057</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select</span></td></tr>
+<td><a id="l1057" class='ln'>1057</a></td><td><span class="ct">       EPwm3Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control</span></td></tr>
 <tr name="1058" id="1058">
-<td><a id="l1058" class='ln'>1058</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM3SOCA Period Select</span></td></tr>
+<td><a id="l1058" class='ln'>1058</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1059" id="1059">
-<td><a id="l1059" class='ln'>1059</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable</span></td></tr>
+<td><a id="l1059" class='ln'>1059</a></td><td>    <a id="1059c5" class="tk">EPwm3Regs</a>.<a id="1059c15" class="tk">DBCTL</a>.<a id="1059c21" class="tk">all</a> = (<a id="1059c28" class="tk">EPwm3Regs</a>.<a id="1059c38" class="tk">DBCTL</a>.<a id="1059c44" class="tk">all</a> <a id="1059c48" class="tk">&amp;</a> <a id="1059c50" class="tk">~</a>0x3F) <a id="1059c57" class="tk">|</a> 0x0;</td></tr>
 <tr name="1060" id="1060">
-<td><a id="l1060" class='ln'>1060</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select</span></td></tr>
+<td><a id="l1060" class='ln'>1060</a></td><td>    <a id="1060c5" class="tk">EPwm3Regs</a>.<a id="1060c15" class="tk">DBRED</a> = 0;</td></tr>
 <tr name="1061" id="1061">
-<td><a id="l1061" class='ln'>1061</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM3SOCB Period Select</span></td></tr>
+<td><a id="l1061" class='ln'>1061</a></td><td>    <a id="1061c5" class="tk">EPwm3Regs</a>.<a id="1061c15" class="tk">DBFED</a> = 0;</td></tr>
 <tr name="1062" id="1062">
-<td><a id="l1062" class='ln'>1062</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.INTEN      = 0;          // EPWM3INTn Enable</span></td></tr>
+<td><a id="l1062" class='ln'>1062</a></td><td></td></tr>
 <tr name="1063" id="1063">
-<td><a id="l1063" class='ln'>1063</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.INTSEL     = 1;          // EPWM3INTn Select</span></td></tr>
+<td><a id="l1063" class='ln'>1063</a></td><td>    <span class="ct">/*-- Setup Event-Trigger (ET) Submodule --*/</span></td></tr>
 <tr name="1064" id="1064">
-<td><a id="l1064" class='ln'>1064</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.INTPRD      = 1;          // EPWM3INTn Period Select</span></td></tr>
+<td><a id="l1064" class='ln'>1064</a></td><td>    <span class="ct">/* // Event-Trigger Selection and Event-Trigger Pre-Scale Register</span></td></tr>
 <tr name="1065" id="1065">
-<td><a id="l1065" class='ln'>1065</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1065" class='ln'>1065</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable</span></td></tr>
 <tr name="1066" id="1066">
-<td><a id="l1066" class='ln'>1066</a></td><td>    <a id="1066c5" class="tk">EPwm3Regs</a>.<a id="1066c15" class="tk">ETSEL</a>.<a id="1066c21" class="tk">all</a> = (<a id="1066c28" class="tk">EPwm3Regs</a>.<a id="1066c38" class="tk">ETSEL</a>.<a id="1066c44" class="tk">all</a> <a id="1066c48" class="tk">&amp;</a> <a id="1066c50" class="tk">~</a>0xFF0F) <a id="1066c59" class="tk">|</a> 0x1101;</td></tr>
+<td><a id="l1066" class='ln'>1066</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select</span></td></tr>
 <tr name="1067" id="1067">
-<td><a id="l1067" class='ln'>1067</a></td><td>    <a id="1067c5" class="tk">EPwm3Regs</a>.<a id="1067c15" class="tk">ETPS</a>.<a id="1067c20" class="tk">all</a> = (<a id="1067c27" class="tk">EPwm3Regs</a>.<a id="1067c37" class="tk">ETPS</a>.<a id="1067c42" class="tk">all</a> <a id="1067c46" class="tk">&amp;</a> <a id="1067c48" class="tk">~</a>0x3303) <a id="1067c57" class="tk">|</a> 0x1101;</td></tr>
+<td><a id="l1067" class='ln'>1067</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM3SOCA Period Select</span></td></tr>
 <tr name="1068" id="1068">
-<td><a id="l1068" class='ln'>1068</a></td><td></td></tr>
+<td><a id="l1068" class='ln'>1068</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable</span></td></tr>
 <tr name="1069" id="1069">
-<td><a id="l1069" class='ln'>1069</a></td><td>    <span class="ct">/*-- Setup PWM-Chopper (PC) Submodule --*/</span></td></tr>
+<td><a id="l1069" class='ln'>1069</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select</span></td></tr>
 <tr name="1070" id="1070">
-<td><a id="l1070" class='ln'>1070</a></td><td>    <span class="ct">/* // PWM-Chopper Control Register</span></td></tr>
+<td><a id="l1070" class='ln'>1070</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM3SOCB Period Select</span></td></tr>
 <tr name="1071" id="1071">
-<td><a id="l1071" class='ln'>1071</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable</span></td></tr>
+<td><a id="l1071" class='ln'>1071</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.INTEN      = 0;          // EPWM3INTn Enable</span></td></tr>
 <tr name="1072" id="1072">
-<td><a id="l1072" class='ln'>1072</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency</span></td></tr>
+<td><a id="l1072" class='ln'>1072</a></td><td><span class="ct">       EPwm3Regs.ETSEL.bit.INTSEL     = 1;          // EPWM3INTn Select</span></td></tr>
 <tr name="1073" id="1073">
-<td><a id="l1073" class='ln'>1073</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width</span></td></tr>
+<td><a id="l1073" class='ln'>1073</a></td><td><span class="ct">       EPwm3Regs.ETPS.bit.INTPRD      = 1;          // EPWM3INTn Period Select</span></td></tr>
 <tr name="1074" id="1074">
-<td><a id="l1074" class='ln'>1074</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle</span></td></tr>
+<td><a id="l1074" class='ln'>1074</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1075" id="1075">
-<td><a id="l1075" class='ln'>1075</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1075" class='ln'>1075</a></td><td>    <a id="1075c5" class="tk">EPwm3Regs</a>.<a id="1075c15" class="tk">ETSEL</a>.<a id="1075c21" class="tk">all</a> = (<a id="1075c28" class="tk">EPwm3Regs</a>.<a id="1075c38" class="tk">ETSEL</a>.<a id="1075c44" class="tk">all</a> <a id="1075c48" class="tk">&amp;</a> <a id="1075c50" class="tk">~</a>0xFF0F) <a id="1075c59" class="tk">|</a> 0x1101;</td></tr>
 <tr name="1076" id="1076">
-<td><a id="l1076" class='ln'>1076</a></td><td>    <a id="1076c5" class="tk">EPwm3Regs</a>.<a id="1076c15" class="tk">PCCTL</a>.<a id="1076c21" class="tk">all</a> = (<a id="1076c28" class="tk">EPwm3Regs</a>.<a id="1076c38" class="tk">PCCTL</a>.<a id="1076c44" class="tk">all</a> <a id="1076c48" class="tk">&amp;</a> <a id="1076c50" class="tk">~</a>0x7FF) <a id="1076c58" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1076" class='ln'>1076</a></td><td>    <a id="1076c5" class="tk">EPwm3Regs</a>.<a id="1076c15" class="tk">ETPS</a>.<a id="1076c20" class="tk">all</a> = (<a id="1076c27" class="tk">EPwm3Regs</a>.<a id="1076c37" class="tk">ETPS</a>.<a id="1076c42" class="tk">all</a> <a id="1076c46" class="tk">&amp;</a> <a id="1076c48" class="tk">~</a>0x3303) <a id="1076c57" class="tk">|</a> 0x1101;</td></tr>
 <tr name="1077" id="1077">
 <td><a id="l1077" class='ln'>1077</a></td><td></td></tr>
 <tr name="1078" id="1078">
-<td><a id="l1078" class='ln'>1078</a></td><td>    <span class="ct">/*-- Set up Trip-Zone (TZ) Submodule --*/</span></td></tr>
+<td><a id="l1078" class='ln'>1078</a></td><td>    <span class="ct">/*-- Setup PWM-Chopper (PC) Submodule --*/</span></td></tr>
 <tr name="1079" id="1079">
-<td><a id="l1079" class='ln'>1079</a></td><td>    <a id="1079c5" class="tk">EALLOW</a>;</td></tr>
+<td><a id="l1079" class='ln'>1079</a></td><td>    <span class="ct">/* // PWM-Chopper Control Register</span></td></tr>
 <tr name="1080" id="1080">
-<td><a id="l1080" class='ln'>1080</a></td><td>    <a id="1080c5" class="tk">EPwm3Regs</a>.<a id="1080c15" class="tk">TZSEL</a>.<a id="1080c21" class="tk">all</a> = 0;</td></tr>
+<td><a id="l1080" class='ln'>1080</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable</span></td></tr>
 <tr name="1081" id="1081">
-<td><a id="l1081" class='ln'>1081</a></td><td></td></tr>
+<td><a id="l1081" class='ln'>1081</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency</span></td></tr>
 <tr name="1082" id="1082">
-<td><a id="l1082" class='ln'>1082</a></td><td>    <span class="ct">/* // Trip-Zone Control Register</span></td></tr>
+<td><a id="l1082" class='ln'>1082</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width</span></td></tr>
 <tr name="1083" id="1083">
-<td><a id="l1083" class='ln'>1083</a></td><td><span class="ct">       EPwm3Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM3A</span></td></tr>
+<td><a id="l1083" class='ln'>1083</a></td><td><span class="ct">       EPwm3Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle</span></td></tr>
 <tr name="1084" id="1084">
-<td><a id="l1084" class='ln'>1084</a></td><td><span class="ct">       EPwm3Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM3B</span></td></tr>
+<td><a id="l1084" class='ln'>1084</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1085" id="1085">
-<td><a id="l1085" class='ln'>1085</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1085" class='ln'>1085</a></td><td>    <a id="1085c5" class="tk">EPwm3Regs</a>.<a id="1085c15" class="tk">PCCTL</a>.<a id="1085c21" class="tk">all</a> = (<a id="1085c28" class="tk">EPwm3Regs</a>.<a id="1085c38" class="tk">PCCTL</a>.<a id="1085c44" class="tk">all</a> <a id="1085c48" class="tk">&amp;</a> <a id="1085c50" class="tk">~</a>0x7FF) <a id="1085c58" class="tk">|</a> 0x0;</td></tr>
 <tr name="1086" id="1086">
-<td><a id="l1086" class='ln'>1086</a></td><td>    <a id="1086c5" class="tk">EPwm3Regs</a>.<a id="1086c15" class="tk">TZCTL</a>.<a id="1086c21" class="tk">all</a> = (<a id="1086c28" class="tk">EPwm3Regs</a>.<a id="1086c38" class="tk">TZCTL</a>.<a id="1086c44" class="tk">all</a> <a id="1086c48" class="tk">&amp;</a> <a id="1086c50" class="tk">~</a>0xF) <a id="1086c56" class="tk">|</a> 0xF;</td></tr>
+<td><a id="l1086" class='ln'>1086</a></td><td></td></tr>
 <tr name="1087" id="1087">
-<td><a id="l1087" class='ln'>1087</a></td><td></td></tr>
+<td><a id="l1087" class='ln'>1087</a></td><td>    <span class="ct">/*-- Set up Trip-Zone (TZ) Submodule --*/</span></td></tr>
 <tr name="1088" id="1088">
-<td><a id="l1088" class='ln'>1088</a></td><td>    <span class="ct">/* // Trip-Zone Enable Interrupt Register</span></td></tr>
+<td><a id="l1088" class='ln'>1088</a></td><td>    <a id="1088c5" class="tk">EALLOW</a>;</td></tr>
 <tr name="1089" id="1089">
-<td><a id="l1089" class='ln'>1089</a></td><td><span class="ct">       EPwm3Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable</span></td></tr>
+<td><a id="l1089" class='ln'>1089</a></td><td>    <a id="1089c5" class="tk">EPwm3Regs</a>.<a id="1089c15" class="tk">TZSEL</a>.<a id="1089c21" class="tk">all</a> = 0;</td></tr>
 <tr name="1090" id="1090">
-<td><a id="l1090" class='ln'>1090</a></td><td><span class="ct">       EPwm3Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable</span></td></tr>
+<td><a id="l1090" class='ln'>1090</a></td><td></td></tr>
 <tr name="1091" id="1091">
-<td><a id="l1091" class='ln'>1091</a></td><td><span class="ct">     */</span></td></tr>
+<td><a id="l1091" class='ln'>1091</a></td><td>    <span class="ct">/* // Trip-Zone Control Register</span></td></tr>
 <tr name="1092" id="1092">
-<td><a id="l1092" class='ln'>1092</a></td><td>    <a id="1092c5" class="tk">EPwm3Regs</a>.<a id="1092c15" class="tk">TZEINT</a>.<a id="1092c22" class="tk">all</a> = (<a id="1092c29" class="tk">EPwm3Regs</a>.<a id="1092c39" class="tk">TZEINT</a>.<a id="1092c46" class="tk">all</a> <a id="1092c50" class="tk">&amp;</a> <a id="1092c52" class="tk">~</a>0x6) <a id="1092c58" class="tk">|</a> 0x0;</td></tr>
+<td><a id="l1092" class='ln'>1092</a></td><td><span class="ct">       EPwm3Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM3A</span></td></tr>
 <tr name="1093" id="1093">
-<td><a id="l1093" class='ln'>1093</a></td><td>    <a id="1093c5" class="tk">EDIS</a>;</td></tr>
+<td><a id="l1093" class='ln'>1093</a></td><td><span class="ct">       EPwm3Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM3B</span></td></tr>
 <tr name="1094" id="1094">
-<td><a id="l1094" class='ln'>1094</a></td><td>  <span class="br">}</span></td></tr>
+<td><a id="l1094" class='ln'>1094</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1095" id="1095">
-<td><a id="l1095" class='ln'>1095</a></td><td></td></tr>
+<td><a id="l1095" class='ln'>1095</a></td><td>    <a id="1095c5" class="tk">EPwm3Regs</a>.<a id="1095c15" class="tk">TZCTL</a>.<a id="1095c21" class="tk">all</a> = (<a id="1095c28" class="tk">EPwm3Regs</a>.<a id="1095c38" class="tk">TZCTL</a>.<a id="1095c44" class="tk">all</a> <a id="1095c48" class="tk">&amp;</a> <a id="1095c50" class="tk">~</a>0xF) <a id="1095c56" class="tk">|</a> 0xF;</td></tr>
 <tr name="1096" id="1096">
-<td><a id="l1096" class='ln'>1096</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="1096">&lt;S4&gt;/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an</a>' */</span></td></tr>
+<td><a id="l1096" class='ln'>1096</a></td><td></td></tr>
 <tr name="1097" id="1097">
-<td><a id="l1097" class='ln'>1097</a></td><td>  <a id="1097c3" class="tk">EALLOW</a>;</td></tr>
+<td><a id="l1097" class='ln'>1097</a></td><td>    <span class="ct">/* // Trip-Zone Enable Interrupt Register</span></td></tr>
 <tr name="1098" id="1098">
-<td><a id="l1098" class='ln'>1098</a></td><td>  <a id="1098c3" class="tk">GpioCtrlRegs</a>.<a id="1098c16" class="tk">GPBMUX1</a>.<a id="1098c24" class="tk">all</a> <a id="1098c28" class="tk">&amp;=</a> 0xFFFFFFCF;</td></tr>
+<td><a id="l1098" class='ln'>1098</a></td><td><span class="ct">       EPwm3Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable</span></td></tr>
 <tr name="1099" id="1099">
-<td><a id="l1099" class='ln'>1099</a></td><td>  <a id="1099c3" class="tk">GpioCtrlRegs</a>.<a id="1099c16" class="tk">GPBDIR</a>.<a id="1099c23" class="tk">all</a> <a id="1099c27" class="tk">|=</a> 0x4;</td></tr>
+<td><a id="l1099" class='ln'>1099</a></td><td><span class="ct">       EPwm3Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable</span></td></tr>
 <tr name="1100" id="1100">
-<td><a id="l1100" class='ln'>1100</a></td><td>  <a id="1100c3" class="tk">EDIS</a>;</td></tr>
+<td><a id="l1100" class='ln'>1100</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1101" id="1101">
-<td><a id="l1101" class='ln'>1101</a></td><td></td></tr>
+<td><a id="l1101" class='ln'>1101</a></td><td>    <a id="1101c5" class="tk">EPwm3Regs</a>.<a id="1101c15" class="tk">TZEINT</a>.<a id="1101c22" class="tk">all</a> = (<a id="1101c29" class="tk">EPwm3Regs</a>.<a id="1101c39" class="tk">TZEINT</a>.<a id="1101c46" class="tk">all</a> <a id="1101c50" class="tk">&amp;</a> <a id="1101c52" class="tk">~</a>0x6) <a id="1101c58" class="tk">|</a> 0x0;</td></tr>
 <tr name="1102" id="1102">
-<td><a id="l1102" class='ln'>1102</a></td><td>  <span class="ct">/* InitializeConditions for Memory: '<a class="ct blk" blk_line="1102">&lt;S10&gt;/Memory</a>' */</span></td></tr>
+<td><a id="l1102" class='ln'>1102</a></td><td>    <a id="1102c5" class="tk">EDIS</a>;</td></tr>
 <tr name="1103" id="1103">
-<td><a id="l1103" class='ln'>1103</a></td><td>  <a id="1103c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1103c35" class="tk">Memory_PreviousInput</a> =</td></tr>
+<td><a id="l1103" class='ln'>1103</a></td><td>  <span class="br">}</span></td></tr>
 <tr name="1104" id="1104">
-<td><a id="l1104" class='ln'>1104</a></td><td>    <a id="1104c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1104c36" class="tk">EdgeDetector2_ic</a>;</td></tr>
+<td><a id="l1104" class='ln'>1104</a></td><td></td></tr>
 <tr name="1105" id="1105">
-<td><a id="l1105" class='ln'>1105</a></td><td></td></tr>
+<td><a id="l1105" class='ln'>1105</a></td><td>  <span class="ct">/* Start for S-Function (c280xgpio_do): '<a class="ct blk" blk_line="1105">&lt;S4&gt;/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an</a>' */</span></td></tr>
 <tr name="1106" id="1106">
-<td><a id="l1106" class='ln'>1106</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1106">&lt;S8&gt;/Unit Delay3</a>' */</span></td></tr>
+<td><a id="l1106" class='ln'>1106</a></td><td>  <a id="1106c3" class="tk">EALLOW</a>;</td></tr>
 <tr name="1107" id="1107">
-<td><a id="l1107" class='ln'>1107</a></td><td>  <a id="1107c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1107c35" class="tk">UnitDelay3_DSTATE</a> =</td></tr>
+<td><a id="l1107" class='ln'>1107</a></td><td>  <a id="1107c3" class="tk">GpioCtrlRegs</a>.<a id="1107c16" class="tk">GPBMUX1</a>.<a id="1107c24" class="tk">all</a> <a id="1107c28" class="tk">&amp;=</a> 0xFFFFFFCF;</td></tr>
 <tr name="1108" id="1108">
-<td><a id="l1108" class='ln'>1108</a></td><td>    <a id="1108c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1108c36" class="tk">UnitDelay3_InitialCondition</a>;</td></tr>
+<td><a id="l1108" class='ln'>1108</a></td><td>  <a id="1108c3" class="tk">GpioCtrlRegs</a>.<a id="1108c16" class="tk">GPBDIR</a>.<a id="1108c23" class="tk">all</a> <a id="1108c27" class="tk">|=</a> 0x4;</td></tr>
 <tr name="1109" id="1109">
-<td><a id="l1109" class='ln'>1109</a></td><td></td></tr>
+<td><a id="l1109" class='ln'>1109</a></td><td>  <a id="1109c3" class="tk">EDIS</a>;</td></tr>
 <tr name="1110" id="1110">
-<td><a id="l1110" class='ln'>1110</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1110">&lt;S8&gt;/Unit Delay4</a>' */</span></td></tr>
+<td><a id="l1110" class='ln'>1110</a></td><td></td></tr>
 <tr name="1111" id="1111">
-<td><a id="l1111" class='ln'>1111</a></td><td>  <a id="1111c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1111c35" class="tk">UnitDelay4_DSTATE</a> =</td></tr>
+<td><a id="l1111" class='ln'>1111</a></td><td>  <span class="ct">/* Start for S-Function (c280xpwm): '<a class="ct blk" blk_line="1111">&lt;Root&gt;/ePWM</a>' */</span></td></tr>
 <tr name="1112" id="1112">
-<td><a id="l1112" class='ln'>1112</a></td><td>    <a id="1112c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1112c36" class="tk">UnitDelay4_InitialCondition</a>;</td></tr>
+<td><a id="l1112" class='ln'>1112</a></td><td></td></tr>
 <tr name="1113" id="1113">
-<td><a id="l1113" class='ln'>1113</a></td><td></td></tr>
+<td><a id="l1113" class='ln'>1113</a></td><td>  <span class="ct">/*** Initialize ePWM4 modules ***/</span></td></tr>
 <tr name="1114" id="1114">
-<td><a id="l1114" class='ln'>1114</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1114">&lt;S8&gt;/Unit Delay5</a>' */</span></td></tr>
+<td><a id="l1114" class='ln'>1114</a></td><td>  <span class="br">{</span></td></tr>
 <tr name="1115" id="1115">
-<td><a id="l1115" class='ln'>1115</a></td><td>  <a id="1115c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1115c35" class="tk">UnitDelay5_DSTATE</a> =</td></tr>
+<td><a id="l1115" class='ln'>1115</a></td><td>    <span class="ct">/*-- Setup Time-Base (TB) Submodule --*/</span></td></tr>
 <tr name="1116" id="1116">
-<td><a id="l1116" class='ln'>1116</a></td><td>    <a id="1116c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1116c36" class="tk">UnitDelay5_InitialCondition</a>;</td></tr>
+<td><a id="l1116" class='ln'>1116</a></td><td>    <a id="1116c5" class="tk">EPwm4Regs</a>.<a id="1116c15" class="tk">TBPRD</a> = 64000;</td></tr>
 <tr name="1117" id="1117">
 <td><a id="l1117" class='ln'>1117</a></td><td></td></tr>
 <tr name="1118" id="1118">
-<td><a id="l1118" class='ln'>1118</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1118">&lt;S8&gt;/Unit Delay2</a>' */</span></td></tr>
+<td><a id="l1118" class='ln'>1118</a></td><td>    <span class="ct">/* // Time-Base Control Register</span></td></tr>
 <tr name="1119" id="1119">
-<td><a id="l1119" class='ln'>1119</a></td><td>  <a id="1119c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1119c35" class="tk">UnitDelay2_DSTATE</a> =</td></tr>
+<td><a id="l1119" class='ln'>1119</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode</span></td></tr>
 <tr name="1120" id="1120">
-<td><a id="l1120" class='ln'>1120</a></td><td>    <a id="1120c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1120c36" class="tk">UnitDelay2_InitialCondition</a>;</td></tr>
+<td><a id="l1120" class='ln'>1120</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select</span></td></tr>
 <tr name="1121" id="1121">
-<td><a id="l1121" class='ln'>1121</a></td><td></td></tr>
+<td><a id="l1121" class='ln'>1121</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select</span></td></tr>
 <tr name="1122" id="1122">
-<td><a id="l1122" class='ln'>1122</a></td><td>  <span class="ct">/* InitializeConditions for Memory: '<a class="ct blk" blk_line="1122">&lt;S9&gt;/Memory</a>' */</span></td></tr>
+<td><a id="l1122" class='ln'>1122</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable</span></td></tr>
 <tr name="1123" id="1123">
-<td><a id="l1123" class='ln'>1123</a></td><td>  <a id="1123c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1123c35" class="tk">Memory_PreviousInput_b</a> =</td></tr>
+<td><a id="l1123" class='ln'>1123</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction</span></td></tr>
 <tr name="1124" id="1124">
-<td><a id="l1124" class='ln'>1124</a></td><td>    <a id="1124c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1124c36" class="tk">EdgeDetector1_ic</a>;</td></tr>
+<td><a id="l1124" class='ln'>1124</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale</span></td></tr>
 <tr name="1125" id="1125">
-<td><a id="l1125" class='ln'>1125</a></td><td></td></tr>
+<td><a id="l1125" class='ln'>1125</a></td><td><span class="ct">       EPwm4Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale</span></td></tr>
 <tr name="1126" id="1126">
-<td><a id="l1126" class='ln'>1126</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1126">&lt;S8&gt;/Unit Delay1</a>' */</span></td></tr>
+<td><a id="l1126" class='ln'>1126</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1127" id="1127">
-<td><a id="l1127" class='ln'>1127</a></td><td>  <a id="1127c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1127c35" class="tk">UnitDelay1_DSTATE</a> =</td></tr>
+<td><a id="l1127" class='ln'>1127</a></td><td>    <a id="1127c5" class="tk">EPwm4Regs</a>.<a id="1127c15" class="tk">TBCTL</a>.<a id="1127c21" class="tk">all</a> = (<a id="1127c28" class="tk">EPwm4Regs</a>.<a id="1127c38" class="tk">TBCTL</a>.<a id="1127c44" class="tk">all</a> <a id="1127c48" class="tk">&amp;</a> <a id="1127c50" class="tk">~</a>0x3FBF) <a id="1127c59" class="tk">|</a> 0x30;</td></tr>
 <tr name="1128" id="1128">
-<td><a id="l1128" class='ln'>1128</a></td><td>    <a id="1128c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1128c36" class="tk">UnitDelay1_InitialCondition</a>;</td></tr>
+<td><a id="l1128" class='ln'>1128</a></td><td></td></tr>
 <tr name="1129" id="1129">
-<td><a id="l1129" class='ln'>1129</a></td><td></td></tr>
+<td><a id="l1129" class='ln'>1129</a></td><td>    <span class="ct">/* // Time-Base Phase Register</span></td></tr>
 <tr name="1130" id="1130">
-<td><a id="l1130" class='ln'>1130</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1130">&lt;S10&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<td><a id="l1130" class='ln'>1130</a></td><td><span class="ct">       EPwm4Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register</span></td></tr>
 <tr name="1131" id="1131">
-<td><a id="l1131" class='ln'>1131</a></td><td>  <a id="1131c3" class="tk">SortierAl_POSITIVEEdge_Init</a></td></tr>
+<td><a id="l1131" class='ln'>1131</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1132" id="1132">
-<td><a id="l1132" class='ln'>1132</a></td><td>    (<a id="1132c6" class="tk">&amp;</a><a id="1132c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1132c38" class="tk">RelationalOperator1</a>,</td></tr>
+<td><a id="l1132" class='ln'>1132</a></td><td>    <a id="1132c5" class="tk">EPwm4Regs</a>.<a id="1132c15" class="tk">TBPHS</a>.<a id="1132c21" class="tk">all</a> = (<a id="1132c28" class="tk">EPwm4Regs</a>.<a id="1132c38" class="tk">TBPHS</a>.<a id="1132c44" class="tk">all</a> <a id="1132c48" class="tk">&amp;</a> <a id="1132c50" class="tk">~</a>0xFFFF0000) <a id="1132c63" class="tk">|</a> 0x0;</td></tr>
 <tr name="1133" id="1133">
-<td><a id="l1133" class='ln'>1133</a></td><td>     <a id="1133c6" class="tk">&amp;</a><a id="1133c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1133c38" class="tk">POSITIVEEdge_n</a>);</td></tr>
+<td><a id="l1133" class='ln'>1133</a></td><td>    <a id="1133c5" class="tk">EPwm4Regs</a>.<a id="1133c15" class="tk">TBCTR</a> = 0x0000;          <span class="ct">/* Clear counter*/</span></td></tr>
 <tr name="1134" id="1134">
 <td><a id="l1134" class='ln'>1134</a></td><td></td></tr>
 <tr name="1135" id="1135">
-<td><a id="l1135" class='ln'>1135</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1135">&lt;S10&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<td><a id="l1135" class='ln'>1135</a></td><td>    <span class="ct">/*-- Setup Counter_Compare (CC) Submodule --*/</span></td></tr>
 <tr name="1136" id="1136">
-<td><a id="l1136" class='ln'>1136</a></td><td></td></tr>
+<td><a id="l1136" class='ln'>1136</a></td><td>    <span class="ct">/* // Counter-Compare Control Register</span></td></tr>
 <tr name="1137" id="1137">
-<td><a id="l1137" class='ln'>1137</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1137">&lt;S10&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<td><a id="l1137" class='ln'>1137</a></td><td><span class="ct">       EPwm4Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.</span></td></tr>
 <tr name="1138" id="1138">
-<td><a id="l1138" class='ln'>1138</a></td><td>  <a id="1138c3" class="tk">SortierAl_NEGATIVEEdge_Init</a></td></tr>
+<td><a id="l1138" class='ln'>1138</a></td><td><span class="ct">       EPwm4Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.</span></td></tr>
 <tr name="1139" id="1139">
-<td><a id="l1139" class='ln'>1139</a></td><td>    (<a id="1139c6" class="tk">&amp;</a><a id="1139c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1139c38" class="tk">RelationalOperator1_f</a>,</td></tr>
+<td><a id="l1139" class='ln'>1139</a></td><td><span class="ct">       EPwm4Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A</span></td></tr>
 <tr name="1140" id="1140">
-<td><a id="l1140" class='ln'>1140</a></td><td>     <a id="1140c6" class="tk">&amp;</a><a id="1140c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1140c38" class="tk">NEGATIVEEdge_o</a>);</td></tr>
+<td><a id="l1140" class='ln'>1140</a></td><td><span class="ct">       EPwm4Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A</span></td></tr>
 <tr name="1141" id="1141">
-<td><a id="l1141" class='ln'>1141</a></td><td></td></tr>
+<td><a id="l1141" class='ln'>1141</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1142" id="1142">
-<td><a id="l1142" class='ln'>1142</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1142">&lt;S10&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<td><a id="l1142" class='ln'>1142</a></td><td>    <a id="1142c5" class="tk">EPwm4Regs</a>.<a id="1142c15" class="tk">CMPCTL</a>.<a id="1142c22" class="tk">all</a> = (<a id="1142c29" class="tk">EPwm4Regs</a>.<a id="1142c39" class="tk">CMPCTL</a>.<a id="1142c46" class="tk">all</a> <a id="1142c50" class="tk">&amp;</a> <a id="1142c52" class="tk">~</a>0x5F) <a id="1142c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="1143" id="1143">
-<td><a id="l1143" class='ln'>1143</a></td><td></td></tr>
+<td><a id="l1143" class='ln'>1143</a></td><td>    <a id="1143c5" class="tk">EPwm4Regs</a>.<a id="1143c15" class="tk">CMPA</a>.<a id="1143c20" class="tk">half</a>.<a id="1143c25" class="tk">CMPA</a> = 19200;</td></tr>
 <tr name="1144" id="1144">
-<td><a id="l1144" class='ln'>1144</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1144">&lt;S9&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<td><a id="l1144" class='ln'>1144</a></td><td>    <a id="1144c5" class="tk">EPwm4Regs</a>.<a id="1144c15" class="tk">CMPB</a> = 32000;</td></tr>
 <tr name="1145" id="1145">
-<td><a id="l1145" class='ln'>1145</a></td><td>  <a id="1145c3" class="tk">SortierAl_POSITIVEEdge_Init</a></td></tr>
+<td><a id="l1145" class='ln'>1145</a></td><td></td></tr>
 <tr name="1146" id="1146">
-<td><a id="l1146" class='ln'>1146</a></td><td>    (<a id="1146c6" class="tk">&amp;</a><a id="1146c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1146c38" class="tk">RelationalOperator1_b</a>,</td></tr>
+<td><a id="l1146" class='ln'>1146</a></td><td>    <span class="ct">/*-- Setup Action-Qualifier (AQ) Submodule --*/</span></td></tr>
 <tr name="1147" id="1147">
-<td><a id="l1147" class='ln'>1147</a></td><td>     <a id="1147c6" class="tk">&amp;</a><a id="1147c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1147c38" class="tk">POSITIVEEdge</a>);</td></tr>
+<td><a id="l1147" class='ln'>1147</a></td><td>    <a id="1147c5" class="tk">EPwm4Regs</a>.<a id="1147c15" class="tk">AQCTLA</a>.<a id="1147c22" class="tk">all</a> = 36;</td></tr>
 <tr name="1148" id="1148">
-<td><a id="l1148" class='ln'>1148</a></td><td></td></tr>
+<td><a id="l1148" class='ln'>1148</a></td><td>    <a id="1148c5" class="tk">EPwm4Regs</a>.<a id="1148c15" class="tk">AQCTLB</a>.<a id="1148c22" class="tk">all</a> = 264;</td></tr>
 <tr name="1149" id="1149">
-<td><a id="l1149" class='ln'>1149</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1149">&lt;S9&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<td><a id="l1149" class='ln'>1149</a></td><td></td></tr>
 <tr name="1150" id="1150">
-<td><a id="l1150" class='ln'>1150</a></td><td></td></tr>
+<td><a id="l1150" class='ln'>1150</a></td><td>    <span class="ct">/* // Action-Qualifier Software Force Register</span></td></tr>
 <tr name="1151" id="1151">
-<td><a id="l1151" class='ln'>1151</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1151">&lt;S9&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<td><a id="l1151" class='ln'>1151</a></td><td><span class="ct">       EPwm4Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options</span></td></tr>
 <tr name="1152" id="1152">
-<td><a id="l1152" class='ln'>1152</a></td><td>  <a id="1152c3" class="tk">SortierAl_NEGATIVEEdge_Init</a></td></tr>
+<td><a id="l1152" class='ln'>1152</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1153" id="1153">
-<td><a id="l1153" class='ln'>1153</a></td><td>    (<a id="1153c6" class="tk">&amp;</a><a id="1153c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1153c38" class="tk">RelationalOperator1_j</a>,</td></tr>
+<td><a id="l1153" class='ln'>1153</a></td><td>    <a id="1153c5" class="tk">EPwm4Regs</a>.<a id="1153c15" class="tk">AQSFRC</a>.<a id="1153c22" class="tk">all</a> = (<a id="1153c29" class="tk">EPwm4Regs</a>.<a id="1153c39" class="tk">AQSFRC</a>.<a id="1153c46" class="tk">all</a> <a id="1153c50" class="tk">&amp;</a> <a id="1153c52" class="tk">~</a>0xC0) <a id="1153c59" class="tk">|</a> 0x0;</td></tr>
 <tr name="1154" id="1154">
-<td><a id="l1154" class='ln'>1154</a></td><td>     <a id="1154c6" class="tk">&amp;</a><a id="1154c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1154c38" class="tk">NEGATIVEEdge</a>);</td></tr>
+<td><a id="l1154" class='ln'>1154</a></td><td></td></tr>
 <tr name="1155" id="1155">
-<td><a id="l1155" class='ln'>1155</a></td><td></td></tr>
+<td><a id="l1155" class='ln'>1155</a></td><td>    <span class="ct">/* // Action-Qualifier Continuous S/W Force Register Set</span></td></tr>
 <tr name="1156" id="1156">
-<td><a id="l1156" class='ln'>1156</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1156">&lt;S9&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<td><a id="l1156" class='ln'>1156</a></td><td><span class="ct">       EPwm4Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A</span></td></tr>
 <tr name="1157" id="1157">
-<td><a id="l1157" class='ln'>1157</a></td><td></td></tr>
+<td><a id="l1157" class='ln'>1157</a></td><td><span class="ct">       EPwm4Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B</span></td></tr>
 <tr name="1158" id="1158">
-<td><a id="l1158" class='ln'>1158</a></td><td>  <span class="ct">/* SystemInitialize for Chart: '<a class="ct blk" blk_line="1158">&lt;Root&gt;/Sortieralgorithmus</a>' */</span></td></tr>
+<td><a id="l1158" class='ln'>1158</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1159" id="1159">
-<td><a id="l1159" class='ln'>1159</a></td><td>  <a id="1159c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1159c35" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
+<td><a id="l1159" class='ln'>1159</a></td><td>    <a id="1159c5" class="tk">EPwm4Regs</a>.<a id="1159c15" class="tk">AQCSFRC</a>.<a id="1159c23" class="tk">all</a> = (<a id="1159c30" class="tk">EPwm4Regs</a>.<a id="1159c40" class="tk">AQCSFRC</a>.<a id="1159c48" class="tk">all</a> <a id="1159c52" class="tk">&amp;</a> <a id="1159c54" class="tk">~</a>0xF) <a id="1159c60" class="tk">|</a> 0x0;</td></tr>
 <tr name="1160" id="1160">
-<td><a id="l1160" class='ln'>1160</a></td><td>  <a id="1160c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1160c35" class="tk">is_active_c3_SortierAlgorithmus</a> = 0U;</td></tr>
+<td><a id="l1160" class='ln'>1160</a></td><td></td></tr>
 <tr name="1161" id="1161">
-<td><a id="l1161" class='ln'>1161</a></td><td>  <a id="1161c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1161c35" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l1161" class='ln'>1161</a></td><td>    <span class="ct">/*-- Setup Dead-Band Generator (DB) Submodule --*/</span></td></tr>
 <tr name="1162" id="1162">
-<td><a id="l1162" class='ln'>1162</a></td><td>    <a id="1162c5" class="tk">SortierAlgor_IN_NO_ACTIVE_CHILD</a>;</td></tr>
+<td><a id="l1162" class='ln'>1162</a></td><td>    <span class="ct">/* // Dead-Band Generator Control Register</span></td></tr>
 <tr name="1163" id="1163">
-<td><a id="l1163" class='ln'>1163</a></td><td></td></tr>
+<td><a id="l1163" class='ln'>1163</a></td><td><span class="ct">       EPwm4Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control</span></td></tr>
 <tr name="1164" id="1164">
-<td><a id="l1164" class='ln'>1164</a></td><td>  <span class="ct">/* SystemInitialize for Chart: '<a class="ct blk" blk_line="1164">&lt;Root&gt;/Chart1</a>' */</span></td></tr>
+<td><a id="l1164" class='ln'>1164</a></td><td><span class="ct">       EPwm4Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control</span></td></tr>
 <tr name="1165" id="1165">
-<td><a id="l1165" class='ln'>1165</a></td><td>  <a id="1165c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1165c35" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
+<td><a id="l1165" class='ln'>1165</a></td><td><span class="ct">       EPwm4Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control</span></td></tr>
 <tr name="1166" id="1166">
-<td><a id="l1166" class='ln'>1166</a></td><td>  <a id="1166c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1166c35" class="tk">is_active_c1_SortierAlgorithmus</a> = 0U;</td></tr>
+<td><a id="l1166" class='ln'>1166</a></td><td><span class="ct">     */</span></td></tr>
 <tr name="1167" id="1167">
-<td><a id="l1167" class='ln'>1167</a></td><td>  <a id="1167c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1167c35" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<td><a id="l1167" class='ln'>1167</a></td><td>    <a id="1167c5" class="tk">EPwm4Regs</a>.<a id="1167c15" class="tk">DBCTL</a>.<a id="1167c21" class="tk">all</a> = (<a id="1167c28" class="tk">EPwm4Regs</a>.<a id="1167c38" class="tk">DBCTL</a>.<a id="1167c44" class="tk">all</a> <a id="1167c48" class="tk">&amp;</a> <a id="1167c50" class="tk">~</a>0x3F) <a id="1167c57" class="tk">|</a> 0x0;</td></tr>
 <tr name="1168" id="1168">
-<td><a id="l1168" class='ln'>1168</a></td><td>    <a id="1168c5" class="tk">SortierAlgor_IN_NO_ACTIVE_CHILD</a>;</td></tr>
+<td><a id="l1168" class='ln'>1168</a></td><td>    <a id="1168c5" class="tk">EPwm4Regs</a>.<a id="1168c15" class="tk">DBRED</a> = 0;</td></tr>
 <tr name="1169" id="1169">
-<td><a id="l1169" class='ln'>1169</a></td><td><span class="br">}</span></td></tr>
+<td><a id="l1169" class='ln'>1169</a></td><td>    <a id="1169c5" class="tk">EPwm4Regs</a>.<a id="1169c15" class="tk">DBFED</a> = 0;</td></tr>
 <tr name="1170" id="1170">
 <td><a id="l1170" class='ln'>1170</a></td><td></td></tr>
 <tr name="1171" id="1171">
-<td><a id="l1171" class='ln'>1171</a></td><td><span class="ct">/* Model terminate function */</span></td></tr>
+<td><a id="l1171" class='ln'>1171</a></td><td>    <span class="ct">/*-- Setup Event-Trigger (ET) Submodule --*/</span></td></tr>
 <tr name="1172" id="1172">
-<td><a id="l1172" class='ln'>1172</a></td><td><span class="kw">void</span> <a id="1172c6" class="tk">SortierAlgorithmusEchtSystem_terminate</a>(<span class="kw">void</span>)</td></tr>
+<td><a id="l1172" class='ln'>1172</a></td><td>    <span class="ct">/* // Event-Trigger Selection and Event-Trigger Pre-Scale Register</span></td></tr>
 <tr name="1173" id="1173">
-<td><a id="l1173" class='ln'>1173</a></td><td><span class="br">{</span></td></tr>
+<td><a id="l1173" class='ln'>1173</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable</span></td></tr>
 <tr name="1174" id="1174">
-<td><a id="l1174" class='ln'>1174</a></td><td>  <span class="ct">/* (no terminate code required) */</span></td></tr>
+<td><a id="l1174" class='ln'>1174</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select</span></td></tr>
 <tr name="1175" id="1175">
-<td><a id="l1175" class='ln'>1175</a></td><td><span class="br">}</span></td></tr>
+<td><a id="l1175" class='ln'>1175</a></td><td><span class="ct">       EPwm4Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM4SOCA Period Select</span></td></tr>
 <tr name="1176" id="1176">
-<td><a id="l1176" class='ln'>1176</a></td><td></td></tr>
+<td><a id="l1176" class='ln'>1176</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable</span></td></tr>
 <tr name="1177" id="1177">
-<td><a id="l1177" class='ln'>1177</a></td><td><span class="ct">/*</span></td></tr>
+<td><a id="l1177" class='ln'>1177</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select</span></td></tr>
 <tr name="1178" id="1178">
-<td><a id="l1178" class='ln'>1178</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
+<td><a id="l1178" class='ln'>1178</a></td><td><span class="ct">       EPwm4Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM4SOCB Period Select</span></td></tr>
 <tr name="1179" id="1179">
-<td><a id="l1179" class='ln'>1179</a></td><td><span class="ct"> *</span></td></tr>
+<td><a id="l1179" class='ln'>1179</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.INTEN      = 0;          // EPWM4INTn Enable</span></td></tr>
 <tr name="1180" id="1180">
-<td><a id="l1180" class='ln'>1180</a></td><td><span class="ct"> * [EOF]</span></td></tr>
+<td><a id="l1180" class='ln'>1180</a></td><td><span class="ct">       EPwm4Regs.ETSEL.bit.INTSEL     = 1;          // EPWM4INTn Select</span></td></tr>
 <tr name="1181" id="1181">
-<td><a id="l1181" class='ln'>1181</a></td><td><span class="ct"> */</span></td></tr>
+<td><a id="l1181" class='ln'>1181</a></td><td><span class="ct">       EPwm4Regs.ETPS.bit.INTPRD      = 1;          // EPWM4INTn Period Select</span></td></tr>
 <tr name="1182" id="1182">
-<td><a id="l1182" class='ln'>1182</a></td><td></td></tr>
+<td><a id="l1182" class='ln'>1182</a></td><td><span class="ct">     */</span></td></tr>
+<tr name="1183" id="1183">
+<td><a id="l1183" class='ln'>1183</a></td><td>    <a id="1183c5" class="tk">EPwm4Regs</a>.<a id="1183c15" class="tk">ETSEL</a>.<a id="1183c21" class="tk">all</a> = (<a id="1183c28" class="tk">EPwm4Regs</a>.<a id="1183c38" class="tk">ETSEL</a>.<a id="1183c44" class="tk">all</a> <a id="1183c48" class="tk">&amp;</a> <a id="1183c50" class="tk">~</a>0xFF0F) <a id="1183c59" class="tk">|</a> 0x1101;</td></tr>
+<tr name="1184" id="1184">
+<td><a id="l1184" class='ln'>1184</a></td><td>    <a id="1184c5" class="tk">EPwm4Regs</a>.<a id="1184c15" class="tk">ETPS</a>.<a id="1184c20" class="tk">all</a> = (<a id="1184c27" class="tk">EPwm4Regs</a>.<a id="1184c37" class="tk">ETPS</a>.<a id="1184c42" class="tk">all</a> <a id="1184c46" class="tk">&amp;</a> <a id="1184c48" class="tk">~</a>0x3303) <a id="1184c57" class="tk">|</a> 0x1101;</td></tr>
+<tr name="1185" id="1185">
+<td><a id="l1185" class='ln'>1185</a></td><td></td></tr>
+<tr name="1186" id="1186">
+<td><a id="l1186" class='ln'>1186</a></td><td>    <span class="ct">/*-- Setup PWM-Chopper (PC) Submodule --*/</span></td></tr>
+<tr name="1187" id="1187">
+<td><a id="l1187" class='ln'>1187</a></td><td>    <span class="ct">/* // PWM-Chopper Control Register</span></td></tr>
+<tr name="1188" id="1188">
+<td><a id="l1188" class='ln'>1188</a></td><td><span class="ct">       EPwm4Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable</span></td></tr>
+<tr name="1189" id="1189">
+<td><a id="l1189" class='ln'>1189</a></td><td><span class="ct">       EPwm4Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency</span></td></tr>
+<tr name="1190" id="1190">
+<td><a id="l1190" class='ln'>1190</a></td><td><span class="ct">       EPwm4Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width</span></td></tr>
+<tr name="1191" id="1191">
+<td><a id="l1191" class='ln'>1191</a></td><td><span class="ct">       EPwm4Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle</span></td></tr>
+<tr name="1192" id="1192">
+<td><a id="l1192" class='ln'>1192</a></td><td><span class="ct">     */</span></td></tr>
+<tr name="1193" id="1193">
+<td><a id="l1193" class='ln'>1193</a></td><td>    <a id="1193c5" class="tk">EPwm4Regs</a>.<a id="1193c15" class="tk">PCCTL</a>.<a id="1193c21" class="tk">all</a> = (<a id="1193c28" class="tk">EPwm4Regs</a>.<a id="1193c38" class="tk">PCCTL</a>.<a id="1193c44" class="tk">all</a> <a id="1193c48" class="tk">&amp;</a> <a id="1193c50" class="tk">~</a>0x7FF) <a id="1193c58" class="tk">|</a> 0x0;</td></tr>
+<tr name="1194" id="1194">
+<td><a id="l1194" class='ln'>1194</a></td><td></td></tr>
+<tr name="1195" id="1195">
+<td><a id="l1195" class='ln'>1195</a></td><td>    <span class="ct">/*-- Set up Trip-Zone (TZ) Submodule --*/</span></td></tr>
+<tr name="1196" id="1196">
+<td><a id="l1196" class='ln'>1196</a></td><td>    <a id="1196c5" class="tk">EALLOW</a>;</td></tr>
+<tr name="1197" id="1197">
+<td><a id="l1197" class='ln'>1197</a></td><td>    <a id="1197c5" class="tk">EPwm4Regs</a>.<a id="1197c15" class="tk">TZSEL</a>.<a id="1197c21" class="tk">all</a> = 0;</td></tr>
+<tr name="1198" id="1198">
+<td><a id="l1198" class='ln'>1198</a></td><td></td></tr>
+<tr name="1199" id="1199">
+<td><a id="l1199" class='ln'>1199</a></td><td>    <span class="ct">/* // Trip-Zone Control Register</span></td></tr>
+<tr name="1200" id="1200">
+<td><a id="l1200" class='ln'>1200</a></td><td><span class="ct">       EPwm4Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM4A</span></td></tr>
+<tr name="1201" id="1201">
+<td><a id="l1201" class='ln'>1201</a></td><td><span class="ct">       EPwm4Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM4B</span></td></tr>
+<tr name="1202" id="1202">
+<td><a id="l1202" class='ln'>1202</a></td><td><span class="ct">     */</span></td></tr>
+<tr name="1203" id="1203">
+<td><a id="l1203" class='ln'>1203</a></td><td>    <a id="1203c5" class="tk">EPwm4Regs</a>.<a id="1203c15" class="tk">TZCTL</a>.<a id="1203c21" class="tk">all</a> = (<a id="1203c28" class="tk">EPwm4Regs</a>.<a id="1203c38" class="tk">TZCTL</a>.<a id="1203c44" class="tk">all</a> <a id="1203c48" class="tk">&amp;</a> <a id="1203c50" class="tk">~</a>0xF) <a id="1203c56" class="tk">|</a> 0xF;</td></tr>
+<tr name="1204" id="1204">
+<td><a id="l1204" class='ln'>1204</a></td><td></td></tr>
+<tr name="1205" id="1205">
+<td><a id="l1205" class='ln'>1205</a></td><td>    <span class="ct">/* // Trip-Zone Enable Interrupt Register</span></td></tr>
+<tr name="1206" id="1206">
+<td><a id="l1206" class='ln'>1206</a></td><td><span class="ct">       EPwm4Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable</span></td></tr>
+<tr name="1207" id="1207">
+<td><a id="l1207" class='ln'>1207</a></td><td><span class="ct">       EPwm4Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable</span></td></tr>
+<tr name="1208" id="1208">
+<td><a id="l1208" class='ln'>1208</a></td><td><span class="ct">     */</span></td></tr>
+<tr name="1209" id="1209">
+<td><a id="l1209" class='ln'>1209</a></td><td>    <a id="1209c5" class="tk">EPwm4Regs</a>.<a id="1209c15" class="tk">TZEINT</a>.<a id="1209c22" class="tk">all</a> = (<a id="1209c29" class="tk">EPwm4Regs</a>.<a id="1209c39" class="tk">TZEINT</a>.<a id="1209c46" class="tk">all</a> <a id="1209c50" class="tk">&amp;</a> <a id="1209c52" class="tk">~</a>0x6) <a id="1209c58" class="tk">|</a> 0x0;</td></tr>
+<tr name="1210" id="1210">
+<td><a id="l1210" class='ln'>1210</a></td><td>    <a id="1210c5" class="tk">EDIS</a>;</td></tr>
+<tr name="1211" id="1211">
+<td><a id="l1211" class='ln'>1211</a></td><td>  <span class="br">}</span></td></tr>
+<tr name="1212" id="1212">
+<td><a id="l1212" class='ln'>1212</a></td><td></td></tr>
+<tr name="1213" id="1213">
+<td><a id="l1213" class='ln'>1213</a></td><td>  <span class="ct">/* InitializeConditions for Memory: '<a class="ct blk" blk_line="1213">&lt;S10&gt;/Memory</a>' */</span></td></tr>
+<tr name="1214" id="1214">
+<td><a id="l1214" class='ln'>1214</a></td><td>  <a id="1214c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1214c35" class="tk">Memory_PreviousInput</a> =</td></tr>
+<tr name="1215" id="1215">
+<td><a id="l1215" class='ln'>1215</a></td><td>    <a id="1215c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1215c36" class="tk">EdgeDetector2_ic</a>;</td></tr>
+<tr name="1216" id="1216">
+<td><a id="l1216" class='ln'>1216</a></td><td></td></tr>
+<tr name="1217" id="1217">
+<td><a id="l1217" class='ln'>1217</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1217">&lt;S8&gt;/Unit Delay3</a>' */</span></td></tr>
+<tr name="1218" id="1218">
+<td><a id="l1218" class='ln'>1218</a></td><td>  <a id="1218c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1218c35" class="tk">UnitDelay3_DSTATE</a> =</td></tr>
+<tr name="1219" id="1219">
+<td><a id="l1219" class='ln'>1219</a></td><td>    <a id="1219c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1219c36" class="tk">UnitDelay3_InitialCondition</a>;</td></tr>
+<tr name="1220" id="1220">
+<td><a id="l1220" class='ln'>1220</a></td><td></td></tr>
+<tr name="1221" id="1221">
+<td><a id="l1221" class='ln'>1221</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1221">&lt;S8&gt;/Unit Delay4</a>' */</span></td></tr>
+<tr name="1222" id="1222">
+<td><a id="l1222" class='ln'>1222</a></td><td>  <a id="1222c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1222c35" class="tk">UnitDelay4_DSTATE</a> =</td></tr>
+<tr name="1223" id="1223">
+<td><a id="l1223" class='ln'>1223</a></td><td>    <a id="1223c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1223c36" class="tk">UnitDelay4_InitialCondition</a>;</td></tr>
+<tr name="1224" id="1224">
+<td><a id="l1224" class='ln'>1224</a></td><td></td></tr>
+<tr name="1225" id="1225">
+<td><a id="l1225" class='ln'>1225</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1225">&lt;S8&gt;/Unit Delay5</a>' */</span></td></tr>
+<tr name="1226" id="1226">
+<td><a id="l1226" class='ln'>1226</a></td><td>  <a id="1226c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1226c35" class="tk">UnitDelay5_DSTATE</a> =</td></tr>
+<tr name="1227" id="1227">
+<td><a id="l1227" class='ln'>1227</a></td><td>    <a id="1227c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1227c36" class="tk">UnitDelay5_InitialCondition</a>;</td></tr>
+<tr name="1228" id="1228">
+<td><a id="l1228" class='ln'>1228</a></td><td></td></tr>
+<tr name="1229" id="1229">
+<td><a id="l1229" class='ln'>1229</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1229">&lt;S8&gt;/Unit Delay2</a>' */</span></td></tr>
+<tr name="1230" id="1230">
+<td><a id="l1230" class='ln'>1230</a></td><td>  <a id="1230c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1230c35" class="tk">UnitDelay2_DSTATE</a> =</td></tr>
+<tr name="1231" id="1231">
+<td><a id="l1231" class='ln'>1231</a></td><td>    <a id="1231c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1231c36" class="tk">UnitDelay2_InitialCondition</a>;</td></tr>
+<tr name="1232" id="1232">
+<td><a id="l1232" class='ln'>1232</a></td><td></td></tr>
+<tr name="1233" id="1233">
+<td><a id="l1233" class='ln'>1233</a></td><td>  <span class="ct">/* InitializeConditions for Memory: '<a class="ct blk" blk_line="1233">&lt;S9&gt;/Memory</a>' */</span></td></tr>
+<tr name="1234" id="1234">
+<td><a id="l1234" class='ln'>1234</a></td><td>  <a id="1234c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1234c35" class="tk">Memory_PreviousInput_b</a> =</td></tr>
+<tr name="1235" id="1235">
+<td><a id="l1235" class='ln'>1235</a></td><td>    <a id="1235c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1235c36" class="tk">EdgeDetector1_ic</a>;</td></tr>
+<tr name="1236" id="1236">
+<td><a id="l1236" class='ln'>1236</a></td><td></td></tr>
+<tr name="1237" id="1237">
+<td><a id="l1237" class='ln'>1237</a></td><td>  <span class="ct">/* InitializeConditions for UnitDelay: '<a class="ct blk" blk_line="1237">&lt;S8&gt;/Unit Delay1</a>' */</span></td></tr>
+<tr name="1238" id="1238">
+<td><a id="l1238" class='ln'>1238</a></td><td>  <a id="1238c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1238c35" class="tk">UnitDelay1_DSTATE</a> =</td></tr>
+<tr name="1239" id="1239">
+<td><a id="l1239" class='ln'>1239</a></td><td>    <a id="1239c5" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1239c36" class="tk">UnitDelay1_InitialCondition</a>;</td></tr>
+<tr name="1240" id="1240">
+<td><a id="l1240" class='ln'>1240</a></td><td></td></tr>
+<tr name="1241" id="1241">
+<td><a id="l1241" class='ln'>1241</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1241">&lt;S10&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<tr name="1242" id="1242">
+<td><a id="l1242" class='ln'>1242</a></td><td>  <a id="1242c3" class="tk">SortierAl_POSITIVEEdge_Init</a></td></tr>
+<tr name="1243" id="1243">
+<td><a id="l1243" class='ln'>1243</a></td><td>    (<a id="1243c6" class="tk">&amp;</a><a id="1243c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1243c38" class="tk">RelationalOperator1</a>,</td></tr>
+<tr name="1244" id="1244">
+<td><a id="l1244" class='ln'>1244</a></td><td>     <a id="1244c6" class="tk">&amp;</a><a id="1244c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1244c38" class="tk">POSITIVEEdge_n</a>);</td></tr>
+<tr name="1245" id="1245">
+<td><a id="l1245" class='ln'>1245</a></td><td></td></tr>
+<tr name="1246" id="1246">
+<td><a id="l1246" class='ln'>1246</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1246">&lt;S10&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<tr name="1247" id="1247">
+<td><a id="l1247" class='ln'>1247</a></td><td></td></tr>
+<tr name="1248" id="1248">
+<td><a id="l1248" class='ln'>1248</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1248">&lt;S10&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<tr name="1249" id="1249">
+<td><a id="l1249" class='ln'>1249</a></td><td>  <a id="1249c3" class="tk">SortierAl_NEGATIVEEdge_Init</a></td></tr>
+<tr name="1250" id="1250">
+<td><a id="l1250" class='ln'>1250</a></td><td>    (<a id="1250c6" class="tk">&amp;</a><a id="1250c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1250c38" class="tk">RelationalOperator1_f</a>,</td></tr>
+<tr name="1251" id="1251">
+<td><a id="l1251" class='ln'>1251</a></td><td>     <a id="1251c6" class="tk">&amp;</a><a id="1251c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1251c38" class="tk">NEGATIVEEdge_o</a>);</td></tr>
+<tr name="1252" id="1252">
+<td><a id="l1252" class='ln'>1252</a></td><td></td></tr>
+<tr name="1253" id="1253">
+<td><a id="l1253" class='ln'>1253</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1253">&lt;S10&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<tr name="1254" id="1254">
+<td><a id="l1254" class='ln'>1254</a></td><td></td></tr>
+<tr name="1255" id="1255">
+<td><a id="l1255" class='ln'>1255</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1255">&lt;S9&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<tr name="1256" id="1256">
+<td><a id="l1256" class='ln'>1256</a></td><td>  <a id="1256c3" class="tk">SortierAl_POSITIVEEdge_Init</a></td></tr>
+<tr name="1257" id="1257">
+<td><a id="l1257" class='ln'>1257</a></td><td>    (<a id="1257c6" class="tk">&amp;</a><a id="1257c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1257c38" class="tk">RelationalOperator1_b</a>,</td></tr>
+<tr name="1258" id="1258">
+<td><a id="l1258" class='ln'>1258</a></td><td>     <a id="1258c6" class="tk">&amp;</a><a id="1258c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1258c38" class="tk">POSITIVEEdge</a>);</td></tr>
+<tr name="1259" id="1259">
+<td><a id="l1259" class='ln'>1259</a></td><td></td></tr>
+<tr name="1260" id="1260">
+<td><a id="l1260" class='ln'>1260</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1260">&lt;S9&gt;/POSITIVE Edge</a>' */</span></td></tr>
+<tr name="1261" id="1261">
+<td><a id="l1261" class='ln'>1261</a></td><td></td></tr>
+<tr name="1262" id="1262">
+<td><a id="l1262" class='ln'>1262</a></td><td>  <span class="ct">/* SystemInitialize for Enabled SubSystem: '<a class="ct blk" blk_line="1262">&lt;S9&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<tr name="1263" id="1263">
+<td><a id="l1263" class='ln'>1263</a></td><td>  <a id="1263c3" class="tk">SortierAl_NEGATIVEEdge_Init</a></td></tr>
+<tr name="1264" id="1264">
+<td><a id="l1264" class='ln'>1264</a></td><td>    (<a id="1264c6" class="tk">&amp;</a><a id="1264c7" class="tk">SortierAlgorithmusEchtSystem_B</a>.<a id="1264c38" class="tk">RelationalOperator1_j</a>,</td></tr>
+<tr name="1265" id="1265">
+<td><a id="l1265" class='ln'>1265</a></td><td>     <a id="1265c6" class="tk">&amp;</a><a id="1265c7" class="tk">SortierAlgorithmusEchtSystem_P</a>.<a id="1265c38" class="tk">NEGATIVEEdge</a>);</td></tr>
+<tr name="1266" id="1266">
+<td><a id="l1266" class='ln'>1266</a></td><td></td></tr>
+<tr name="1267" id="1267">
+<td><a id="l1267" class='ln'>1267</a></td><td>  <span class="ct">/* End of SystemInitialize for SubSystem: '<a class="ct blk" blk_line="1267">&lt;S9&gt;/NEGATIVE Edge</a>' */</span></td></tr>
+<tr name="1268" id="1268">
+<td><a id="l1268" class='ln'>1268</a></td><td></td></tr>
+<tr name="1269" id="1269">
+<td><a id="l1269" class='ln'>1269</a></td><td>  <span class="ct">/* SystemInitialize for Chart: '<a class="ct blk" blk_line="1269">&lt;Root&gt;/Sortieralgorithmus</a>' */</span></td></tr>
+<tr name="1270" id="1270">
+<td><a id="l1270" class='ln'>1270</a></td><td>  <a id="1270c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1270c35" class="tk">temporalCounter_i1</a> = 0U;</td></tr>
+<tr name="1271" id="1271">
+<td><a id="l1271" class='ln'>1271</a></td><td>  <a id="1271c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1271c35" class="tk">is_active_c3_SortierAlgorithmus</a> = 0U;</td></tr>
+<tr name="1272" id="1272">
+<td><a id="l1272" class='ln'>1272</a></td><td>  <a id="1272c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1272c35" class="tk">is_c3_SortierAlgorithmusEchtSys</a> =</td></tr>
+<tr name="1273" id="1273">
+<td><a id="l1273" class='ln'>1273</a></td><td>    <a id="1273c5" class="tk">SortierAlgor_IN_NO_ACTIVE_CHILD</a>;</td></tr>
+<tr name="1274" id="1274">
+<td><a id="l1274" class='ln'>1274</a></td><td></td></tr>
+<tr name="1275" id="1275">
+<td><a id="l1275" class='ln'>1275</a></td><td>  <span class="ct">/* SystemInitialize for Chart: '<a class="ct blk" blk_line="1275">&lt;Root&gt;/Chart1</a>' */</span></td></tr>
+<tr name="1276" id="1276">
+<td><a id="l1276" class='ln'>1276</a></td><td>  <a id="1276c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1276c35" class="tk">temporalCounter_i1_o</a> = 0U;</td></tr>
+<tr name="1277" id="1277">
+<td><a id="l1277" class='ln'>1277</a></td><td>  <a id="1277c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1277c35" class="tk">is_active_c1_SortierAlgorithmus</a> = 0U;</td></tr>
+<tr name="1278" id="1278">
+<td><a id="l1278" class='ln'>1278</a></td><td>  <a id="1278c3" class="tk">SortierAlgorithmusEchtSystem_DW</a>.<a id="1278c35" class="tk">is_c1_SortierAlgorithmusEchtSys</a> =</td></tr>
+<tr name="1279" id="1279">
+<td><a id="l1279" class='ln'>1279</a></td><td>    <a id="1279c5" class="tk">SortierAlgor_IN_NO_ACTIVE_CHILD</a>;</td></tr>
+<tr name="1280" id="1280">
+<td><a id="l1280" class='ln'>1280</a></td><td><span class="br">}</span></td></tr>
+<tr name="1281" id="1281">
+<td><a id="l1281" class='ln'>1281</a></td><td></td></tr>
+<tr name="1282" id="1282">
+<td><a id="l1282" class='ln'>1282</a></td><td><span class="ct">/* Model terminate function */</span></td></tr>
+<tr name="1283" id="1283">
+<td><a id="l1283" class='ln'>1283</a></td><td><span class="kw">void</span> <a id="1283c6" class="tk">SortierAlgorithmusEchtSystem_terminate</a>(<span class="kw">void</span>)</td></tr>
+<tr name="1284" id="1284">
+<td><a id="l1284" class='ln'>1284</a></td><td><span class="br">{</span></td></tr>
+<tr name="1285" id="1285">
+<td><a id="l1285" class='ln'>1285</a></td><td>  <span class="ct">/* (no terminate code required) */</span></td></tr>
+<tr name="1286" id="1286">
+<td><a id="l1286" class='ln'>1286</a></td><td><span class="br">}</span></td></tr>
+<tr name="1287" id="1287">
+<td><a id="l1287" class='ln'>1287</a></td><td></td></tr>
+<tr name="1288" id="1288">
+<td><a id="l1288" class='ln'>1288</a></td><td><span class="ct">/*</span></td></tr>
+<tr name="1289" id="1289">
+<td><a id="l1289" class='ln'>1289</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
+<tr name="1290" id="1290">
+<td><a id="l1290" class='ln'>1290</a></td><td><span class="ct"> *</span></td></tr>
+<tr name="1291" id="1291">
+<td><a id="l1291" class='ln'>1291</a></td><td><span class="ct"> * [EOF]</span></td></tr>
+<tr name="1292" id="1292">
+<td><a id="l1292" class='ln'>1292</a></td><td><span class="ct"> */</span></td></tr>
+<tr name="1293" id="1293">
+<td><a id="l1293" class='ln'>1293</a></td><td></td></tr>
 </table>
 </pre>
 </body>

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.48
+ * Model version                  : 1.49
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 13 17:47:54 2021
+ * C/C++ source code generated on : Thu Jan 14 15:03:57 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -164,10 +164,10 @@ struct P_SortierAlgorithmusEchtSyste_T_ {
   real_T WinkelFlankePolulo3416V022Pol_o;/* Expression: 0.076
                                           * Referenced by: '<S8>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,043'
                                           */
-  real_T uDLookupTable_tableData[7];   /* Expression: [-440,-295,-170,-40,85,220,430]
+  real_T uDLookupTable_tableData[8];   /* Expression: [-1,-440,-295,-170,-40,85,220,430]
                                         * Referenced by: '<Root>/1-D Lookup Table'
                                         */
-  real_T uDLookupTable_bp01Data[7];    /* Expression: [1,2,3,4,5,6,7]
+  real_T uDLookupTable_bp01Data[8];    /* Expression: [-1,0,1,2,3,4,5,6]
                                         * Referenced by: '<Root>/1-D Lookup Table'
                                         */
   real_T DeadZone_Start;               /* Expression: -1
