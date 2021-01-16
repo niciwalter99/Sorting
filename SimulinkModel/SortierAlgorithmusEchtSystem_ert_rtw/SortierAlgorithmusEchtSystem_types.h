@@ -7,13 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.23
+ * Model version                  : 1.49
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
-<<<<<<< HEAD
- * C/C++ source code generated on : Tue Jan 12 19:02:16 2021
-=======
- * C/C++ source code generated on : Tue Dec 15 20:26:45 2020
->>>>>>> bfa550e76c270d184c296ba61861d33db74f4c03
+ * C/C++ source code generated on : Fri Jan 15 18:01:31 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -25,10 +21,10 @@
 #define RTW_HEADER_SortierAlgorithmusEchtSystem_types_h_
 #include "rtwtypes.h"
 
-/* Parameters for system: '<S9>/NEGATIVE Edge' */
+/* Parameters for system: '<S10>/NEGATIVE Edge' */
 typedef struct P_NEGATIVEEdge_SortierAlgorit_T_ P_NEGATIVEEdge_SortierAlgorit_T;
 
-/* Parameters for system: '<S9>/POSITIVE Edge' */
+/* Parameters for system: '<S10>/POSITIVE Edge' */
 typedef struct P_POSITIVEEdge_SortierAlgorit_T_ P_POSITIVEEdge_SortierAlgorit_T;
 
 /* Parameters (default storage) */

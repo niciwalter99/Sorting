@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   11 \
+    NumChartData   10 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -28,59 +28,52 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m2_LC"\
+      Name         "magacin2_LastCube"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m2_LC"\
+      Path         "magacin2_LastCube"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m1_LC"\
+      Name         "magacin1_LastCube"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m1_LC"\
+      Path         "magacin1_LastCube"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m0"\
+      Name         "magacin0"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m0"\
+      Path         "magacin0"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m1"\
+      Name         "magacin1"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m1"\
+      Path         "magacin1"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m2"\
+      Name         "magacin2"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m2"\
+      Path         "magacin2"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m3"\
+      Name         "magacin3"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m3"\
+      Path         "magacin3"\
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "m4"\
+      Name         "magacin4"\
       Description  "ChartLocal"\
       SFName       ""\
-      Path         "m4"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "m5"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "m5"\
+      Path         "magacin4"\
       SrcLocation  ""\
     }\
     ChartData {\
