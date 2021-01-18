@@ -1,2 +1,0 @@
-  PoluluSortierenWinkel2.c
-

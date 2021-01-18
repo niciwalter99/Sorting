@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.54
+ * Model version                  : 1.55
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Jan 18 14:18:13 2021
+ * C/C++ source code generated on : Mon Jan 18 15:02:14 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -647,11 +647,12 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.signal = 1.0;
       } else {
-        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
-          SortierAlgorithm_IN_throwBlacks;
-        SortierAlgorithmusEchtSystem_B.signal = 1.0;
+        if (SortierAlgorithmusEchtSystem_DW.cubeCounter > 9.0) {
+          SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+            SortierAlgorithm_IN_throwBlacks;
+          SortierAlgorithmusEchtSystem_B.signal = 1.0;
+        }
       }
       break;
 
@@ -667,7 +668,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
           IN_photoelectricBarrierActivate;
       } else {
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.signal = 1.0;
       }
       break;
 
@@ -697,7 +697,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.signal = 1.0;
       } else {
         SortierAlgorithmusEchtSystem_DW.magacin0 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin1 = 0.0;
@@ -719,7 +718,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.signal = 1.0;
       } else {
         SortierAlgorithmusEchtSystem_B.signal = 1.0;
       }
@@ -954,7 +952,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* Chart: '<Root>/Chart2' incorporates:
    *  DataTypeConversion: '<Root>/Data Type Conversion1'
    */
-  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c < 31U) {
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c < 127U) {
     SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c = ((int16_T)
       SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c + 1) & 255U;
   }
@@ -971,7 +969,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEchtS_IN_open:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c >= 30U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c >= 100U) {
         SortierAlgorithmusEchtSystem_DW.is_c5_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEcht_IN_close;
         rtb_gatePWM = 0.0;
