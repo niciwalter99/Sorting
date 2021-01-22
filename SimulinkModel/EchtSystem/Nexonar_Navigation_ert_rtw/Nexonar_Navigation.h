@@ -7,9 +7,15 @@
  *
  * Code generated for Simulink model 'Nexonar_Navigation'.
  *
+<<<<<<< HEAD
  * Model version                  : 1.80
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
  * C/C++ source code generated on : Wed Jan 20 11:10:53 2021
+=======
+ * Model version                  : 1.76
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Mon Jan 18 19:13:49 2021
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -41,8 +47,11 @@
 #include "rt_zcfcn.h"
 #include "mw_C28x_addsub_s32.h"
 #include "mw_C28x_s16.h"
+<<<<<<< HEAD
 #include "rt_nonfinite.h"
 #include "rtGetInf.h"
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 /* Macros for accessing real-time model data structure */
 #ifndef rtmGetErrorStatus
@@ -96,11 +105,18 @@ typedef struct {
   real_T magacin;                      /* '<S5>/Sortieralgorithmus' */
   real_T signal;                       /* '<S5>/Sortieralgorithmus' */
   real_T y;                            /* '<S32>/Richtung' */
+<<<<<<< HEAD
   real_T gatePWM;                      /* '<S5>/Chart2' */
   real_T angle;                        /* '<S5>/Chart1' */
   real_T signal_n;                     /* '<S5>/Chart1' */
   real_T gatePWM_d;                    /* '<S5>/Chart' */
   real_T gateDirection;                /* '<S5>/Chart' */
+=======
+  real_T angle;                        /* '<S5>/Chart1' */
+  real_T signal_n;                     /* '<S5>/Chart1' */
+  real_T gatePWM;                      /* '<S5>/Chart' */
+  real_T gateDirection_d;              /* '<S5>/Chart' */
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   real_T alpha_neu;                    /* '<S9>/Winkelausgabe fuer Ausrichtung' */
   real_T Quadrant;                     /* '<S9>/Quadrantenteiler' */
   real_T pwm_out_l;                    /* '<S3>/Fahrsystem' */

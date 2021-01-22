@@ -2,7 +2,11 @@
 ## Makefile generated for Simulink model 'Nexonar_Navigation'. 
 ## 
 ## Makefile     : Nexonar_Navigation.mk
+<<<<<<< HEAD
 ## Generated on : Wed Jan 20 11:13:55 2021
+=======
+## Generated on : Mon Jan 18 18:52:44 2021
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -29,7 +33,11 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2018b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2018b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
+<<<<<<< HEAD
 START_DIR                 = C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/EchtSystem
+=======
+START_DIR                 = C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
@@ -216,7 +224,11 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
+<<<<<<< HEAD
 INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/Nexonar_Navigation_ert_rtw -IC:/Users/User/DOWNLO~1 -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include/comm_rt -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/inc -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/src -I$(MATLAB_ROOT)/toolbox/rtw/targets/common/can/blocks/tlc_c -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/shared/EXTERN~1/include
+=======
+INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/Nexonar_Navigation_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include/comm_rt -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/inc -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/src -I$(MATLAB_ROOT)/toolbox/rtw/targets/common/can/blocks/tlc_c -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/shared/EXTERN~1/include
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -236,7 +248,11 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_IMPLIED) $(DEFINES_SKIPFOR
 ## SOURCE FILES
 ###########################################################################
 
+<<<<<<< HEAD
 SRCS = $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_board.c mw_C28x_addsubasm_s32.asm $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_adc.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_csl.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_i2c.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_pwm.c $(START_DIR)/Nexonar_Navigation_ert_rtw/Nexonar_Navigation.c $(START_DIR)/Nexonar_Navigation_ert_rtw/Nexonar_Navigation_data.c $(START_DIR)/Nexonar_Navigation_ert_rtw/rtGetInf.c $(START_DIR)/Nexonar_Navigation_ert_rtw/rtGetNaN.c $(START_DIR)/Nexonar_Navigation_ert_rtw/rt_nonfinite.c $(START_DIR)/Nexonar_Navigation_ert_rtw/rt_zcfcn.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xBoard_Realtime_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_MemCopy.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CpuTimers.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DefaultIsr.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_GlobalVariableDefs.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieVect.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_SysCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_usDelay.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CodeStartBranch.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_ADC_cal.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DMA.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/profiler_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xSchedulerTimer0.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_Adc.c
+=======
+SRCS = $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_board.c mw_C28x_addsubasm_s32.asm $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_adc.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_csl.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_i2c.c $(START_DIR)/Nexonar_Navigation_ert_rtw/MW_c28xx_pwm.c $(START_DIR)/Nexonar_Navigation_ert_rtw/Nexonar_Navigation.c $(START_DIR)/Nexonar_Navigation_ert_rtw/Nexonar_Navigation_data.c $(START_DIR)/Nexonar_Navigation_ert_rtw/rt_zcfcn.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xBoard_Realtime_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_MemCopy.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CpuTimers.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DefaultIsr.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_GlobalVariableDefs.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_PieVect.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_SysCtrl.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_usDelay.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_CodeStartBranch.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_ADC_cal.asm C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_DMA.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/profiler_Support.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/c2833xSchedulerTimer0.c C:/ProgramData/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/tic2000/src/DSP2833x_Adc.c
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 MAIN_SRC = $(START_DIR)/Nexonar_Navigation_ert_rtw/ert_main.c
 
@@ -246,7 +262,11 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
+<<<<<<< HEAD
 OBJS = MW_c28xx_board.obj mw_C28x_addsubasm_s32.obj MW_c28xx_adc.obj MW_c28xx_csl.obj MW_c28xx_i2c.obj MW_c28xx_pwm.obj Nexonar_Navigation.obj Nexonar_Navigation_data.obj rtGetInf.obj rtGetNaN.obj rt_nonfinite.obj rt_zcfcn.obj c2833xBoard_Realtime_Support.obj DSP2833x_MemCopy.obj DSP2833x_CpuTimers.obj DSP2833x_DefaultIsr.obj DSP2833x_GlobalVariableDefs.obj DSP2833x_PieCtrl.obj DSP2833x_PieVect.obj DSP2833x_SysCtrl.obj DSP2833x_usDelay.obj DSP2833x_CodeStartBranch.obj DSP2833x_ADC_cal.obj DSP2833x_DMA.obj profiler_Support.obj c2833xSchedulerTimer0.obj DSP2833x_Adc.obj
+=======
+OBJS = MW_c28xx_board.obj mw_C28x_addsubasm_s32.obj MW_c28xx_adc.obj MW_c28xx_csl.obj MW_c28xx_i2c.obj MW_c28xx_pwm.obj Nexonar_Navigation.obj Nexonar_Navigation_data.obj rt_zcfcn.obj c2833xBoard_Realtime_Support.obj DSP2833x_MemCopy.obj DSP2833x_CpuTimers.obj DSP2833x_DefaultIsr.obj DSP2833x_GlobalVariableDefs.obj DSP2833x_PieCtrl.obj DSP2833x_PieVect.obj DSP2833x_SysCtrl.obj DSP2833x_usDelay.obj DSP2833x_CodeStartBranch.obj DSP2833x_ADC_cal.obj DSP2833x_DMA.obj profiler_Support.obj c2833xSchedulerTimer0.obj DSP2833x_Adc.obj
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 MAIN_OBJ = ert_main.obj
 
@@ -278,7 +298,11 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
+<<<<<<< HEAD
 CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1 -DF28335 -DBOOT_FROM_FLASH=1
+=======
+CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -287,7 +311,11 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
+<<<<<<< HEAD
 CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1 -DF28335 -DBOOT_FROM_FLASH=1
+=======
+CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
@@ -296,7 +324,11 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
+<<<<<<< HEAD
 CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+=======
+CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -304,7 +336,11 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
+<<<<<<< HEAD
 CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+=======
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -312,7 +348,11 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
+<<<<<<< HEAD
 LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+=======
+LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -320,7 +360,11 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
+<<<<<<< HEAD
 SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+=======
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 

@@ -7,9 +7,15 @@
  *
  * Code generated for Simulink model 'Nexonar_Navigation'.
  *
+<<<<<<< HEAD
  * Model version                  : 1.80
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
  * C/C++ source code generated on : Wed Jan 20 11:10:53 2021
+=======
+ * Model version                  : 1.76
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Mon Jan 18 19:13:49 2021
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -546,7 +552,11 @@ static void Nexonar_Navigation_Sammeln(const real_T *RoundingFunction, const
 
       /* Entry 'Anfahrpunkt_2': '<S1>:83' */
       Nexonar_Navigation_B.x_soll = 800.0;
+<<<<<<< HEAD
       Nexonar_Navigation_B.y_soll = -100.0;
+=======
+      Nexonar_Navigation_B.y_soll = -50.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       break;
 
      case Nexonar_Navigatio_IN_Wechsel_10:
@@ -629,7 +639,11 @@ static void Nexonar_Navigation_Sammeln(const real_T *RoundingFunction, const
       Nexonar_Navigation_DWork.is_Sammeln = Nexonar_Navig_IN_Anfahrpunkt_10;
 
       /* Entry 'Anfahrpunkt_10': '<S1>:174' */
+<<<<<<< HEAD
       Nexonar_Navigation_B.x_soll = 1450.0;
+=======
+      Nexonar_Navigation_B.x_soll = 1250.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       Nexonar_Navigation_B.y_soll = 50.0;
       break;
     }
@@ -644,10 +658,17 @@ static void enter_atomic_Drehstillstand_mit(const real_T *alpha_diff_intern)
   /* Entry 'Drehstillstand_mit_Ausrichtungsregelung': '<S6>:26' */
   Nexonar_Navigation_B.alpha_diff_opt = 0.0;
   tmp = fabs(*alpha_diff_intern);
+<<<<<<< HEAD
   if (tmp < 5.0) {
     Nexonar_Navigation_B.pwm_mindern[0] = rt_roundd_snf(tmp / 2.0);
   } else if (tmp < 15.0) {
     Nexonar_Navigation_B.pwm_mindern[0] = floor((tmp - 5.0) / 5.0) + 3.0;
+=======
+  if (tmp <= 5.0) {
+    Nexonar_Navigation_B.pwm_mindern[0] = fabs(*alpha_diff_intern / 2.0);
+  } else if (tmp <= 15.0) {
+    Nexonar_Navigation_B.pwm_mindern[0] = rt_roundd_snf((tmp - 5.0) / 4.0 + 2.5);
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   } else {
     Nexonar_Navigation_B.pwm_mindern[0] = 5.0;
   }
@@ -661,6 +682,7 @@ static void enter_atomic_Drehstillstand_mit(const real_T *alpha_diff_intern)
   }
 }
 
+<<<<<<< HEAD
 real_T rt_powd_snf(real_T u0, real_T u1)
 {
   real_T y;
@@ -707,12 +729,17 @@ real_T rt_powd_snf(real_T u0, real_T u1)
   return y;
 }
 
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 /* Function for Chart: '<S3>/Fahrsystem' */
 static void Nexonar_Navigation_Start_Warten(const real_T *PWMWertebereich)
 {
   real_T l_mindern;
   real_T r_mindern;
+<<<<<<< HEAD
   real_T pwm_out_l_tmp;
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
   /* During 'Start_Warten': '<S7>:92' */
   /* Transition: '<S7>:93' */
@@ -789,12 +816,27 @@ static void Nexonar_Navigation_Start_Warten(const real_T *PWMWertebereich)
       IN_Fahren_mit_Ausrichtungsregel;
 
     /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S7>:94' */
+<<<<<<< HEAD
     pwm_out_l_tmp = rt_roundd_snf(rt_powd_snf(*PWMWertebereich / 100.0, 1.9) *
       Nexonar_Navigation_B.pwm_mindern[0]);
     Nexonar_Navigation_B.pwm_out_l = *PWMWertebereich - pwm_out_l_tmp *
       l_mindern;
     Nexonar_Navigation_B.pwm_out_r = *PWMWertebereich - pwm_out_l_tmp *
       r_mindern;
+=======
+    Nexonar_Navigation_B.pwm_out_l = *PWMWertebereich -
+      Nexonar_Navigation_B.pwm_mindern[0] * l_mindern;
+    Nexonar_Navigation_B.pwm_out_r = *PWMWertebereich -
+      Nexonar_Navigation_B.pwm_mindern[0] * r_mindern;
+    if (Nexonar_Navigation_B.pwm_out_l < 0.0) {
+      Nexonar_Navigation_B.pwm_out_l = 0.0;
+    }
+
+    if (Nexonar_Navigation_B.pwm_out_r < 0.0) {
+      Nexonar_Navigation_B.pwm_out_r = 0.0;
+    }
+
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
     Nexonar_Navigation_B.r_l_out_l = 1.0 - Nexonar_Navigation_B.Gang;
     Nexonar_Navigation_B.r_l_out_r = 1.0 - Nexonar_Navigation_B.Gang;
   }
@@ -805,7 +847,10 @@ static void Nexonar_Naviga_Drehen_links_max(const real_T *PWMWertebereich)
 {
   real_T l_mindern;
   real_T r_mindern;
+<<<<<<< HEAD
   real_T pwm_out_l_tmp;
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
   /* During 'Drehen_links_max': '<S7>:8' */
   /* Transition: '<S7>:60' */
@@ -883,12 +928,27 @@ static void Nexonar_Naviga_Drehen_links_max(const real_T *PWMWertebereich)
       IN_Fahren_mit_Ausrichtungsregel;
 
     /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S7>:94' */
+<<<<<<< HEAD
     pwm_out_l_tmp = rt_roundd_snf(rt_powd_snf(*PWMWertebereich / 100.0, 1.9) *
       Nexonar_Navigation_B.pwm_mindern[0]);
     Nexonar_Navigation_B.pwm_out_l = *PWMWertebereich - pwm_out_l_tmp *
       l_mindern;
     Nexonar_Navigation_B.pwm_out_r = *PWMWertebereich - pwm_out_l_tmp *
       r_mindern;
+=======
+    Nexonar_Navigation_B.pwm_out_l = *PWMWertebereich -
+      Nexonar_Navigation_B.pwm_mindern[0] * l_mindern;
+    Nexonar_Navigation_B.pwm_out_r = *PWMWertebereich -
+      Nexonar_Navigation_B.pwm_mindern[0] * r_mindern;
+    if (Nexonar_Navigation_B.pwm_out_l < 0.0) {
+      Nexonar_Navigation_B.pwm_out_l = 0.0;
+    }
+
+    if (Nexonar_Navigation_B.pwm_out_r < 0.0) {
+      Nexonar_Navigation_B.pwm_out_r = 0.0;
+    }
+
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
     Nexonar_Navigation_B.r_l_out_l = 1.0 - Nexonar_Navigation_B.Gang;
     Nexonar_Navigation_B.r_l_out_r = 1.0 - Nexonar_Navigation_B.Gang;
   }
@@ -1355,6 +1415,10 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 {
   /* local block i/o variables */
   real_T rtb_y_l;
+<<<<<<< HEAD
+=======
+  real_T rtb_gatePWM;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   int32_T bitIdx;
   uint32_T u;
   int16_T j;
@@ -1371,7 +1435,10 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
   real_T RoundingFunction1;
   uint16_T RateTransition[20];
   int16_T i;
+<<<<<<< HEAD
   real_T pwm_out_l_tmp;
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
   /* RateTransition: '<S4>/Rate Transition' */
   Nexonar_Navigation_DWork.RateTransition_semaphoreTaken =
@@ -2078,7 +2145,11 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
       Nexon_IN_Start_Einstellung_Init;
 
     /* Entry 'Start_Einstellung_Init': '<S1>:44' */
+<<<<<<< HEAD
     Nexonar_Navigation_B.Zielradius = 40.0;
+=======
+    Nexonar_Navigation_B.Zielradius = 25.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   } else {
     switch (Nexonar_Navigation_DWork.is_c5_Nexonar_Navigation) {
      case Nexonar_Navigation_IN_Ende:
@@ -2101,7 +2172,11 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Nexon_IN_Start_Einstellung_Init:
+<<<<<<< HEAD
       Nexonar_Navigation_B.Zielradius = 40.0;
+=======
+      Nexonar_Navigation_B.Zielradius = 25.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
 
       /* During 'Start_Einstellung_Init': '<S1>:44' */
       /* Transition: '<S1>:74' */
@@ -2115,8 +2190,13 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
       Nexonar_Navigation_DWork.is_Sammeln = Nexonar_Naviga_IN_Anfahrpunkt_1;
 
       /* Entry 'Anfahrpunkt_1': '<S1>:81' */
+<<<<<<< HEAD
       Nexonar_Navigation_B.x_soll = 1400.0;
       Nexonar_Navigation_B.y_soll = 50.0;
+=======
+      Nexonar_Navigation_B.x_soll = 700.0;
+      Nexonar_Navigation_B.y_soll = 700.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       break;
 
      default:
@@ -2132,7 +2212,11 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
         /* Entry 'Parken': '<S1>:73' */
         Nexonar_Navigation_B.x_soll = Nexonar_Navigation_DWork.x_least;
+<<<<<<< HEAD
         Nexonar_Navigation_B.y_soll = -100.0;
+=======
+        Nexonar_Navigation_B.y_soll = -50.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       } else {
         switch (Nexonar_Navigation_DWork.is_Uebergabe) {
          case Ne_IN_Uebergabepunkt_x_Richtung:
@@ -2860,9 +2944,15 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
               Nexo_IN_Drehen_rechts_gesteuert;
 
             /* Entry 'Drehen_rechts_gesteuert': '<S7>:51' */
+<<<<<<< HEAD
             pwm_out_l_tmp = 59.0 + fabs(Nexonar_Navigation_B.alpha_diff_opt);
             Nexonar_Navigation_B.pwm_out_l = pwm_out_l_tmp;
             Nexonar_Navigation_B.pwm_out_r = pwm_out_l_tmp;
+=======
+            RoundingFunction = 59.0 + fabs(Nexonar_Navigation_B.alpha_diff_opt);
+            Nexonar_Navigation_B.pwm_out_l = RoundingFunction;
+            Nexonar_Navigation_B.pwm_out_r = RoundingFunction;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
             Nexonar_Navigation_B.r_l_out_l = 1.0;
             Nexonar_Navigation_B.r_l_out_r = 0.0;
           }
@@ -2887,12 +2977,27 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
           IN_Fahren_mit_Ausrichtungsregel;
 
         /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S7>:94' */
+<<<<<<< HEAD
         pwm_out_l_tmp = rt_roundd_snf(rt_powd_snf(RoundingFunction / 100.0, 1.9)
           * Nexonar_Navigation_B.pwm_mindern[0]);
         Nexonar_Navigation_B.pwm_out_l = RoundingFunction - pwm_out_l_tmp *
           RoundingFunction1;
         Nexonar_Navigation_B.pwm_out_r = RoundingFunction - pwm_out_l_tmp *
           rtb_RoundingFunction2;
+=======
+        Nexonar_Navigation_B.pwm_out_l = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * RoundingFunction1;
+        Nexonar_Navigation_B.pwm_out_r = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * rtb_RoundingFunction2;
+        if (Nexonar_Navigation_B.pwm_out_l < 0.0) {
+          Nexonar_Navigation_B.pwm_out_l = 0.0;
+        }
+
+        if (Nexonar_Navigation_B.pwm_out_r < 0.0) {
+          Nexonar_Navigation_B.pwm_out_r = 0.0;
+        }
+
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         Nexonar_Navigation_B.r_l_out_l = 1.0 - Nexonar_Navigation_B.Gang;
         Nexonar_Navigation_B.r_l_out_r = 1.0 - Nexonar_Navigation_B.Gang;
       }
@@ -2976,12 +3081,27 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
           IN_Fahren_mit_Ausrichtungsregel;
 
         /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S7>:94' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.pwm_out_l = RoundingFunction - rt_roundd_snf
           (rt_powd_snf(RoundingFunction / 100.0, 1.9) *
            Nexonar_Navigation_B.pwm_mindern[0]) * RoundingFunction1;
         Nexonar_Navigation_B.pwm_out_r = RoundingFunction - rt_roundd_snf
           (rt_powd_snf(RoundingFunction / 100.0, 1.9) *
            Nexonar_Navigation_B.pwm_mindern[0]) * rtb_RoundingFunction2;
+=======
+        Nexonar_Navigation_B.pwm_out_l = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * RoundingFunction1;
+        Nexonar_Navigation_B.pwm_out_r = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * rtb_RoundingFunction2;
+        if (Nexonar_Navigation_B.pwm_out_l < 0.0) {
+          Nexonar_Navigation_B.pwm_out_l = 0.0;
+        }
+
+        if (Nexonar_Navigation_B.pwm_out_r < 0.0) {
+          Nexonar_Navigation_B.pwm_out_r = 0.0;
+        }
+
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         Nexonar_Navigation_B.r_l_out_l = 1.0 - Nexonar_Navigation_B.Gang;
         Nexonar_Navigation_B.r_l_out_r = 1.0 - Nexonar_Navigation_B.Gang;
       }
@@ -3065,12 +3185,27 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
           IN_Fahren_mit_Ausrichtungsregel;
 
         /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S7>:94' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.pwm_out_l = RoundingFunction - rt_roundd_snf
           (rt_powd_snf(RoundingFunction / 100.0, 1.9) *
            Nexonar_Navigation_B.pwm_mindern[0]) * RoundingFunction1;
         Nexonar_Navigation_B.pwm_out_r = RoundingFunction - rt_roundd_snf
           (rt_powd_snf(RoundingFunction / 100.0, 1.9) *
            Nexonar_Navigation_B.pwm_mindern[0]) * rtb_RoundingFunction2;
+=======
+        Nexonar_Navigation_B.pwm_out_l = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * RoundingFunction1;
+        Nexonar_Navigation_B.pwm_out_r = RoundingFunction -
+          Nexonar_Navigation_B.pwm_mindern[0] * rtb_RoundingFunction2;
+        if (Nexonar_Navigation_B.pwm_out_l < 0.0) {
+          Nexonar_Navigation_B.pwm_out_l = 0.0;
+        }
+
+        if (Nexonar_Navigation_B.pwm_out_r < 0.0) {
+          Nexonar_Navigation_B.pwm_out_r = 0.0;
+        }
+
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         Nexonar_Navigation_B.r_l_out_l = 1.0 - Nexonar_Navigation_B.Gang;
         Nexonar_Navigation_B.r_l_out_r = 1.0 - Nexonar_Navigation_B.Gang;
       }
@@ -3263,6 +3398,7 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
         /* Entry 'cubeLoaded': '<S30>:183' */
         Nexonar_Navigation_B.magacin = -1.0;
+<<<<<<< HEAD
       } else {
         if (Nexonar_Navigation_DWork.cubeCounter > 0.0) {
           /* Transition: '<S30>:199' */
@@ -3272,6 +3408,16 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
           /* Entry 'throwBlacks': '<S30>:198' */
           Nexonar_Navigation_B.signal = 1.0;
         }
+=======
+        Nexonar_Navigation_B.signal = 1.0;
+      } else {
+        /* Transition: '<S30>:199' */
+        Nexonar_Navigation_DWork.is_c15_Nexonar_Navigation =
+          Nexonar_Navigati_IN_throwBlacks;
+
+        /* Entry 'throwBlacks': '<S30>:198' */
+        Nexonar_Navigation_B.signal = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       }
       break;
 
@@ -3295,6 +3441,10 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
         /* Entry 'photoelectricBarrierActivated': '<S30>:184' */
       } else {
         Nexonar_Navigation_B.magacin = -1.0;
+<<<<<<< HEAD
+=======
+        Nexonar_Navigation_B.signal = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       }
       break;
 
@@ -3336,6 +3486,10 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
         /* Entry 'cubeLoaded': '<S30>:183' */
         Nexonar_Navigation_B.magacin = -1.0;
+<<<<<<< HEAD
+=======
+        Nexonar_Navigation_B.signal = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       } else {
         Nexonar_Navigation_DWork.magacin0 = 0.0;
         Nexonar_Navigation_DWork.magacin1 = 0.0;
@@ -3361,6 +3515,10 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
         /* Entry 'cubeLoaded': '<S30>:183' */
         Nexonar_Navigation_B.magacin = -1.0;
+<<<<<<< HEAD
+=======
+        Nexonar_Navigation_B.signal = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       } else {
         Nexonar_Navigation_B.signal = 1.0;
       }
@@ -3512,8 +3670,13 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
       Nexonar_Navigation_IN_wait;
 
     /* Entry 'wait': '<S26>:4' */
+<<<<<<< HEAD
     Nexonar_Navigation_B.gatePWM_d = 0.0;
     Nexonar_Navigation_B.gateDirection = 1.0;
+=======
+    Nexonar_Navigation_B.gatePWM = 0.0;
+    Nexonar_Navigation_B.gateDirection_d = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
     Nexonar_Navigation_B.movingCube_j = 0.0F;
   } else {
     switch (Nexonar_Navigation_DWork.is_c3_Nexonar_Navigation) {
@@ -3525,11 +3688,19 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
           Nexonar_Navigation_IN_wait;
 
         /* Entry 'wait': '<S26>:4' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.gatePWM_d = 0.0;
         Nexonar_Navigation_B.gateDirection = 1.0;
         Nexonar_Navigation_B.movingCube_j = 0.0F;
       } else {
         Nexonar_Navigation_B.gateDirection = 0.0;
+=======
+        Nexonar_Navigation_B.gatePWM = 0.0;
+        Nexonar_Navigation_B.gateDirection_d = 1.0;
+        Nexonar_Navigation_B.movingCube_j = 0.0F;
+      } else {
+        Nexonar_Navigation_B.gateDirection_d = 0.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       }
       break;
 
@@ -3542,9 +3713,15 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
         Nexonar_Navigation_DWork.temporalCounter_i1_e = 0U;
 
         /* Entry 'close': '<S26>:3' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.gateDirection = 0.0;
       } else {
         Nexonar_Navigation_B.gatePWM_d = 50.0;
+=======
+        Nexonar_Navigation_B.gateDirection_d = 0.0;
+      } else {
+        Nexonar_Navigation_B.gatePWM = 50.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         Nexonar_Navigation_B.movingCube_j = 1.0F;
       }
       break;
@@ -3558,11 +3735,19 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
         Nexonar_Navigation_DWork.temporalCounter_i1_e = 0U;
 
         /* Entry 'open': '<S26>:1' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.gatePWM_d = 50.0;
         Nexonar_Navigation_B.movingCube_j = 1.0F;
       } else {
         Nexonar_Navigation_B.gatePWM_d = 0.0;
         Nexonar_Navigation_B.gateDirection = 1.0;
+=======
+        Nexonar_Navigation_B.gatePWM = 50.0;
+        Nexonar_Navigation_B.movingCube_j = 1.0F;
+      } else {
+        Nexonar_Navigation_B.gatePWM = 0.0;
+        Nexonar_Navigation_B.gateDirection_d = 1.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         Nexonar_Navigation_B.movingCube_j = 0.0F;
       }
       break;
@@ -3573,7 +3758,11 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
   /* S-Function (c280xgpio_do): '<S5>/Drehrichtungsvorgabe für einen Motor1' */
   {
+<<<<<<< HEAD
     if (Nexonar_Navigation_B.gateDirection)
+=======
+    if (Nexonar_Navigation_B.gateDirection_d)
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       GpioDataRegs.GPASET.bit.GPIO17 = 1;
     else
       GpioDataRegs.GPACLEAR.bit.GPIO17 = 1;
@@ -3656,13 +3845,21 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
   /*-- Update CMPB value for ePWM3 --*/
   {
     EPwm3Regs.CMPB = (uint16_T)((uint32_T)EPwm3Regs.TBPRD *
+<<<<<<< HEAD
       Nexonar_Navigation_B.gatePWM_d * 0.01);
+=======
+      Nexonar_Navigation_B.gatePWM * 0.01);
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   }
 
   /* Chart: '<S5>/Chart2' incorporates:
    *  DataTypeConversion: '<S5>/Data Type Conversion1'
    */
+<<<<<<< HEAD
   if (Nexonar_Navigation_DWork.temporalCounter_i1_k < 127U) {
+=======
+  if (Nexonar_Navigation_DWork.temporalCounter_i1_k < 31U) {
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
     Nexonar_Navigation_DWork.temporalCounter_i1_k = ((int16_T)
       Nexonar_Navigation_DWork.temporalCounter_i1_k + 1) & 255U;
   }
@@ -3679,24 +3876,42 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
       Nexonar_Navigation_IN_wait;
 
     /* Entry 'wait': '<S28>:4' */
+<<<<<<< HEAD
+=======
+    rtb_gatePWM = 0.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   } else {
     switch (Nexonar_Navigation_DWork.is_c6_Nexonar_Navigation) {
      case Nexonar_Navigation_IN_close:
       /* During 'close': '<S28>:3' */
+<<<<<<< HEAD
       Nexonar_Navigation_B.gatePWM = 0.0;
+=======
+      rtb_gatePWM = 0.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       break;
 
      case Nexonar_Navigation_IN_open:
       /* During 'open': '<S28>:1' */
+<<<<<<< HEAD
       if (Nexonar_Navigation_DWork.temporalCounter_i1_k >= 100U) {
+=======
+      if (Nexonar_Navigation_DWork.temporalCounter_i1_k >= 30U) {
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
         /* Transition: '<S28>:6' */
         Nexonar_Navigation_DWork.is_c6_Nexonar_Navigation =
           Nexonar_Navigation_IN_close;
 
         /* Entry 'close': '<S28>:3' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.gatePWM = 0.0;
       } else {
         Nexonar_Navigation_B.gatePWM = 50.0;
+=======
+        rtb_gatePWM = 0.0;
+      } else {
+        rtb_gatePWM = 50.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       }
       break;
 
@@ -3709,7 +3924,13 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
         Nexonar_Navigation_DWork.temporalCounter_i1_k = 0U;
 
         /* Entry 'open': '<S28>:1' */
+<<<<<<< HEAD
         Nexonar_Navigation_B.gatePWM = 50.0;
+=======
+        rtb_gatePWM = 50.0;
+      } else {
+        rtb_gatePWM = 0.0;
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
       }
       break;
     }
@@ -3721,8 +3942,12 @@ void Nexonar_Navigation_step1(void)    /* Sample time: [0.01s, 0.0s] */
 
   /*-- Update CMPB value for ePWM5 --*/
   {
+<<<<<<< HEAD
     EPwm5Regs.CMPB = (uint16_T)((uint32_T)EPwm5Regs.TBPRD *
       Nexonar_Navigation_B.gatePWM * 0.01);
+=======
+    EPwm5Regs.CMPB = (uint16_T)((uint32_T)EPwm5Regs.TBPRD * rtb_gatePWM * 0.01);
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   }
 
   /* Update for UnitDelay: '<S5>/Unit Delay' incorporates:
@@ -3737,9 +3962,12 @@ void Nexonar_Navigation_initialize(void)
 {
   /* Registration code */
 
+<<<<<<< HEAD
   /* initialize non-finites */
   rt_InitInfAndNaN(sizeof(real_T));
 
+=======
+>>>>>>> 0d6976cc58bfb98cc8551aaa0d8c51af6654d43d
   /* initialize real-time model */
   (void) memset((void *)Nexonar_Navigation_M, 0,
                 sizeof(RT_MODEL_Nexonar_Navigation));
