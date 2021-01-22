@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.55
+ * Model version                  : 1.56
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Jan 18 15:02:14 2021
+ * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -70,10 +70,11 @@ typedef struct {
   real_T magacin;                      /* '<Root>/Sortieralgorithmus' */
   real_T signal;                       /* '<Root>/Sortieralgorithmus' */
   real_T y;                            /* '<S7>/Richtung' */
+  real_T gatePWM;                      /* '<Root>/Chart2' */
   real_T angle;                        /* '<Root>/Chart1' */
   real_T signal_m;                     /* '<Root>/Chart1' */
-  real_T gatePWM;                      /* '<Root>/Chart' */
-  real_T gateDirection_h;              /* '<Root>/Chart' */
+  real_T gatePWM_e;                    /* '<Root>/Chart' */
+  real_T gateDirection;                /* '<Root>/Chart' */
   real32_T movingCube_l;               /* '<Root>/Chart1' */
   real32_T movingCube_m;               /* '<Root>/Chart' */
   boolean_T RelationalOperator1;       /* '<S19>/Relational Operator1' */
