@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Nexonar_Navigation'.
  *
- * Model version                  : 1.76
+ * Model version                  : 1.87
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Jan 18 19:13:49 2021
+ * C/C++ source code generated on : Mon Jan 25 18:09:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -28,6 +28,7 @@ void config_ADC_A(uint16_T maxconvReg , uint16_T adcChselSEQ1Reg, uint16_T
                   adcChselSEQ2Reg, uint16_T adcChselSEQ3Reg, uint16_T
                   adcChselSEQ4Reg);
 extern real_T rt_roundd_snf(real_T u);
+extern real_T rt_powd_snf(real_T u0, real_T u1);
 void isr_int8pie2_task_fcn(void);
 extern void configureGPIOExtInterrupt(void);
 extern real_T look1_binlxpw(real_T u0, const real_T bp0[], const real_T table[],

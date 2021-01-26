@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   14 \
+    NumChartData   16 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -102,6 +102,20 @@
       Description  "ChartLocal"\
       SFName       ""\
       Path         "cubeCounter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "averageColour"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "averageColour"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
       SrcLocation  ""\
     }\
     ChartData {\

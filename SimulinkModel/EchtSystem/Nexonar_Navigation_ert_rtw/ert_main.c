@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Nexonar_Navigation'.
  *
- * Model version                  : 1.76
+ * Model version                  : 1.87
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Jan 18 19:13:49 2021
+ * C/C++ source code generated on : Mon Jan 25 18:09:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
