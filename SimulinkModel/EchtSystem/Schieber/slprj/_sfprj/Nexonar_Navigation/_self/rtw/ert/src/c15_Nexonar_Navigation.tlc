@@ -7,12 +7,18 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
+<<<<<<< HEAD
+    NumChartData   0 \
+=======
     NumChartData   16 \
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
     }\
+<<<<<<< HEAD
+=======
     ChartData {\
       Name         "is_active_c15_Nexonar_Navigation"\
       Description  "StateIsActive"\
@@ -125,6 +131,7 @@
       Path         ""\
       SrcLocation  ""\
     }\
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
   }
   %return ChartDataElements
 %endfunction

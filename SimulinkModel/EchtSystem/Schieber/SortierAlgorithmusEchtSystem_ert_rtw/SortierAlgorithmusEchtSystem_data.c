@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
-<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c
- * Model version                  : 1.59
+ * Model version                  : 1.62
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
-=======
- * Model version                  : 1.56
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
->>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c
+ * C/C++ source code generated on : Wed Jan 27 19:38:51 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -47,6 +41,11 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    * Referenced by: '<S11>/Memory'
    */
   0,
+
+  /* Expression: 0.3
+   * Referenced by: '<Root>/Moving Average'
+   */
+  0.3,
 
   /* Expression: [1 1]
    * Referenced by: '<S11>/either edge'

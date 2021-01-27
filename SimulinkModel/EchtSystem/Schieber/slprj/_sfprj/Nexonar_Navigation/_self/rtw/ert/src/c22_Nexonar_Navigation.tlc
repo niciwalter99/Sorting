@@ -7,11 +7,61 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   0 \
+    NumChartData   7 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c22_Nexonar_Navigation"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c22_Nexonar_Navigation"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "values_out1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "values_out1"\
+      SrcLocation  ""\
+      Dimensions   [20]\
+    }\
+    ChartData {\
+      Name         "zaehler"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "zaehler"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "search"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "search"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "x_found"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "x_found"\
+      SrcLocation  ""\
     }\
   }
   %return ChartDataElements

@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
-<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
- * Model version                  : 1.59
+ * Model version                  : 1.62
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
-=======
- * Model version                  : 1.56
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
->>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+ * C/C++ source code generated on : Wed Jan 27 19:38:51 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -70,8 +64,8 @@ typedef struct {
   real_T AnalogDigitalWandlungSampleti_a;/* '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
   real_T AnalogDigitalWandlungSampleti_o;/* '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
   real_T RateTransition3;              /* '<S6>/Rate Transition3' */
-  real_T RateTransition2;              /* '<Root>/Rate Transition2' */
   real_T RateTransition3_l;            /* '<Root>/Rate Transition3' */
+  real_T RateTransition2;              /* '<Root>/Rate Transition2' */
   real_T RL;                           /* '<S10>/MATLAB Function2' */
   real_T magacin;                      /* '<Root>/Sortieralgorithmus' */
   real_T signal;                       /* '<Root>/Sortieralgorithmus' */
@@ -81,11 +75,8 @@ typedef struct {
   real_T signal_m;                     /* '<Root>/Chart1' */
   real_T gatePWM_e;                    /* '<Root>/Chart' */
   real_T gateDirection;                /* '<Root>/Chart' */
-<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+  real_T MovingAverage;                /* '<Root>/Moving Average' */
   real32_T movingCube;                 /* '<Root>/Chart1' */
-=======
-  real32_T movingCube_l;               /* '<Root>/Chart1' */
->>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
   real32_T movingCube_m;               /* '<Root>/Chart' */
   boolean_T RelationalOperator1;       /* '<S19>/Relational Operator1' */
   boolean_T RelationalOperator1_f;     /* '<S18>/Relational Operator1' */
@@ -95,6 +86,9 @@ typedef struct {
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
+  dsp_simulink_MovingAverage_So_T obj; /* '<Root>/Moving Average' */
+  dsp_private_ExponentialMoving_T gobj_0;/* '<Root>/Moving Average' */
+  dsp_private_ExponentialMoving_T gobj_1;/* '<Root>/Moving Average' */
   real_T UnitDelay5_DSTATE;            /* '<S10>/Unit Delay5' */
   real_T magacin3_LastCube;            /* '<Root>/Sortieralgorithmus' */
   real_T magacin2_LastCube;            /* '<Root>/Sortieralgorithmus' */
@@ -107,14 +101,13 @@ typedef struct {
   real_T magacin4;                     /* '<Root>/Sortieralgorithmus' */
   real_T magacin5;                     /* '<Root>/Sortieralgorithmus' */
   real_T cubeCounter;                  /* '<Root>/Sortieralgorithmus' */
-  real_T averageColour;                /* '<Root>/Sortieralgorithmus' */
-  real_T counter;                      /* '<Root>/Sortieralgorithmus' */
   real_T magacin;
   real32_T UnitDelay2_DSTATE;          /* '<S10>/Unit Delay2' */
   real32_T UnitDelay1_DSTATE;          /* '<S10>/Unit Delay1' */
   real32_T UnitDelay_DSTATE;           /* '<Root>/Unit Delay' */
   uint16_T temporalCounter_i1;         /* '<Root>/Sortieralgorithmus' */
   uint16_T temporalCounter_i1_o;       /* '<Root>/Chart1' */
+  uint16_T temporalCounter_i1_d;       /* '<Root>/Chart' */
   boolean_T UnitDelay3_DSTATE;         /* '<S10>/Unit Delay3' */
   boolean_T UnitDelay4_DSTATE;         /* '<S10>/Unit Delay4' */
   uint16_T is_active_c3_SortierAlgorithmus;/* '<Root>/Sortieralgorithmus' */
@@ -126,9 +119,9 @@ typedef struct {
   uint16_T is_c1_SortierAlgorithmusEchtSys;/* '<Root>/Chart1' */
   uint16_T is_active_c2_SortierAlgorithmus;/* '<Root>/Chart' */
   uint16_T is_c2_SortierAlgorithmusEchtSys;/* '<Root>/Chart' */
-  uint16_T temporalCounter_i1_d;       /* '<Root>/Chart' */
   boolean_T Memory_PreviousInput;      /* '<S12>/Memory' */
   boolean_T Memory_PreviousInput_b;    /* '<S11>/Memory' */
+  boolean_T objisempty;                /* '<Root>/Moving Average' */
 } DW_SortierAlgorithmusEchtSyst_T;
 
 /* Parameters for system: '<S11>/NEGATIVE Edge' */
@@ -159,6 +152,9 @@ struct P_SortierAlgorithmusEchtSyste_T_ {
   boolean_T EdgeDetector1_ic;          /* Mask Parameter: EdgeDetector1_ic
                                         * Referenced by: '<S11>/Memory'
                                         */
+  real_T MovingAverage_ForgettingFactor;/* Expression: 0.3
+                                         * Referenced by: '<Root>/Moving Average'
+                                         */
   real_T eitheredge_Value[2];          /* Expression: [1 1]
                                         * Referenced by: '<S11>/either edge'
                                         */

@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
-<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_types.h
- * Model version                  : 1.59
+ * Model version                  : 1.62
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
-=======
- * Model version                  : 1.56
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
->>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_types.h
+ * C/C++ source code generated on : Wed Jan 27 19:38:51 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -26,6 +20,45 @@
 #ifndef RTW_HEADER_SortierAlgorithmusEchtSystem_types_h_
 #define RTW_HEADER_SortierAlgorithmusEchtSystem_types_h_
 #include "rtwtypes.h"
+#ifndef typedef_dsp_private_ExponentialMoving_T
+#define typedef_dsp_private_ExponentialMoving_T
+
+typedef struct {
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  boolean_T TunablePropsChanged;
+  real_T ForgettingFactor;
+  real_T pwN;
+  real_T pmN;
+  real_T plambda;
+} dsp_private_ExponentialMoving_T;
+
+#endif                                 /*typedef_dsp_private_ExponentialMoving_T*/
+
+#ifndef typedef_cell_wrap_SortierAlgorithmusE_T
+#define typedef_cell_wrap_SortierAlgorithmusE_T
+
+typedef struct {
+  uint32_T f1[8];
+} cell_wrap_SortierAlgorithmusE_T;
+
+#endif                                 /*typedef_cell_wrap_SortierAlgorithmusE_T*/
+
+#ifndef typedef_dsp_simulink_MovingAverage_So_T
+#define typedef_dsp_simulink_MovingAverage_So_T
+
+typedef struct {
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  boolean_T TunablePropsChanged;
+  cell_wrap_SortierAlgorithmusE_T inputVarSize;
+  real_T ForgettingFactor;
+  dsp_private_ExponentialMoving_T *pStatistic;
+  int32_T NumChannels;
+} dsp_simulink_MovingAverage_So_T;
+
+#endif                                 /*typedef_dsp_simulink_MovingAverage_So_T*/
 
 /* Parameters for system: '<S11>/NEGATIVE Edge' */
 typedef struct P_NEGATIVEEdge_SortierAlgorit_T_ P_NEGATIVEEdge_SortierAlgorit_T;
