@@ -7,21 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
-<<<<<<< HEAD
- * Model version                  : 1.59
+ * Model version                  : 1.62
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Tue Jan 26 21:33:34 2021
-=======
-<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c
- * Model version                  : 1.59
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
-=======
- * Model version                  : 1.56
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
->>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c
->>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
+ * C/C++ source code generated on : Wed Jan 27 19:38:51 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -31,12 +19,12 @@
 
 #include "SortierAlgorithmusEchtSystem.h"
 #include "SortierAlgorithmusEchtSystem_private.h"
-#define IN_photoelectricBarrierActivate (7U)
+#define IN_photoelectricBarrierActivate (6U)
 #define SortierAlgor_IN_NO_ACTIVE_CHILD (0U)
-#define SortierAlgorit_IN_setupVariable (8U)
+#define SortierAlgorit_IN_setupVariable (7U)
 #define SortierAlgorith_IN_DetectedCube (3U)
 #define SortierAlgorithm_IN_goToMagacin (3U)
-#define SortierAlgorithm_IN_throwBlacks (9U)
+#define SortierAlgorithm_IN_throwBlacks (8U)
 #define SortierAlgorithm_IN_waitForCube (7U)
 #define SortierAlgorithmu_IN_cubeLoaded (5U)
 #define SortierAlgorithmu_IN_firstEntry (2U)
@@ -44,12 +32,8 @@
 #define SortierAlgorithmusE_IN_goToZero (4U)
 #define SortierAlgorithmusE_IN_openGate (5U)
 #define SortierAlgorithmusEc_IN_RedCube (4U)
-<<<<<<< HEAD
 #define SortierAlgorithmusEc_IN_wait_bo (3U)
 #define SortierAlgorithmusEch_IN_open_b (2U)
-=======
-#define SortierAlgorithmusEch_IN_messen (6U)
->>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 #define SortierAlgorithmusEch_IN_wait_b (6U)
 #define SortierAlgorithmusEchtS_IN_init (2U)
 #define SortierAlgorithmusEchtS_IN_open (3U)
@@ -72,6 +56,9 @@ RT_MODEL_SortierAlgorithmusEc_T *const SortierAlgorithmusEchtSystem_M =
 /* Forward declaration for local functions */
 static real_T SortierAlgorit_findPlaceForBlue(void);
 static real_T SortierAlgorith_findPlaceForRed(void);
+static void SortierAlgor_SystemCore_release(dsp_simulink_MovingAverage_So_T *obj);
+static void SortierAlgori_SystemCore_delete(dsp_simulink_MovingAverage_So_T *obj);
+static void matlabCodegenHandle_matlabCodeg(dsp_simulink_MovingAverage_So_T *obj);
 static void rate_monotonic_scheduler(void);
 static uint16_T adcInitFlag = 0;
 real_T look1_binlxpw(real_T u0, const real_T bp0[], const real_T table[],
@@ -313,6 +300,32 @@ static real_T SortierAlgorith_findPlaceForRed(void)
   }
 
   return magacinOut;
+}
+
+static void SortierAlgor_SystemCore_release(dsp_simulink_MovingAverage_So_T *obj)
+{
+  dsp_private_ExponentialMoving_T *obj_0;
+  if ((obj->isInitialized == 1L) && obj->isSetupComplete) {
+    obj_0 = obj->pStatistic;
+    if (obj_0->isInitialized == 1L) {
+      obj_0->isInitialized = 2L;
+    }
+
+    obj->NumChannels = -1L;
+  }
+}
+
+static void SortierAlgori_SystemCore_delete(dsp_simulink_MovingAverage_So_T *obj)
+{
+  SortierAlgor_SystemCore_release(obj);
+}
+
+static void matlabCodegenHandle_matlabCodeg(dsp_simulink_MovingAverage_So_T *obj)
+{
+  if (!obj->matlabCodegenIsDeleted) {
+    obj->matlabCodegenIsDeleted = true;
+    SortierAlgori_SystemCore_delete(obj);
+  }
 }
 
 /* Model step function for TID0 */
@@ -579,13 +592,13 @@ void SortierAlgorithmusEchtSystem_step0(void) /* Sample time: [2.0E-5s, 0.0s] */
   if (SortierAlgorithmusEchtSystem_M->Timing.RateInteraction.TID0_1) {
     SortierAlgorithmusEchtSystem_B.RateTransition3 = rtb_MultiportSwitch_idx_0;
 
-    /* RateTransition: '<Root>/Rate Transition2' */
-    SortierAlgorithmusEchtSystem_B.RateTransition2 =
-      SortierAlgorithmusEchtSystem_B.AnalogDigitalWandlungSampletime;
-
     /* RateTransition: '<Root>/Rate Transition3' */
     SortierAlgorithmusEchtSystem_B.RateTransition3_l =
       SortierAlgorithmusEchtSystem_B.AnalogDigitalWandlungSampleti_l;
+
+    /* RateTransition: '<Root>/Rate Transition2' */
+    SortierAlgorithmusEchtSystem_B.RateTransition2 =
+      SortierAlgorithmusEchtSystem_B.AnalogDigitalWandlungSampletime;
   }
 
   /* End of RateTransition: '<S6>/Rate Transition3' */
@@ -620,7 +633,64 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
 {
   /* local block i/o variables */
   real_T rtb_y_f;
+  boolean_T flag;
+  real_T pmLocal;
+  real_T lambda;
   real_T rtb_uDLookupTable;
+
+  /* MATLABSystem: '<Root>/Moving Average' */
+  if (SortierAlgorithmusEchtSystem_DW.obj.ForgettingFactor !=
+      SortierAlgorithmusEchtSystem_P.MovingAverage_ForgettingFactor) {
+    if (SortierAlgorithmusEchtSystem_DW.obj.isInitialized == 1L) {
+      SortierAlgorithmusEchtSystem_DW.obj.TunablePropsChanged = true;
+    }
+
+    SortierAlgorithmusEchtSystem_DW.obj.ForgettingFactor =
+      SortierAlgorithmusEchtSystem_P.MovingAverage_ForgettingFactor;
+  }
+
+  if (SortierAlgorithmusEchtSystem_DW.obj.TunablePropsChanged) {
+    SortierAlgorithmusEchtSystem_DW.obj.TunablePropsChanged = false;
+    flag = (SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isInitialized == 1L);
+    if (flag) {
+      SortierAlgorithmusEchtSystem_DW.obj.pStatistic->TunablePropsChanged = true;
+    }
+
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->ForgettingFactor =
+      SortierAlgorithmusEchtSystem_DW.obj.ForgettingFactor;
+  }
+
+  if (SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isInitialized != 1L) {
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isSetupComplete = false;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isInitialized = 1L;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pwN = 1.0;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pmN = 0.0;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->plambda =
+      SortierAlgorithmusEchtSystem_DW.obj.pStatistic->ForgettingFactor;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isSetupComplete = true;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->TunablePropsChanged = false;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pwN = 1.0;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pmN = 0.0;
+  }
+
+  if (SortierAlgorithmusEchtSystem_DW.obj.pStatistic->TunablePropsChanged) {
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->TunablePropsChanged = false;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic->plambda =
+      SortierAlgorithmusEchtSystem_DW.obj.pStatistic->ForgettingFactor;
+  }
+
+  rtb_uDLookupTable = SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pwN;
+  pmLocal = SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pmN;
+  lambda = SortierAlgorithmusEchtSystem_DW.obj.pStatistic->plambda;
+  SortierAlgorithmusEchtSystem_B.MovingAverage = (1.0 - 1.0 / rtb_uDLookupTable)
+    * pmLocal + 1.0 / rtb_uDLookupTable *
+    SortierAlgorithmusEchtSystem_B.RateTransition2;
+  SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pwN = lambda *
+    rtb_uDLookupTable + 1.0;
+  SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pmN =
+    SortierAlgorithmusEchtSystem_B.MovingAverage;
+
+  /* End of MATLABSystem: '<Root>/Moving Average' */
 
   /* Chart: '<Root>/Sortieralgorithmus' incorporates:
    *  UnitDelay: '<Root>/Unit Delay'
@@ -646,8 +716,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
     SortierAlgorithmusEchtSystem_DW.magacin4_LastCube = 0.0;
     SortierAlgorithmusEchtSystem_B.magacin = -1.0;
     SortierAlgorithmusEchtSystem_DW.cubeCounter = 0.0;
-    SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-    SortierAlgorithmusEchtSystem_DW.averageColour = 0.0;
   } else {
     switch (SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys) {
      case SortierAlgorithmusEcht_IN_Black:
@@ -667,8 +735,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         if (SortierAlgorithmusEchtSystem_DW.cubeCounter > 0.0) {
           SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
@@ -685,43 +751,28 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmu_IN_cubeLoaded:
-      if (SortierAlgorithmusEchtSystem_B.RateTransition3_l < 400.0) {
+      if ((SortierAlgorithmusEchtSystem_B.MovingAverage < 2300.0) ||
+          (SortierAlgorithmusEchtSystem_B.MovingAverage > 2500.0)) {
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           IN_photoelectricBarrierActivate;
       } else {
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
-      }
-      break;
-
-     case SortierAlgorithmusEch_IN_messen:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 1U) {
-        SortierAlgorithmusEchtSystem_DW.counter++;
-        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
-          SortierAlgorithmusEch_IN_messen;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
-        SortierAlgorithmusEchtSystem_DW.averageColour +=
-          SortierAlgorithmusEchtSystem_B.RateTransition2;
       }
       break;
 
      case IN_photoelectricBarrierActivate:
-      if ((SortierAlgorithmusEchtSystem_B.RateTransition2 > 2150.0) ||
-          ((SortierAlgorithmusEchtSystem_B.RateTransition2 > 1500.0) &&
-           (SortierAlgorithmusEchtSystem_B.RateTransition2 < 1800.0))) {
+      if (SortierAlgorithmusEchtSystem_B.MovingAverage > 2150.0) {
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEcht_IN_Black;
         SortierAlgorithmusEchtSystem_B.magacin = 6.0;
-      } else if ((SortierAlgorithmusEchtSystem_B.RateTransition2 < 700.0) &&
-                 (SortierAlgorithmusEchtSystem_B.RateTransition2 > 0.0)) {
+      } else if (SortierAlgorithmusEchtSystem_B.MovingAverage < 1000.0) {
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEc_IN_RedCube;
         SortierAlgorithmusEchtSystem_B.magacin = SortierAlgorith_findPlaceForRed
           ();
       } else {
-        if ((SortierAlgorithmusEchtSystem_B.RateTransition2 >= 700.0) &&
-            (SortierAlgorithmusEchtSystem_B.RateTransition2 <= 2150.0)) {
+        if ((SortierAlgorithmusEchtSystem_B.MovingAverage >= 1000.0) &&
+            (SortierAlgorithmusEchtSystem_B.MovingAverage <= 2150.0)) {
           SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
             SortierAlgorithmusE_IN_BlueCube;
           SortierAlgorithmusEchtSystem_B.magacin =
@@ -735,8 +786,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         SortierAlgorithmusEchtSystem_DW.magacin0 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin1 = 0.0;
@@ -750,8 +799,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.magacin4_LastCube = 0.0;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
         SortierAlgorithmusEchtSystem_DW.cubeCounter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.averageColour = 0.0;
       }
       break;
 
@@ -760,8 +807,6 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
-        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         SortierAlgorithmusEchtSystem_B.signal = 1.0;
       }
@@ -866,14 +911,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* End of Chart: '<Root>/Chart1' */
 
   /* Chart: '<Root>/Chart' */
-<<<<<<< HEAD
   if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d < 511U) {
     SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d++;
-=======
-  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d < 63U) {
-    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = ((int16_T)
-      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d + 1) & 255U;
->>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
   }
 
   if (SortierAlgorithmusEchtSystem_DW.is_active_c2_SortierAlgorithmus == 0U) {
@@ -911,7 +950,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEchtS_IN_open:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d >= 50U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d >= 30U) {
         SortierAlgorithmusEchtSystem_DW.is_c2_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEcht_IN_close;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
@@ -1085,532 +1124,575 @@ void SortierAlgorithmusEchtSystem_initialize(void)
   (void) memset((void *)&SortierAlgorithmusEchtSystem_DW, 0,
                 sizeof(DW_SortierAlgorithmusEchtSyst_T));
 
-  /* Machine initializer */
-  SortierAlgorithmusEchtSystem_DW.magacin = 0.0;
-
-  /* Start for S-Function (c280xadc): '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
-  if (adcInitFlag == 0) {
-    InitAdc();
-    adcInitFlag = 1;
-  }
-
-  config_ADC_A (3U, 4165U, 0U, 0U, 0U);
-
-  /* Start for S-Function (c280xgpio_do): '<Root>/Drehrichtungsvorgabe für einen Motor1' */
-  EALLOW;
-  GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFFFC;
-  GpioCtrlRegs.GPADIR.all |= 0x10000;
-  EDIS;
-
-  /* Start for S-Function (c280xgpio_do): '<S4>/Drehrichtungsvorgabe für einen Motor' */
-  EALLOW;
-  GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFF3F;
-  GpioCtrlRegs.GPADIR.all |= 0x80000;
-  EDIS;
-
-  /* Start for S-Function (c280xpwm): '<S4>/PWM Vorgabe für einen Motor ' */
-
-  /*** Initialize ePWM4 modules ***/
   {
-    /*-- Setup Time-Base (TB) Submodule --*/
-    EPwm4Regs.TBPRD = 64000;
+    boolean_T flag;
 
-    /* // Time-Base Control Register
-       EPwm4Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
-       EPwm4Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
-       EPwm4Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
-       EPwm4Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
-       EPwm4Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
-       EPwm4Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
-       EPwm4Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
-     */
-    EPwm4Regs.TBCTL.all = (EPwm4Regs.TBCTL.all & ~0x3FBF) | 0x30;
+    /* Machine initializer */
+    SortierAlgorithmusEchtSystem_DW.magacin = 0.0;
 
-    /* // Time-Base Phase Register
-       EPwm4Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
-     */
-    EPwm4Regs.TBPHS.all = (EPwm4Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
-    EPwm4Regs.TBCTR = 0x0000;          /* Clear counter*/
+    /* Start for S-Function (c280xadc): '<Root>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
+    if (adcInitFlag == 0) {
+      InitAdc();
+      adcInitFlag = 1;
+    }
 
-    /*-- Setup Counter_Compare (CC) Submodule --*/
-    /* // Counter-Compare Control Register
-       EPwm4Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
-       EPwm4Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
-       EPwm4Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
-       EPwm4Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
-     */
-    EPwm4Regs.CMPCTL.all = (EPwm4Regs.CMPCTL.all & ~0x5F) | 0x0;
-    EPwm4Regs.CMPA.half.CMPA = 32000;
-    EPwm4Regs.CMPB = 0;
+    config_ADC_A (3U, 4165U, 0U, 0U, 0U);
 
-    /*-- Setup Action-Qualifier (AQ) Submodule --*/
-    EPwm4Regs.AQCTLA.all = 36;
-    EPwm4Regs.AQCTLB.all = 264;
+    /* Start for MATLABSystem: '<Root>/Moving Average' */
+    SortierAlgorithmusEchtSystem_DW.obj.matlabCodegenIsDeleted = true;
+    SortierAlgorithmusEchtSystem_DW.obj.isInitialized = 0L;
+    SortierAlgorithmusEchtSystem_DW.obj.NumChannels = -1L;
+    SortierAlgorithmusEchtSystem_DW.obj.matlabCodegenIsDeleted = false;
+    SortierAlgorithmusEchtSystem_DW.objisempty = true;
+    if (SortierAlgorithmusEchtSystem_DW.obj.isInitialized == 1L) {
+      SortierAlgorithmusEchtSystem_DW.obj.TunablePropsChanged = true;
+    }
 
-    /* // Action-Qualifier Software Force Register
-       EPwm4Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
-     */
-    EPwm4Regs.AQSFRC.all = (EPwm4Regs.AQSFRC.all & ~0xC0) | 0x0;
+    SortierAlgorithmusEchtSystem_DW.obj.ForgettingFactor =
+      SortierAlgorithmusEchtSystem_P.MovingAverage_ForgettingFactor;
+    SortierAlgorithmusEchtSystem_DW.obj.isSetupComplete = false;
+    SortierAlgorithmusEchtSystem_DW.obj.isInitialized = 1L;
+    SortierAlgorithmusEchtSystem_DW.obj.NumChannels = 1L;
+    SortierAlgorithmusEchtSystem_DW.gobj_0.isInitialized = 0L;
+    flag = (SortierAlgorithmusEchtSystem_DW.gobj_0.isInitialized == 1L);
+    if (flag) {
+      SortierAlgorithmusEchtSystem_DW.gobj_0.TunablePropsChanged = true;
+    }
 
-    /* // Action-Qualifier Continuous S/W Force Register Set
-       EPwm4Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
-       EPwm4Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
-     */
-    EPwm4Regs.AQCSFRC.all = (EPwm4Regs.AQCSFRC.all & ~0xF) | 0x0;
+    SortierAlgorithmusEchtSystem_DW.gobj_0.ForgettingFactor =
+      SortierAlgorithmusEchtSystem_DW.obj.ForgettingFactor;
+    SortierAlgorithmusEchtSystem_DW.obj.pStatistic =
+      &SortierAlgorithmusEchtSystem_DW.gobj_0;
+    SortierAlgorithmusEchtSystem_DW.obj.isSetupComplete = true;
+    SortierAlgorithmusEchtSystem_DW.obj.TunablePropsChanged = false;
 
-    /*-- Setup Dead-Band Generator (DB) Submodule --*/
-    /* // Dead-Band Generator Control Register
-       EPwm4Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
-       EPwm4Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
-       EPwm4Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
-     */
-    EPwm4Regs.DBCTL.all = (EPwm4Regs.DBCTL.all & ~0x3F) | 0x0;
-    EPwm4Regs.DBRED = 0;
-    EPwm4Regs.DBFED = 0;
+    /* End of Start for MATLABSystem: '<Root>/Moving Average' */
 
-    /*-- Setup Event-Trigger (ET) Submodule --*/
-    /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
-       EPwm4Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
-       EPwm4Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
-       EPwm4Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM4SOCA Period Select
-       EPwm4Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
-       EPwm4Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
-       EPwm4Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM4SOCB Period Select
-       EPwm4Regs.ETSEL.bit.INTEN      = 0;          // EPWM4INTn Enable
-       EPwm4Regs.ETSEL.bit.INTSEL     = 1;          // EPWM4INTn Select
-       EPwm4Regs.ETPS.bit.INTPRD      = 1;          // EPWM4INTn Period Select
-     */
-    EPwm4Regs.ETSEL.all = (EPwm4Regs.ETSEL.all & ~0xFF0F) | 0x1101;
-    EPwm4Regs.ETPS.all = (EPwm4Regs.ETPS.all & ~0x3303) | 0x1101;
-
-    /*-- Setup PWM-Chopper (PC) Submodule --*/
-    /* // PWM-Chopper Control Register
-       EPwm4Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
-       EPwm4Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
-       EPwm4Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
-       EPwm4Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
-     */
-    EPwm4Regs.PCCTL.all = (EPwm4Regs.PCCTL.all & ~0x7FF) | 0x0;
-
-    /*-- Set up Trip-Zone (TZ) Submodule --*/
+    /* Start for S-Function (c280xgpio_do): '<Root>/Drehrichtungsvorgabe für einen Motor1' */
     EALLOW;
-    EPwm4Regs.TZSEL.all = 0;
-
-    /* // Trip-Zone Control Register
-       EPwm4Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM4A
-       EPwm4Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM4B
-     */
-    EPwm4Regs.TZCTL.all = (EPwm4Regs.TZCTL.all & ~0xF) | 0xF;
-
-    /* // Trip-Zone Enable Interrupt Register
-       EPwm4Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
-       EPwm4Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
-     */
-    EPwm4Regs.TZEINT.all = (EPwm4Regs.TZEINT.all & ~0x6) | 0x0;
+    GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFFFC;
+    GpioCtrlRegs.GPADIR.all |= 0x10000;
     EDIS;
-  }
 
-  /* Start for S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 1' */
-
-  /*** Initialize ePWM6 modules ***/
-  {
-    /*-- Setup Time-Base (TB) Submodule --*/
-    EPwm6Regs.TBPRD = 64000;
-
-    /* // Time-Base Control Register
-       EPwm6Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
-       EPwm6Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
-       EPwm6Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
-       EPwm6Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
-       EPwm6Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
-       EPwm6Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
-       EPwm6Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
-     */
-    EPwm6Regs.TBCTL.all = (EPwm6Regs.TBCTL.all & ~0x3FBF) | 0x30;
-
-    /* // Time-Base Phase Register
-       EPwm6Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
-     */
-    EPwm6Regs.TBPHS.all = (EPwm6Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
-    EPwm6Regs.TBCTR = 0x0000;          /* Clear counter*/
-
-    /*-- Setup Counter_Compare (CC) Submodule --*/
-    /* // Counter-Compare Control Register
-       EPwm6Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
-       EPwm6Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
-       EPwm6Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
-       EPwm6Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
-     */
-    EPwm6Regs.CMPCTL.all = (EPwm6Regs.CMPCTL.all & ~0x5F) | 0x0;
-    EPwm6Regs.CMPA.half.CMPA = 32000;
-    EPwm6Regs.CMPB = 0;
-
-    /*-- Setup Action-Qualifier (AQ) Submodule --*/
-    EPwm6Regs.AQCTLA.all = 36;
-    EPwm6Regs.AQCTLB.all = 264;
-
-    /* // Action-Qualifier Software Force Register
-       EPwm6Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
-     */
-    EPwm6Regs.AQSFRC.all = (EPwm6Regs.AQSFRC.all & ~0xC0) | 0x0;
-
-    /* // Action-Qualifier Continuous S/W Force Register Set
-       EPwm6Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
-       EPwm6Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
-     */
-    EPwm6Regs.AQCSFRC.all = (EPwm6Regs.AQCSFRC.all & ~0xF) | 0x0;
-
-    /*-- Setup Dead-Band Generator (DB) Submodule --*/
-    /* // Dead-Band Generator Control Register
-       EPwm6Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
-       EPwm6Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
-       EPwm6Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
-     */
-    EPwm6Regs.DBCTL.all = (EPwm6Regs.DBCTL.all & ~0x3F) | 0x0;
-    EPwm6Regs.DBRED = 0;
-    EPwm6Regs.DBFED = 0;
-
-    /*-- Setup Event-Trigger (ET) Submodule --*/
-    /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
-       EPwm6Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
-       EPwm6Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
-       EPwm6Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM6SOCA Period Select
-       EPwm6Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
-       EPwm6Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
-       EPwm6Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM6SOCB Period Select
-       EPwm6Regs.ETSEL.bit.INTEN      = 0;          // EPWM6INTn Enable
-       EPwm6Regs.ETSEL.bit.INTSEL     = 1;          // EPWM6INTn Select
-       EPwm6Regs.ETPS.bit.INTPRD      = 1;          // EPWM6INTn Period Select
-     */
-    EPwm6Regs.ETSEL.all = (EPwm6Regs.ETSEL.all & ~0xFF0F) | 0x1101;
-    EPwm6Regs.ETPS.all = (EPwm6Regs.ETPS.all & ~0x3303) | 0x1101;
-
-    /*-- Setup PWM-Chopper (PC) Submodule --*/
-    /* // PWM-Chopper Control Register
-       EPwm6Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
-       EPwm6Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
-       EPwm6Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
-       EPwm6Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
-     */
-    EPwm6Regs.PCCTL.all = (EPwm6Regs.PCCTL.all & ~0x7FF) | 0x0;
-
-    /*-- Set up Trip-Zone (TZ) Submodule --*/
+    /* Start for S-Function (c280xgpio_do): '<S4>/Drehrichtungsvorgabe für einen Motor' */
     EALLOW;
-    EPwm6Regs.TZSEL.all = 0;
-
-    /* // Trip-Zone Control Register
-       EPwm6Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM6A
-       EPwm6Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM6B
-     */
-    EPwm6Regs.TZCTL.all = (EPwm6Regs.TZCTL.all & ~0xF) | 0xF;
-
-    /* // Trip-Zone Enable Interrupt Register
-       EPwm6Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
-       EPwm6Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
-     */
-    EPwm6Regs.TZEINT.all = (EPwm6Regs.TZEINT.all & ~0x6) | 0x0;
+    GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFF3F;
+    GpioCtrlRegs.GPADIR.all |= 0x80000;
     EDIS;
-  }
 
-  /* Start for S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 2' */
+    /* Start for S-Function (c280xpwm): '<S4>/PWM Vorgabe für einen Motor ' */
 
-  /*** Initialize ePWM3 modules ***/
-  {
-    /*-- Setup Time-Base (TB) Submodule --*/
-    EPwm3Regs.TBPRD = 64000;
+    /*** Initialize ePWM4 modules ***/
+    {
+      /*-- Setup Time-Base (TB) Submodule --*/
+      EPwm4Regs.TBPRD = 64000;
 
-    /* // Time-Base Control Register
-       EPwm3Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
-       EPwm3Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
-       EPwm3Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
-       EPwm3Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
-       EPwm3Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
-       EPwm3Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
-       EPwm3Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
-     */
-    EPwm3Regs.TBCTL.all = (EPwm3Regs.TBCTL.all & ~0x3FBF) | 0x30;
+      /* // Time-Base Control Register
+         EPwm4Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
+         EPwm4Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
+         EPwm4Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
+         EPwm4Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
+         EPwm4Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
+         EPwm4Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
+         EPwm4Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
+       */
+      EPwm4Regs.TBCTL.all = (EPwm4Regs.TBCTL.all & ~0x3FBF) | 0x30;
 
-    /* // Time-Base Phase Register
-       EPwm3Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
-     */
-    EPwm3Regs.TBPHS.all = (EPwm3Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
-    EPwm3Regs.TBCTR = 0x0000;          /* Clear counter*/
+      /* // Time-Base Phase Register
+         EPwm4Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
+       */
+      EPwm4Regs.TBPHS.all = (EPwm4Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
+      EPwm4Regs.TBCTR = 0x0000;        /* Clear counter*/
 
-    /*-- Setup Counter_Compare (CC) Submodule --*/
-    /* // Counter-Compare Control Register
-       EPwm3Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
-       EPwm3Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
-       EPwm3Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
-       EPwm3Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
-     */
-    EPwm3Regs.CMPCTL.all = (EPwm3Regs.CMPCTL.all & ~0x5F) | 0x0;
-    EPwm3Regs.CMPA.half.CMPA = 32000;
-    EPwm3Regs.CMPB = 0;
+      /*-- Setup Counter_Compare (CC) Submodule --*/
+      /* // Counter-Compare Control Register
+         EPwm4Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
+         EPwm4Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
+         EPwm4Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
+         EPwm4Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
+       */
+      EPwm4Regs.CMPCTL.all = (EPwm4Regs.CMPCTL.all & ~0x5F) | 0x0;
+      EPwm4Regs.CMPA.half.CMPA = 32000;
+      EPwm4Regs.CMPB = 0;
 
-    /*-- Setup Action-Qualifier (AQ) Submodule --*/
-    EPwm3Regs.AQCTLA.all = 36;
-    EPwm3Regs.AQCTLB.all = 264;
+      /*-- Setup Action-Qualifier (AQ) Submodule --*/
+      EPwm4Regs.AQCTLA.all = 36;
+      EPwm4Regs.AQCTLB.all = 264;
 
-    /* // Action-Qualifier Software Force Register
-       EPwm3Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
-     */
-    EPwm3Regs.AQSFRC.all = (EPwm3Regs.AQSFRC.all & ~0xC0) | 0x0;
+      /* // Action-Qualifier Software Force Register
+         EPwm4Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
+       */
+      EPwm4Regs.AQSFRC.all = (EPwm4Regs.AQSFRC.all & ~0xC0) | 0x0;
 
-    /* // Action-Qualifier Continuous S/W Force Register Set
-       EPwm3Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
-       EPwm3Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
-     */
-    EPwm3Regs.AQCSFRC.all = (EPwm3Regs.AQCSFRC.all & ~0xF) | 0x0;
+      /* // Action-Qualifier Continuous S/W Force Register Set
+         EPwm4Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
+         EPwm4Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
+       */
+      EPwm4Regs.AQCSFRC.all = (EPwm4Regs.AQCSFRC.all & ~0xF) | 0x0;
 
-    /*-- Setup Dead-Band Generator (DB) Submodule --*/
-    /* // Dead-Band Generator Control Register
-       EPwm3Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
-       EPwm3Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
-       EPwm3Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
-     */
-    EPwm3Regs.DBCTL.all = (EPwm3Regs.DBCTL.all & ~0x3F) | 0x0;
-    EPwm3Regs.DBRED = 0;
-    EPwm3Regs.DBFED = 0;
+      /*-- Setup Dead-Band Generator (DB) Submodule --*/
+      /* // Dead-Band Generator Control Register
+         EPwm4Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
+         EPwm4Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
+         EPwm4Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
+       */
+      EPwm4Regs.DBCTL.all = (EPwm4Regs.DBCTL.all & ~0x3F) | 0x0;
+      EPwm4Regs.DBRED = 0;
+      EPwm4Regs.DBFED = 0;
 
-    /*-- Setup Event-Trigger (ET) Submodule --*/
-    /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
-       EPwm3Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
-       EPwm3Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
-       EPwm3Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM3SOCA Period Select
-       EPwm3Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
-       EPwm3Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
-       EPwm3Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM3SOCB Period Select
-       EPwm3Regs.ETSEL.bit.INTEN      = 0;          // EPWM3INTn Enable
-       EPwm3Regs.ETSEL.bit.INTSEL     = 1;          // EPWM3INTn Select
-       EPwm3Regs.ETPS.bit.INTPRD      = 1;          // EPWM3INTn Period Select
-     */
-    EPwm3Regs.ETSEL.all = (EPwm3Regs.ETSEL.all & ~0xFF0F) | 0x1101;
-    EPwm3Regs.ETPS.all = (EPwm3Regs.ETPS.all & ~0x3303) | 0x1101;
+      /*-- Setup Event-Trigger (ET) Submodule --*/
+      /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
+         EPwm4Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
+         EPwm4Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
+         EPwm4Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM4SOCA Period Select
+         EPwm4Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
+         EPwm4Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
+         EPwm4Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM4SOCB Period Select
+         EPwm4Regs.ETSEL.bit.INTEN      = 0;          // EPWM4INTn Enable
+         EPwm4Regs.ETSEL.bit.INTSEL     = 1;          // EPWM4INTn Select
+         EPwm4Regs.ETPS.bit.INTPRD      = 1;          // EPWM4INTn Period Select
+       */
+      EPwm4Regs.ETSEL.all = (EPwm4Regs.ETSEL.all & ~0xFF0F) | 0x1101;
+      EPwm4Regs.ETPS.all = (EPwm4Regs.ETPS.all & ~0x3303) | 0x1101;
 
-    /*-- Setup PWM-Chopper (PC) Submodule --*/
-    /* // PWM-Chopper Control Register
-       EPwm3Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
-       EPwm3Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
-       EPwm3Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
-       EPwm3Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
-     */
-    EPwm3Regs.PCCTL.all = (EPwm3Regs.PCCTL.all & ~0x7FF) | 0x0;
+      /*-- Setup PWM-Chopper (PC) Submodule --*/
+      /* // PWM-Chopper Control Register
+         EPwm4Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
+         EPwm4Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
+         EPwm4Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
+         EPwm4Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
+       */
+      EPwm4Regs.PCCTL.all = (EPwm4Regs.PCCTL.all & ~0x7FF) | 0x0;
 
-    /*-- Set up Trip-Zone (TZ) Submodule --*/
+      /*-- Set up Trip-Zone (TZ) Submodule --*/
+      EALLOW;
+      EPwm4Regs.TZSEL.all = 0;
+
+      /* // Trip-Zone Control Register
+         EPwm4Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM4A
+         EPwm4Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM4B
+       */
+      EPwm4Regs.TZCTL.all = (EPwm4Regs.TZCTL.all & ~0xF) | 0xF;
+
+      /* // Trip-Zone Enable Interrupt Register
+         EPwm4Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
+         EPwm4Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
+       */
+      EPwm4Regs.TZEINT.all = (EPwm4Regs.TZEINT.all & ~0x6) | 0x0;
+      EDIS;
+    }
+
+    /* Start for S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 1' */
+
+    /*** Initialize ePWM6 modules ***/
+    {
+      /*-- Setup Time-Base (TB) Submodule --*/
+      EPwm6Regs.TBPRD = 64000;
+
+      /* // Time-Base Control Register
+         EPwm6Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
+         EPwm6Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
+         EPwm6Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
+         EPwm6Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
+         EPwm6Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
+         EPwm6Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
+         EPwm6Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
+       */
+      EPwm6Regs.TBCTL.all = (EPwm6Regs.TBCTL.all & ~0x3FBF) | 0x30;
+
+      /* // Time-Base Phase Register
+         EPwm6Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
+       */
+      EPwm6Regs.TBPHS.all = (EPwm6Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
+      EPwm6Regs.TBCTR = 0x0000;        /* Clear counter*/
+
+      /*-- Setup Counter_Compare (CC) Submodule --*/
+      /* // Counter-Compare Control Register
+         EPwm6Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
+         EPwm6Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
+         EPwm6Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
+         EPwm6Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
+       */
+      EPwm6Regs.CMPCTL.all = (EPwm6Regs.CMPCTL.all & ~0x5F) | 0x0;
+      EPwm6Regs.CMPA.half.CMPA = 32000;
+      EPwm6Regs.CMPB = 0;
+
+      /*-- Setup Action-Qualifier (AQ) Submodule --*/
+      EPwm6Regs.AQCTLA.all = 36;
+      EPwm6Regs.AQCTLB.all = 264;
+
+      /* // Action-Qualifier Software Force Register
+         EPwm6Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
+       */
+      EPwm6Regs.AQSFRC.all = (EPwm6Regs.AQSFRC.all & ~0xC0) | 0x0;
+
+      /* // Action-Qualifier Continuous S/W Force Register Set
+         EPwm6Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
+         EPwm6Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
+       */
+      EPwm6Regs.AQCSFRC.all = (EPwm6Regs.AQCSFRC.all & ~0xF) | 0x0;
+
+      /*-- Setup Dead-Band Generator (DB) Submodule --*/
+      /* // Dead-Band Generator Control Register
+         EPwm6Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
+         EPwm6Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
+         EPwm6Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
+       */
+      EPwm6Regs.DBCTL.all = (EPwm6Regs.DBCTL.all & ~0x3F) | 0x0;
+      EPwm6Regs.DBRED = 0;
+      EPwm6Regs.DBFED = 0;
+
+      /*-- Setup Event-Trigger (ET) Submodule --*/
+      /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
+         EPwm6Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
+         EPwm6Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
+         EPwm6Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM6SOCA Period Select
+         EPwm6Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
+         EPwm6Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
+         EPwm6Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM6SOCB Period Select
+         EPwm6Regs.ETSEL.bit.INTEN      = 0;          // EPWM6INTn Enable
+         EPwm6Regs.ETSEL.bit.INTSEL     = 1;          // EPWM6INTn Select
+         EPwm6Regs.ETPS.bit.INTPRD      = 1;          // EPWM6INTn Period Select
+       */
+      EPwm6Regs.ETSEL.all = (EPwm6Regs.ETSEL.all & ~0xFF0F) | 0x1101;
+      EPwm6Regs.ETPS.all = (EPwm6Regs.ETPS.all & ~0x3303) | 0x1101;
+
+      /*-- Setup PWM-Chopper (PC) Submodule --*/
+      /* // PWM-Chopper Control Register
+         EPwm6Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
+         EPwm6Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
+         EPwm6Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
+         EPwm6Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
+       */
+      EPwm6Regs.PCCTL.all = (EPwm6Regs.PCCTL.all & ~0x7FF) | 0x0;
+
+      /*-- Set up Trip-Zone (TZ) Submodule --*/
+      EALLOW;
+      EPwm6Regs.TZSEL.all = 0;
+
+      /* // Trip-Zone Control Register
+         EPwm6Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM6A
+         EPwm6Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM6B
+       */
+      EPwm6Regs.TZCTL.all = (EPwm6Regs.TZCTL.all & ~0xF) | 0xF;
+
+      /* // Trip-Zone Enable Interrupt Register
+         EPwm6Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
+         EPwm6Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
+       */
+      EPwm6Regs.TZEINT.all = (EPwm6Regs.TZEINT.all & ~0x6) | 0x0;
+      EDIS;
+    }
+
+    /* Start for S-Function (c280xpwm): '<Root>/PWM Vorgabe für einen Motor 2' */
+
+    /*** Initialize ePWM3 modules ***/
+    {
+      /*-- Setup Time-Base (TB) Submodule --*/
+      EPwm3Regs.TBPRD = 64000;
+
+      /* // Time-Base Control Register
+         EPwm3Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
+         EPwm3Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
+         EPwm3Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
+         EPwm3Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
+         EPwm3Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
+         EPwm3Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
+         EPwm3Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
+       */
+      EPwm3Regs.TBCTL.all = (EPwm3Regs.TBCTL.all & ~0x3FBF) | 0x30;
+
+      /* // Time-Base Phase Register
+         EPwm3Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
+       */
+      EPwm3Regs.TBPHS.all = (EPwm3Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
+      EPwm3Regs.TBCTR = 0x0000;        /* Clear counter*/
+
+      /*-- Setup Counter_Compare (CC) Submodule --*/
+      /* // Counter-Compare Control Register
+         EPwm3Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
+         EPwm3Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
+         EPwm3Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
+         EPwm3Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
+       */
+      EPwm3Regs.CMPCTL.all = (EPwm3Regs.CMPCTL.all & ~0x5F) | 0x0;
+      EPwm3Regs.CMPA.half.CMPA = 32000;
+      EPwm3Regs.CMPB = 0;
+
+      /*-- Setup Action-Qualifier (AQ) Submodule --*/
+      EPwm3Regs.AQCTLA.all = 36;
+      EPwm3Regs.AQCTLB.all = 264;
+
+      /* // Action-Qualifier Software Force Register
+         EPwm3Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
+       */
+      EPwm3Regs.AQSFRC.all = (EPwm3Regs.AQSFRC.all & ~0xC0) | 0x0;
+
+      /* // Action-Qualifier Continuous S/W Force Register Set
+         EPwm3Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
+         EPwm3Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
+       */
+      EPwm3Regs.AQCSFRC.all = (EPwm3Regs.AQCSFRC.all & ~0xF) | 0x0;
+
+      /*-- Setup Dead-Band Generator (DB) Submodule --*/
+      /* // Dead-Band Generator Control Register
+         EPwm3Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
+         EPwm3Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
+         EPwm3Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
+       */
+      EPwm3Regs.DBCTL.all = (EPwm3Regs.DBCTL.all & ~0x3F) | 0x0;
+      EPwm3Regs.DBRED = 0;
+      EPwm3Regs.DBFED = 0;
+
+      /*-- Setup Event-Trigger (ET) Submodule --*/
+      /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
+         EPwm3Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
+         EPwm3Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
+         EPwm3Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM3SOCA Period Select
+         EPwm3Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
+         EPwm3Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
+         EPwm3Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM3SOCB Period Select
+         EPwm3Regs.ETSEL.bit.INTEN      = 0;          // EPWM3INTn Enable
+         EPwm3Regs.ETSEL.bit.INTSEL     = 1;          // EPWM3INTn Select
+         EPwm3Regs.ETPS.bit.INTPRD      = 1;          // EPWM3INTn Period Select
+       */
+      EPwm3Regs.ETSEL.all = (EPwm3Regs.ETSEL.all & ~0xFF0F) | 0x1101;
+      EPwm3Regs.ETPS.all = (EPwm3Regs.ETPS.all & ~0x3303) | 0x1101;
+
+      /*-- Setup PWM-Chopper (PC) Submodule --*/
+      /* // PWM-Chopper Control Register
+         EPwm3Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
+         EPwm3Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
+         EPwm3Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
+         EPwm3Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
+       */
+      EPwm3Regs.PCCTL.all = (EPwm3Regs.PCCTL.all & ~0x7FF) | 0x0;
+
+      /*-- Set up Trip-Zone (TZ) Submodule --*/
+      EALLOW;
+      EPwm3Regs.TZSEL.all = 0;
+
+      /* // Trip-Zone Control Register
+         EPwm3Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM3A
+         EPwm3Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM3B
+       */
+      EPwm3Regs.TZCTL.all = (EPwm3Regs.TZCTL.all & ~0xF) | 0xF;
+
+      /* // Trip-Zone Enable Interrupt Register
+         EPwm3Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
+         EPwm3Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
+       */
+      EPwm3Regs.TZEINT.all = (EPwm3Regs.TZEINT.all & ~0x6) | 0x0;
+      EDIS;
+    }
+
+    /* Start for S-Function (c280xgpio_do): '<S6>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
     EALLOW;
-    EPwm3Regs.TZSEL.all = 0;
-
-    /* // Trip-Zone Control Register
-       EPwm3Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM3A
-       EPwm3Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM3B
-     */
-    EPwm3Regs.TZCTL.all = (EPwm3Regs.TZCTL.all & ~0xF) | 0xF;
-
-    /* // Trip-Zone Enable Interrupt Register
-       EPwm3Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
-       EPwm3Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
-     */
-    EPwm3Regs.TZEINT.all = (EPwm3Regs.TZEINT.all & ~0x6) | 0x0;
+    GpioCtrlRegs.GPBMUX1.all &= 0xFFFFFFCF;
+    GpioCtrlRegs.GPBDIR.all |= 0x4;
     EDIS;
+
+    /* Start for S-Function (c280xpwm): '<Root>/ePWM' */
+
+    /*** Initialize ePWM5 modules ***/
+    {
+      /*-- Setup Time-Base (TB) Submodule --*/
+      EPwm5Regs.TBPRD = 64000;
+
+      /* // Time-Base Control Register
+         EPwm5Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
+         EPwm5Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
+         EPwm5Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
+         EPwm5Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
+         EPwm5Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
+         EPwm5Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
+         EPwm5Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
+       */
+      EPwm5Regs.TBCTL.all = (EPwm5Regs.TBCTL.all & ~0x3FBF) | 0x30;
+
+      /* // Time-Base Phase Register
+         EPwm5Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
+       */
+      EPwm5Regs.TBPHS.all = (EPwm5Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
+      EPwm5Regs.TBCTR = 0x0000;        /* Clear counter*/
+
+      /*-- Setup Counter_Compare (CC) Submodule --*/
+      /* // Counter-Compare Control Register
+         EPwm5Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
+         EPwm5Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
+         EPwm5Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
+         EPwm5Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
+       */
+      EPwm5Regs.CMPCTL.all = (EPwm5Regs.CMPCTL.all & ~0x5F) | 0x0;
+      EPwm5Regs.CMPA.half.CMPA = 19200;
+      EPwm5Regs.CMPB = 51200;
+
+      /*-- Setup Action-Qualifier (AQ) Submodule --*/
+      EPwm5Regs.AQCTLA.all = 36;
+      EPwm5Regs.AQCTLB.all = 264;
+
+      /* // Action-Qualifier Software Force Register
+         EPwm5Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
+       */
+      EPwm5Regs.AQSFRC.all = (EPwm5Regs.AQSFRC.all & ~0xC0) | 0x0;
+
+      /* // Action-Qualifier Continuous S/W Force Register Set
+         EPwm5Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
+         EPwm5Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
+       */
+      EPwm5Regs.AQCSFRC.all = (EPwm5Regs.AQCSFRC.all & ~0xF) | 0x0;
+
+      /*-- Setup Dead-Band Generator (DB) Submodule --*/
+      /* // Dead-Band Generator Control Register
+         EPwm5Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
+         EPwm5Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
+         EPwm5Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
+       */
+      EPwm5Regs.DBCTL.all = (EPwm5Regs.DBCTL.all & ~0x3F) | 0x0;
+      EPwm5Regs.DBRED = 0;
+      EPwm5Regs.DBFED = 0;
+
+      /*-- Setup Event-Trigger (ET) Submodule --*/
+      /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
+         EPwm5Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
+         EPwm5Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
+         EPwm5Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM5SOCA Period Select
+         EPwm5Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
+         EPwm5Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
+         EPwm5Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM5SOCB Period Select
+         EPwm5Regs.ETSEL.bit.INTEN      = 0;          // EPWM5INTn Enable
+         EPwm5Regs.ETSEL.bit.INTSEL     = 1;          // EPWM5INTn Select
+         EPwm5Regs.ETPS.bit.INTPRD      = 1;          // EPWM5INTn Period Select
+       */
+      EPwm5Regs.ETSEL.all = (EPwm5Regs.ETSEL.all & ~0xFF0F) | 0x1101;
+      EPwm5Regs.ETPS.all = (EPwm5Regs.ETPS.all & ~0x3303) | 0x1101;
+
+      /*-- Setup PWM-Chopper (PC) Submodule --*/
+      /* // PWM-Chopper Control Register
+         EPwm5Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
+         EPwm5Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
+         EPwm5Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
+         EPwm5Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
+       */
+      EPwm5Regs.PCCTL.all = (EPwm5Regs.PCCTL.all & ~0x7FF) | 0x0;
+
+      /*-- Set up Trip-Zone (TZ) Submodule --*/
+      EALLOW;
+      EPwm5Regs.TZSEL.all = 0;
+
+      /* // Trip-Zone Control Register
+         EPwm5Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM5A
+         EPwm5Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM5B
+       */
+      EPwm5Regs.TZCTL.all = (EPwm5Regs.TZCTL.all & ~0xF) | 0xF;
+
+      /* // Trip-Zone Enable Interrupt Register
+         EPwm5Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
+         EPwm5Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
+       */
+      EPwm5Regs.TZEINT.all = (EPwm5Regs.TZEINT.all & ~0x6) | 0x0;
+      EDIS;
+    }
+
+    /* InitializeConditions for Memory: '<S12>/Memory' */
+    SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput =
+      SortierAlgorithmusEchtSystem_P.EdgeDetector2_ic;
+
+    /* InitializeConditions for UnitDelay: '<S10>/Unit Delay3' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay3_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay3_InitialCondition;
+
+    /* InitializeConditions for UnitDelay: '<S10>/Unit Delay4' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay4_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay4_InitialCondition;
+
+    /* InitializeConditions for UnitDelay: '<S10>/Unit Delay5' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay5_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay5_InitialCondition;
+
+    /* InitializeConditions for UnitDelay: '<S10>/Unit Delay2' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay2_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay2_InitialCondition;
+
+    /* InitializeConditions for Memory: '<S11>/Memory' */
+    SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput_b =
+      SortierAlgorithmusEchtSystem_P.EdgeDetector1_ic;
+
+    /* InitializeConditions for UnitDelay: '<S10>/Unit Delay1' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay1_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay1_InitialCondition;
+
+    /* InitializeConditions for UnitDelay: '<Root>/Unit Delay' */
+    SortierAlgorithmusEchtSystem_DW.UnitDelay_DSTATE =
+      SortierAlgorithmusEchtSystem_P.UnitDelay_InitialCondition;
+
+    /* SystemInitialize for Enabled SubSystem: '<S12>/POSITIVE Edge' */
+    SortierAl_POSITIVEEdge_Init
+      (&SortierAlgorithmusEchtSystem_B.RelationalOperator1,
+       &SortierAlgorithmusEchtSystem_P.POSITIVEEdge_n);
+
+    /* End of SystemInitialize for SubSystem: '<S12>/POSITIVE Edge' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S12>/NEGATIVE Edge' */
+    SortierAl_NEGATIVEEdge_Init
+      (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_f,
+       &SortierAlgorithmusEchtSystem_P.NEGATIVEEdge_o);
+
+    /* End of SystemInitialize for SubSystem: '<S12>/NEGATIVE Edge' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S11>/POSITIVE Edge' */
+    SortierAl_POSITIVEEdge_Init
+      (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_b,
+       &SortierAlgorithmusEchtSystem_P.POSITIVEEdge);
+
+    /* End of SystemInitialize for SubSystem: '<S11>/POSITIVE Edge' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S11>/NEGATIVE Edge' */
+    SortierAl_NEGATIVEEdge_Init
+      (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_j,
+       &SortierAlgorithmusEchtSystem_P.NEGATIVEEdge);
+
+    /* End of SystemInitialize for SubSystem: '<S11>/NEGATIVE Edge' */
+
+    /* InitializeConditions for MATLABSystem: '<Root>/Moving Average' */
+    if (SortierAlgorithmusEchtSystem_DW.obj.pStatistic->isInitialized == 1L) {
+      SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pwN = 1.0;
+      SortierAlgorithmusEchtSystem_DW.obj.pStatistic->pmN = 0.0;
+    }
+
+    /* End of InitializeConditions for MATLABSystem: '<Root>/Moving Average' */
+
+    /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus' */
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_active_c3_SortierAlgorithmus = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<Root>/Chart1' */
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_o = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_active_c1_SortierAlgorithmus = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<Root>/Chart' */
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_active_c2_SortierAlgorithmus = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_c2_SortierAlgorithmusEchtSys =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<Root>/Chart2' */
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_active_c5_SortierAlgorithmus = 0U;
+    SortierAlgorithmusEchtSystem_DW.is_c5_SortierAlgorithmusEchtSys =
+      SortierAlgor_IN_NO_ACTIVE_CHILD;
   }
-
-  /* Start for S-Function (c280xgpio_do): '<S6>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
-  EALLOW;
-  GpioCtrlRegs.GPBMUX1.all &= 0xFFFFFFCF;
-  GpioCtrlRegs.GPBDIR.all |= 0x4;
-  EDIS;
-
-  /* Start for S-Function (c280xpwm): '<Root>/ePWM' */
-
-  /*** Initialize ePWM5 modules ***/
-  {
-    /*-- Setup Time-Base (TB) Submodule --*/
-    EPwm5Regs.TBPRD = 64000;
-
-    /* // Time-Base Control Register
-       EPwm5Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
-       EPwm5Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
-       EPwm5Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
-       EPwm5Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
-       EPwm5Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
-       EPwm5Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
-       EPwm5Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
-     */
-    EPwm5Regs.TBCTL.all = (EPwm5Regs.TBCTL.all & ~0x3FBF) | 0x30;
-
-    /* // Time-Base Phase Register
-       EPwm5Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
-     */
-    EPwm5Regs.TBPHS.all = (EPwm5Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
-    EPwm5Regs.TBCTR = 0x0000;          /* Clear counter*/
-
-    /*-- Setup Counter_Compare (CC) Submodule --*/
-    /* // Counter-Compare Control Register
-       EPwm5Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
-       EPwm5Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
-       EPwm5Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
-       EPwm5Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
-     */
-    EPwm5Regs.CMPCTL.all = (EPwm5Regs.CMPCTL.all & ~0x5F) | 0x0;
-    EPwm5Regs.CMPA.half.CMPA = 19200;
-    EPwm5Regs.CMPB = 51200;
-
-    /*-- Setup Action-Qualifier (AQ) Submodule --*/
-    EPwm5Regs.AQCTLA.all = 36;
-    EPwm5Regs.AQCTLB.all = 264;
-
-    /* // Action-Qualifier Software Force Register
-       EPwm5Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
-     */
-    EPwm5Regs.AQSFRC.all = (EPwm5Regs.AQSFRC.all & ~0xC0) | 0x0;
-
-    /* // Action-Qualifier Continuous S/W Force Register Set
-       EPwm5Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
-       EPwm5Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
-     */
-    EPwm5Regs.AQCSFRC.all = (EPwm5Regs.AQCSFRC.all & ~0xF) | 0x0;
-
-    /*-- Setup Dead-Band Generator (DB) Submodule --*/
-    /* // Dead-Band Generator Control Register
-       EPwm5Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
-       EPwm5Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
-       EPwm5Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
-     */
-    EPwm5Regs.DBCTL.all = (EPwm5Regs.DBCTL.all & ~0x3F) | 0x0;
-    EPwm5Regs.DBRED = 0;
-    EPwm5Regs.DBFED = 0;
-
-    /*-- Setup Event-Trigger (ET) Submodule --*/
-    /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
-       EPwm5Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
-       EPwm5Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
-       EPwm5Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM5SOCA Period Select
-       EPwm5Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
-       EPwm5Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
-       EPwm5Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM5SOCB Period Select
-       EPwm5Regs.ETSEL.bit.INTEN      = 0;          // EPWM5INTn Enable
-       EPwm5Regs.ETSEL.bit.INTSEL     = 1;          // EPWM5INTn Select
-       EPwm5Regs.ETPS.bit.INTPRD      = 1;          // EPWM5INTn Period Select
-     */
-    EPwm5Regs.ETSEL.all = (EPwm5Regs.ETSEL.all & ~0xFF0F) | 0x1101;
-    EPwm5Regs.ETPS.all = (EPwm5Regs.ETPS.all & ~0x3303) | 0x1101;
-
-    /*-- Setup PWM-Chopper (PC) Submodule --*/
-    /* // PWM-Chopper Control Register
-       EPwm5Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
-       EPwm5Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
-       EPwm5Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
-       EPwm5Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
-     */
-    EPwm5Regs.PCCTL.all = (EPwm5Regs.PCCTL.all & ~0x7FF) | 0x0;
-
-    /*-- Set up Trip-Zone (TZ) Submodule --*/
-    EALLOW;
-    EPwm5Regs.TZSEL.all = 0;
-
-    /* // Trip-Zone Control Register
-       EPwm5Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM5A
-       EPwm5Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM5B
-     */
-    EPwm5Regs.TZCTL.all = (EPwm5Regs.TZCTL.all & ~0xF) | 0xF;
-
-    /* // Trip-Zone Enable Interrupt Register
-       EPwm5Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
-       EPwm5Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
-     */
-    EPwm5Regs.TZEINT.all = (EPwm5Regs.TZEINT.all & ~0x6) | 0x0;
-    EDIS;
-  }
-
-  /* InitializeConditions for Memory: '<S12>/Memory' */
-  SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput =
-    SortierAlgorithmusEchtSystem_P.EdgeDetector2_ic;
-
-  /* InitializeConditions for UnitDelay: '<S10>/Unit Delay3' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay3_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay3_InitialCondition;
-
-  /* InitializeConditions for UnitDelay: '<S10>/Unit Delay4' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay4_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay4_InitialCondition;
-
-  /* InitializeConditions for UnitDelay: '<S10>/Unit Delay5' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay5_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay5_InitialCondition;
-
-  /* InitializeConditions for UnitDelay: '<S10>/Unit Delay2' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay2_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay2_InitialCondition;
-
-  /* InitializeConditions for Memory: '<S11>/Memory' */
-  SortierAlgorithmusEchtSystem_DW.Memory_PreviousInput_b =
-    SortierAlgorithmusEchtSystem_P.EdgeDetector1_ic;
-
-  /* InitializeConditions for UnitDelay: '<S10>/Unit Delay1' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay1_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay1_InitialCondition;
-
-  /* InitializeConditions for UnitDelay: '<Root>/Unit Delay' */
-  SortierAlgorithmusEchtSystem_DW.UnitDelay_DSTATE =
-    SortierAlgorithmusEchtSystem_P.UnitDelay_InitialCondition;
-
-  /* SystemInitialize for Enabled SubSystem: '<S12>/POSITIVE Edge' */
-  SortierAl_POSITIVEEdge_Init
-    (&SortierAlgorithmusEchtSystem_B.RelationalOperator1,
-     &SortierAlgorithmusEchtSystem_P.POSITIVEEdge_n);
-
-  /* End of SystemInitialize for SubSystem: '<S12>/POSITIVE Edge' */
-
-  /* SystemInitialize for Enabled SubSystem: '<S12>/NEGATIVE Edge' */
-  SortierAl_NEGATIVEEdge_Init
-    (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_f,
-     &SortierAlgorithmusEchtSystem_P.NEGATIVEEdge_o);
-
-  /* End of SystemInitialize for SubSystem: '<S12>/NEGATIVE Edge' */
-
-  /* SystemInitialize for Enabled SubSystem: '<S11>/POSITIVE Edge' */
-  SortierAl_POSITIVEEdge_Init
-    (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_b,
-     &SortierAlgorithmusEchtSystem_P.POSITIVEEdge);
-
-  /* End of SystemInitialize for SubSystem: '<S11>/POSITIVE Edge' */
-
-  /* SystemInitialize for Enabled SubSystem: '<S11>/NEGATIVE Edge' */
-  SortierAl_NEGATIVEEdge_Init
-    (&SortierAlgorithmusEchtSystem_B.RelationalOperator1_j,
-     &SortierAlgorithmusEchtSystem_P.NEGATIVEEdge);
-
-  /* End of SystemInitialize for SubSystem: '<S11>/NEGATIVE Edge' */
-
-  /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus' */
-  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_active_c3_SortierAlgorithmus = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
-
-  /* SystemInitialize for Chart: '<Root>/Chart1' */
-  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_o = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_active_c1_SortierAlgorithmus = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_c1_SortierAlgorithmusEchtSys =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
-
-  /* SystemInitialize for Chart: '<Root>/Chart' */
-  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_active_c2_SortierAlgorithmus = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_c2_SortierAlgorithmusEchtSys =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
-
-  /* SystemInitialize for Chart: '<Root>/Chart2' */
-  SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_c = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_active_c5_SortierAlgorithmus = 0U;
-  SortierAlgorithmusEchtSystem_DW.is_c5_SortierAlgorithmusEchtSys =
-    SortierAlgor_IN_NO_ACTIVE_CHILD;
 }
 
 /* Model terminate function */
 void SortierAlgorithmusEchtSystem_terminate(void)
 {
-  /* (no terminate code required) */
+  /* Terminate for MATLABSystem: '<Root>/Moving Average' */
+  matlabCodegenHandle_matlabCodeg(&SortierAlgorithmusEchtSystem_DW.obj);
 }
 
 /*
