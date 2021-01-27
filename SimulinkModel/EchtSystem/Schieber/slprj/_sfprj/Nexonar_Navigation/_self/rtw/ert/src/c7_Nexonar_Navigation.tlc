@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   2 \
+    NumChartData   8 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -23,6 +23,48 @@
     ChartData {\
       Name         "is_c7_Nexonar_Navigation"\
       Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Parken"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Parken"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Uebergabe"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Uebergabe"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Sammeln"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Sammeln"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "x_least"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "x_least"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\

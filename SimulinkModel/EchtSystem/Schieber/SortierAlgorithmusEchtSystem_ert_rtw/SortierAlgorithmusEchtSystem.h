@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.56
+ * Model version                  : 1.59
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
+ * C/C++ source code generated on : Tue Jan 26 21:33:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -75,7 +75,7 @@ typedef struct {
   real_T signal_m;                     /* '<Root>/Chart1' */
   real_T gatePWM_e;                    /* '<Root>/Chart' */
   real_T gateDirection;                /* '<Root>/Chart' */
-  real32_T movingCube_l;               /* '<Root>/Chart1' */
+  real32_T movingCube;                 /* '<Root>/Chart1' */
   real32_T movingCube_m;               /* '<Root>/Chart' */
   boolean_T RelationalOperator1;       /* '<S19>/Relational Operator1' */
   boolean_T RelationalOperator1_f;     /* '<S18>/Relational Operator1' */
@@ -103,6 +103,7 @@ typedef struct {
   real32_T UnitDelay_DSTATE;           /* '<Root>/Unit Delay' */
   uint16_T temporalCounter_i1;         /* '<Root>/Sortieralgorithmus' */
   uint16_T temporalCounter_i1_o;       /* '<Root>/Chart1' */
+  uint16_T temporalCounter_i1_d;       /* '<Root>/Chart' */
   boolean_T UnitDelay3_DSTATE;         /* '<S10>/Unit Delay3' */
   boolean_T UnitDelay4_DSTATE;         /* '<S10>/Unit Delay4' */
   uint16_T is_active_c3_SortierAlgorithmus;/* '<Root>/Sortieralgorithmus' */
@@ -114,7 +115,6 @@ typedef struct {
   uint16_T is_c1_SortierAlgorithmusEchtSys;/* '<Root>/Chart1' */
   uint16_T is_active_c2_SortierAlgorithmus;/* '<Root>/Chart' */
   uint16_T is_c2_SortierAlgorithmusEchtSys;/* '<Root>/Chart' */
-  uint16_T temporalCounter_i1_d;       /* '<Root>/Chart' */
   boolean_T Memory_PreviousInput;      /* '<S12>/Memory' */
   boolean_T Memory_PreviousInput_b;    /* '<S11>/Memory' */
 } DW_SortierAlgorithmusEchtSyst_T;

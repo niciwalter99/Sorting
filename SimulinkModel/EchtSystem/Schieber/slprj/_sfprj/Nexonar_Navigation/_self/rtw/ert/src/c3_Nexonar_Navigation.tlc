@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   3 \
+    NumChartData   14 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -25,6 +25,83 @@
       Description  "StateActiveChild"\
       SFName       ""\
       Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin3_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin3_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin2_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin2_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin1_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin1_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin4_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin4_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin0"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin0"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin3"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin4"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin4"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin5"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin5"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "cubeCounter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "cubeCounter"\
       SrcLocation  ""\
     }\
     ChartData {\

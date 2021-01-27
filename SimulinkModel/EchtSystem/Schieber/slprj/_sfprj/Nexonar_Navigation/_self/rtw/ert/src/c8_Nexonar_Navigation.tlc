@@ -7,39 +7,11 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   4 \
+    NumChartData   0 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
-    }\
-    ChartData {\
-      Name         "is_active_c8_Nexonar_Navigation"\
-      Description  "StateIsActive"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_c8_Nexonar_Navigation"\
-      Description  "StateActiveChild"\
-      SFName       ""\
-      Path         ""\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "alpha_diff_intern"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "alpha_diff_intern"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "Stillstandintervall"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "Stillstandintervall"\
-      SrcLocation  ""\
     }\
   }
   %return ChartDataElements
