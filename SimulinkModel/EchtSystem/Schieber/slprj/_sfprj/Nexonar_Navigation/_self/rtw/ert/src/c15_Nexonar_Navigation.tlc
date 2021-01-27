@@ -7,12 +7,131 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
+<<<<<<< HEAD
     NumChartData   0 \
+=======
+    NumChartData   16 \
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
       IsTestPoint  0\
     }\
+<<<<<<< HEAD
+=======
+    ChartData {\
+      Name         "is_active_c15_Nexonar_Navigation"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c15_Nexonar_Navigation"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin3_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin3_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin2_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin2_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin1_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin1_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin4_LastCube"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin4_LastCube"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin0"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin0"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin2"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin3"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin4"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin4"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "magacin5"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "magacin5"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "cubeCounter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "cubeCounter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "averageColour"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "averageColour"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
   }
   %return ChartDataElements
 %endfunction

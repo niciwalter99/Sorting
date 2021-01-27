@@ -7,9 +7,21 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
+<<<<<<< HEAD
  * Model version                  : 1.59
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
  * C/C++ source code generated on : Tue Jan 26 21:33:34 2021
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c
+ * Model version                  : 1.59
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
+=======
+ * Model version                  : 1.56
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -19,12 +31,12 @@
 
 #include "SortierAlgorithmusEchtSystem.h"
 #include "SortierAlgorithmusEchtSystem_private.h"
-#define IN_photoelectricBarrierActivate (6U)
+#define IN_photoelectricBarrierActivate (7U)
 #define SortierAlgor_IN_NO_ACTIVE_CHILD (0U)
-#define SortierAlgorit_IN_setupVariable (7U)
+#define SortierAlgorit_IN_setupVariable (8U)
 #define SortierAlgorith_IN_DetectedCube (3U)
 #define SortierAlgorithm_IN_goToMagacin (3U)
-#define SortierAlgorithm_IN_throwBlacks (8U)
+#define SortierAlgorithm_IN_throwBlacks (9U)
 #define SortierAlgorithm_IN_waitForCube (7U)
 #define SortierAlgorithmu_IN_cubeLoaded (5U)
 #define SortierAlgorithmu_IN_firstEntry (2U)
@@ -32,8 +44,12 @@
 #define SortierAlgorithmusE_IN_goToZero (4U)
 #define SortierAlgorithmusE_IN_openGate (5U)
 #define SortierAlgorithmusEc_IN_RedCube (4U)
+<<<<<<< HEAD
 #define SortierAlgorithmusEc_IN_wait_bo (3U)
 #define SortierAlgorithmusEch_IN_open_b (2U)
+=======
+#define SortierAlgorithmusEch_IN_messen (6U)
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 #define SortierAlgorithmusEch_IN_wait_b (6U)
 #define SortierAlgorithmusEchtS_IN_init (2U)
 #define SortierAlgorithmusEchtS_IN_open (3U)
@@ -630,6 +646,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
     SortierAlgorithmusEchtSystem_DW.magacin4_LastCube = 0.0;
     SortierAlgorithmusEchtSystem_B.magacin = -1.0;
     SortierAlgorithmusEchtSystem_DW.cubeCounter = 0.0;
+    SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+    SortierAlgorithmusEchtSystem_DW.averageColour = 0.0;
   } else {
     switch (SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys) {
      case SortierAlgorithmusEcht_IN_Black:
@@ -649,6 +667,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
+        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         if (SortierAlgorithmusEchtSystem_DW.cubeCounter > 0.0) {
           SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
@@ -670,6 +690,19 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
           IN_photoelectricBarrierActivate;
       } else {
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
+        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
+      }
+      break;
+
+     case SortierAlgorithmusEch_IN_messen:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 1U) {
+        SortierAlgorithmusEchtSystem_DW.counter++;
+        SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
+          SortierAlgorithmusEch_IN_messen;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_DW.averageColour +=
+          SortierAlgorithmusEchtSystem_B.RateTransition2;
       }
       break;
 
@@ -680,13 +713,14 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEcht_IN_Black;
         SortierAlgorithmusEchtSystem_B.magacin = 6.0;
-      } else if (SortierAlgorithmusEchtSystem_B.RateTransition2 < 1000.0) {
+      } else if ((SortierAlgorithmusEchtSystem_B.RateTransition2 < 700.0) &&
+                 (SortierAlgorithmusEchtSystem_B.RateTransition2 > 0.0)) {
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEc_IN_RedCube;
         SortierAlgorithmusEchtSystem_B.magacin = SortierAlgorith_findPlaceForRed
           ();
       } else {
-        if ((SortierAlgorithmusEchtSystem_B.RateTransition2 >= 1000.0) &&
+        if ((SortierAlgorithmusEchtSystem_B.RateTransition2 >= 700.0) &&
             (SortierAlgorithmusEchtSystem_B.RateTransition2 <= 2150.0)) {
           SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
             SortierAlgorithmusE_IN_BlueCube;
@@ -701,6 +735,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
+        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         SortierAlgorithmusEchtSystem_DW.magacin0 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin1 = 0.0;
@@ -714,6 +750,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.magacin4_LastCube = 0.0;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
         SortierAlgorithmusEchtSystem_DW.cubeCounter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.averageColour = 0.0;
       }
       break;
 
@@ -722,6 +760,8 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.is_c3_SortierAlgorithmusEchtSys =
           SortierAlgorithmu_IN_cubeLoaded;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
+        SortierAlgorithmusEchtSystem_DW.counter = 0.0;
+        SortierAlgorithmusEchtSystem_DW.averageColour = -1.0;
       } else {
         SortierAlgorithmusEchtSystem_B.signal = 1.0;
       }
@@ -826,8 +866,14 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* End of Chart: '<Root>/Chart1' */
 
   /* Chart: '<Root>/Chart' */
+<<<<<<< HEAD
   if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d < 511U) {
     SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d++;
+=======
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d < 63U) {
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = ((int16_T)
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d + 1) & 255U;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
   }
 
   if (SortierAlgorithmusEchtSystem_DW.is_active_c2_SortierAlgorithmus == 0U) {
@@ -865,7 +911,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEchtS_IN_open:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d >= 30U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d >= 50U) {
         SortierAlgorithmusEchtSystem_DW.is_c2_SortierAlgorithmusEchtSys =
           SortierAlgorithmusEcht_IN_close;
         SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_d = 0U;

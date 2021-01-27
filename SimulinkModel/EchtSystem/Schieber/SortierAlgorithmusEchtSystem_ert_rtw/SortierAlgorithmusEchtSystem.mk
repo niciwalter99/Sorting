@@ -2,7 +2,15 @@
 ## Makefile generated for Simulink model 'SortierAlgorithmusEchtSystem'. 
 ## 
 ## Makefile     : SortierAlgorithmusEchtSystem.mk
+<<<<<<< HEAD
 ## Generated on : Tue Jan 26 21:33:39 2021
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.mk
+## Generated on : Mon Jan 25 17:56:52 2021
+=======
+## Generated on : Wed Jan 20 10:49:30 2021
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.mk
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -29,7 +37,11 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2018b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2018b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
+<<<<<<< HEAD
 START_DIR                 = C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber
+=======
+START_DIR                 = C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 

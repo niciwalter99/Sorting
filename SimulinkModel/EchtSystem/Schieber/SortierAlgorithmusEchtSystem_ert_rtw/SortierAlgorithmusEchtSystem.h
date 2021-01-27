@@ -7,9 +7,21 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
+<<<<<<< HEAD
  * Model version                  : 1.59
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
  * C/C++ source code generated on : Tue Jan 26 21:33:34 2021
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+ * Model version                  : 1.59
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Sat Jan 23 13:33:46 2021
+=======
+ * Model version                  : 1.56
+ * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
+ * C/C++ source code generated on : Wed Jan 20 10:48:53 2021
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -75,7 +87,15 @@ typedef struct {
   real_T signal_m;                     /* '<Root>/Chart1' */
   real_T gatePWM_e;                    /* '<Root>/Chart' */
   real_T gateDirection;                /* '<Root>/Chart' */
+<<<<<<< HEAD
   real32_T movingCube;                 /* '<Root>/Chart1' */
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+  real32_T movingCube;                 /* '<Root>/Chart1' */
+=======
+  real32_T movingCube_l;               /* '<Root>/Chart1' */
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.h
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
   real32_T movingCube_m;               /* '<Root>/Chart' */
   boolean_T RelationalOperator1;       /* '<S19>/Relational Operator1' */
   boolean_T RelationalOperator1_f;     /* '<S18>/Relational Operator1' */
@@ -97,6 +117,8 @@ typedef struct {
   real_T magacin4;                     /* '<Root>/Sortieralgorithmus' */
   real_T magacin5;                     /* '<Root>/Sortieralgorithmus' */
   real_T cubeCounter;                  /* '<Root>/Sortieralgorithmus' */
+  real_T averageColour;                /* '<Root>/Sortieralgorithmus' */
+  real_T counter;                      /* '<Root>/Sortieralgorithmus' */
   real_T magacin;
   real32_T UnitDelay2_DSTATE;          /* '<S10>/Unit Delay2' */
   real32_T UnitDelay1_DSTATE;          /* '<S10>/Unit Delay1' */

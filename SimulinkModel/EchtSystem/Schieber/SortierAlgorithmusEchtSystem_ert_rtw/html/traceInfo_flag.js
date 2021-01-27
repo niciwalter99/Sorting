@@ -1,5 +1,6 @@
 function TraceInfoFlag() {
     this.traceFlag = new Array();
+<<<<<<< HEAD
     this.traceFlag["SortierAlgorithmusEchtSystem.c:182c18"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:184c41"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:213c18"]=1;
@@ -49,6 +50,346 @@ function TraceInfoFlag() {
     this.traceFlag["SortierAlgorithmusEchtSystem.c:408c5"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:416c5"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:424c5"]=1;
+=======
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:180c18"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:182c41"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:211c18"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:213c33"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:227c21"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:235c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:237c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:238c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:238c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:239c66"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:239c74"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:240c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:242c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:244c65"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:244c73"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:245c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:247c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:249c55"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:251c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:253c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:255c47"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:266c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:266c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:267c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:267c67"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:268c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:270c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:272c65"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:272c73"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:273c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:275c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:277c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:277c63"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:278c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:280c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:283c45"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:284c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:286c47"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:289c61"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:291c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:380c39"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:385c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:387c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:389c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:391c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:398c69"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:406c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:414c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:422c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:430c11"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:431c11"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:432c16"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:433c11"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:433c15"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:433c47"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:433c51"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:439c11"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:439c15"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:439c47"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:443c11"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:443c44"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:443c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:444c35"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:447c18"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:448c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:448c17"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:448c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:448c53"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:450c35"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:453c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:453c17"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:453c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:459c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:459c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:463c62"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:464c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:464c17"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:464c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:464c53"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:469c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:469c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:469c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:475c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:475c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:476c35"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:479c62"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:481c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:481c17"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:481c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:483c35"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:486c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:486c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:486c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:491c13"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:491c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:496c68"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:508c81"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:509c65"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:512c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:519c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:527c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:538c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:539c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:542c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:549c68"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:557c29"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:558c5"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:610c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:611c55"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:614c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:629c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:638c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:644c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:648c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:651c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:653c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:655c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:666c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:670c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:674c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:676c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:681c62"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:682c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:686c55"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:692c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:696c66"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:696c75"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:697c66"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:703c61"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:703c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:704c61"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:714c62"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:717c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:719c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:731c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:739c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:742c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:744c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:763c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:764c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:767c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:776c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:785c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:792c69"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:793c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:793c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:794c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:795c49"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:805c69"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:805c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:805c78"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:806c69"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:817c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:828c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:836c29"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:836c32"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:849c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:851c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:851c65"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:854c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:864c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:876c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:888c51"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:916c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:920c25"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:921c23"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:922c32"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:926c23"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:932c21"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:935c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:949c12"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:949c23"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:949c35"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:951c22"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:954c17"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:965c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:965c69"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:972c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:973c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:979c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:981c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:981c65"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:984c71"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:995c64"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1005c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1021c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1022c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1029c47"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1054c19"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1063c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1064c27"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1069c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1070c27"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1089c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1089c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1089c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1094c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1094c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1094c63"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1104c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1104c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1104c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1115c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1115c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1115c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1121c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1121c54"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1121c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1129c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1129c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1129c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1145c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1145c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1145c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1146c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1146c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1146c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1155c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1155c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1155c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1165c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1165c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1165c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1171c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1171c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1171c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1191c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1191c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1191c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1196c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1196c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1196c63"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1206c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1206c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1206c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1217c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1217c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1217c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1223c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1223c54"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1223c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1231c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1231c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1231c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1247c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1247c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1247c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1248c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1248c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1248c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1257c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1257c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1257c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1267c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1267c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1267c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1273c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1273c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1273c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1293c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1293c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1293c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1298c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1298c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1298c63"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1308c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1308c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1308c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1319c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1319c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1319c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1325c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1325c54"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1325c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1333c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1333c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1333c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1349c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1349c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1349c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1350c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1350c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1350c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1359c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1359c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1359c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1369c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1369c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1369c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1375c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1375c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1375c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1381c28"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1382c27"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1401c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1401c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1401c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1406c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1406c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1406c63"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1416c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1416c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1416c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1427c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1427c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1427c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c54"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c60"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1441c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1441c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1441c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1457c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1457c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1457c59"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c46"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c57"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1467c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1467c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1467c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1477c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1477c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1477c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1483c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1483c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1483c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1521c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1522c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1528c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1529c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1535c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1536c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1542c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1543c6"]=1;
+=======
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:431c16"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.traceFlag["SortierAlgorithmusEchtSystem.c:432c11"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:433c11"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:434c16"]=1;
@@ -307,6 +648,7 @@ function TraceInfoFlag() {
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c48"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c50"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1433c57"]=1;
+<<<<<<< HEAD
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1449c48"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1449c50"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1449c59"]=1;
@@ -330,10 +672,31 @@ function TraceInfoFlag() {
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1528c6"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1534c6"]=1;
     this.traceFlag["SortierAlgorithmusEchtSystem.c:1535c6"]=1;
+=======
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1442c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1442c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1442c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1452c48"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1452c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1452c56"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c50"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c52"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1458c58"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1496c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1497c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1503c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1504c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1510c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1511c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1517c6"]=1;
+    this.traceFlag["SortierAlgorithmusEchtSystem.c:1518c6"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 }
 top.TraceInfoFlag.instance = new TraceInfoFlag();
 function TraceInfoLineFlag() {
     this.lineTraceFlag = new Array();
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:168"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:182"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:184"]=1;
@@ -341,6 +704,17 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:213"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:215"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:229"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:166"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:180"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:182"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:197"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:211"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:213"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:227"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:234"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:235"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:236"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:237"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:238"]=1;
@@ -357,11 +731,19 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:249"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:250"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:251"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:252"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:253"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:255"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:256"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:257"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:253"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:254"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:255"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:266"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:267"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:268"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:269"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:270"]=1;
@@ -375,16 +757,23 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:278"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:279"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:280"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:281"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:282"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:284"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:285"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:286"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:287"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:288"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:289"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:291"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:292"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:293"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:294"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:325"]=1;
@@ -398,10 +787,26 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:338"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:339"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:340"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:323"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:324"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:325"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:326"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:329"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:330"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:331"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:335"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:336"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:337"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:338"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:350"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:351"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:352"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:353"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:354"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:355"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:356"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:357"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:360"]=1;
@@ -413,11 +818,27 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:369"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:370"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:371"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:358"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:359"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:360"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:361"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:362"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:366"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:367"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:368"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:369"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:376"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:377"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:378"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:379"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:380"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:381"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:382"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:383"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:385"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:386"]=1;
@@ -427,6 +848,7 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:390"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:391"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:392"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:393"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:394"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:399"]=1;
@@ -494,10 +916,80 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:527"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:528"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:529"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:397"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:398"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:399"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:403"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:404"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:405"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:406"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:411"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:412"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:413"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:414"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:421"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:422"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:429"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:430"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:431"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:432"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:433"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:435"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:436"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:439"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:440"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:443"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:444"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:447"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:448"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:450"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:453"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:455"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:456"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:459"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:460"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:463"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:464"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:466"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:469"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:471"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:472"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:475"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:476"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:479"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:480"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:481"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:483"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:486"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:488"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:491"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:492"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:493"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:496"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:497"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:498"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:508"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:509"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:510"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:511"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:512"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:516"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:517"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:518"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:519"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:524"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:525"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:526"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:527"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:537"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:538"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:539"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:540"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:541"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:542"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:543"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:544"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:550"]=1;
@@ -511,10 +1003,26 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:568"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:571"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:572"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:548"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:549"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:550"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:557"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:558"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:561"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:562"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:565"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:566"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:569"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:570"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:576"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:577"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:578"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:579"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:580"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:581"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:582"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:583"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:586"]=1;
@@ -526,6 +1034,21 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:598"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:599"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:612"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:584"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:585"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:588"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:589"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:592"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:593"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:596"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:597"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:609"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:610"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:613"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:616"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:617"]=1;
@@ -541,11 +1064,23 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:627"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:628"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:629"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:630"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:630"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:631"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:632"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:634"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:635"]=1;
+<<<<<<< HEAD
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:636"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:637"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:636"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:637"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:638"]=1;
@@ -556,12 +1091,46 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:647"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:648"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:649"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:638"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:641"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:642"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:643"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:644"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:647"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:648"]=1;
+<<<<<<< HEAD
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:649"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:650"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:651"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:653"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:654"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:655"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:656"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:655"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:656"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:657"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:658"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:663"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:664"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:665"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:666"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:669"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:670"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:671"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:672"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:658"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:659"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:660"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:661"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:662"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:663"]=1;
@@ -569,20 +1138,32 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:667"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:668"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:669"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:670"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:672"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:673"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:674"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:675"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:676"]=1;
-    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:677"]=1;
-    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:678"]=1;
-    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:679"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:680"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:681"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:682"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:683"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:683"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:684"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:685"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:686"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:687"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:689"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:690"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:691"]=1;
@@ -590,23 +1171,51 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:693"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:694"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:699"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:691"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:692"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:693"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:688"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:689"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:694"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:695"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:696"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:697"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:698"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:699"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:700"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:701"]=1;
-    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:702"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:703"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:705"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:706"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:707"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:708"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:713"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:714"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:715"]=1;
+=======
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:709"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:710"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:711"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:712"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:713"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:714"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:715"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:716"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:721"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:722"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:723"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:724"]=1;
@@ -616,6 +1225,43 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:737"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:743"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:744"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:722"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:723"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:724"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:725"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:726"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:727"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:728"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:729"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:730"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:731"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:732"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:733"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:734"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:739"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:740"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:741"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:730"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:731"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:732"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:738"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:739"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:742"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:743"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:744"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:746"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:755"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:756"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:757"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:763"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:764"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:747"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:748"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:749"]=1;
@@ -631,26 +1277,76 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:764"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:765"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:766"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:767"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:771"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:772"]=1;
-    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:773"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:774"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:775"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:776"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:777"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:778"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:776"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:777"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:778"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:779"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:780"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:784"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:785"]=1;
+=======
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:785"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:786"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:787"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:788"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:789"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:791"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:792"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:796"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:793"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:794"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:795"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:796"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:797"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:798"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:799"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:800"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:804"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:805"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:806"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:807"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:808"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:809"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:811"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:812"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:816"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:817"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:818"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:819"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:820"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:822"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:823"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:827"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:828"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:829"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:830"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:831"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:836"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:797"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:798"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:799"]=1;
@@ -672,16 +1368,28 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:833"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:834"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:835"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:836"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:837"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:838"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:839"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:837"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:838"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:839"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:840"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:849"]=1;
+=======
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:841"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:842"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:843"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:844"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:845"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:846"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:847"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:848"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:850"]=1;
@@ -693,12 +1401,95 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:859"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:860"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:862"]=1;
+=======
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:850"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:851"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:854"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:855"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:856"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:857"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:858"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:859"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:860"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:862"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:857"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:858"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:863"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:867"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:868"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:869"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:870"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:871"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:875"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:876"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:877"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:878"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:879"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:880"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:882"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:883"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:888"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:889"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:890"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:891"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:892"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:893"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:895"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:896"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:897"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:906"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:907"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:908"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:909"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:910"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:911"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:916"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:917"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:920"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:921"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:922"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:924"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:926"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:932"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:935"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:938"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:939"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:940"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:941"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:942"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:943"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:946"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:949"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:950"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:951"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:952"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:954"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:955"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:964"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:965"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:966"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:971"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:972"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:973"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:974"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:979"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:980"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:981"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:984"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:985"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:986"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:987"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:989"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:990"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:991"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:994"]=1;
+=======
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:872"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:874"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:875"]=1;
@@ -756,6 +1547,7 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:981"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:982"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:983"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:986"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:987"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:988"]=1;
@@ -774,6 +1566,150 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1020"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1021"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1022"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:984"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:995"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:996"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:997"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:998"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1000"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1005"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1006"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1007"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1008"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1009"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1020"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1021"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1022"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1023"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1028"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1029"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1030"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1054"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1055"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1056"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1057"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1059"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1062"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1063"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1064"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1065"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1068"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1069"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1070"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1071"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1076"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1078"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1089"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1094"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1095"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1104"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1105"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1106"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1109"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1110"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1115"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1121"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1129"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1130"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1131"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1145"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1146"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1155"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1158"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1159"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1165"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1171"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1172"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1173"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1178"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1180"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1191"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1196"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1197"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1206"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1207"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1208"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1211"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1212"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1217"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1223"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1231"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1232"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1233"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1247"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1248"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1257"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1260"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1261"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1267"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1273"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1274"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1275"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1280"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1282"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1293"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1298"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1299"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1308"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1309"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1310"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1313"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1314"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1319"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1325"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1333"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1334"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1335"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1349"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1350"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1359"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1362"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1363"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1369"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1375"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1376"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1377"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1380"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1381"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1382"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1383"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1388"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1390"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1401"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1406"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1407"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1416"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1417"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1418"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1421"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1422"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1427"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1433"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1441"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1442"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1443"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1457"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1458"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1003"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1004"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1005"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1029"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1030"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1031"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1032"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1034"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1037"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1038"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1039"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1040"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1043"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1044"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1045"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1046"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1047"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1048"]=1;
@@ -883,7 +1819,66 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1459"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1462"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1463"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1469"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1464"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1467"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1468"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1471"]=1;
+<<<<<<< HEAD:SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1477"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1483"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1484"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1485"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1488"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1489"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1492"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1493"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1496"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1497"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1500"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1501"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1504"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1505"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1508"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1509"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1512"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1513"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1516"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1517"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1520"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1521"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1522"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1527"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1528"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1529"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1534"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1535"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1536"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1541"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1542"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1543"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1548"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1549"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1550"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1551"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1554"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1555"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1556"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1557"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1560"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1561"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1562"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1563"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1566"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1567"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1568"]=1;
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1569"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1472"]=1;
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1475"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1476"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1477"]=1;
@@ -919,6 +1914,7 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1541"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1542"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1543"]=1;
+<<<<<<< HEAD
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1546"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1547"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1548"]=1;
@@ -931,5 +1927,9 @@ function TraceInfoLineFlag() {
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1559"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1560"]=1;
     this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1561"]=1;
+=======
+    this.lineTraceFlag["SortierAlgorithmusEchtSystem.c:1544"]=1;
+>>>>>>> d9cc46c8cf39ea11377a61abe29ef5dd2a86b746:SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/html/traceInfo_flag.js
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 }
 top.TraceInfoLineFlag.instance = new TraceInfoLineFlag();

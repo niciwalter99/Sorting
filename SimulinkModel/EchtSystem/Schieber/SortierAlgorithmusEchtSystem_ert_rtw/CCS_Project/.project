@@ -25,37 +25,65 @@
 <link>
 <name>MW_c28xx_board.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_board.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_board.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>MW_c28xx_adc.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_adc.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_adc.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>MW_c28xx_csl.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_csl.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_csl.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>MW_c28xx_pwm.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_pwm.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/MW_c28xx_pwm.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>SortierAlgorithmusEchtSystem.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>SortierAlgorithmusEchtSystem_data.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/SortierAlgorithmusEchtSystem_data.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>ert_main.c</name>
 <type>1</type>
+<<<<<<< HEAD
 <location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/Schieber/SortierAlgorithmusEchtSystem_ert_rtw/ert_main.c</location>
+=======
+<location>C:/Users/Nici/Desktop/Programming/Sorting/SimulinkModel/EchtSystem/SortierAlgorithmusEchtSystem_ert_rtw/ert_main.c</location>
+>>>>>>> 38b90b2e3117f47e37c0bd4603659d3ffc7e949b
 </link>
 <link>
 <name>c2833xBoard_Realtime_Support.c</name>
