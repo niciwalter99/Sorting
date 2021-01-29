@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   14 \
+    NumChartData   12 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -28,13 +28,6 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "magacin3_LastCube"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "magacin3_LastCube"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
       Name         "magacin2_LastCube"\
       Description  "ChartLocal"\
       SFName       ""\
@@ -46,13 +39,6 @@
       Description  "ChartLocal"\
       SFName       ""\
       Path         "magacin1_LastCube"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "magacin4_LastCube"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "magacin4_LastCube"\
       SrcLocation  ""\
     }\
     ChartData {\

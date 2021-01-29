@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.62
+ * Model version                  : 1.73
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Jan 27 19:38:51 2021
+ * C/C++ source code generated on : Fri Jan 29 10:55:56 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -90,10 +90,8 @@ typedef struct {
   dsp_private_ExponentialMoving_T gobj_0;/* '<Root>/Moving Average' */
   dsp_private_ExponentialMoving_T gobj_1;/* '<Root>/Moving Average' */
   real_T UnitDelay5_DSTATE;            /* '<S10>/Unit Delay5' */
-  real_T magacin3_LastCube;            /* '<Root>/Sortieralgorithmus' */
   real_T magacin2_LastCube;            /* '<Root>/Sortieralgorithmus' */
   real_T magacin1_LastCube;            /* '<Root>/Sortieralgorithmus' */
-  real_T magacin4_LastCube;            /* '<Root>/Sortieralgorithmus' */
   real_T magacin0;                     /* '<Root>/Sortieralgorithmus' */
   real_T magacin1;                     /* '<Root>/Sortieralgorithmus' */
   real_T magacin2;                     /* '<Root>/Sortieralgorithmus' */
