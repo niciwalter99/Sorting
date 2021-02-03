@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.73
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Fri Jan 29 10:55:56 2021
+ * C/C++ source code generated on : Wed Feb  3 02:16:31 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -23,22 +23,22 @@
 /* Block parameters (default storage) */
 P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
   /* Mask Parameter: EdgeDetector1_model
-   * Referenced by: '<S11>/Constant1'
-   */
-  3.0,
-
-  /* Mask Parameter: EdgeDetector2_model
    * Referenced by: '<S12>/Constant1'
    */
   3.0,
 
+  /* Mask Parameter: EdgeDetector2_model
+   * Referenced by: '<S13>/Constant1'
+   */
+  3.0,
+
   /* Mask Parameter: EdgeDetector2_ic
-   * Referenced by: '<S12>/Memory'
+   * Referenced by: '<S13>/Memory'
    */
   0,
 
   /* Mask Parameter: EdgeDetector1_ic
-   * Referenced by: '<S11>/Memory'
+   * Referenced by: '<S12>/Memory'
    */
   0,
 
@@ -46,21 +46,6 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    * Referenced by: '<Root>/Moving Average'
    */
   0.3,
-
-  /* Expression: [1 1]
-   * Referenced by: '<S11>/either edge'
-   */
-  { 1.0, 1.0 },
-
-  /* Expression: [0 1]
-   * Referenced by: '<S11>/neg. edge'
-   */
-  { 0.0, 1.0 },
-
-  /* Expression: [1 0]
-   * Referenced by: '<S11>/pos. edge'
-   */
-  { 1.0, 0.0 },
 
   /* Expression: [1 1]
    * Referenced by: '<S12>/either edge'
@@ -77,28 +62,43 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    */
   { 1.0, 0.0 },
 
+  /* Expression: [1 1]
+   * Referenced by: '<S13>/either edge'
+   */
+  { 1.0, 1.0 },
+
+  /* Expression: [0 1]
+   * Referenced by: '<S13>/neg. edge'
+   */
+  { 0.0, 1.0 },
+
+  /* Expression: [1 0]
+   * Referenced by: '<S13>/pos. edge'
+   */
+  { 1.0, 0.0 },
+
   /* Expression: 2000
-   * Referenced by: '<S10>/Heuristisch ermittelter Schwellwert'
+   * Referenced by: '<S11>/Heuristisch ermittelter Schwellwert'
    */
   2000.0,
 
   /* Expression: 2000
-   * Referenced by: '<S10>/Constant'
+   * Referenced by: '<S11>/Constant'
    */
   2000.0,
 
   /* Expression: 0
-   * Referenced by: '<S10>/Unit Delay5'
+   * Referenced by: '<S11>/Unit Delay5'
    */
   0.0,
 
   /* Expression: 0.076
-   * Referenced by: '<S10>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,1'
+   * Referenced by: '<S11>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,1'
    */
   0.076,
 
   /* Expression: 0.076
-   * Referenced by: '<S10>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,043'
+   * Referenced by: '<S11>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,043'
    */
   0.076,
 
@@ -113,27 +113,32 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
   { -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 },
 
   /* Expression: -0.5
-   * Referenced by: '<S7>/Dead Zone'
+   * Referenced by: '<S8>/Dead Zone'
    */
   -0.5,
 
   /* Expression: 0.5
-   * Referenced by: '<S7>/Dead Zone'
+   * Referenced by: '<S8>/Dead Zone'
    */
   0.5,
 
   /* Expression: 1
-   * Referenced by: '<S7>/Verstaerkung'
+   * Referenced by: '<S8>/Verstaerkung'
    */
   1.0,
 
   /* Computed Parameter: UnitDelay2_InitialCondition
-   * Referenced by: '<S10>/Unit Delay2'
+   * Referenced by: '<S11>/Unit Delay2'
    */
   0.0F,
 
   /* Computed Parameter: UnitDelay1_InitialCondition
-   * Referenced by: '<S10>/Unit Delay1'
+   * Referenced by: '<S11>/Unit Delay1'
+   */
+  0.0F,
+
+  /* Computed Parameter: TmpRTBAtChart1Inport4_InitialCo
+   * Referenced by: synthesized block
    */
   0.0F,
 
@@ -142,20 +147,47 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    */
   0.0F,
 
+  /* Computed Parameter: TmpRTBAtSortieralgorithmusInpor
+   * Referenced by: synthesized block
+   */
+  0.0F,
+
   /* Computed Parameter: UnitDelay3_InitialCondition
-   * Referenced by: '<S10>/Unit Delay3'
+   * Referenced by: '<S11>/Unit Delay3'
    */
   0,
 
   /* Computed Parameter: UnitDelay4_InitialCondition
-   * Referenced by: '<S10>/Unit Delay4'
+   * Referenced by: '<S11>/Unit Delay4'
    */
   0,
+
+  /* Start of '<S13>/POSITIVE Edge' */
+  {
+    /* Computed Parameter: OUT_Y0
+     * Referenced by: '<S20>/OUT'
+     */
+    0
+  }
+  ,
+
+  /* End of '<S13>/POSITIVE Edge' */
+
+  /* Start of '<S13>/NEGATIVE Edge' */
+  {
+    /* Computed Parameter: OUT_Y0
+     * Referenced by: '<S19>/OUT'
+     */
+    0
+  }
+  ,
+
+  /* End of '<S13>/NEGATIVE Edge' */
 
   /* Start of '<S12>/POSITIVE Edge' */
   {
     /* Computed Parameter: OUT_Y0
-     * Referenced by: '<S19>/OUT'
+     * Referenced by: '<S18>/OUT'
      */
     0
   }
@@ -166,33 +198,11 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
   /* Start of '<S12>/NEGATIVE Edge' */
   {
     /* Computed Parameter: OUT_Y0
-     * Referenced by: '<S18>/OUT'
-     */
-    0
-  }
-  ,
-
-  /* End of '<S12>/NEGATIVE Edge' */
-
-  /* Start of '<S11>/POSITIVE Edge' */
-  {
-    /* Computed Parameter: OUT_Y0
      * Referenced by: '<S17>/OUT'
      */
     0
   }
-  ,
-
-  /* End of '<S11>/POSITIVE Edge' */
-
-  /* Start of '<S11>/NEGATIVE Edge' */
-  {
-    /* Computed Parameter: OUT_Y0
-     * Referenced by: '<S16>/OUT'
-     */
-    0
-  }
-  /* End of '<S11>/NEGATIVE Edge' */
+  /* End of '<S12>/NEGATIVE Edge' */
 };
 
 /*
