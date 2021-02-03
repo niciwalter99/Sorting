@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.74
+ * Model version                  : 1.76
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 18:56:58 2021
+ * C/C++ source code generated on : Wed Feb  3 22:11:22 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -96,6 +96,7 @@ typedef struct {
   dsp_private_ExponentialMoving_T gobj_0;/* '<Root>/Moving Average2' */
   dsp_private_ExponentialMoving_T gobj_1;/* '<Root>/Moving Average2' */
   real_T UnitDelay5_DSTATE;            /* '<S11>/Unit Delay5' */
+  real_T magacin6;                     /* '<Root>/Sortieralgorithmus2' */
   real_T magacin2_LastCube;            /* '<Root>/Sortieralgorithmus2' */
   real_T magacin1_LastCube;            /* '<Root>/Sortieralgorithmus2' */
   real_T magacin0;                     /* '<Root>/Sortieralgorithmus2' */
@@ -116,15 +117,16 @@ typedef struct {
   boolean_T UnitDelay4_DSTATE;         /* '<S11>/Unit Delay4' */
   uint16_T is_active_c42_SortierAlgorithmu;/* '<Root>/Sortieralgorithmus2' */
   uint16_T is_c42_SortierAlgorithmusEchtSy;/* '<Root>/Sortieralgorithmus2' */
+  uint16_T temporalCounter_i1;         /* '<Root>/Sortieralgorithmus2' */
   uint16_T is_active_c39_SortierAlgorithmu;/* '<Root>/Chart8' */
   uint16_T is_c39_SortierAlgorithmusEchtSy;/* '<Root>/Chart8' */
-  uint16_T temporalCounter_i1;         /* '<Root>/Chart8' */
+  uint16_T temporalCounter_i1_e;       /* '<Root>/Chart8' */
   uint16_T is_active_c38_SortierAlgorithmu;/* '<Root>/Chart7' */
   uint16_T is_c38_SortierAlgorithmusEchtSy;/* '<Root>/Chart7' */
   uint16_T temporalCounter_i1_d;       /* '<Root>/Chart7' */
   uint16_T is_active_c37_SortierAlgorithmu;/* '<Root>/Chart6' */
   uint16_T is_c37_SortierAlgorithmusEchtSy;/* '<Root>/Chart6' */
-  uint16_T temporalCounter_i1_e;       /* '<Root>/Chart6' */
+  uint16_T temporalCounter_i1_e0;      /* '<Root>/Chart6' */
   boolean_T Memory_PreviousInput;      /* '<S13>/Memory' */
   boolean_T Memory_PreviousInput_d;    /* '<S12>/Memory' */
   boolean_T objisempty;                /* '<Root>/Moving Average2' */

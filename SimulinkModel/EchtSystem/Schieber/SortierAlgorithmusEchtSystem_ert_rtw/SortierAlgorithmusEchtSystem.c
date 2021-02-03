@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.74
+ * Model version                  : 1.76
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 18:56:58 2021
+ * C/C++ source code generated on : Wed Feb  3 22:11:22 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -37,6 +37,7 @@
 #define SortierAlgorithmusE_IN_BlueCube (2U)
 #define SortierAlgorithmusE_IN_goToZero (7U)
 #define SortierAlgorithmusE_IN_openGate (8U)
+#define SortierAlgorithmusE_IN_wait_boy (8U)
 #define SortierAlgorithmusEc_IN_RedCube (4U)
 #define SortierAlgorithmusEc_IN_wait_bo (6U)
 #define SortierAlgorithmusEch_IN_open_b (5U)
@@ -283,6 +284,8 @@ static real_T SortierAlgorit_findPlaceForBlue(void)
   } else if (SortierAlgorithmusEchtSystem_DW.magacin5 < 5.0) {
     magacinOut = 5.0;
     SortierAlgorithmusEchtSystem_DW.magacin5++;
+  } else if (SortierAlgorithmusEchtSystem_DW.magacin6 < 4.0) {
+    magacinOut = 6.0;
   } else {
     magacinOut = -1.0;
   }
@@ -308,6 +311,8 @@ static real_T SortierAlgorith_findPlaceForRed(void)
   } else if (SortierAlgorithmusEchtSystem_DW.magacin0 != 5.0) {
     magacinOut = 0.0;
     SortierAlgorithmusEchtSystem_DW.magacin0++;
+  } else if (SortierAlgorithmusEchtSystem_DW.magacin6 < 4.0) {
+    magacinOut = 6.0;
   } else if (SortierAlgorithmusEchtSystem_DW.magacin3 != 5.0) {
     magacinOut = 3.0;
     SortierAlgorithmusEchtSystem_DW.magacin3++;
@@ -733,6 +738,11 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   /* Chart: '<Root>/Sortieralgorithmus2' incorporates:
    *  UnitDelay: '<Root>/Unit Delay2'
    */
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 < 255U) {
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = ((int16_T)
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 + 1) & 255U;
+  }
+
   if (SortierAlgorithmusEchtSystem_DW.is_active_c42_SortierAlgorithmu == 0U) {
     SortierAlgorithmusEchtSystem_DW.is_active_c42_SortierAlgorithmu = 1U;
     SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
@@ -743,6 +753,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
     SortierAlgorithmusEchtSystem_DW.magacin3 = 0.0;
     SortierAlgorithmusEchtSystem_DW.magacin4 = 0.0;
     SortierAlgorithmusEchtSystem_DW.magacin5 = 0.0;
+    SortierAlgorithmusEchtSystem_DW.magacin6 = 0.0;
     SortierAlgorithmusEchtSystem_DW.magacin1_LastCube = 0.0;
     SortierAlgorithmusEchtSystem_DW.magacin2_LastCube = 0.0;
     SortierAlgorithmusEchtSystem_B.magacin = -1.0;
@@ -753,15 +764,21 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   } else {
     switch (SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy) {
      case SortierAlgorithmusEcht_IN_Black:
-      SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 100U) {
+        SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
+          SortierAlgorith_IN_DetectedCube;
+        SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      } else {
+        SortierAlgorithmusEchtSystem_B.magacin = 6.0;
+      }
       break;
 
      case SortierAlgorithmusE_IN_BlueCube:
-      SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 100U) {
+        SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
+          SortierAlgorith_IN_DetectedCube;
+        SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      }
       break;
 
      case SortierAlgorith_IN_DetectedCube:
@@ -774,20 +791,23 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEc_IN_RedCube:
-      SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
-        SortierAlgorith_IN_DetectedCube;
-      SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 100U) {
+        SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
+          SortierAlgorith_IN_DetectedCube;
+        SortierAlgorithmusEchtSystem_DW.cubeCounter++;
+      }
       break;
 
      case SortierAlgorithmu_IN_cubeLoaded:
-      if ((SortierAlgorithmusEchtSystem_B.MovingAverage2 < 700.0) &&
-          (SortierAlgorithmusEchtSystem_B.MovingAverage2 > 1300.0)) {
+      if ((SortierAlgorithmusEchtSystem_B.MovingAverage2 < 400.0) ||
+          (SortierAlgorithmusEchtSystem_B.MovingAverage2 > 1300.0) ||
+          (SortierAlgorithmusEchtSystem_B.TmpRTBAtSortieralgorithmus2Inpo > 0.0F))
+      {
         SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
           IN_photoelectricBarrierActivate;
         SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 1.0;
       }
       break;
 
@@ -795,30 +815,33 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       if (SortierAlgorithmusEchtSystem_B.MovingAverage2 > 2150.0) {
         SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEcht_IN_Black;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
         SortierAlgorithmusEchtSystem_B.magacin = 6.0;
+        SortierAlgorithmusEchtSystem_DW.magacin6++;
       } else if (SortierAlgorithmusEchtSystem_B.MovingAverage2 < 1000.0) {
         SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEc_IN_RedCube;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
         SortierAlgorithmusEchtSystem_B.magacin = SortierAlgorith_findPlaceForRed
           ();
-      } else if ((SortierAlgorithmusEchtSystem_B.MovingAverage2 >= 1000.0) &&
-                 (SortierAlgorithmusEchtSystem_B.MovingAverage2 <= 2150.0)) {
-        SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
-          SortierAlgorithmusE_IN_BlueCube;
-        SortierAlgorithmusEchtSystem_B.magacin = SortierAlgorit_findPlaceForBlue
-          ();
       } else {
-        SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 0.0;
+        if ((SortierAlgorithmusEchtSystem_B.MovingAverage2 >= 1000.0) &&
+            (SortierAlgorithmusEchtSystem_B.MovingAverage2 <= 2150.0)) {
+          SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
+            SortierAlgorithmusE_IN_BlueCube;
+          SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+          SortierAlgorithmusEchtSystem_B.magacin =
+            SortierAlgorit_findPlaceForBlue();
+        }
       }
       break;
 
-     default:
+     case SortierAlgorit_IN_setupVariable:
       if (SortierAlgorithmusEchtSystem_B.TmpRTBAtSortieralgorithmus2Inpo > 0.0F)
       {
         SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
-          SortierAlgorithmu_IN_cubeLoaded;
-        SortierAlgorithmusEchtSystem_B.magacin = -1.0;
-        SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 1.0;
+          SortierAlgorithmusE_IN_wait_boy;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
       } else {
         SortierAlgorithmusEchtSystem_DW.magacin0 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin1 = 0.0;
@@ -826,6 +849,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_DW.magacin3 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin4 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin5 = 0.0;
+        SortierAlgorithmusEchtSystem_DW.magacin6 = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin1_LastCube = 0.0;
         SortierAlgorithmusEchtSystem_DW.magacin2_LastCube = 0.0;
         SortierAlgorithmusEchtSystem_B.magacin = -1.0;
@@ -833,6 +857,15 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
         SortierAlgorithmusEchtSystem_B.signal = 0.0;
         SortierAlgorithmusEchtSystem_B.lampeSortier = 0.0;
         SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 0.0;
+      }
+      break;
+
+     default:
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 200U) {
+        SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
+          SortierAlgorithmu_IN_cubeLoaded;
+        SortierAlgorithmusEchtSystem_B.magacin = -1.0;
+        SortierAlgorithmusEchtSystem_B.lampeCubeLoaded = 1.0;
       }
       break;
     }
@@ -1047,9 +1080,9 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
   }
 
   /* Chart: '<Root>/Chart6' */
-  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e < 127U) {
-    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = ((int16_T)
-      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e + 1) & 255U;
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 < 127U) {
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 = ((int16_T)
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 + 1) & 255U;
   }
 
   if (SortierAlgorithmusEchtSystem_DW.is_active_c37_SortierAlgorithmu == 0U) {
@@ -1057,7 +1090,7 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
     SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
       SortierAlgorithmusEchtS_IN_wait;
     SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
-    SortierAlgorithmusEchtSystem_B.gatePWM_g = 0.0;
+    SortierAlgorithmusEchtSystem_B.gatePWM_g = 50.0;
     SortierAlgorithmusEchtSystem_B.movingCube_g = 0.0F;
   } else {
     switch (SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy) {
@@ -1067,11 +1100,11 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEcht_IN_close:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 40U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 >= 40U) {
         SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEchtS_IN_wait;
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
-        SortierAlgorithmusEchtSystem_B.gatePWM_g = 0.0;
+        SortierAlgorithmusEchtSystem_B.gatePWM_g = 50.0;
         SortierAlgorithmusEchtSystem_B.movingCube_g = 0.0F;
       } else {
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
@@ -1079,11 +1112,11 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithm_IN_closeKlappe:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 100U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 >= 100U) {
         SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEchtS_IN_wait;
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
-        SortierAlgorithmusEchtSystem_B.gatePWM_g = 0.0;
+        SortierAlgorithmusEchtSystem_B.gatePWM_g = 50.0;
         SortierAlgorithmusEchtSystem_B.movingCube_g = 0.0F;
       } else {
         SortierAlgorithmusEchtSystem_B.gatePWM_g = 100.0;
@@ -1092,10 +1125,10 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       break;
 
      case SortierAlgorithmusEchtS_IN_open:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 50U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 >= 50U) {
         SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEcht_IN_close;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 = 0U;
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 1.0;
@@ -1108,19 +1141,19 @@ void SortierAlgorithmusEchtSystem_step1(void) /* Sample time: [0.01s, 0.0s] */
       if (SortierAlgorithmusEchtSystem_B.signal_o == 1.0) {
         SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEchtS_IN_open;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 = 0U;
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 1.0;
         SortierAlgorithmusEchtSystem_B.gatePWM_g = 100.0;
         SortierAlgorithmusEchtSystem_B.movingCube_g = 1.0F;
       } else if (SortierAlgorithmusEchtSystem_B.signal_o == -1.0) {
         SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
           SortierAlgorithm_IN_closeKlappe;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 = 0U;
         SortierAlgorithmusEchtSystem_B.gatePWM_g = 100.0;
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.gateDirection_f = 0.0;
-        SortierAlgorithmusEchtSystem_B.gatePWM_g = 0.0;
+        SortierAlgorithmusEchtSystem_B.gatePWM_g = 50.0;
         SortierAlgorithmusEchtSystem_B.movingCube_g = 0.0F;
       }
       break;
@@ -1163,9 +1196,9 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
   }
 
   /* Chart: '<Root>/Chart8' */
-  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 < 31U) {
-    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = ((int16_T)
-      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 + 1) & 255U;
+  if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e < 31U) {
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = ((int16_T)
+      SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e + 1) & 255U;
   }
 
   if (SortierAlgorithmusEchtSystem_DW.is_active_c39_SortierAlgorithmu == 0U) {
@@ -1182,7 +1215,7 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
       break;
 
      case SortierAlgorithmu_IN_Stillstand:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 10U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 10U) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEcht_IN_Lampe;
         SortierAlgorithmusEchtSystem_B.lampe = 1.0;
@@ -1192,10 +1225,10 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
       break;
 
      case SortierAlgorithmusEchtSy_IN_end:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 5U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 5U) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmu_IN_Stillstand;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
         SortierAlgorithmusEchtSystem_B.gatePWM = 0.0;
       } else {
         SortierAlgorithmusEchtSystem_B.gatePWM = 100.0;
@@ -1212,10 +1245,10 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
       break;
 
      case SortierAlgorithmusEch_IN_open_b:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 5U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 5U) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEcht_IN_wait1;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
         SortierAlgorithmusEchtSystem_B.gatePWM = 0.0;
       }
       break;
@@ -1225,7 +1258,7 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
           (SortierAlgorithmusEchtSystem_DW.tasterCounter >= 1.0)) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEchtSy_IN_end;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
         SortierAlgorithmusEchtSystem_B.gatePWM = 100.0;
         SortierAlgorithmusEchtSystem_B.gateDirection = 1.0;
         SortierAlgorithmusEchtSystem_B.panzerMotor = 0.0;
@@ -1233,7 +1266,7 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
                  (SortierAlgorithmusEchtSystem_DW.tasterCounter == 0.0)) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEch_IN_open_b;
-        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+        SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
         SortierAlgorithmusEchtSystem_DW.tasterCounter++;
         SortierAlgorithmusEchtSystem_B.gatePWM = 100.0;
         SortierAlgorithmusEchtSystem_B.gateDirection = 0.0;
@@ -1245,7 +1278,7 @@ void SortierAlgorithmusEchtSystem_step2(void) /* Sample time: [0.1s, 0.0s] */
       break;
 
      default:
-      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 >= 20U) {
+      if (SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e >= 20U) {
         SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
           SortierAlgorithmusEc_IN_wait_bo;
         SortierAlgorithmusEchtSystem_B.gatePWM = 0.0;
@@ -1743,7 +1776,7 @@ void SortierAlgorithmusEchtSystem_initialize(void)
       SortierAlgorithmusEchtSystem_P.TmpRTBAtChart7Inport4_InitialCo;
 
     /* SystemInitialize for Chart: '<Root>/Chart8' */
-    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
     SortierAlgorithmusEchtSystem_DW.is_active_c39_SortierAlgorithmu = 0U;
     SortierAlgorithmusEchtSystem_DW.is_c39_SortierAlgorithmusEchtSy =
       SortierAlgor_IN_NO_ACTIVE_CHILD;
@@ -1785,6 +1818,7 @@ void SortierAlgorithmusEchtSystem_initialize(void)
     /* End of InitializeConditions for MATLABSystem: '<Root>/Moving Average2' */
 
     /* SystemInitialize for Chart: '<Root>/Sortieralgorithmus2' */
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1 = 0U;
     SortierAlgorithmusEchtSystem_DW.is_active_c42_SortierAlgorithmu = 0U;
     SortierAlgorithmusEchtSystem_DW.is_c42_SortierAlgorithmusEchtSy =
       SortierAlgor_IN_NO_ACTIVE_CHILD;
@@ -1796,7 +1830,7 @@ void SortierAlgorithmusEchtSystem_initialize(void)
       SortierAlgor_IN_NO_ACTIVE_CHILD;
 
     /* SystemInitialize for Chart: '<Root>/Chart6' */
-    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e = 0U;
+    SortierAlgorithmusEchtSystem_DW.temporalCounter_i1_e0 = 0U;
     SortierAlgorithmusEchtSystem_DW.is_active_c37_SortierAlgorithmu = 0U;
     SortierAlgorithmusEchtSystem_DW.is_c37_SortierAlgorithmusEchtSy =
       SortierAlgor_IN_NO_ACTIVE_CHILD;
