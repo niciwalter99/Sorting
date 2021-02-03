@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'SortierAlgorithmusEchtSystem'.
  *
- * Model version                  : 1.73
+ * Model version                  : 1.74
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 02:16:31 2021
+ * C/C++ source code generated on : Wed Feb  3 18:56:58 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -43,7 +43,7 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
   0,
 
   /* Expression: 0.3
-   * Referenced by: '<Root>/Moving Average'
+   * Referenced by: '<Root>/Moving Average2'
    */
   0.3,
 
@@ -103,12 +103,12 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
   0.076,
 
   /* Expression: [-1,-440,-295,-170,-40,85,220,430]
-   * Referenced by: '<Root>/1-D Lookup Table'
+   * Referenced by: '<Root>/1-D Lookup Table2'
    */
   { -1.0, -440.0, -295.0, -170.0, -40.0, 85.0, 220.0, 430.0 },
 
   /* Expression: [-1,0,1,2,3,4,5,6]
-   * Referenced by: '<Root>/1-D Lookup Table'
+   * Referenced by: '<Root>/1-D Lookup Table2'
    */
   { -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 },
 
@@ -137,17 +137,17 @@ P_SortierAlgorithmusEchtSyste_T SortierAlgorithmusEchtSystem_P = {
    */
   0.0F,
 
-  /* Computed Parameter: TmpRTBAtChart1Inport4_InitialCo
+  /* Computed Parameter: TmpRTBAtSortieralgorithmus2Inpo
    * Referenced by: synthesized block
    */
   0.0F,
 
-  /* Computed Parameter: UnitDelay_InitialCondition
-   * Referenced by: '<Root>/Unit Delay'
+  /* Computed Parameter: UnitDelay2_InitialCondition_i
+   * Referenced by: '<Root>/Unit Delay2'
    */
   0.0F,
 
-  /* Computed Parameter: TmpRTBAtSortieralgorithmusInpor
+  /* Computed Parameter: TmpRTBAtChart7Inport4_InitialCo
    * Referenced by: synthesized block
    */
   0.0F,
