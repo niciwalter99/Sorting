@@ -28,9 +28,9 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH.1515724014" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH" valueType="includePath">
 <listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include">
 </listOptionValue>
-<listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\msup\Sorting\SimulinkModel\EchtSystem\Gesamtsystem">
+<listOptionValue builtIn="false" value="C:\Users\User\Desktop\Uni\MSuP\Informatik\Sorting\SimulinkModel\EchtSystem\Gesamtsystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\msup\Sorting\SimulinkModel\EchtSystem\Gesamtsystem\Gesamtsystem_ert_rtw">
+<listOptionValue builtIn="false" value="C:\Users\User\Desktop\Uni\MSuP\Informatik\Sorting\SimulinkModel\EchtSystem\Gesamtsystem\Gesamtsystem_ert_rtw">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\extern\include">
 </listOptionValue>
@@ -66,7 +66,7 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1045084510" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
 <listOptionValue builtIn="false" value="MODEL=Gesamtsystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="NUMST=2">
+<listOptionValue builtIn="false" value="NUMST=3">
 </listOptionValue>
 <listOptionValue builtIn="false" value="NCSTATES=0">
 </listOptionValue>
@@ -186,9 +186,9 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH.899964030" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.INCLUDE_PATH" valueType="includePath">
 <listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include">
 </listOptionValue>
-<listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\msup\Sorting\SimulinkModel\EchtSystem\Gesamtsystem">
+<listOptionValue builtIn="false" value="C:\Users\User\Desktop\Uni\MSuP\Informatik\Sorting\SimulinkModel\EchtSystem\Gesamtsystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="C:\Users\Nici\Desktop\msup\Sorting\SimulinkModel\EchtSystem\Gesamtsystem\Gesamtsystem_ert_rtw">
+<listOptionValue builtIn="false" value="C:\Users\User\Desktop\Uni\MSuP\Informatik\Sorting\SimulinkModel\EchtSystem\Gesamtsystem\Gesamtsystem_ert_rtw">
 </listOptionValue>
 <listOptionValue builtIn="false" value="C:\Program Files\MATLAB\R2018b\extern\include">
 </listOptionValue>
@@ -224,7 +224,7 @@
 <option id="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE.1616953459" superClass="com.ti.ccstudio.buildDefinitions.C2000_6.4.compilerID.DEFINE" valueType="definedSymbols">
 <listOptionValue builtIn="false" value="MODEL=Gesamtsystem">
 </listOptionValue>
-<listOptionValue builtIn="false" value="NUMST=2">
+<listOptionValue builtIn="false" value="NUMST=3">
 </listOptionValue>
 <listOptionValue builtIn="false" value="NCSTATES=0">
 </listOptionValue>

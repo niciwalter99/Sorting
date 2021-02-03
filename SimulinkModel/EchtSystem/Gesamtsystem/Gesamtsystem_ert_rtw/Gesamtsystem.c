@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Gesamtsystem'.
  *
- * Model version                  : 1.80
+ * Model version                  : 1.83
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Mon Feb  1 18:19:51 2021
+ * C/C++ source code generated on : Wed Feb  3 10:34:50 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -19,13 +19,14 @@
 
 #include "Gesamtsystem.h"
 #include "Gesamtsystem_private.h"
-#define G_IN_Ausrichtung_ohne_Aenderung (1U)
+#define G_IN_Ausrichtung_ohne_Aenderung (2U)
 #define Ge_IN_Uebergabepunkt_x_Richtung (1U)
 #define Ge_IN_Uebergabepunkt_y_Richtung (2U)
 #define Gesa_IN_Drehen_rechts_gesteuert (3U)
 #define Gesam_IN_Drehen_links_gesteuert (1U)
 #define Gesam_IN_Start_Einstellung_Init (4U)
 #define Gesamts_IN_x5_valid_data_found1 (6U)
+#define Gesamtsy_IN_Ausrichtung_gegeben (1U)
 #define Gesamtsy_IN_betterRightPosition (2U)
 #define Gesamtsys_IN_betterLeftPosition (1U)
 #define Gesamtsyst_IN_Drehen_rechts_max (4U)
@@ -37,19 +38,22 @@
 #define Gesamtsystem_IN_Anfahrpunkt_11 (3U)
 #define Gesamtsystem_IN_Anfahrpunkt_12 (4U)
 #define Gesamtsystem_IN_Anfahrpunkt_13 (5U)
-#define Gesamtsystem_IN_Anfahrpunkt_2  (6U)
-#define Gesamtsystem_IN_Anfahrpunkt_3  (7U)
-#define Gesamtsystem_IN_Anfahrpunkt_4  (8U)
-#define Gesamtsystem_IN_Anfahrpunkt_5  (9U)
-#define Gesamtsystem_IN_Anfahrpunkt_6  (10U)
-#define Gesamtsystem_IN_Anfahrpunkt_7  (11U)
-#define Gesamtsystem_IN_Anfahrpunkt_8  (12U)
-#define Gesamtsystem_IN_Anfahrpunkt_9  (13U)
+#define Gesamtsystem_IN_Anfahrpunkt_14 (6U)
+#define Gesamtsystem_IN_Anfahrpunkt_2  (7U)
+#define Gesamtsystem_IN_Anfahrpunkt_3  (8U)
+#define Gesamtsystem_IN_Anfahrpunkt_4  (9U)
+#define Gesamtsystem_IN_Anfahrpunkt_5  (10U)
+#define Gesamtsystem_IN_Anfahrpunkt_6  (11U)
+#define Gesamtsystem_IN_Anfahrpunkt_7  (12U)
+#define Gesamtsystem_IN_Anfahrpunkt_8  (13U)
+#define Gesamtsystem_IN_Anfahrpunkt_9  (14U)
 #define Gesamtsystem_IN_Black          (1U)
 #define Gesamtsystem_IN_BlueCube       (2U)
+#define Gesamtsystem_IN_CloseRegular   (1U)
 #define Gesamtsystem_IN_Daten_einlesen (1U)
 #define Gesamtsystem_IN_DetectedCube   (3U)
 #define Gesamtsystem_IN_Ende           (1U)
+#define Gesamtsystem_IN_Lampe          (1U)
 #define Gesamtsystem_IN_NO_ACTIVE_CHILD (0U)
 #define Gesamtsystem_IN_Parken         (2U)
 #define Gesamtsystem_IN_Parken_1       (1U)
@@ -61,41 +65,53 @@
 #define Gesamtsystem_IN_Quadrant_d     (4U)
 #define Gesamtsystem_IN_RedCube        (4U)
 #define Gesamtsystem_IN_Sammeln        (3U)
+#define Gesamtsystem_IN_Start          (1U)
 #define Gesamtsystem_IN_Start_Warten   (6U)
 #define Gesamtsystem_IN_Start_Warten_b (5U)
-#define Gesamtsystem_IN_Start_Warten_ba (2U)
+#define Gesamtsystem_IN_Start_Warten_ba (3U)
+#define Gesamtsystem_IN_Stehen         (2U)
+#define Gesamtsystem_IN_Stillstand     (2U)
 #define Gesamtsystem_IN_Uebergabe      (5U)
+#define Gesamtsystem_IN_Warten1        (3U)
 #define Gesamtsystem_IN_Wechsel_1      (4U)
-#define Gesamtsystem_IN_Wechsel_10     (15U)
-#define Gesamtsystem_IN_Wechsel_11     (16U)
-#define Gesamtsystem_IN_Wechsel_12     (17U)
-#define Gesamtsystem_IN_Wechsel_13     (18U)
-#define Gesamtsystem_IN_Wechsel_1_b    (14U)
+#define Gesamtsystem_IN_Wechsel_10     (16U)
+#define Gesamtsystem_IN_Wechsel_11     (17U)
+#define Gesamtsystem_IN_Wechsel_12     (18U)
+#define Gesamtsystem_IN_Wechsel_13     (19U)
+#define Gesamtsystem_IN_Wechsel_14     (20U)
+#define Gesamtsystem_IN_Wechsel_1_b    (15U)
 #define Gesamtsystem_IN_Wechsel_2      (5U)
-#define Gesamtsystem_IN_Wechsel_2_b    (19U)
+#define Gesamtsystem_IN_Wechsel_2_b    (21U)
 #define Gesamtsystem_IN_Wechsel_3      (6U)
-#define Gesamtsystem_IN_Wechsel_3_b    (20U)
-#define Gesamtsystem_IN_Wechsel_4      (21U)
-#define Gesamtsystem_IN_Wechsel_5      (22U)
-#define Gesamtsystem_IN_Wechsel_6      (23U)
-#define Gesamtsystem_IN_Wechsel_7      (24U)
-#define Gesamtsystem_IN_Wechsel_8      (25U)
-#define Gesamtsystem_IN_Wechsel_9      (26U)
-#define Gesamtsystem_IN_close          (1U)
+#define Gesamtsystem_IN_Wechsel_3_b    (22U)
+#define Gesamtsystem_IN_Wechsel_4      (23U)
+#define Gesamtsystem_IN_Wechsel_5      (24U)
+#define Gesamtsystem_IN_Wechsel_6      (25U)
+#define Gesamtsystem_IN_Wechsel_7      (26U)
+#define Gesamtsystem_IN_Wechsel_8      (27U)
+#define Gesamtsystem_IN_Wechsel_9      (28U)
+#define Gesamtsystem_IN_Weiter         (4U)
+#define Gesamtsystem_IN_close          (2U)
 #define Gesamtsystem_IN_closeGate      (3U)
+#define Gesamtsystem_IN_closeKlappe    (3U)
+#define Gesamtsystem_IN_closeKlappe_b  (4U)
 #define Gesamtsystem_IN_cubeLoaded     (5U)
-#define Gesamtsystem_IN_firstEntry     (4U)
-#define Gesamtsystem_IN_goToMagacin    (5U)
-#define Gesamtsystem_IN_goToZero       (6U)
+#define Gesamtsystem_IN_end            (3U)
+#define Gesamtsystem_IN_entry          (4U)
+#define Gesamtsystem_IN_firstEntry     (5U)
+#define Gesamtsystem_IN_goToMagacin    (6U)
+#define Gesamtsystem_IN_goToZero       (7U)
 #define Gesamtsystem_IN_init           (2U)
-#define Gesamtsystem_IN_open           (3U)
-#define Gesamtsystem_IN_openGate       (7U)
-#define Gesamtsystem_IN_open_b         (2U)
+#define Gesamtsystem_IN_open           (4U)
+#define Gesamtsystem_IN_openGate       (8U)
+#define Gesamtsystem_IN_open_b         (5U)
 #define Gesamtsystem_IN_setupVariable  (7U)
-#define Gesamtsystem_IN_wait           (4U)
-#define Gesamtsystem_IN_waitForCube    (9U)
-#define Gesamtsystem_IN_wait_b         (8U)
-#define Gesamtsystem_IN_wait_ba        (3U)
+#define Gesamtsystem_IN_startPosition  (9U)
+#define Gesamtsystem_IN_wait           (5U)
+#define Gesamtsystem_IN_wait1          (7U)
+#define Gesamtsystem_IN_waitForCube    (11U)
+#define Gesamtsystem_IN_wait_b         (10U)
+#define Gesamtsystem_IN_wait_ba        (6U)
 #define Gesamtsystem_IN_wert_erkannt   (3U)
 #define Gesamtsystem_IN_wert_erkannt2  (4U)
 #define Gesamtsystem_IN_x0             (2U)
@@ -104,8 +120,8 @@
 #define IN_Anfang_found_Schritt_uebertr (1U)
 #define IN_Drehstillstand_mit_Ausrichtu (1U)
 #define IN_Fahren_mit_Ausrichtungsregel (5U)
-#define IN_Trigonometrische_Auswertun_b (4U)
-#define IN_Trigonometrische_Auswertung_ (3U)
+#define IN_Trigonometrische_Auswertun_b (5U)
+#define IN_Trigonometrische_Auswertung_ (4U)
 #define IN_Weiterleitung_bei_Drehzustan (3U)
 #define IN_photoelectricBarrierActivate (6U)
 
@@ -127,11 +143,14 @@ RT_MODEL_Gesamtsystem *const Gesamtsystem_M = &Gesamtsystem_M_;
 
 /* Forward declaration for local functions */
 static void Gesam_enter_atomic_wert_erkannt(void);
-static void Gesamtsystem_Wechsel_10(void);
+static void Gesamtsystem_Anfahrpunkt_8(void);
+static void Gesamtsystem_Anfahrpunkt_9(void);
+static void Gesamtsystem_Wechsel_1(void);
+static void Gesamtsystem_Wechsel_3(void);
 static void Gesamtsystem_Wechsel_11(void);
 static void Gesamtsystem_Wechsel_12(void);
+static void Gesamtsystem_Wechsel_13(void);
 static void Gesamtsystem_Wechsel_2(void);
-static void Gesamtsystem_Wechsel_3(void);
 static void Gesamtsystem_Wechsel_4(void);
 static void Gesamtsystem_Wechsel_5(void);
 static void Gesamtsystem_Wechsel_6(void);
@@ -203,20 +222,20 @@ real_T look1_binlxpw(real_T u0, const real_T bp0[], const real_T table[],
   return (table[iLeft + 1UL] - table[iLeft]) * frac + table[iLeft];
 }
 
-/* Hardware Interrupt Block: '<S12>/C28x Hardware Interrupt' */
+/* Hardware Interrupt Block: '<S13>/C28x Hardware Interrupt' */
 void isr_int8pie2_task_fcn(void)
 {
-  /* Call the system: <S12>/Triggered Subsystem */
+  /* Call the system: <S13>/Triggered Subsystem */
   {
     int16_T i;
 
-    /* S-Function (c28xisr_c2000): '<S12>/C28x Hardware Interrupt' */
+    /* S-Function (c28xisr_c2000): '<S13>/C28x Hardware Interrupt' */
 
-    /* Output and update for function-call system: '<S12>/Triggered Subsystem' */
+    /* Output and update for function-call system: '<S13>/Triggered Subsystem' */
     {
       int16_T i;
 
-      /* S-Function (c280xi2c_rx): '<S28>/I2C Receive' */
+      /* S-Function (c280xi2c_rx): '<S29>/I2C Receive' */
       {
         int rx_loop= 0;
 
@@ -242,21 +261,21 @@ void isr_int8pie2_task_fcn(void)
       }
 
       for (i = 0; i < 10; i++) {
-        /* SignalConversion: '<S28>/ConcatBufferAtVector ConcatenateIn2' */
+        /* SignalConversion: '<S29>/ConcatBufferAtVector ConcatenateIn2' */
         Gesamtsystem_B.VectorConcatenate[i + 10] =
           Gesamtsystem_B.I2CReceive_o1[i];
 
-        /* Delay: '<S28>/Delay' */
+        /* Delay: '<S29>/Delay' */
         Gesamtsystem_B.VectorConcatenate[i] = Gesamtsystem_DWork.Delay_DSTATE[i];
 
-        /* Update for Delay: '<S28>/Delay' */
+        /* Update for Delay: '<S29>/Delay' */
         Gesamtsystem_DWork.Delay_DSTATE[i] = Gesamtsystem_B.I2CReceive_o1[i];
       }
     }
 
-    /* End of Outputs for S-Function (c28xisr_c2000): '<S12>/C28x Hardware Interrupt' */
+    /* End of Outputs for S-Function (c28xisr_c2000): '<S13>/C28x Hardware Interrupt' */
 
-    /* RateTransition: '<S12>/Rate Transition' */
+    /* RateTransition: '<S13>/Rate Transition' */
     for (i = 0; i < 20; i++) {
       Gesamtsystem_DWork.RateTransition_Buffer[i +
         (Gesamtsystem_DWork.RateTransition_semaphoreTaken == 0) * 20] =
@@ -266,7 +285,7 @@ void isr_int8pie2_task_fcn(void)
     Gesamtsystem_DWork.RateTransition_ActiveBufIdx =
       (Gesamtsystem_DWork.RateTransition_semaphoreTaken == 0);
 
-    /* End of RateTransition: '<S12>/Rate Transition' */
+    /* End of RateTransition: '<S13>/Rate Transition' */
   }
 }
 
@@ -280,6 +299,7 @@ void Gesamtsystem_SetEventsForThisBaseStep(boolean_T *eventFlags)
 {
   /* Task runs when its counter is zero, computed via rtmStepTask macro */
   eventFlags[1] = ((boolean_T)rtmStepTask(Gesamtsystem_M, 1));
+  eventFlags[2] = ((boolean_T)rtmStepTask(Gesamtsystem_M, 2));
 }
 
 /*
@@ -303,6 +323,12 @@ static void rate_monotonic_scheduler(void)
   Gesamtsystem_M->Timing.RateInteraction.TID0_1 =
     (Gesamtsystem_M->Timing.TaskCounters.TID[1] == 0);
 
+  /* tid 1 shares data with slower tid rate: 2 */
+  if (Gesamtsystem_M->Timing.TaskCounters.TID[1] == 0) {
+    Gesamtsystem_M->Timing.RateInteraction.TID1_2 =
+      (Gesamtsystem_M->Timing.TaskCounters.TID[2] == 0);
+  }
+
   /* Compute which subrates run during the next base time step.  Subrates
    * are an integer multiple of the base rate counter.  Therefore, the subtask
    * counter is reset when it reaches its limit (zero means run).
@@ -311,63 +337,68 @@ static void rate_monotonic_scheduler(void)
   if ((Gesamtsystem_M->Timing.TaskCounters.TID[1]) > 499) {/* Sample time: [0.01s, 0.0s] */
     Gesamtsystem_M->Timing.TaskCounters.TID[1] = 0;
   }
+
+  (Gesamtsystem_M->Timing.TaskCounters.TID[2])++;
+  if ((Gesamtsystem_M->Timing.TaskCounters.TID[2]) > 4999) {/* Sample time: [0.1s, 0.0s] */
+    Gesamtsystem_M->Timing.TaskCounters.TID[2] = 0;
+  }
 }
 
 /*
  * Output and update for enable system:
- *    '<S43>/NEGATIVE Edge'
- *    '<S44>/NEGATIVE Edge'
+ *    '<S45>/NEGATIVE Edge'
+ *    '<S46>/NEGATIVE Edge'
  */
 void Gesamtsystem_NEGATIVEEdge(real_T rtu_Enable, boolean_T rtu_IN, boolean_T
   rtu_INprevious, rtB_NEGATIVEEdge_Gesamtsystem *localB)
 {
-  /* Outputs for Enabled SubSystem: '<S43>/NEGATIVE Edge' incorporates:
-   *  EnablePort: '<S48>/Enable'
+  /* Outputs for Enabled SubSystem: '<S45>/NEGATIVE Edge' incorporates:
+   *  EnablePort: '<S50>/Enable'
    */
   if (rtu_Enable > 0.0) {
-    /* RelationalOperator: '<S48>/Relational Operator1' */
+    /* RelationalOperator: '<S50>/Relational Operator1' */
     localB->RelationalOperator1 = ((int16_T)rtu_INprevious > (int16_T)rtu_IN);
   }
 
-  /* End of Outputs for SubSystem: '<S43>/NEGATIVE Edge' */
+  /* End of Outputs for SubSystem: '<S45>/NEGATIVE Edge' */
 }
 
 /*
  * Output and update for enable system:
- *    '<S43>/POSITIVE Edge'
- *    '<S44>/POSITIVE Edge'
+ *    '<S45>/POSITIVE Edge'
+ *    '<S46>/POSITIVE Edge'
  */
 void Gesamtsystem_POSITIVEEdge(real_T rtu_Enable, boolean_T rtu_IN, boolean_T
   rtu_INprevious, rtB_POSITIVEEdge_Gesamtsystem *localB)
 {
-  /* Outputs for Enabled SubSystem: '<S43>/POSITIVE Edge' incorporates:
-   *  EnablePort: '<S49>/Enable'
+  /* Outputs for Enabled SubSystem: '<S45>/POSITIVE Edge' incorporates:
+   *  EnablePort: '<S51>/Enable'
    */
   if (rtu_Enable > 0.0) {
-    /* RelationalOperator: '<S49>/Relational Operator1' */
+    /* RelationalOperator: '<S51>/Relational Operator1' */
     localB->RelationalOperator1 = ((int16_T)rtu_IN > (int16_T)rtu_INprevious);
   }
 
-  /* End of Outputs for SubSystem: '<S43>/POSITIVE Edge' */
+  /* End of Outputs for SubSystem: '<S45>/POSITIVE Edge' */
 }
 
 /*
  * Output and update for atomic system:
- *    '<S42>/MATLAB Function1'
- *    '<S42>/MATLAB Function3'
+ *    '<S44>/MATLAB Function1'
+ *    '<S44>/MATLAB Function3'
  */
 void Gesamtsyste_MATLABFunction1(real_T rtu_u, real32_T rtu_yalt,
   rtB_MATLABFunction1_Gesamtsyste *localB)
 {
-  /* MATLAB Function 'Subsystem/getAngle/Messung des absoluten Winkels -  Auswertung der Encodersignale/MATLAB Function1': '<S45>:1' */
-  /* '<S45>:1:3' */
+  /* MATLAB Function 'Subsystem/getAngle2/Messung des absoluten Winkels -  Auswertung der Encodersignale/MATLAB Function1': '<S47>:1' */
+  /* '<S47>:1:3' */
   localB->y = rtu_yalt + (real32_T)rtu_u;
 }
 
-/* Function for Chart: '<S12>/Chart8' */
+/* Function for Chart: '<S13>/Chart8' */
 static void Gesam_enter_atomic_wert_erkannt(void)
 {
-  /* Entry 'wert_erkannt': '<S26>:109' */
+  /* Entry 'wert_erkannt': '<S27>:109' */
   Gesamtsystem_DWork.values_out1[0] = (int16_T)Gesamtsystem_B.RateTransition[0];
   Gesamtsystem_DWork.values_out1[1] = (int16_T)Gesamtsystem_B.RateTransition[1];
   Gesamtsystem_DWork.values_out1[2] = (int16_T)Gesamtsystem_B.RateTransition[2];
@@ -409,337 +440,370 @@ real_T rt_roundd_snf(real_T u)
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Wechsel_10(void)
+static void Gesamtsystem_Anfahrpunkt_8(void)
 {
-  /* During 'Wechsel_10': '<S8>:1079' */
-  /* Transition: '<S8>:1054' */
-  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_11;
+  /* During 'Anfahrpunkt_8': '<S8>:1389' */
+  if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
+       Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
+        Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
+    /* Transition: '<S8>:1362' */
+    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_8;
 
-  /* Entry 'Anfahrpunkt_11': '<S8>:1080' */
-  Gesamtsystem_B.x_soll = 900.0;
-  Gesamtsystem_B.y_soll = 0.0;
+    /* Entry 'Wechsel_8': '<S8>:1390' */
+    Gesamtsystem_DWork.Counter++;
+  }
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Wechsel_11(void)
+static void Gesamtsystem_Anfahrpunkt_9(void)
 {
-  /* During 'Wechsel_11': '<S8>:1081' */
-  /* Transition: '<S8>:1056' */
-  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_12;
+  /* During 'Anfahrpunkt_9': '<S8>:1391' */
+  if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
+       Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
+        Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
+    /* Transition: '<S8>:1364' */
+    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_9;
 
-  /* Entry 'Anfahrpunkt_12': '<S8>:1082' */
+    /* Entry 'Wechsel_9': '<S8>:1392' */
+    Gesamtsystem_DWork.Counter++;
+  }
+}
+
+/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
+static void Gesamtsystem_Wechsel_1(void)
+{
+  /* During 'Wechsel_1': '<S8>:1374' */
+  /* Transition: '<S8>:1346' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_2;
+
+  /* Entry 'Anfahrpunkt_2': '<S8>:1375' */
   Gesamtsystem_B.x_soll = 1200.0;
-  Gesamtsystem_B.y_soll = 0.0;
-}
-
-/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Wechsel_12(void)
-{
-  /* During 'Wechsel_12': '<S8>:1083' */
-  /* Transition: '<S8>:1058' */
-  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_13;
-
-  /* Entry 'Anfahrpunkt_13': '<S8>:1084' */
-  Gesamtsystem_B.x_soll = 1380.0;
-  Gesamtsystem_B.y_soll = -80.0;
-}
-
-/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Wechsel_2(void)
-{
-  /* During 'Wechsel_2': '<S8>:1063' */
-  /* Transition: '<S8>:1037' */
-  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_3;
-
-  /* Entry 'Anfahrpunkt_3': '<S8>:1064' */
-  Gesamtsystem_B.x_soll = 900.0;
-  Gesamtsystem_B.y_soll = 675.0;
+  Gesamtsystem_B.y_soll = 100.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_3(void)
 {
-  /* During 'Wechsel_3': '<S8>:1065' */
-  /* Transition: '<S8>:1040' */
+  /* During 'Wechsel_3': '<S8>:1378' */
+  /* Transition: '<S8>:1350' */
   Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_4;
 
-  /* Entry 'Anfahrpunkt_4': '<S8>:1066' */
-  Gesamtsystem_B.x_soll = 850.0;
-  Gesamtsystem_B.y_soll = 750.0;
+  /* Entry 'Anfahrpunkt_4': '<S8>:1379' */
+  Gesamtsystem_B.x_soll = 940.0;
+  Gesamtsystem_B.y_soll = 650.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
+}
+
+/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
+static void Gesamtsystem_Wechsel_11(void)
+{
+  /* During 'Wechsel_11': '<S8>:1394' */
+  /* Transition: '<S8>:1367' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_12;
+
+  /* Entry 'Anfahrpunkt_12': '<S8>:1395' */
+  Gesamtsystem_B.x_soll = 900.0;
+  Gesamtsystem_B.y_soll = 0.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
+}
+
+/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
+static void Gesamtsystem_Wechsel_12(void)
+{
+  /* During 'Wechsel_12': '<S8>:1396' */
+  /* Transition: '<S8>:1369' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_13;
+
+  /* Entry 'Anfahrpunkt_13': '<S8>:1397' */
+  Gesamtsystem_B.x_soll = 1200.0;
+  Gesamtsystem_B.y_soll = 0.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
+}
+
+/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
+static void Gesamtsystem_Wechsel_13(void)
+{
+  /* During 'Wechsel_13': '<S8>:1398' */
+  /* Transition: '<S8>:1371' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_14;
+
+  /* Entry 'Anfahrpunkt_14': '<S8>:1399' */
+  Gesamtsystem_B.x_soll = 1370.0;
+  Gesamtsystem_B.y_soll = -100.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
+}
+
+/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
+static void Gesamtsystem_Wechsel_2(void)
+{
+  /* During 'Wechsel_2': '<S8>:1376' */
+  /* Transition: '<S8>:1348' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_3;
+
+  /* Entry 'Anfahrpunkt_3': '<S8>:1377' */
+  Gesamtsystem_B.x_soll = 1000.0;
+  Gesamtsystem_B.y_soll = 250.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_4(void)
 {
-  /* During 'Wechsel_4': '<S8>:1067' */
-  /* Transition: '<S8>:1042' */
+  /* During 'Wechsel_4': '<S8>:1380' */
+  /* Transition: '<S8>:1353' */
   Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_5;
 
-  /* Entry 'Anfahrpunkt_5': '<S8>:1069' */
-  Gesamtsystem_B.x_soll = 600.0;
-  Gesamtsystem_B.y_soll = 825.0;
+  /* Entry 'Anfahrpunkt_5': '<S8>:1381' */
+  Gesamtsystem_B.x_soll = 850.0;
+  Gesamtsystem_B.y_soll = 750.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_5(void)
 {
-  /* During 'Wechsel_5': '<S8>:1071' */
-  /* Transition: '<S8>:1046' */
+  /* During 'Wechsel_5': '<S8>:1382' */
+  /* Transition: '<S8>:1355' */
   Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_6;
 
-  /* Entry 'Anfahrpunkt_6': '<S8>:1072' */
-  Gesamtsystem_B.x_soll = 500.0;
+  /* Entry 'Anfahrpunkt_6': '<S8>:1383' */
+  Gesamtsystem_B.x_soll = 600.0;
   Gesamtsystem_B.y_soll = 825.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_6(void)
 {
-  /* During 'Wechsel_6': '<S8>:1073' */
-  /* Transition: '<S8>:1048' */
+  /* During 'Wechsel_6': '<S8>:1384' */
+  /* Transition: '<S8>:1357' */
   Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_7;
 
-  /* Entry 'Anfahrpunkt_7': '<S8>:1074' */
-  Gesamtsystem_B.x_soll = 325.0;
-  Gesamtsystem_B.y_soll = 725.0;
+  /* Entry 'Anfahrpunkt_7': '<S8>:1386' */
+  Gesamtsystem_B.x_soll = 500.0;
+  Gesamtsystem_B.y_soll = 825.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_7(void)
 {
-  /* During 'Wechsel_7': '<S8>:1075' */
-  /* Transition: '<S8>:1050' */
+  /* During 'Wechsel_7': '<S8>:1388' */
+  /* Transition: '<S8>:1361' */
   Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_8;
 
-  /* Entry 'Anfahrpunkt_8': '<S8>:1076' */
-  Gesamtsystem_B.x_soll = 400.0;
-  Gesamtsystem_B.y_soll = 200.0;
+  /* Entry 'Anfahrpunkt_8': '<S8>:1389' */
+  Gesamtsystem_B.x_soll = 325.0;
+  Gesamtsystem_B.y_soll = 725.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Wechsel_8(void)
 {
-  /* During 'Wechsel_8': '<S8>:1077' */
-  if (Gesamtsystem_DWork.Counter == 8.0) {
-    /* Transition: '<S8>:1045' */
-    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_9;
+  /* During 'Wechsel_8': '<S8>:1390' */
+  /* Transition: '<S8>:1363' */
+  Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_9;
 
-    /* Entry 'Anfahrpunkt_9': '<S8>:1070' */
-    Gesamtsystem_B.x_soll = 890.0;
-    Gesamtsystem_B.y_soll = 275.0;
-  } else {
-    /* Transition: '<S8>:1052' */
-    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_10;
-
-    /* Entry 'Anfahrpunkt_10': '<S8>:1078' */
-    Gesamtsystem_B.x_soll = 600.0;
-    Gesamtsystem_B.y_soll = 0.0;
-  }
+  /* Entry 'Anfahrpunkt_9': '<S8>:1391' */
+  Gesamtsystem_B.x_soll = 400.0;
+  Gesamtsystem_B.y_soll = 300.0;
+  Gesamtsystem_B.alpha_soll = -1.0;
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 static void Gesamtsystem_Sammeln(void)
 {
-  /* During 'Sammeln': '<S8>:1032' */
-  if (Gesamtsystem_DWork.Counter == 19.0) {
-    /* Transition: '<S8>:1086' */
+  /* During 'Sammeln': '<S8>:1343' */
+  if (Gesamtsystem_DWork.Counter == 20.0) {
+    /* Transition: '<S8>:1342' */
     Gesamtsystem_B.Gang = 1.0;
     Gesamtsystem_DWork.x_least = Gesamtsystem_B.x_soll;
 
-    /* Exit Internal 'Sammeln': '<S8>:1032' */
+    /* Exit Internal 'Sammeln': '<S8>:1343' */
     Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_NO_ACTIVE_CHILD;
     Gesamtsystem_DWork.is_c5_Gesamtsystem = Gesamtsystem_IN_Uebergabe;
 
-    /* Entry Internal 'Uebergabe': '<S8>:1021' */
-    /* Transition: '<S8>:1022' */
+    /* Entry Internal 'Uebergabe': '<S8>:1330' */
+    /* Transition: '<S8>:1331' */
     Gesamtsystem_DWork.Counter = 0.0;
     Gesamtsystem_DWork.is_Uebergabe = Ge_IN_Uebergabepunkt_x_Richtung;
 
-    /* Entry 'Uebergabepunkt_x_Richtung': '<S8>:1027' */
-    Gesamtsystem_B.x_soll = 1373.0;
+    /* Entry 'Uebergabepunkt_x_Richtung': '<S8>:1336' */
+    Gesamtsystem_B.alpha_soll = -1.0;
   } else {
     switch (Gesamtsystem_DWork.is_Sammeln) {
      case Gesamtsystem_IN_Anfahrpunkt_1:
-      /* During 'Anfahrpunkt_1': '<S8>:1060' */
+      /* During 'Anfahrpunkt_1': '<S8>:1373' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1034' */
+        /* Transition: '<S8>:1345' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_1_b;
 
-        /* Entry 'Wechsel_1': '<S8>:1061' */
+        /* Entry 'Wechsel_1': '<S8>:1374' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_10:
-      /* During 'Anfahrpunkt_10': '<S8>:1078' */
+      /* During 'Anfahrpunkt_10': '<S8>:1387' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1053' */
+        /* Transition: '<S8>:1358' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_10;
 
-        /* Entry 'Wechsel_10': '<S8>:1079' */
+        /* Entry 'Wechsel_10': '<S8>:1385' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_11:
-      /* During 'Anfahrpunkt_11': '<S8>:1080' */
+      /* During 'Anfahrpunkt_11': '<S8>:1393' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1055' */
+        /* Transition: '<S8>:1366' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_11;
 
-        /* Entry 'Wechsel_11': '<S8>:1081' */
+        /* Entry 'Wechsel_11': '<S8>:1394' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_12:
-      /* During 'Anfahrpunkt_12': '<S8>:1082' */
+      /* During 'Anfahrpunkt_12': '<S8>:1395' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1057' */
+        /* Transition: '<S8>:1368' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_12;
 
-        /* Entry 'Wechsel_12': '<S8>:1083' */
+        /* Entry 'Wechsel_12': '<S8>:1396' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_13:
-      /* During 'Anfahrpunkt_13': '<S8>:1084' */
+      /* During 'Anfahrpunkt_13': '<S8>:1397' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1059' */
+        /* Transition: '<S8>:1370' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_13;
 
-        /* Entry 'Wechsel_13': '<S8>:1085' */
+        /* Entry 'Wechsel_13': '<S8>:1398' */
+        Gesamtsystem_DWork.Counter++;
+      }
+      break;
+
+     case Gesamtsystem_IN_Anfahrpunkt_14:
+      /* During 'Anfahrpunkt_14': '<S8>:1399' */
+      if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
+           Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
+            Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
+        /* Transition: '<S8>:1372' */
+        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_14;
+
+        /* Entry 'Wechsel_14': '<S8>:1400' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_2:
-      /* During 'Anfahrpunkt_2': '<S8>:1062' */
+      /* During 'Anfahrpunkt_2': '<S8>:1375' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1036' */
+        /* Transition: '<S8>:1347' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_2_b;
 
-        /* Entry 'Wechsel_2': '<S8>:1063' */
+        /* Entry 'Wechsel_2': '<S8>:1376' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_3:
-      /* During 'Anfahrpunkt_3': '<S8>:1064' */
+      /* During 'Anfahrpunkt_3': '<S8>:1377' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1039' */
+        /* Transition: '<S8>:1349' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_3_b;
 
-        /* Entry 'Wechsel_3': '<S8>:1065' */
+        /* Entry 'Wechsel_3': '<S8>:1378' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_4:
-      /* During 'Anfahrpunkt_4': '<S8>:1066' */
+      /* During 'Anfahrpunkt_4': '<S8>:1379' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1041' */
+        /* Transition: '<S8>:1352' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_4;
 
-        /* Entry 'Wechsel_4': '<S8>:1067' */
+        /* Entry 'Wechsel_4': '<S8>:1380' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_5:
-      /* During 'Anfahrpunkt_5': '<S8>:1069' */
+      /* During 'Anfahrpunkt_5': '<S8>:1381' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1044' */
+        /* Transition: '<S8>:1354' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_5;
 
-        /* Entry 'Wechsel_5': '<S8>:1071' */
+        /* Entry 'Wechsel_5': '<S8>:1382' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_6:
-      /* During 'Anfahrpunkt_6': '<S8>:1072' */
+      /* During 'Anfahrpunkt_6': '<S8>:1383' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1047' */
+        /* Transition: '<S8>:1356' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_6;
 
-        /* Entry 'Wechsel_6': '<S8>:1073' */
+        /* Entry 'Wechsel_6': '<S8>:1384' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_7:
-      /* During 'Anfahrpunkt_7': '<S8>:1074' */
+      /* During 'Anfahrpunkt_7': '<S8>:1386' */
       if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
            Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
             Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1049' */
+        /* Transition: '<S8>:1359' */
         Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_7;
 
-        /* Entry 'Wechsel_7': '<S8>:1075' */
+        /* Entry 'Wechsel_7': '<S8>:1388' */
         Gesamtsystem_DWork.Counter++;
       }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_8:
-      /* During 'Anfahrpunkt_8': '<S8>:1076' */
-      if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
-           Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
-            Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1051' */
-        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_8;
-
-        /* Entry 'Wechsel_8': '<S8>:1077' */
-        Gesamtsystem_DWork.Counter++;
-      }
+      Gesamtsystem_Anfahrpunkt_8();
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_9:
-      /* During 'Anfahrpunkt_9': '<S8>:1070' */
-      if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
-           Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
-            Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-        /* Transition: '<S8>:1043' */
-        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_9;
-
-        /* Entry 'Wechsel_9': '<S8>:1068' */
-        Gesamtsystem_DWork.Counter++;
-      }
+      Gesamtsystem_Anfahrpunkt_9();
       break;
 
      case Gesamtsystem_IN_Wechsel_1_b:
-      /* During 'Wechsel_1': '<S8>:1061' */
-      /* Transition: '<S8>:1035' */
-      Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_2;
-
-      /* Entry 'Anfahrpunkt_2': '<S8>:1062' */
-      Gesamtsystem_B.x_soll = 850.0;
-      Gesamtsystem_B.y_soll = 0.0;
+      Gesamtsystem_Wechsel_1();
       break;
 
      case Gesamtsystem_IN_Wechsel_10:
-      Gesamtsystem_Wechsel_10();
+      Gesamtsystem_Wechsel_3();
       break;
 
      case Gesamtsystem_IN_Wechsel_11:
@@ -751,7 +815,11 @@ static void Gesamtsystem_Sammeln(void)
       break;
 
      case Gesamtsystem_IN_Wechsel_13:
-      /* During 'Wechsel_13': '<S8>:1085' */
+      Gesamtsystem_Wechsel_13();
+      break;
+
+     case Gesamtsystem_IN_Wechsel_14:
+      /* During 'Wechsel_14': '<S8>:1400' */
       break;
 
      case Gesamtsystem_IN_Wechsel_2_b:
@@ -783,24 +851,35 @@ static void Gesamtsystem_Sammeln(void)
       break;
 
      default:
-      /* During 'Wechsel_9': '<S8>:1068' */
-      /* Transition: '<S8>:1038' */
-      Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_3;
+      /* During 'Wechsel_9': '<S8>:1392' */
+      if (Gesamtsystem_DWork.Counter == 9.0) {
+        /* Transition: '<S8>:1360' */
+        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_10;
 
-      /* Entry 'Anfahrpunkt_3': '<S8>:1064' */
-      Gesamtsystem_B.x_soll = 900.0;
-      Gesamtsystem_B.y_soll = 675.0;
+        /* Entry 'Anfahrpunkt_10': '<S8>:1387' */
+        Gesamtsystem_B.x_soll = 880.0;
+        Gesamtsystem_B.y_soll = 0.0;
+        Gesamtsystem_B.alpha_soll = -1.0;
+      } else {
+        /* Transition: '<S8>:1365' */
+        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_11;
+
+        /* Entry 'Anfahrpunkt_11': '<S8>:1393' */
+        Gesamtsystem_B.x_soll = 600.0;
+        Gesamtsystem_B.y_soll = 0.0;
+        Gesamtsystem_B.alpha_soll = -1.0;
+      }
       break;
     }
   }
 }
 
-/* Function for Chart: '<S11>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
+/* Function for Chart: '<S12>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
 static void enter_atomic_Drehstillstand_mit(void)
 {
   real_T tmp;
 
-  /* Entry 'Drehstillstand_mit_Ausrichtungsregelung': '<S13>:26' */
+  /* Entry 'Drehstillstand_mit_Ausrichtungsregelung': '<S14>:26' */
   Gesamtsystem_B.alpha_diff_opt = 0.0;
   tmp = fabs(Gesamtsystem_DWork.alpha_diff_intern);
   if (tmp < 5.0) {
@@ -820,55 +899,55 @@ static void enter_atomic_Drehstillstand_mit(void)
   }
 }
 
-/* Function for Chart: '<S11>/Fahrsystem' */
+/* Function for Chart: '<S12>/Fahrsystem' */
 static void Gesamtsystem_Start_Warten(void)
 {
   real_T a;
   real_T l_mindern;
   real_T r_mindern;
 
-  /* During 'Start_Warten': '<S14>:92' */
-  /* Transition: '<S14>:93' */
+  /* During 'Start_Warten': '<S15>:92' */
+  /* Transition: '<S15>:93' */
   l_mindern = fabs(Gesamtsystem_B.alpha_diff_opt);
   if ((l_mindern > 0.0) && (Gesamtsystem_B.PWMWertebereich > 0.0)) {
-    /* Transition: '<S14>:58' */
+    /* Transition: '<S15>:58' */
     if (l_mindern > 40.0) {
-      /* Transition: '<S14>:21' */
+      /* Transition: '<S15>:21' */
       if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-        /* Transition: '<S14>:45' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsyste_IN_Drehen_links_max;
+        /* Transition: '<S15>:45' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsyste_IN_Drehen_links_max;
 
-        /* Entry 'Drehen_links_max': '<S14>:8' */
+        /* Entry 'Drehen_links_max': '<S15>:8' */
         Gesamtsystem_B.pwm_out_l = 100.0;
         Gesamtsystem_B.pwm_out_r = 100.0;
         Gesamtsystem_B.r_l_out_l = 0.0;
         Gesamtsystem_B.r_l_out_r = 1.0;
       } else {
-        /* Transition: '<S14>:57' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsyst_IN_Drehen_rechts_max;
+        /* Transition: '<S15>:57' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsyst_IN_Drehen_rechts_max;
 
-        /* Entry 'Drehen_rechts_max': '<S14>:9' */
+        /* Entry 'Drehen_rechts_max': '<S15>:9' */
         Gesamtsystem_B.pwm_out_l = 100.0;
         Gesamtsystem_B.pwm_out_r = 100.0;
         Gesamtsystem_B.r_l_out_l = 1.0;
         Gesamtsystem_B.r_l_out_r = 0.0;
       }
     } else {
-      /* Transition: '<S14>:53' */
+      /* Transition: '<S15>:53' */
       if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-        /* Transition: '<S14>:54' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesam_IN_Drehen_links_gesteuert;
+        /* Transition: '<S15>:54' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesam_IN_Drehen_links_gesteuert;
 
-        /* Entry 'Drehen_links_gesteuert': '<S14>:43' */
+        /* Entry 'Drehen_links_gesteuert': '<S15>:43' */
         Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.r_l_out_l = 0.0;
         Gesamtsystem_B.r_l_out_r = 1.0;
       } else {
-        /* Transition: '<S14>:55' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesa_IN_Drehen_rechts_gesteuert;
+        /* Transition: '<S15>:55' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesa_IN_Drehen_rechts_gesteuert;
 
-        /* Entry 'Drehen_rechts_gesteuert': '<S14>:51' */
+        /* Entry 'Drehen_rechts_gesteuert': '<S15>:51' */
         Gesamtsystem_B.pwm_out_l = 59.0 + l_mindern;
         Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.r_l_out_l = 1.0;
@@ -876,24 +955,24 @@ static void Gesamtsystem_Start_Warten(void)
       }
     }
   } else {
-    /* Transition: '<S14>:82' */
+    /* Transition: '<S15>:82' */
     if (Gesamtsystem_B.pwm_mindern[1] == 1.0) {
-      /* Transition: '<S14>:85' */
+      /* Transition: '<S15>:85' */
       l_mindern = 1.0 - Gesamtsystem_B.Gang;
       r_mindern = Gesamtsystem_B.Gang;
     } else if (Gesamtsystem_B.pwm_mindern[1] == 0.0) {
-      /* Transition: '<S14>:86' */
+      /* Transition: '<S15>:86' */
       l_mindern = Gesamtsystem_B.Gang;
       r_mindern = 1.0 - Gesamtsystem_B.Gang;
     } else {
-      /* Transition: '<S14>:87' */
+      /* Transition: '<S15>:87' */
       l_mindern = 0.0;
       r_mindern = 0.0;
     }
 
-    Gesamtsystem_DWork.is_c11_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
+    Gesamtsystem_DWork.is_c7_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
 
-    /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
+    /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
     a = Gesamtsystem_B.PWMWertebereich / 100.0;
     Gesamtsystem_B.pwm_out_l = Gesamtsystem_B.PWMWertebereich - rt_roundd_snf(a *
       a * Gesamtsystem_B.pwm_mindern[0]) * l_mindern;
@@ -905,56 +984,56 @@ static void Gesamtsystem_Start_Warten(void)
   }
 }
 
-/* Function for Chart: '<S11>/Fahrsystem' */
+/* Function for Chart: '<S12>/Fahrsystem' */
 static void Gesamtsystem_Drehen_links_max(void)
 {
   real_T a;
   real_T l_mindern;
   real_T r_mindern;
 
-  /* During 'Drehen_links_max': '<S14>:8' */
-  /* Transition: '<S14>:60' */
-  /* Transition: '<S14>:75' */
+  /* During 'Drehen_links_max': '<S15>:8' */
+  /* Transition: '<S15>:60' */
+  /* Transition: '<S15>:75' */
   l_mindern = fabs(Gesamtsystem_B.alpha_diff_opt);
   if ((l_mindern > 0.0) && (Gesamtsystem_B.PWMWertebereich > 0.0)) {
-    /* Transition: '<S14>:58' */
+    /* Transition: '<S15>:58' */
     if (l_mindern > 40.0) {
-      /* Transition: '<S14>:21' */
+      /* Transition: '<S15>:21' */
       if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-        /* Transition: '<S14>:45' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsyste_IN_Drehen_links_max;
+        /* Transition: '<S15>:45' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsyste_IN_Drehen_links_max;
 
-        /* Entry 'Drehen_links_max': '<S14>:8' */
+        /* Entry 'Drehen_links_max': '<S15>:8' */
         Gesamtsystem_B.pwm_out_l = 100.0;
         Gesamtsystem_B.pwm_out_r = 100.0;
         Gesamtsystem_B.r_l_out_l = 0.0;
         Gesamtsystem_B.r_l_out_r = 1.0;
       } else {
-        /* Transition: '<S14>:57' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsyst_IN_Drehen_rechts_max;
+        /* Transition: '<S15>:57' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsyst_IN_Drehen_rechts_max;
 
-        /* Entry 'Drehen_rechts_max': '<S14>:9' */
+        /* Entry 'Drehen_rechts_max': '<S15>:9' */
         Gesamtsystem_B.pwm_out_l = 100.0;
         Gesamtsystem_B.pwm_out_r = 100.0;
         Gesamtsystem_B.r_l_out_l = 1.0;
         Gesamtsystem_B.r_l_out_r = 0.0;
       }
     } else {
-      /* Transition: '<S14>:53' */
+      /* Transition: '<S15>:53' */
       if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-        /* Transition: '<S14>:54' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesam_IN_Drehen_links_gesteuert;
+        /* Transition: '<S15>:54' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesam_IN_Drehen_links_gesteuert;
 
-        /* Entry 'Drehen_links_gesteuert': '<S14>:43' */
+        /* Entry 'Drehen_links_gesteuert': '<S15>:43' */
         Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.r_l_out_l = 0.0;
         Gesamtsystem_B.r_l_out_r = 1.0;
       } else {
-        /* Transition: '<S14>:55' */
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesa_IN_Drehen_rechts_gesteuert;
+        /* Transition: '<S15>:55' */
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesa_IN_Drehen_rechts_gesteuert;
 
-        /* Entry 'Drehen_rechts_gesteuert': '<S14>:51' */
+        /* Entry 'Drehen_rechts_gesteuert': '<S15>:51' */
         Gesamtsystem_B.pwm_out_l = 59.0 + l_mindern;
         Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
         Gesamtsystem_B.r_l_out_l = 1.0;
@@ -962,24 +1041,24 @@ static void Gesamtsystem_Drehen_links_max(void)
       }
     }
   } else {
-    /* Transition: '<S14>:82' */
+    /* Transition: '<S15>:82' */
     if (Gesamtsystem_B.pwm_mindern[1] == 1.0) {
-      /* Transition: '<S14>:85' */
+      /* Transition: '<S15>:85' */
       l_mindern = 1.0 - Gesamtsystem_B.Gang;
       r_mindern = Gesamtsystem_B.Gang;
     } else if (Gesamtsystem_B.pwm_mindern[1] == 0.0) {
-      /* Transition: '<S14>:86' */
+      /* Transition: '<S15>:86' */
       l_mindern = Gesamtsystem_B.Gang;
       r_mindern = 1.0 - Gesamtsystem_B.Gang;
     } else {
-      /* Transition: '<S14>:87' */
+      /* Transition: '<S15>:87' */
       l_mindern = 0.0;
       r_mindern = 0.0;
     }
 
-    Gesamtsystem_DWork.is_c11_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
+    Gesamtsystem_DWork.is_c7_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
 
-    /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
+    /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
     a = Gesamtsystem_B.PWMWertebereich / 100.0;
     Gesamtsystem_B.pwm_out_l = Gesamtsystem_B.PWMWertebereich - rt_roundd_snf(a *
       a * Gesamtsystem_B.pwm_mindern[0]) * l_mindern;
@@ -991,160 +1070,160 @@ static void Gesamtsystem_Drehen_links_max(void)
   }
 }
 
-/* Function for Chart: '<S3>/Sortieralgorithmus' */
+/* Function for Chart: '<S3>/Sortieralgorithmus2' */
 static real_T Gesamtsystem_findPlaceForBlue(void)
 {
   real_T magacinOut;
 
-  /* MATLAB Function 'findPlaceForBlue': '<S37>:206' */
+  /* MATLAB Function 'findPlaceForBlue': '<S38>:206' */
   if (Gesamtsystem_DWork.magacin0 == 4.0) {
-    /* '<S37>:206:4' */
-    /* '<S37>:206:5' */
+    /* '<S38>:206:4' */
+    /* '<S38>:206:5' */
     magacinOut = 0.0;
 
-    /* '<S37>:206:6' */
+    /* '<S38>:206:6' */
     Gesamtsystem_DWork.magacin0++;
 
-    /* '<S37>:206:7' */
+    /* '<S38>:206:7' */
   } else if ((Gesamtsystem_DWork.magacin2 == 0.0) ||
              ((Gesamtsystem_DWork.magacin2_LastCube == 2.0) &&
               (Gesamtsystem_DWork.magacin2 < 5.0))) {
-    /* '<S37>:206:9' */
-    /* '<S37>:206:10' */
+    /* '<S38>:206:9' */
+    /* '<S38>:206:10' */
     magacinOut = 2.0;
 
-    /* '<S37>:206:11' */
+    /* '<S38>:206:11' */
     Gesamtsystem_DWork.magacin2++;
 
-    /* '<S37>:206:12' */
+    /* '<S38>:206:12' */
     Gesamtsystem_DWork.magacin2_LastCube = 1.0;
   } else if ((Gesamtsystem_DWork.magacin1_LastCube == 2.0) &&
              (Gesamtsystem_DWork.magacin1 < 5.0)) {
-    /* '<S37>:206:14' */
-    /* '<S37>:206:15' */
+    /* '<S38>:206:14' */
+    /* '<S38>:206:15' */
     magacinOut = 1.0;
 
-    /* '<S37>:206:16' */
+    /* '<S38>:206:16' */
     Gesamtsystem_DWork.magacin1++;
 
-    /* '<S37>:206:17' */
+    /* '<S38>:206:17' */
     Gesamtsystem_DWork.magacin1_LastCube = 1.0;
   } else if (Gesamtsystem_DWork.magacin3 < 5.0) {
-    /* '<S37>:206:19' */
-    /* '<S37>:206:20' */
+    /* '<S38>:206:19' */
+    /* '<S38>:206:20' */
     magacinOut = 3.0;
 
-    /* '<S37>:206:21' */
+    /* '<S38>:206:21' */
     Gesamtsystem_DWork.magacin3++;
   } else if (Gesamtsystem_DWork.magacin4 < 5.0) {
-    /* '<S37>:206:23' */
-    /* '<S37>:206:24' */
+    /* '<S38>:206:23' */
+    /* '<S38>:206:24' */
     magacinOut = 4.0;
 
-    /* '<S37>:206:25' */
+    /* '<S38>:206:25' */
     Gesamtsystem_DWork.magacin4++;
   } else if (Gesamtsystem_DWork.magacin5 < 5.0) {
-    /* '<S37>:206:27' */
-    /* '<S37>:206:28' */
+    /* '<S38>:206:27' */
+    /* '<S38>:206:28' */
     magacinOut = 5.0;
 
-    /* '<S37>:206:29' */
+    /* '<S38>:206:29' */
     Gesamtsystem_DWork.magacin5++;
   } else {
-    /* '<S37>:206:32' */
+    /* '<S38>:206:32' */
     magacinOut = -1.0;
   }
 
   return magacinOut;
 }
 
-/* Function for Chart: '<S3>/Sortieralgorithmus' */
+/* Function for Chart: '<S3>/Sortieralgorithmus2' */
 static real_T Gesamtsystem_findPlaceForRed(void)
 {
   real_T magacinOut;
 
-  /* MATLAB Function 'findPlaceForRed': '<S37>:204' */
+  /* MATLAB Function 'findPlaceForRed': '<S38>:204' */
   if ((Gesamtsystem_DWork.magacin1 == 0.0) ||
       ((Gesamtsystem_DWork.magacin1_LastCube == 1.0) &&
        (Gesamtsystem_DWork.magacin1 < 5.0))) {
-    /* '<S37>:204:3' */
-    /* '<S37>:204:4' */
+    /* '<S38>:204:3' */
+    /* '<S38>:204:4' */
     magacinOut = 1.0;
 
-    /* '<S37>:204:5' */
+    /* '<S38>:204:5' */
     Gesamtsystem_DWork.magacin1++;
 
-    /* '<S37>:204:6' */
+    /* '<S38>:204:6' */
     Gesamtsystem_DWork.magacin1_LastCube = 2.0;
   } else if ((Gesamtsystem_DWork.magacin2_LastCube == 1.0) &&
              (Gesamtsystem_DWork.magacin2 < 5.0)) {
-    /* '<S37>:204:8' */
-    /* '<S37>:204:9' */
+    /* '<S38>:204:8' */
+    /* '<S38>:204:9' */
     magacinOut = 2.0;
 
-    /* '<S37>:204:10' */
+    /* '<S38>:204:10' */
     Gesamtsystem_DWork.magacin2++;
 
-    /* '<S37>:204:11' */
+    /* '<S38>:204:11' */
     Gesamtsystem_DWork.magacin2_LastCube = 2.0;
   } else if (Gesamtsystem_DWork.magacin0 != 5.0) {
-    /* '<S37>:204:13' */
-    /* '<S37>:204:14' */
+    /* '<S38>:204:13' */
+    /* '<S38>:204:14' */
     magacinOut = 0.0;
 
-    /* '<S37>:204:15' */
+    /* '<S38>:204:15' */
     Gesamtsystem_DWork.magacin0++;
 
-    /* '<S37>:204:16' */
+    /* '<S38>:204:16' */
   } else if (Gesamtsystem_DWork.magacin3 != 5.0) {
-    /* '<S37>:204:19' */
-    /* '<S37>:204:20' */
+    /* '<S38>:204:19' */
+    /* '<S38>:204:20' */
     magacinOut = 3.0;
 
-    /* '<S37>:204:21' */
+    /* '<S38>:204:21' */
     Gesamtsystem_DWork.magacin3++;
 
-    /* '<S37>:204:22' */
+    /* '<S38>:204:22' */
   } else if ((Gesamtsystem_DWork.magacin1 <= Gesamtsystem_DWork.magacin4) &&
              (Gesamtsystem_DWork.magacin1 != 5.0)) {
-    /* '<S37>:204:24' */
-    /* '<S37>:204:25' */
+    /* '<S38>:204:24' */
+    /* '<S38>:204:25' */
     magacinOut = 1.0;
 
-    /* '<S37>:204:26' */
+    /* '<S38>:204:26' */
     Gesamtsystem_DWork.magacin1++;
 
-    /* '<S37>:204:27' */
+    /* '<S38>:204:27' */
     Gesamtsystem_DWork.magacin1_LastCube = 2.0;
   } else if (Gesamtsystem_DWork.magacin1 > Gesamtsystem_DWork.magacin4) {
-    /* '<S37>:204:29' */
-    /* '<S37>:204:30' */
+    /* '<S38>:204:29' */
+    /* '<S38>:204:30' */
     magacinOut = 4.0;
 
-    /* '<S37>:204:31' */
+    /* '<S38>:204:31' */
     Gesamtsystem_DWork.magacin4++;
   } else if ((Gesamtsystem_DWork.magacin2 <= Gesamtsystem_DWork.magacin5) &&
              (Gesamtsystem_DWork.magacin2 != 5.0)) {
-    /* '<S37>:204:34' */
-    /* '<S37>:204:35' */
+    /* '<S38>:204:34' */
+    /* '<S38>:204:35' */
     magacinOut = 2.0;
 
-    /* '<S37>:204:36' */
+    /* '<S38>:204:36' */
     Gesamtsystem_DWork.magacin2++;
 
-    /* '<S37>:204:37' */
+    /* '<S38>:204:37' */
     Gesamtsystem_DWork.magacin2_LastCube = 2.0;
   } else if (Gesamtsystem_DWork.magacin2 > Gesamtsystem_DWork.magacin5) {
-    /* '<S37>:204:39' */
-    /* '<S37>:204:41' */
+    /* '<S38>:204:39' */
+    /* '<S38>:204:41' */
     magacinOut = 5.0;
 
-    /* '<S37>:204:42' */
+    /* '<S38>:204:42' */
     Gesamtsystem_DWork.magacin5++;
 
-    /* '<S37>:204:43' */
+    /* '<S38>:204:43' */
   } else {
-    /* '<S37>:204:46' */
+    /* '<S38>:204:46' */
     magacinOut = -1.0;
   }
 
@@ -1182,7 +1261,7 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
 {
   real_T y;
   boolean_T rtb_VergleichmitSchwellwert;
-  boolean_T rtb_VergleichmitSchwellwert_f;
+  boolean_T rtb_VergleichmitSchwellwert_l;
   real_T rtb_Sum;
   real_T rtb_MultiportSwitch_idx_0;
   real_T rtb_MultiportSwitch_idx_1;
@@ -1194,7 +1273,7 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
     rate_monotonic_scheduler();
   }
 
-  /* S-Function (c280xadc): '<S3>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
+  /* S-Function (c280xadc): '<S3>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
   {
     AdcRegs.ADCTRL2.bit.RST_SEQ1 = 1;  /* Reset SEQ1 module*/
     AdcRegs.ADCST.bit.INT_SEQ1_CLR = 1;/*clear INT sequencer*/
@@ -1204,22 +1283,21 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
 
     asm(" RPT #11 || NOP");
     Gesamtsystem_B.AnalogDigitalWandlungSampletime = (AdcRegs.ADCRESULT0) >> 4;
-    Gesamtsystem_B.AnalogDigitalWandlungSampleti_i = (AdcRegs.ADCRESULT1) >> 4;
-    Gesamtsystem_B.AnalogDigitalWandlungSampleti_g = (AdcRegs.ADCRESULT2) >> 4;
-    Gesamtsystem_B.AnalogDigitalWandlungSampleti_d = (AdcRegs.ADCRESULT3) >> 4;
+    Gesamtsystem_B.AnalogDigitalWandlungSampleti_j = (AdcRegs.ADCRESULT1) >> 4;
+    Gesamtsystem_B.AnalogDigitalWandlungSamplet_jy = (AdcRegs.ADCRESULT2) >> 4;
   }
 
-  /* RelationalOperator: '<S42>/Vergleich mit  Schwellwert' incorporates:
-   *  Constant: '<S42>/Constant'
+  /* RelationalOperator: '<S44>/Vergleich mit  Schwellwert' incorporates:
+   *  Constant: '<S44>/Constant'
    */
   rtb_VergleichmitSchwellwert = (Gesamtsystem_P.Constant_Value <=
-    Gesamtsystem_B.AnalogDigitalWandlungSampleti_g);
+    Gesamtsystem_B.AnalogDigitalWandlungSamplet_jy);
 
-  /* MultiPortSwitch: '<S43>/Multiport Switch' incorporates:
-   *  Constant: '<S43>/Constant1'
-   *  Constant: '<S43>/either edge'
-   *  Constant: '<S43>/neg. edge'
-   *  Constant: '<S43>/pos. edge'
+  /* MultiPortSwitch: '<S45>/Multiport Switch' incorporates:
+   *  Constant: '<S45>/Constant1'
+   *  Constant: '<S45>/either edge'
+   *  Constant: '<S45>/neg. edge'
+   *  Constant: '<S45>/pos. edge'
    */
   switch ((int16_T)Gesamtsystem_P.EdgeDetector1_model) {
    case 1:
@@ -1238,164 +1316,164 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
     break;
   }
 
-  /* End of MultiPortSwitch: '<S43>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S45>/Multiport Switch' */
 
-  /* Outputs for Enabled SubSystem: '<S43>/POSITIVE Edge' */
-  /* Memory: '<S43>/Memory' */
+  /* Outputs for Enabled SubSystem: '<S45>/POSITIVE Edge' */
+  /* Memory: '<S45>/Memory' */
   Gesamtsystem_POSITIVEEdge(rtb_MultiportSwitch_idx_0,
     rtb_VergleichmitSchwellwert, Gesamtsystem_DWork.Memory_PreviousInput,
     &Gesamtsystem_B.POSITIVEEdge);
 
-  /* End of Outputs for SubSystem: '<S43>/POSITIVE Edge' */
+  /* End of Outputs for SubSystem: '<S45>/POSITIVE Edge' */
 
-  /* Outputs for Enabled SubSystem: '<S43>/NEGATIVE Edge' */
+  /* Outputs for Enabled SubSystem: '<S45>/NEGATIVE Edge' */
   Gesamtsystem_NEGATIVEEdge(rtb_MultiportSwitch_idx_1,
     rtb_VergleichmitSchwellwert, Gesamtsystem_DWork.Memory_PreviousInput,
     &Gesamtsystem_B.NEGATIVEEdge);
 
-  /* End of Outputs for SubSystem: '<S43>/NEGATIVE Edge' */
+  /* End of Outputs for SubSystem: '<S45>/NEGATIVE Edge' */
 
-  /* RelationalOperator: '<S42>/Vergleich mit Schwellwert' incorporates:
-   *  Constant: '<S42>/Heuristisch ermittelter Schwellwert'
+  /* RelationalOperator: '<S44>/Vergleich mit Schwellwert' incorporates:
+   *  Constant: '<S44>/Heuristisch ermittelter Schwellwert'
    */
-  rtb_VergleichmitSchwellwert_f =
-    (Gesamtsystem_B.AnalogDigitalWandlungSampleti_d <=
+  rtb_VergleichmitSchwellwert_l =
+    (Gesamtsystem_B.AnalogDigitalWandlungSampletime <=
      Gesamtsystem_P.HeuristischermittelterSchwellwe);
 
-  /* MATLAB Function: '<S42>/MATLAB Function2' incorporates:
-   *  UnitDelay: '<S42>/Unit Delay3'
-   *  UnitDelay: '<S42>/Unit Delay4'
-   *  UnitDelay: '<S42>/Unit Delay5'
+  /* MATLAB Function: '<S44>/MATLAB Function2' incorporates:
+   *  UnitDelay: '<S44>/Unit Delay3'
+   *  UnitDelay: '<S44>/Unit Delay4'
+   *  UnitDelay: '<S44>/Unit Delay5'
    */
-  /* MATLAB Function 'Subsystem/getAngle/Messung des absoluten Winkels -  Auswertung der Encodersignale/MATLAB Function2': '<S46>:1' */
-  /* '<S46>:1:3' */
+  /* MATLAB Function 'Subsystem/getAngle2/Messung des absoluten Winkels -  Auswertung der Encodersignale/MATLAB Function2': '<S48>:1' */
+  /* '<S48>:1:3' */
   y = 1.0;
   tmp_0 = !Gesamtsystem_DWork.UnitDelay3_DSTATE;
   tmp_1 = !Gesamtsystem_DWork.UnitDelay4_DSTATE;
   tmp = (tmp_0 && tmp_1);
-  if (tmp && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_f))
+  if (tmp && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_l))
   {
-    /* '<S46>:1:7' */
+    /* '<S48>:1:7' */
     y = Gesamtsystem_DWork.UnitDelay5_DSTATE;
   }
 
-  if (tmp && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_f) {
-    /* '<S46>:1:10' */
-    /* '<S46>:1:11' */
+  if (tmp && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_l) {
+    /* '<S48>:1:10' */
+    /* '<S48>:1:11' */
     y = 1.0;
   }
 
-  if (tmp && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_f)) {
-    /* '<S46>:1:14' */
-    /* '<S46>:1:15' */
+  if (tmp && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_l)) {
+    /* '<S48>:1:14' */
+    /* '<S48>:1:15' */
     y = -1.0;
   }
 
   tmp_0 = (tmp_0 && Gesamtsystem_DWork.UnitDelay4_DSTATE);
-  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_f))
+  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_l))
   {
-    /* '<S46>:1:22' */
-    /* '<S46>:1:23' */
+    /* '<S48>:1:22' */
+    /* '<S48>:1:23' */
     y = -1.0;
   }
 
-  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_f)
+  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_l)
   {
-    /* '<S46>:1:26' */
-    /* '<S46>:1:27' */
+    /* '<S48>:1:26' */
+    /* '<S48>:1:27' */
     y = Gesamtsystem_DWork.UnitDelay5_DSTATE;
   }
 
-  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_f) {
-    /* '<S46>:1:34' */
-    /* '<S46>:1:35' */
+  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_l) {
+    /* '<S48>:1:34' */
+    /* '<S48>:1:35' */
     y = 1.0;
   }
 
   tmp_0 = (Gesamtsystem_DWork.UnitDelay3_DSTATE && tmp_1);
-  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_f))
+  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && (!rtb_VergleichmitSchwellwert_l))
   {
-    /* '<S46>:1:38' */
-    /* '<S46>:1:39' */
+    /* '<S48>:1:38' */
+    /* '<S48>:1:39' */
     y = 1.0;
   }
 
-  if (tmp_0 && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_f))
+  if (tmp_0 && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_l))
   {
-    /* '<S46>:1:46' */
-    /* '<S46>:1:47' */
+    /* '<S48>:1:46' */
+    /* '<S48>:1:47' */
     y = Gesamtsystem_DWork.UnitDelay5_DSTATE;
   }
 
-  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_f) {
-    /* '<S46>:1:50' */
-    /* '<S46>:1:51' */
+  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_l) {
+    /* '<S48>:1:50' */
+    /* '<S48>:1:51' */
     y = -1.0;
   }
 
   tmp_0 = (Gesamtsystem_DWork.UnitDelay3_DSTATE &&
            Gesamtsystem_DWork.UnitDelay4_DSTATE);
-  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_f)
+  if (tmp_0 && (!rtb_VergleichmitSchwellwert) && rtb_VergleichmitSchwellwert_l)
   {
-    /* '<S46>:1:58' */
-    /* '<S46>:1:59' */
+    /* '<S48>:1:58' */
+    /* '<S48>:1:59' */
     y = -1.0;
   }
 
-  if (tmp_0 && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_f))
+  if (tmp_0 && rtb_VergleichmitSchwellwert && (!rtb_VergleichmitSchwellwert_l))
   {
-    /* '<S46>:1:62' */
-    /* '<S46>:1:63' */
+    /* '<S48>:1:62' */
+    /* '<S48>:1:63' */
     y = 1.0;
   }
 
-  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_f) {
-    /* '<S46>:1:66' */
-    /* '<S46>:1:67' */
+  if (tmp_0 && rtb_VergleichmitSchwellwert && rtb_VergleichmitSchwellwert_l) {
+    /* '<S48>:1:66' */
+    /* '<S48>:1:67' */
     y = Gesamtsystem_DWork.UnitDelay5_DSTATE;
   }
 
   if (y == 1.0) {
-    /* '<S46>:1:70' */
-    /* '<S46>:1:71' */
+    /* '<S48>:1:70' */
+    /* '<S48>:1:71' */
     Gesamtsystem_B.RL = 1.0;
   } else {
-    /* '<S46>:1:73' */
+    /* '<S48>:1:73' */
     Gesamtsystem_B.RL = 0.0;
   }
 
-  /* MATLAB Function: '<S42>/MATLAB Function1' incorporates:
-   *  Logic: '<S43>/Logical Operator1'
-   *  MATLAB Function: '<S42>/MATLAB Function2'
-   *  Product: '<S42>/Product3'
-   *  UnitDelay: '<S42>/Unit Delay1'
+  /* MATLAB Function: '<S44>/MATLAB Function1' incorporates:
+   *  Logic: '<S45>/Logical Operator1'
+   *  MATLAB Function: '<S44>/MATLAB Function2'
+   *  Product: '<S44>/Product3'
+   *  UnitDelay: '<S44>/Unit Delay1'
    */
   Gesamtsyste_MATLABFunction1((real_T)
     (Gesamtsystem_B.POSITIVEEdge.RelationalOperator1 ||
      Gesamtsystem_B.NEGATIVEEdge.RelationalOperator1) * y,
     Gesamtsystem_DWork.UnitDelay1_DSTATE, &Gesamtsystem_B.sf_MATLABFunction1);
 
-  /* Product: '<S42>/Product1' incorporates:
-   *  Constant: '<S42>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,043'
+  /* Product: '<S44>/Product1' incorporates:
+   *  Constant: '<S44>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,043'
    */
   rtb_Sum = Gesamtsystem_P.WinkelFlankePolulo3416V022Polul *
     Gesamtsystem_B.sf_MATLABFunction1.y;
 
-  /* MultiPortSwitch: '<S44>/Multiport Switch' incorporates:
-   *  Constant: '<S44>/Constant1'
-   *  Constant: '<S44>/either edge'
-   *  Constant: '<S44>/neg. edge'
-   *  Constant: '<S44>/pos. edge'
+  /* MultiPortSwitch: '<S46>/Multiport Switch' incorporates:
+   *  Constant: '<S46>/Constant1'
+   *  Constant: '<S46>/either edge'
+   *  Constant: '<S46>/neg. edge'
+   *  Constant: '<S46>/pos. edge'
    */
   switch ((int16_T)Gesamtsystem_P.EdgeDetector2_model) {
    case 1:
-    rtb_MultiportSwitch_idx_0 = Gesamtsystem_P.posedge_Value_b[0];
-    rtb_MultiportSwitch_idx_1 = Gesamtsystem_P.posedge_Value_b[1];
+    rtb_MultiportSwitch_idx_0 = Gesamtsystem_P.posedge_Value_c[0];
+    rtb_MultiportSwitch_idx_1 = Gesamtsystem_P.posedge_Value_c[1];
     break;
 
    case 2:
-    rtb_MultiportSwitch_idx_0 = Gesamtsystem_P.negedge_Value_h[0];
-    rtb_MultiportSwitch_idx_1 = Gesamtsystem_P.negedge_Value_h[1];
+    rtb_MultiportSwitch_idx_0 = Gesamtsystem_P.negedge_Value_b[0];
+    rtb_MultiportSwitch_idx_1 = Gesamtsystem_P.negedge_Value_b[1];
     break;
 
    default:
@@ -1404,57 +1482,53 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
     break;
   }
 
-  /* End of MultiPortSwitch: '<S44>/Multiport Switch' */
+  /* End of MultiPortSwitch: '<S46>/Multiport Switch' */
 
-  /* Outputs for Enabled SubSystem: '<S44>/POSITIVE Edge' */
-  /* Memory: '<S44>/Memory' */
+  /* Outputs for Enabled SubSystem: '<S46>/POSITIVE Edge' */
+  /* Memory: '<S46>/Memory' */
   Gesamtsystem_POSITIVEEdge(rtb_MultiportSwitch_idx_0,
-    rtb_VergleichmitSchwellwert_f, Gesamtsystem_DWork.Memory_PreviousInput_a,
-    &Gesamtsystem_B.POSITIVEEdge_j);
+    rtb_VergleichmitSchwellwert_l, Gesamtsystem_DWork.Memory_PreviousInput_n,
+    &Gesamtsystem_B.POSITIVEEdge_n);
 
-  /* End of Outputs for SubSystem: '<S44>/POSITIVE Edge' */
+  /* End of Outputs for SubSystem: '<S46>/POSITIVE Edge' */
 
-  /* Outputs for Enabled SubSystem: '<S44>/NEGATIVE Edge' */
+  /* Outputs for Enabled SubSystem: '<S46>/NEGATIVE Edge' */
   Gesamtsystem_NEGATIVEEdge(rtb_MultiportSwitch_idx_1,
-    rtb_VergleichmitSchwellwert_f, Gesamtsystem_DWork.Memory_PreviousInput_a,
+    rtb_VergleichmitSchwellwert_l, Gesamtsystem_DWork.Memory_PreviousInput_n,
     &Gesamtsystem_B.NEGATIVEEdge_i);
 
-  /* End of Outputs for SubSystem: '<S44>/NEGATIVE Edge' */
+  /* End of Outputs for SubSystem: '<S46>/NEGATIVE Edge' */
 
-  /* MATLAB Function: '<S42>/MATLAB Function3' incorporates:
-   *  Logic: '<S44>/Logical Operator1'
-   *  MATLAB Function: '<S42>/MATLAB Function2'
-   *  Product: '<S42>/Product'
-   *  UnitDelay: '<S42>/Unit Delay2'
+  /* MATLAB Function: '<S44>/MATLAB Function3' incorporates:
+   *  Logic: '<S46>/Logical Operator1'
+   *  MATLAB Function: '<S44>/MATLAB Function2'
+   *  Product: '<S44>/Product'
+   *  UnitDelay: '<S44>/Unit Delay2'
    */
   Gesamtsyste_MATLABFunction1(y * (real_T)
-    (Gesamtsystem_B.POSITIVEEdge_j.RelationalOperator1 ||
+    (Gesamtsystem_B.POSITIVEEdge_n.RelationalOperator1 ||
      Gesamtsystem_B.NEGATIVEEdge_i.RelationalOperator1),
     Gesamtsystem_DWork.UnitDelay2_DSTATE, &Gesamtsystem_B.sf_MATLABFunction3);
 
-  /* Sum: '<S42>/Sum' incorporates:
-   *  Constant: '<S42>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,1'
-   *  Product: '<S42>/Product2'
+  /* Sum: '<S44>/Sum' incorporates:
+   *  Constant: '<S44>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,1'
+   *  Product: '<S44>/Product2'
    */
   rtb_Sum += Gesamtsystem_B.sf_MATLABFunction3.y *
-    Gesamtsystem_P.WinkelFlankePolulo3416V022Pol_o;
+    Gesamtsystem_P.WinkelFlankePolulo3416V022Pol_i;
 
-  /* RateTransition: '<S38>/Rate Transition3' */
+  /* RateTransition: '<S40>/Rate Transition3' */
   if (Gesamtsystem_M->Timing.RateInteraction.TID0_1) {
     Gesamtsystem_B.RateTransition3 = rtb_Sum;
 
-    /* RateTransition: '<S3>/Rate Transition2' */
-    Gesamtsystem_B.RateTransition2 =
-      Gesamtsystem_B.AnalogDigitalWandlungSampletime;
-
     /* RateTransition: '<S3>/Rate Transition3' */
-    Gesamtsystem_B.RateTransition3_a =
-      Gesamtsystem_B.AnalogDigitalWandlungSampleti_i;
+    Gesamtsystem_B.RateTransition3_j =
+      Gesamtsystem_B.AnalogDigitalWandlungSampleti_j;
   }
 
-  /* End of RateTransition: '<S38>/Rate Transition3' */
+  /* End of RateTransition: '<S40>/Rate Transition3' */
 
-  /* S-Function (c280xgpio_do): '<S38>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
+  /* S-Function (c280xgpio_do): '<S40>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
   {
     if (Gesamtsystem_B.RL)
       GpioDataRegs.GPBSET.bit.GPIO34 = 1;
@@ -1462,27 +1536,27 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
       GpioDataRegs.GPBCLEAR.bit.GPIO34 = 1;
   }
 
-  /* Update for Memory: '<S43>/Memory' */
+  /* Update for Memory: '<S45>/Memory' */
   Gesamtsystem_DWork.Memory_PreviousInput = rtb_VergleichmitSchwellwert;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay3' */
+  /* Update for UnitDelay: '<S44>/Unit Delay3' */
   Gesamtsystem_DWork.UnitDelay3_DSTATE = rtb_VergleichmitSchwellwert;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay4' */
-  Gesamtsystem_DWork.UnitDelay4_DSTATE = rtb_VergleichmitSchwellwert_f;
+  /* Update for UnitDelay: '<S44>/Unit Delay4' */
+  Gesamtsystem_DWork.UnitDelay4_DSTATE = rtb_VergleichmitSchwellwert_l;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay5' incorporates:
-   *  MATLAB Function: '<S42>/MATLAB Function2'
+  /* Update for UnitDelay: '<S44>/Unit Delay5' incorporates:
+   *  MATLAB Function: '<S44>/MATLAB Function2'
    */
   Gesamtsystem_DWork.UnitDelay5_DSTATE = y;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay1' */
+  /* Update for UnitDelay: '<S44>/Unit Delay1' */
   Gesamtsystem_DWork.UnitDelay1_DSTATE = Gesamtsystem_B.sf_MATLABFunction1.y;
 
-  /* Update for Memory: '<S44>/Memory' */
-  Gesamtsystem_DWork.Memory_PreviousInput_a = rtb_VergleichmitSchwellwert_f;
+  /* Update for Memory: '<S46>/Memory' */
+  Gesamtsystem_DWork.Memory_PreviousInput_n = rtb_VergleichmitSchwellwert_l;
 
-  /* Update for UnitDelay: '<S42>/Unit Delay2' */
+  /* Update for UnitDelay: '<S44>/Unit Delay2' */
   Gesamtsystem_DWork.UnitDelay2_DSTATE = Gesamtsystem_B.sf_MATLABFunction3.y;
 }
 
@@ -1490,7 +1564,8 @@ void Gesamtsystem_step0(void)          /* Sample time: [2.0E-5s, 0.0s] */
 void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
 {
   /* local block i/o variables */
-  real_T rtb_y_l;
+  real_T rtb_y_o;
+  real_T rtb_DeadZone;
   int32_T bitIdx;
   int32_T intVal;
   int16_T j;
@@ -1511,7 +1586,82 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
   int16_T i;
   real_T x_Wagen_tmp;
 
-  /* RateTransition: '<S12>/Rate Transition' */
+  /* S-Function (c280xgpio_di): '<S2>/Uebergabeschalter' */
+  {
+    Gesamtsystem_B.Uebergabeschalter = GpioDataRegs.GPADAT.bit.GPIO24;
+  }
+
+  /* Chart: '<S2>/Motorsteuerung bei der Uebergabe' */
+  if (Gesamtsystem_DWork.temporalCounter_i1 < 1023U) {
+    Gesamtsystem_DWork.temporalCounter_i1++;
+  }
+
+  /* Gateway: Nexonar-System/Motorsteuerung bei der
+     Uebergabe */
+  /* During: Nexonar-System/Motorsteuerung bei der
+     Uebergabe */
+  if (Gesamtsystem_DWork.is_active_c9_Gesamtsystem == 0U) {
+    /* Entry: Nexonar-System/Motorsteuerung bei der
+       Uebergabe */
+    Gesamtsystem_DWork.is_active_c9_Gesamtsystem = 1U;
+
+    /* Entry Internal: Nexonar-System/Motorsteuerung bei der
+       Uebergabe */
+    /* Transition: '<S11>:1405' */
+    Gesamtsystem_DWork.is_c9_Gesamtsystem = Gesamtsystem_IN_Start;
+  } else {
+    switch (Gesamtsystem_DWork.is_c9_Gesamtsystem) {
+     case Gesamtsystem_IN_Start:
+      /* During 'Start': '<S11>:1404' */
+      if (Gesamtsystem_B.Uebergabeschalter) {
+        /* Transition: '<S11>:1411' */
+        Gesamtsystem_DWork.is_c9_Gesamtsystem = Gesamtsystem_IN_Warten1;
+        Gesamtsystem_DWork.temporalCounter_i1 = 0U;
+
+        /* Entry 'Warten1': '<S11>:1410' */
+        Gesamtsystem_B.Value = 1.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_Stehen:
+      Gesamtsystem_B.Value = 0.0;
+
+      /* During 'Stehen': '<S11>:1406' */
+      if (Gesamtsystem_DWork.temporalCounter_i1 >= 1000U) {
+        /* Transition: '<S11>:1409' */
+        Gesamtsystem_DWork.is_c9_Gesamtsystem = Gesamtsystem_IN_Weiter;
+
+        /* Entry 'Weiter': '<S11>:1408' */
+        Gesamtsystem_B.Value = 1.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_Warten1:
+      Gesamtsystem_B.Value = 1.0;
+
+      /* During 'Warten1': '<S11>:1410' */
+      if (Gesamtsystem_B.Uebergabeschalter &&
+          (Gesamtsystem_DWork.temporalCounter_i1 >= 1000U)) {
+        /* Transition: '<S11>:1407' */
+        Gesamtsystem_DWork.is_c9_Gesamtsystem = Gesamtsystem_IN_Stehen;
+        Gesamtsystem_DWork.temporalCounter_i1 = 0U;
+
+        /* Entry 'Stehen': '<S11>:1406' */
+        Gesamtsystem_B.Value = 0.0;
+      }
+      break;
+
+     default:
+      Gesamtsystem_B.Value = 1.0;
+
+      /* During 'Weiter': '<S11>:1408' */
+      break;
+    }
+  }
+
+  /* End of Chart: '<S2>/Motorsteuerung bei der Uebergabe' */
+
+  /* RateTransition: '<S13>/Rate Transition' */
   Gesamtsystem_DWork.RateTransition_semaphoreTaken =
     Gesamtsystem_DWork.RateTransition_ActiveBufIdx;
   j = Gesamtsystem_DWork.RateTransition_semaphoreTaken * 20;
@@ -1520,20 +1670,20 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       Gesamtsystem_DWork.RateTransition_Buffer[i + j];
   }
 
-  /* End of RateTransition: '<S12>/Rate Transition' */
+  /* End of RateTransition: '<S13>/Rate Transition' */
 
-  /* Chart: '<S12>/Chart8' */
+  /* Chart: '<S13>/Chart8' */
   /* Gateway: Nexonar-System/Nexonar-Positionsbestimmung/Chart8 */
   /* During: Nexonar-System/Nexonar-Positionsbestimmung/Chart8 */
-  if (Gesamtsystem_DWork.is_active_c25_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c17_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Nexonar-Positionsbestimmung/Chart8 */
-    Gesamtsystem_DWork.is_active_c25_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c17_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Nexonar-Positionsbestimmung/Chart8 */
-    /* Transition: '<S26>:3' */
-    Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_init;
+    /* Transition: '<S27>:3' */
+    Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_init;
 
-    /* Entry 'init': '<S26>:2' */
+    /* Entry 'init': '<S27>:2' */
     Gesamtsystem_DWork.values_out1[0] = 0;
     Gesamtsystem_DWork.values_out1[1] = 0;
     Gesamtsystem_DWork.values_out1[2] = 0;
@@ -1555,9 +1705,9 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     Gesamtsystem_DWork.values_out1[18] = 0;
     Gesamtsystem_DWork.values_out1[19] = 0;
   } else {
-    switch (Gesamtsystem_DWork.is_c25_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c17_Gesamtsystem) {
      case IN_Anfang_found_Schritt_uebertr:
-      /* During 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S26>:126' */
+      /* During 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S27>:126' */
       if ((c28x_add_s16_s16_s16_sat(c28x_add_s16_s16_s16_sat
             (c28x_add_s16_s16_s16_sat(c28x_add_s16_s16_s16_sat
               (c28x_add_s16_s16_s16_sat(c28x_add_s16_s16_s16_sat
@@ -1742,17 +1892,17 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
              (Gesamtsystem_DWork.search, 8)]), 1792) ==
            Gesamtsystem_DWork.values_out1[c28x_add_s16_s16_s16_sat
            (Gesamtsystem_DWork.search, 9)])) {
-        /* Transition: '<S26>:144' */
-        /* Transition: '<S26>:145' */
-        /* Transition: '<S26>:146' */
-        /* Transition: '<S26>:151' */
-        /* Transition: '<S26>:150' */
-        /* Transition: '<S26>:149' */
-        /* Transition: '<S26>:147' */
-        /* Transition: '<S26>:156' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamts_IN_x5_valid_data_found1;
+        /* Transition: '<S27>:144' */
+        /* Transition: '<S27>:145' */
+        /* Transition: '<S27>:146' */
+        /* Transition: '<S27>:151' */
+        /* Transition: '<S27>:150' */
+        /* Transition: '<S27>:149' */
+        /* Transition: '<S27>:147' */
+        /* Transition: '<S27>:156' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamts_IN_x5_valid_data_found1;
 
-        /* Entry 'x5_valid_data_found1': '<S26>:148' */
+        /* Entry 'x5_valid_data_found1': '<S27>:148' */
         Gesamtsystem_B.valid_values1 =
           Gesamtsystem_DWork.values_out1[c28x_add_s16_s16_s16_sat
           (Gesamtsystem_DWork.search, 1)];
@@ -1780,87 +1930,87 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
         Gesamtsystem_DWork.zaehler = c28x_add_s32_s32_s32_sat
           (Gesamtsystem_DWork.zaehler, 1L);
       } else {
-        /* Transition: '<S26>:135' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_x1_search1;
+        /* Transition: '<S27>:135' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_x1_search1;
 
-        /* Entry 'x1_search1': '<S26>:125' */
+        /* Entry 'x1_search1': '<S27>:125' */
         Gesamtsystem_DWork.search = c28x_add_s16_s16_s16_sat
           (Gesamtsystem_DWork.search, 1);
       }
       break;
 
      case Gesamtsystem_IN_init:
-      /* During 'init': '<S26>:2' */
-      /* Transition: '<S26>:112' */
-      Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
+      /* During 'init': '<S27>:2' */
+      /* Transition: '<S27>:112' */
+      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
       Gesam_enter_atomic_wert_erkannt();
       break;
 
      case Gesamtsystem_IN_wert_erkannt:
-      /* During 'wert_erkannt': '<S26>:109' */
-      /* Transition: '<S26>:116' */
-      Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_wert_erkannt2;
+      /* During 'wert_erkannt': '<S27>:109' */
+      /* Transition: '<S27>:116' */
+      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_wert_erkannt2;
 
-      /* Entry 'wert_erkannt2': '<S26>:115' */
+      /* Entry 'wert_erkannt2': '<S27>:115' */
       Gesamtsystem_DWork.search = 0;
       Gesamtsystem_DWork.counter = c28x_add_s32_s32_s32_sat
         (Gesamtsystem_DWork.counter, 1L);
       break;
 
      case Gesamtsystem_IN_wert_erkannt2:
-      /* During 'wert_erkannt2': '<S26>:115' */
+      /* During 'wert_erkannt2': '<S27>:115' */
       if (Gesamtsystem_DWork.values_out1[Gesamtsystem_DWork.search] == 88) {
-        /* Transition: '<S26>:127' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = IN_Anfang_found_Schritt_uebertr;
+        /* Transition: '<S27>:127' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = IN_Anfang_found_Schritt_uebertr;
 
-        /* Entry 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S26>:126' */
+        /* Entry 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S27>:126' */
         Gesamtsystem_DWork.x_found = c28x_add_s32_s32_s32_sat
           (Gesamtsystem_DWork.x_found, 1L);
       } else {
-        /* Transition: '<S26>:128' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_x1_search1;
+        /* Transition: '<S27>:128' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_x1_search1;
 
-        /* Entry 'x1_search1': '<S26>:125' */
+        /* Entry 'x1_search1': '<S27>:125' */
         Gesamtsystem_DWork.search = c28x_add_s16_s16_s16_sat
           (Gesamtsystem_DWork.search, 1);
       }
       break;
 
      case Gesamtsystem_IN_x1_search1:
-      /* During 'x1_search1': '<S26>:125' */
+      /* During 'x1_search1': '<S27>:125' */
       if (Gesamtsystem_DWork.values_out1[Gesamtsystem_DWork.search] == 88) {
-        /* Transition: '<S26>:129' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = IN_Anfang_found_Schritt_uebertr;
+        /* Transition: '<S27>:129' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = IN_Anfang_found_Schritt_uebertr;
 
-        /* Entry 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S26>:126' */
+        /* Entry 'Anfang_found_Schritt_uebertragen_weglassen_performance': '<S27>:126' */
         Gesamtsystem_DWork.x_found = c28x_add_s32_s32_s32_sat
           (Gesamtsystem_DWork.x_found, 1L);
       } else if (Gesamtsystem_DWork.search < 19) {
-        /* Transition: '<S26>:130' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_x1_search1;
+        /* Transition: '<S27>:130' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_x1_search1;
 
-        /* Entry 'x1_search1': '<S26>:125' */
+        /* Entry 'x1_search1': '<S27>:125' */
         Gesamtsystem_DWork.search = c28x_add_s16_s16_s16_sat
           (Gesamtsystem_DWork.search, 1);
       } else {
-        /* Transition: '<S26>:133' */
-        Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
+        /* Transition: '<S27>:133' */
+        Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
         Gesam_enter_atomic_wert_erkannt();
       }
       break;
 
      default:
-      /* During 'x5_valid_data_found1': '<S26>:148' */
-      /* Transition: '<S26>:152' */
-      Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
+      /* During 'x5_valid_data_found1': '<S27>:148' */
+      /* Transition: '<S27>:152' */
+      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_wert_erkannt;
       Gesam_enter_atomic_wert_erkannt();
       break;
     }
   }
 
-  /* End of Chart: '<S12>/Chart8' */
+  /* End of Chart: '<S13>/Chart8' */
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter2' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter2' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values1;
@@ -1870,9 +2020,9 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter2' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter2' */
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter3' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter3' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values2;
@@ -1882,26 +2032,26 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter3' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter3' */
 
-  /* Chart: '<S12>/Chart6' */
+  /* Chart: '<S13>/Chart6' */
   /* Gateway: Nexonar-System/Nexonar-Positionsbestimmung/Chart6 */
   /* During: Nexonar-System/Nexonar-Positionsbestimmung/Chart6 */
-  if (Gesamtsystem_DWork.is_active_c24_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c16_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Nexonar-Positionsbestimmung/Chart6 */
-    Gesamtsystem_DWork.is_active_c24_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c16_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Nexonar-Positionsbestimmung/Chart6 */
-    /* Transition: '<S25>:3' */
-    Gesamtsystem_DWork.is_c24_Gesamtsystem = Gesamtsystem_IN_x0;
+    /* Transition: '<S26>:3' */
+    Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_x0;
   } else {
-    switch (Gesamtsystem_DWork.is_c24_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c16_Gesamtsystem) {
      case Gesamtsystem_IN_Daten_einlesen:
-      /* During 'Daten_einlesen': '<S25>:17' */
-      /* Transition: '<S25>:24' */
-      Gesamtsystem_DWork.is_c24_Gesamtsystem = Gesamtsystem_IN_x1_1;
+      /* During 'Daten_einlesen': '<S26>:17' */
+      /* Transition: '<S26>:24' */
+      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_x1_1;
 
-      /* Entry 'x1_1': '<S25>:26' */
+      /* Entry 'x1_1': '<S26>:26' */
       Gesamtsystem_B.int16x_bin[0] = rtb_IntegertoBitConverter2[0];
       Gesamtsystem_B.int16x_bin[1] = rtb_IntegertoBitConverter2[1];
       Gesamtsystem_B.int16x_bin[2] = rtb_IntegertoBitConverter2[2];
@@ -1921,22 +2071,22 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_x0:
-      /* During 'x0': '<S25>:2' */
-      /* Transition: '<S25>:7' */
-      Gesamtsystem_DWork.is_c24_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x0': '<S26>:2' */
+      /* Transition: '<S26>:7' */
+      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
 
      default:
-      /* During 'x1_1': '<S25>:26' */
-      /* Transition: '<S25>:25' */
-      Gesamtsystem_DWork.is_c24_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x1_1': '<S26>:26' */
+      /* Transition: '<S26>:25' */
+      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
     }
   }
 
-  /* End of Chart: '<S12>/Chart6' */
+  /* End of Chart: '<S13>/Chart6' */
 
-  /* S-Function (scominttobit): '<S12>/Bit to Integer Converter' */
+  /* S-Function (scominttobit): '<S13>/Bit to Integer Converter' */
   /* Bit to Integer Conversion */
   bitIdx = 0L;
   intVal = 0L;
@@ -1952,14 +2102,15 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx++;
   }
 
-  /* Rounding: '<S12>/Rounding Function' incorporates:
-   *  Gain: '<S12>/x in mm'
-   *  S-Function (scominttobit): '<S12>/Bit to Integer Converter'
+  /* Gain: '<S13>/x in mm' incorporates:
+   *  S-Function (scominttobit): '<S13>/Bit to Integer Converter'
    */
-  rtb_RoundingFunction = rt_roundd_snf((real_T)Gesamtsystem_P.xinmm_Gain *
-    (real32_T)intVal);
+  rtb_DeadZone = (real_T)Gesamtsystem_P.xinmm_Gain * (real32_T)intVal;
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter1' */
+  /* Rounding: '<S13>/Rounding Function' */
+  rtb_RoundingFunction = rt_roundd_snf(rtb_DeadZone);
+
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter1' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values3;
@@ -1969,9 +2120,9 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter1' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter1' */
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter4' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter4' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values4;
@@ -1981,26 +2132,26 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter4' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter4' */
 
-  /* Chart: '<S12>/Chart2' */
+  /* Chart: '<S13>/Chart2' */
   /* Gateway: Nexonar-System/Nexonar-Positionsbestimmung/Chart2 */
   /* During: Nexonar-System/Nexonar-Positionsbestimmung/Chart2 */
-  if (Gesamtsystem_DWork.is_active_c17_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c13_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Nexonar-Positionsbestimmung/Chart2 */
-    Gesamtsystem_DWork.is_active_c17_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c13_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Nexonar-Positionsbestimmung/Chart2 */
-    /* Transition: '<S23>:3' */
-    Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_x0;
+    /* Transition: '<S24>:3' */
+    Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_x0;
   } else {
-    switch (Gesamtsystem_DWork.is_c17_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c13_Gesamtsystem) {
      case Gesamtsystem_IN_Daten_einlesen:
-      /* During 'Daten_einlesen': '<S23>:17' */
-      /* Transition: '<S23>:24' */
-      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_x1_1;
+      /* During 'Daten_einlesen': '<S24>:17' */
+      /* Transition: '<S24>:24' */
+      Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_x1_1;
 
-      /* Entry 'x1_1': '<S23>:26' */
+      /* Entry 'x1_1': '<S24>:26' */
       Gesamtsystem_B.int16y_bin[0] = rtb_IntegertoBitConverter1[0];
       Gesamtsystem_B.int16y_bin[1] = rtb_IntegertoBitConverter1[1];
       Gesamtsystem_B.int16y_bin[2] = rtb_IntegertoBitConverter1[2];
@@ -2020,22 +2171,22 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_x0:
-      /* During 'x0': '<S23>:2' */
-      /* Transition: '<S23>:7' */
-      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x0': '<S24>:2' */
+      /* Transition: '<S24>:7' */
+      Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
 
      default:
-      /* During 'x1_1': '<S23>:26' */
-      /* Transition: '<S23>:25' */
-      Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x1_1': '<S24>:26' */
+      /* Transition: '<S24>:25' */
+      Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
     }
   }
 
-  /* End of Chart: '<S12>/Chart2' */
+  /* End of Chart: '<S13>/Chart2' */
 
-  /* S-Function (scominttobit): '<S12>/Bit to Integer Converter1' */
+  /* S-Function (scominttobit): '<S13>/Bit to Integer Converter1' */
   /* Bit to Integer Conversion */
   bitIdx = 0L;
   intVal = 0L;
@@ -2051,14 +2202,15 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx++;
   }
 
-  /* Rounding: '<S12>/Rounding Function1' incorporates:
-   *  Gain: '<S12>/y in mm'
-   *  S-Function (scominttobit): '<S12>/Bit to Integer Converter1'
+  /* Gain: '<S13>/y in mm' incorporates:
+   *  S-Function (scominttobit): '<S13>/Bit to Integer Converter1'
    */
-  rtb_RoundingFunction1 = rt_roundd_snf((real_T)Gesamtsystem_P.yinmm_Gain *
-    (real32_T)intVal);
+  rtb_DeadZone = (real_T)Gesamtsystem_P.yinmm_Gain * (real32_T)intVal;
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter5' */
+  /* Rounding: '<S13>/Rounding Function1' */
+  rtb_RoundingFunction1 = rt_roundd_snf(rtb_DeadZone);
+
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter5' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values5;
@@ -2068,9 +2220,9 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter5' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter5' */
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter6' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter6' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values6;
@@ -2080,26 +2232,26 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter6' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter6' */
 
-  /* Chart: '<S12>/Chart4' */
+  /* Chart: '<S13>/Chart4' */
   /* Gateway: Nexonar-System/Nexonar-Positionsbestimmung/Chart4 */
   /* During: Nexonar-System/Nexonar-Positionsbestimmung/Chart4 */
-  if (Gesamtsystem_DWork.is_active_c21_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c14_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Nexonar-Positionsbestimmung/Chart4 */
-    Gesamtsystem_DWork.is_active_c21_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c14_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Nexonar-Positionsbestimmung/Chart4 */
-    /* Transition: '<S24>:3' */
-    Gesamtsystem_DWork.is_c21_Gesamtsystem = Gesamtsystem_IN_x0;
+    /* Transition: '<S25>:3' */
+    Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_x0;
   } else {
-    switch (Gesamtsystem_DWork.is_c21_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c14_Gesamtsystem) {
      case Gesamtsystem_IN_Daten_einlesen:
-      /* During 'Daten_einlesen': '<S24>:17' */
-      /* Transition: '<S24>:24' */
-      Gesamtsystem_DWork.is_c21_Gesamtsystem = Gesamtsystem_IN_x1_1;
+      /* During 'Daten_einlesen': '<S25>:17' */
+      /* Transition: '<S25>:24' */
+      Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_x1_1;
 
-      /* Entry 'x1_1': '<S24>:26' */
+      /* Entry 'x1_1': '<S25>:26' */
       Gesamtsystem_B.int16a1_bin[0] = rtb_IntegertoBitConverter5[0];
       Gesamtsystem_B.int16a1_bin[1] = rtb_IntegertoBitConverter5[1];
       Gesamtsystem_B.int16a1_bin[2] = rtb_IntegertoBitConverter5[2];
@@ -2119,22 +2271,22 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_x0:
-      /* During 'x0': '<S24>:2' */
-      /* Transition: '<S24>:7' */
-      Gesamtsystem_DWork.is_c21_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x0': '<S25>:2' */
+      /* Transition: '<S25>:7' */
+      Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
 
      default:
-      /* During 'x1_1': '<S24>:26' */
-      /* Transition: '<S24>:25' */
-      Gesamtsystem_DWork.is_c21_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x1_1': '<S25>:26' */
+      /* Transition: '<S25>:25' */
+      Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
     }
   }
 
-  /* End of Chart: '<S12>/Chart4' */
+  /* End of Chart: '<S13>/Chart4' */
 
-  /* S-Function (scominttobit): '<S12>/Bit to Integer Converter2' */
+  /* S-Function (scominttobit): '<S13>/Bit to Integer Converter2' */
   /* Bit to Integer Conversion */
   bitIdx = 0L;
   intVal = 0L;
@@ -2150,12 +2302,13 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx++;
   }
 
-  /* Rounding: '<S12>/Rounding Function2' incorporates:
-   *  Gain: '<S12>/alpha in °'
-   *  S-Function (scominttobit): '<S12>/Bit to Integer Converter2'
+  /* Gain: '<S13>/alpha in °' incorporates:
+   *  S-Function (scominttobit): '<S13>/Bit to Integer Converter2'
    */
-  rtb_RoundingFunction2 = rt_roundd_snf((real_T)Gesamtsystem_P.alphain_Gain *
-    (real32_T)intVal);
+  rtb_DeadZone = (real_T)Gesamtsystem_P.alphain_Gain * (real32_T)intVal;
+
+  /* Rounding: '<S13>/Rounding Function2' */
+  rtb_RoundingFunction2 = rt_roundd_snf(rtb_DeadZone);
 
   /* MATLAB Function: '<S2>/Konvertierung Nexonar -> Fahrzeug Folgende Werte koennen für Nexonar eingestellt werden: - r_Versatz_Nexo: Radialer Versatz des Nexonars zur Rotationsachse des Fahrzeugs - phi_Versatz_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Rotationspunkt des Fahrzeugs) - psi_Offset_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Nexonar-Empfangstelle)' */
   /* MATLAB Function 'Nexonar-System/Konvertierung Nexonar -> Fahrzeug Folgende Werte koennen für Nexonar eingestellt werden: - r_Versatz_Nexo: Radialer Versatz des Nexonars zur Rotationsachse des Fahrzeugs - phi_Versatz_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Rotationspunkt des Fahrzeugs) - psi_Offset_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Nexonar-Empfangstelle)': '<S9>:1' */
@@ -2174,8 +2327,8 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     * 2.5);
 
   /* Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-  if (Gesamtsystem_DWork.temporalCounter_i1_k < 1023U) {
-    Gesamtsystem_DWork.temporalCounter_i1_k++;
+  if (Gesamtsystem_DWork.temporalCounter_i1_m < 1023U) {
+    Gesamtsystem_DWork.temporalCounter_i1_m++;
   }
 
   /* Gateway: Nexonar-System/Fahrablaufsteuerung
@@ -2225,75 +2378,77 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_Parken:
-      /* During 'Parken': '<S8>:1008' */
+      /* During 'Parken': '<S8>:1258' */
       if (Gesamtsystem_DWork.Counter == 3.0) {
         /* Transition: '<S8>:795' */
-        /* Exit Internal 'Parken': '<S8>:1008' */
+        /* Exit Internal 'Parken': '<S8>:1258' */
         Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_NO_ACTIVE_CHILD;
         Gesamtsystem_DWork.is_c5_Gesamtsystem = Gesamtsystem_IN_Ende;
       } else {
         switch (Gesamtsystem_DWork.is_Parken) {
          case Gesamtsystem_IN_Parken_1:
-          /* During 'Parken_1': '<S8>:1015' */
+          /* During 'Parken_1': '<S8>:1265' */
           if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
                Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
                 Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-            /* Transition: '<S8>:1010' */
+            /* Transition: '<S8>:1260' */
             Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Wechsel_1;
 
-            /* Entry 'Wechsel_1': '<S8>:1016' */
+            /* Entry 'Wechsel_1': '<S8>:1266' */
             Gesamtsystem_DWork.Counter++;
           }
           break;
 
          case Gesamtsystem_IN_Parken_2:
-          /* During 'Parken_2': '<S8>:1017' */
+          /* During 'Parken_2': '<S8>:1267' */
           if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
                Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
                 Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-            /* Transition: '<S8>:1012' */
+            /* Transition: '<S8>:1262' */
             Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Wechsel_2;
 
-            /* Entry 'Wechsel_2': '<S8>:1018' */
+            /* Entry 'Wechsel_2': '<S8>:1268' */
             Gesamtsystem_DWork.Counter++;
           }
           break;
 
          case Gesamtsystem_IN_Parken_3:
-          /* During 'Parken_3': '<S8>:1019' */
+          /* During 'Parken_3': '<S8>:1269' */
           if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
                Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
                 Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-            /* Transition: '<S8>:1014' */
+            /* Transition: '<S8>:1264' */
             Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Wechsel_3;
 
-            /* Entry 'Wechsel_3': '<S8>:1020' */
+            /* Entry 'Wechsel_3': '<S8>:1270' */
             Gesamtsystem_DWork.Counter++;
           }
           break;
 
          case Gesamtsystem_IN_Wechsel_1:
-          /* During 'Wechsel_1': '<S8>:1016' */
-          /* Transition: '<S8>:1011' */
+          /* During 'Wechsel_1': '<S8>:1266' */
+          /* Transition: '<S8>:1261' */
           Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Parken_2;
 
-          /* Entry 'Parken_2': '<S8>:1017' */
+          /* Entry 'Parken_2': '<S8>:1267' */
           Gesamtsystem_B.x_soll = 1620.0;
           Gesamtsystem_B.y_soll = -135.0;
+          Gesamtsystem_B.alpha_soll = -1.0;
           break;
 
          case Gesamtsystem_IN_Wechsel_2:
-          /* During 'Wechsel_2': '<S8>:1018' */
-          /* Transition: '<S8>:1013' */
+          /* During 'Wechsel_2': '<S8>:1268' */
+          /* Transition: '<S8>:1263' */
           Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Parken_3;
 
-          /* Entry 'Parken_3': '<S8>:1019' */
+          /* Entry 'Parken_3': '<S8>:1269' */
           Gesamtsystem_B.x_soll = 1640.0;
-          Gesamtsystem_B.y_soll = -132.0;
+          Gesamtsystem_B.y_soll = -131.0;
+          Gesamtsystem_B.alpha_soll = -1.0;
           break;
 
          default:
-          /* During 'Wechsel_3': '<S8>:1020' */
+          /* During 'Wechsel_3': '<S8>:1270' */
           break;
         }
       }
@@ -2311,84 +2466,89 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       Gesamtsystem_B.Gang = 0.0;
       Gesamtsystem_DWork.is_c5_Gesamtsystem = Gesamtsystem_IN_Sammeln;
 
-      /* Entry Internal 'Sammeln': '<S8>:1032' */
-      /* Transition: '<S8>:1033' */
+      /* Entry Internal 'Sammeln': '<S8>:1343' */
+      /* Transition: '<S8>:1344' */
       Gesamtsystem_DWork.Counter = 0.0;
       Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Anfahrpunkt_1;
 
-      /* Entry 'Anfahrpunkt_1': '<S8>:1060' */
+      /* Entry 'Anfahrpunkt_1': '<S8>:1373' */
       Gesamtsystem_B.x_soll = 1500.0;
       Gesamtsystem_B.y_soll = 0.0;
+      Gesamtsystem_B.alpha_soll = -1.0;
       break;
 
      default:
-      /* During 'Uebergabe': '<S8>:1021' */
+      /* During 'Uebergabe': '<S8>:1330' */
       if (Gesamtsystem_DWork.Counter == 2.0) {
-        /* Transition: '<S8>:1087' */
+        /* Transition: '<S8>:1341' */
         Gesamtsystem_B.Gang = 0.0;
 
-        /* Exit Internal 'Uebergabe': '<S8>:1021' */
+        /* Exit Internal 'Uebergabe': '<S8>:1330' */
         Gesamtsystem_DWork.is_Uebergabe = Gesamtsystem_IN_NO_ACTIVE_CHILD;
         Gesamtsystem_DWork.is_c5_Gesamtsystem = Gesamtsystem_IN_Parken;
 
-        /* Entry Internal 'Parken': '<S8>:1008' */
-        /* Transition: '<S8>:1009' */
+        /* Entry Internal 'Parken': '<S8>:1258' */
+        /* Transition: '<S8>:1259' */
         Gesamtsystem_DWork.Counter = 0.0;
         Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_Parken_1;
 
-        /* Entry 'Parken_1': '<S8>:1015' */
-        Gesamtsystem_B.x_soll = 1400.0;
+        /* Entry 'Parken_1': '<S8>:1265' */
+        Gesamtsystem_B.x_soll = 1420.0;
         Gesamtsystem_B.y_soll = -50.0;
+        Gesamtsystem_B.alpha_soll = -1.0;
       } else {
         switch (Gesamtsystem_DWork.is_Uebergabe) {
          case Ge_IN_Uebergabepunkt_x_Richtung:
-          /* During 'Uebergabepunkt_x_Richtung': '<S8>:1027' */
+          /* During 'Uebergabepunkt_x_Richtung': '<S8>:1336' */
           if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
                Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
                 Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-            /* Transition: '<S8>:1023' */
+            /* Transition: '<S8>:1332' */
             Gesamtsystem_DWork.x_least = Gesamtsystem_B.x_soll;
             Gesamtsystem_DWork.is_Uebergabe = Gesamtsystem_IN_Wechsel_1;
 
-            /* Entry 'Wechsel_1': '<S8>:1028' */
+            /* Entry 'Wechsel_1': '<S8>:1337' */
             Gesamtsystem_DWork.Counter++;
           }
           break;
 
          case Ge_IN_Uebergabepunkt_y_Richtung:
-          /* During 'Uebergabepunkt_y_Richtung': '<S8>:1029' */
-          if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
-               Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
-                Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-            /* Transition: '<S8>:1025' */
+          /* During 'Uebergabepunkt_y_Richtung': '<S8>:1338' */
+          if (Gesamtsystem_B.Uebergabeschalter || ((fabs(Gesamtsystem_B.x_soll -
+                 Gesamtsystem_B.x_Wagen) <= Gesamtsystem_B.Zielradius) && (fabs
+                (Gesamtsystem_B.y_soll - Gesamtsystem_B.y_Wagen) <=
+                Gesamtsystem_B.Zielradius))) {
+            /* Transition: '<S8>:1401' */
+            /* Transition: '<S8>:1334' */
             Gesamtsystem_DWork.is_Uebergabe = Gesamtsyste_IN_Warten_Uebergabe;
-            Gesamtsystem_DWork.temporalCounter_i1_k = 0U;
+            Gesamtsystem_DWork.temporalCounter_i1_m = 0U;
           }
           break;
 
          case Gesamtsyste_IN_Warten_Uebergabe:
-          /* During 'Warten_Uebergabe': '<S8>:1030' */
-          if (Gesamtsystem_DWork.temporalCounter_i1_k >= 1000U) {
-            /* Transition: '<S8>:1026' */
+          /* During 'Warten_Uebergabe': '<S8>:1339' */
+          if (Gesamtsystem_DWork.temporalCounter_i1_m >= 1000U) {
+            /* Transition: '<S8>:1335' */
             Gesamtsystem_DWork.is_Uebergabe = Gesamtsystem_IN_Wechsel_2;
 
-            /* Entry 'Wechsel_2': '<S8>:1031' */
+            /* Entry 'Wechsel_2': '<S8>:1340' */
             Gesamtsystem_DWork.Counter++;
           }
           break;
 
          case Gesamtsystem_IN_Wechsel_1:
-          /* During 'Wechsel_1': '<S8>:1028' */
-          /* Transition: '<S8>:1024' */
+          /* During 'Wechsel_1': '<S8>:1337' */
+          /* Transition: '<S8>:1333' */
           Gesamtsystem_DWork.is_Uebergabe = Ge_IN_Uebergabepunkt_y_Richtung;
 
-          /* Entry 'Uebergabepunkt_y_Richtung': '<S8>:1029' */
+          /* Entry 'Uebergabepunkt_y_Richtung': '<S8>:1338' */
           Gesamtsystem_B.x_soll = Gesamtsystem_DWork.x_least;
-          Gesamtsystem_B.y_soll = 100.0;
+          Gesamtsystem_B.y_soll = 50.0;
+          Gesamtsystem_B.alpha_soll = 80.0;
           break;
 
          default:
-          /* During 'Wechsel_2': '<S8>:1031' */
+          /* During 'Wechsel_2': '<S8>:1340' */
           break;
         }
       }
@@ -2399,63 +2559,65 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
   /* End of Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
 
   /* Outputs for Atomic SubSystem: '<S2>/Navigationssystem [Einstellungen moeglich]' */
-  /* Sum: '<S15>/Soll-Ist-Abgleich_x' */
+  /* Sum: '<S16>/Soll-Ist-Abgleich_x' */
   rtb_RoundingFunction1 = Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen;
 
-  /* Sum: '<S15>/Soll-Ist-Abgleich_y' */
+  /* Sum: '<S16>/Soll-Ist-Abgleich_y' */
   rtb_RoundingFunction = Gesamtsystem_B.y_soll - Gesamtsystem_B.y_Wagen;
 
-  /* Chart: '<S16>/Quadrantenteiler' */
+  /* Chart: '<S17>/Quadrantenteiler' */
   /* Gateway: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Winkelregelungssystem
      (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Quadrantenteiler */
   /* During: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Winkelregelungssystem
      (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Quadrantenteiler */
-  if (Gesamtsystem_DWork.is_active_c13_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c11_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Winkelregelungssystem
        (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Quadrantenteiler */
-    Gesamtsystem_DWork.is_active_c13_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c11_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Winkelregelungssystem
        (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Quadrantenteiler */
-    /* Transition: '<S20>:28' */
-    Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Start_Warten_b;
+    /* Transition: '<S21>:28' */
+    Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Start_Warten_b;
   } else {
-    switch (Gesamtsystem_DWork.is_c13_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c11_Gesamtsystem) {
      case Gesamtsystem_IN_Quadrant_a:
       Gesamtsystem_B.Quadrant = 0.0;
 
-      /* During 'Quadrant_a': '<S20>:8' */
-      /* Transition: '<S20>:36' */
-      /* Transition: '<S20>:40' */
-      if ((rtb_RoundingFunction1 >= 0.0) && (rtb_RoundingFunction >= 0.0)) {
-        /* Transition: '<S20>:29' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
+      /* During 'Quadrant_a': '<S21>:8' */
+      /* Transition: '<S21>:36' */
+      /* Transition: '<S21>:40' */
+      if ((Gesamtsystem_B.alpha_soll != -1.0) || ((rtb_RoundingFunction1 >= 0.0)
+           && (rtb_RoundingFunction >= 0.0))) {
+        /* Transition: '<S21>:44' */
+        /* Transition: '<S21>:29' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
 
-        /* Entry 'Quadrant_a': '<S20>:8' */
+        /* Entry 'Quadrant_a': '<S21>:8' */
         Gesamtsystem_B.Quadrant = 0.0;
       } else if ((rtb_RoundingFunction1 <= 0.0) && (rtb_RoundingFunction > 0.0))
       {
-        /* Transition: '<S20>:30' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
+        /* Transition: '<S21>:30' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
 
-        /* Entry 'Quadrant_b': '<S20>:9' */
+        /* Entry 'Quadrant_b': '<S21>:9' */
         Gesamtsystem_B.Quadrant = 1.0;
       } else if ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <= 0.0))
       {
-        /* Transition: '<S20>:31' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
+        /* Transition: '<S21>:31' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
 
-        /* Entry 'Quadrant_c': '<S20>:11' */
+        /* Entry 'Quadrant_c': '<S21>:11' */
         Gesamtsystem_B.Quadrant = 2.0;
       } else {
-        /* Transition: '<S20>:32' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
+        /* Transition: '<S21>:32' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
 
-        /* Entry 'Quadrant_d': '<S20>:12' */
+        /* Entry 'Quadrant_d': '<S21>:12' */
         Gesamtsystem_B.Quadrant = 3.0;
       }
       break;
@@ -2463,34 +2625,36 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
      case Gesamtsystem_IN_Quadrant_b:
       Gesamtsystem_B.Quadrant = 1.0;
 
-      /* During 'Quadrant_b': '<S20>:9' */
-      /* Transition: '<S20>:37' */
-      /* Transition: '<S20>:40' */
-      if ((rtb_RoundingFunction1 >= 0.0) && (rtb_RoundingFunction >= 0.0)) {
-        /* Transition: '<S20>:29' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
+      /* During 'Quadrant_b': '<S21>:9' */
+      /* Transition: '<S21>:37' */
+      /* Transition: '<S21>:40' */
+      if ((Gesamtsystem_B.alpha_soll != -1.0) || ((rtb_RoundingFunction1 >= 0.0)
+           && (rtb_RoundingFunction >= 0.0))) {
+        /* Transition: '<S21>:44' */
+        /* Transition: '<S21>:29' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
 
-        /* Entry 'Quadrant_a': '<S20>:8' */
+        /* Entry 'Quadrant_a': '<S21>:8' */
         Gesamtsystem_B.Quadrant = 0.0;
       } else if ((rtb_RoundingFunction1 <= 0.0) && (rtb_RoundingFunction > 0.0))
       {
-        /* Transition: '<S20>:30' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
+        /* Transition: '<S21>:30' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
 
-        /* Entry 'Quadrant_b': '<S20>:9' */
+        /* Entry 'Quadrant_b': '<S21>:9' */
         Gesamtsystem_B.Quadrant = 1.0;
       } else if ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <= 0.0))
       {
-        /* Transition: '<S20>:31' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
+        /* Transition: '<S21>:31' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
 
-        /* Entry 'Quadrant_c': '<S20>:11' */
+        /* Entry 'Quadrant_c': '<S21>:11' */
         Gesamtsystem_B.Quadrant = 2.0;
       } else {
-        /* Transition: '<S20>:32' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
+        /* Transition: '<S21>:32' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
 
-        /* Entry 'Quadrant_d': '<S20>:12' */
+        /* Entry 'Quadrant_d': '<S21>:12' */
         Gesamtsystem_B.Quadrant = 3.0;
       }
       break;
@@ -2498,34 +2662,36 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
      case Gesamtsystem_IN_Quadrant_c:
       Gesamtsystem_B.Quadrant = 2.0;
 
-      /* During 'Quadrant_c': '<S20>:11' */
-      /* Transition: '<S20>:38' */
-      /* Transition: '<S20>:40' */
-      if ((rtb_RoundingFunction1 >= 0.0) && (rtb_RoundingFunction >= 0.0)) {
-        /* Transition: '<S20>:29' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
+      /* During 'Quadrant_c': '<S21>:11' */
+      /* Transition: '<S21>:38' */
+      /* Transition: '<S21>:40' */
+      if ((Gesamtsystem_B.alpha_soll != -1.0) || ((rtb_RoundingFunction1 >= 0.0)
+           && (rtb_RoundingFunction >= 0.0))) {
+        /* Transition: '<S21>:44' */
+        /* Transition: '<S21>:29' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
 
-        /* Entry 'Quadrant_a': '<S20>:8' */
+        /* Entry 'Quadrant_a': '<S21>:8' */
         Gesamtsystem_B.Quadrant = 0.0;
       } else if ((rtb_RoundingFunction1 <= 0.0) && (rtb_RoundingFunction > 0.0))
       {
-        /* Transition: '<S20>:30' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
+        /* Transition: '<S21>:30' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
 
-        /* Entry 'Quadrant_b': '<S20>:9' */
+        /* Entry 'Quadrant_b': '<S21>:9' */
         Gesamtsystem_B.Quadrant = 1.0;
       } else if ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <= 0.0))
       {
-        /* Transition: '<S20>:31' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
+        /* Transition: '<S21>:31' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
 
-        /* Entry 'Quadrant_c': '<S20>:11' */
+        /* Entry 'Quadrant_c': '<S21>:11' */
         Gesamtsystem_B.Quadrant = 2.0;
       } else {
-        /* Transition: '<S20>:32' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
+        /* Transition: '<S21>:32' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
 
-        /* Entry 'Quadrant_d': '<S20>:12' */
+        /* Entry 'Quadrant_d': '<S21>:12' */
         Gesamtsystem_B.Quadrant = 3.0;
       }
       break;
@@ -2533,75 +2699,79 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
      case Gesamtsystem_IN_Quadrant_d:
       Gesamtsystem_B.Quadrant = 3.0;
 
-      /* During 'Quadrant_d': '<S20>:12' */
-      /* Transition: '<S20>:39' */
-      /* Transition: '<S20>:40' */
-      if ((rtb_RoundingFunction1 >= 0.0) && (rtb_RoundingFunction >= 0.0)) {
-        /* Transition: '<S20>:29' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
+      /* During 'Quadrant_d': '<S21>:12' */
+      /* Transition: '<S21>:39' */
+      /* Transition: '<S21>:40' */
+      if ((Gesamtsystem_B.alpha_soll != -1.0) || ((rtb_RoundingFunction1 >= 0.0)
+           && (rtb_RoundingFunction >= 0.0))) {
+        /* Transition: '<S21>:44' */
+        /* Transition: '<S21>:29' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
 
-        /* Entry 'Quadrant_a': '<S20>:8' */
+        /* Entry 'Quadrant_a': '<S21>:8' */
         Gesamtsystem_B.Quadrant = 0.0;
       } else if ((rtb_RoundingFunction1 <= 0.0) && (rtb_RoundingFunction > 0.0))
       {
-        /* Transition: '<S20>:30' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
+        /* Transition: '<S21>:30' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
 
-        /* Entry 'Quadrant_b': '<S20>:9' */
+        /* Entry 'Quadrant_b': '<S21>:9' */
         Gesamtsystem_B.Quadrant = 1.0;
       } else if ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <= 0.0))
       {
-        /* Transition: '<S20>:31' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
+        /* Transition: '<S21>:31' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
 
-        /* Entry 'Quadrant_c': '<S20>:11' */
+        /* Entry 'Quadrant_c': '<S21>:11' */
         Gesamtsystem_B.Quadrant = 2.0;
       } else {
-        /* Transition: '<S20>:32' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
+        /* Transition: '<S21>:32' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
 
-        /* Entry 'Quadrant_d': '<S20>:12' */
+        /* Entry 'Quadrant_d': '<S21>:12' */
         Gesamtsystem_B.Quadrant = 3.0;
       }
       break;
 
      default:
-      /* During 'Start_Warten': '<S20>:41' */
-      /* Transition: '<S20>:42' */
-      if ((rtb_RoundingFunction1 >= 0.0) && (rtb_RoundingFunction >= 0.0)) {
-        /* Transition: '<S20>:29' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
+      /* During 'Start_Warten': '<S21>:41' */
+      /* Transition: '<S21>:42' */
+      if ((Gesamtsystem_B.alpha_soll != -1.0) || ((rtb_RoundingFunction1 >= 0.0)
+           && (rtb_RoundingFunction >= 0.0))) {
+        /* Transition: '<S21>:44' */
+        /* Transition: '<S21>:29' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_a;
 
-        /* Entry 'Quadrant_a': '<S20>:8' */
+        /* Entry 'Quadrant_a': '<S21>:8' */
         Gesamtsystem_B.Quadrant = 0.0;
       } else if ((rtb_RoundingFunction1 <= 0.0) && (rtb_RoundingFunction > 0.0))
       {
-        /* Transition: '<S20>:30' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
+        /* Transition: '<S21>:30' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_b;
 
-        /* Entry 'Quadrant_b': '<S20>:9' */
+        /* Entry 'Quadrant_b': '<S21>:9' */
         Gesamtsystem_B.Quadrant = 1.0;
       } else if ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <= 0.0))
       {
-        /* Transition: '<S20>:31' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
+        /* Transition: '<S21>:31' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_c;
 
-        /* Entry 'Quadrant_c': '<S20>:11' */
+        /* Entry 'Quadrant_c': '<S21>:11' */
         Gesamtsystem_B.Quadrant = 2.0;
       } else {
-        /* Transition: '<S20>:32' */
-        Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
+        /* Transition: '<S21>:32' */
+        Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Quadrant_d;
 
-        /* Entry 'Quadrant_d': '<S20>:12' */
+        /* Entry 'Quadrant_d': '<S21>:12' */
         Gesamtsystem_B.Quadrant = 3.0;
       }
       break;
     }
   }
 
-  /* End of Chart: '<S16>/Quadrantenteiler' */
+  /* End of Chart: '<S17>/Quadrantenteiler' */
 
-  /* Chart: '<S16>/Winkelausgabe fuer Ausrichtung' incorporates:
+  /* Chart: '<S17>/Winkelausgabe fuer Ausrichtung' incorporates:
    *  MATLAB Function: '<S2>/Konvertierung Nexonar -> Fahrzeug Folgende Werte koennen für Nexonar eingestellt werden: - r_Versatz_Nexo: Radialer Versatz des Nexonars zur Rotationsachse des Fahrzeugs - phi_Versatz_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Rotationspunkt des Fahrzeugs) - psi_Offset_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Nexonar-Empfangstelle)'
    */
   /* Gateway: Nexonar-System/Navigationssystem
@@ -2610,45 +2780,91 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
   /* During: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Winkelregelungssystem
      (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Winkelausgabe fuer Ausrichtung */
-  if (Gesamtsystem_DWork.is_active_c14_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c12_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Winkelregelungssystem
        (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Winkelausgabe fuer Ausrichtung */
-    Gesamtsystem_DWork.is_active_c14_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c12_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Winkelregelungssystem
        (Soll-Ist-Abgleich & Ausrichtungsauswertung)/Winkelausgabe fuer Ausrichtung */
-    /* Transition: '<S21>:81' */
-    Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_Start_Warten_ba;
+    /* Transition: '<S22>:81' */
+    Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsystem_IN_Start_Warten_ba;
   } else {
-    switch (Gesamtsystem_DWork.is_c14_Gesamtsystem) {
-     case G_IN_Ausrichtung_ohne_Aenderung:
-      /* During 'Ausrichtung_ohne_Aenderung': '<S21>:52' */
-      /* Transition: '<S21>:66' */
-      /* Transition: '<S21>:70' */
-      if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0)) {
-        /* Transition: '<S21>:60' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+    switch (Gesamtsystem_DWork.is_c12_Gesamtsystem) {
+     case Gesamtsy_IN_Ausrichtung_gegeben:
+      /* During 'Ausrichtung_gegeben': '<S22>:85' */
+      /* Transition: '<S22>:87' */
+      /* Transition: '<S22>:70' */
+      if (Gesamtsystem_B.alpha_soll != -1.0) {
+        /* Transition: '<S22>:86' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsy_IN_Ausrichtung_gegeben;
 
-        /* Entry 'Ausrichtung_ohne_Aenderung': '<S21>:52' */
+        /* Entry 'Ausrichtung_gegeben': '<S22>:85' */
+        Gesamtsystem_B.alpha_neu = Gesamtsystem_B.alpha_soll;
+      } else if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0))
+      {
+        /* Transition: '<S22>:60' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+
+        /* Entry 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
         Gesamtsystem_B.alpha_neu = rtb_RoundingFunction2 - 15.0;
       } else if (((rtb_RoundingFunction1 > 0.0) && (rtb_RoundingFunction >= 0.0))
                  || ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <=
                    0.0))) {
-        /* Transition: '<S21>:76' */
-        /* Transition: '<S21>:77' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertung_;
+        /* Transition: '<S22>:76' */
+        /* Transition: '<S22>:77' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertung_;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S21>:24' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction) / fabs
           (rtb_RoundingFunction1)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
       } else {
-        /* Transition: '<S21>:78' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
+        /* Transition: '<S22>:78' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S21>:71' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
+        Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction1) / fabs
+          (rtb_RoundingFunction)) * 360.0 / 6.2831853071795862;
+        Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
+      }
+      break;
+
+     case G_IN_Ausrichtung_ohne_Aenderung:
+      /* During 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
+      /* Transition: '<S22>:66' */
+      /* Transition: '<S22>:70' */
+      if (Gesamtsystem_B.alpha_soll != -1.0) {
+        /* Transition: '<S22>:86' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsy_IN_Ausrichtung_gegeben;
+
+        /* Entry 'Ausrichtung_gegeben': '<S22>:85' */
+        Gesamtsystem_B.alpha_neu = Gesamtsystem_B.alpha_soll;
+      } else if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0))
+      {
+        /* Transition: '<S22>:60' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+
+        /* Entry 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
+        Gesamtsystem_B.alpha_neu = rtb_RoundingFunction2 - 15.0;
+      } else if (((rtb_RoundingFunction1 > 0.0) && (rtb_RoundingFunction >= 0.0))
+                 || ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <=
+                   0.0))) {
+        /* Transition: '<S22>:76' */
+        /* Transition: '<S22>:77' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertung_;
+
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
+        Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction) / fabs
+          (rtb_RoundingFunction1)) * 360.0 / 6.2831853071795862;
+        Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
+      } else {
+        /* Transition: '<S22>:78' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
+
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction1) / fabs
           (rtb_RoundingFunction)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
@@ -2656,30 +2872,37 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_Start_Warten_ba:
-      /* During 'Start_Warten': '<S21>:82' */
-      /* Transition: '<S21>:83' */
-      if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0)) {
-        /* Transition: '<S21>:60' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+      /* During 'Start_Warten': '<S22>:82' */
+      /* Transition: '<S22>:83' */
+      if (Gesamtsystem_B.alpha_soll != -1.0) {
+        /* Transition: '<S22>:86' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsy_IN_Ausrichtung_gegeben;
 
-        /* Entry 'Ausrichtung_ohne_Aenderung': '<S21>:52' */
+        /* Entry 'Ausrichtung_gegeben': '<S22>:85' */
+        Gesamtsystem_B.alpha_neu = Gesamtsystem_B.alpha_soll;
+      } else if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0))
+      {
+        /* Transition: '<S22>:60' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+
+        /* Entry 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
         Gesamtsystem_B.alpha_neu = rtb_RoundingFunction2 - 15.0;
       } else if (((rtb_RoundingFunction1 > 0.0) && (rtb_RoundingFunction >= 0.0))
                  || ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <=
                    0.0))) {
-        /* Transition: '<S21>:76' */
-        /* Transition: '<S21>:77' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertung_;
+        /* Transition: '<S22>:76' */
+        /* Transition: '<S22>:77' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertung_;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S21>:24' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction) / fabs
           (rtb_RoundingFunction1)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
       } else {
-        /* Transition: '<S21>:78' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
+        /* Transition: '<S22>:78' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S21>:71' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction1) / fabs
           (rtb_RoundingFunction)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
@@ -2687,31 +2910,38 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case IN_Trigonometrische_Auswertung_:
-      /* During 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S21>:24' */
-      /* Transition: '<S21>:68' */
-      /* Transition: '<S21>:70' */
-      if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0)) {
-        /* Transition: '<S21>:60' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+      /* During 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
+      /* Transition: '<S22>:68' */
+      /* Transition: '<S22>:70' */
+      if (Gesamtsystem_B.alpha_soll != -1.0) {
+        /* Transition: '<S22>:86' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsy_IN_Ausrichtung_gegeben;
 
-        /* Entry 'Ausrichtung_ohne_Aenderung': '<S21>:52' */
+        /* Entry 'Ausrichtung_gegeben': '<S22>:85' */
+        Gesamtsystem_B.alpha_neu = Gesamtsystem_B.alpha_soll;
+      } else if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0))
+      {
+        /* Transition: '<S22>:60' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+
+        /* Entry 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
         Gesamtsystem_B.alpha_neu = rtb_RoundingFunction2 - 15.0;
       } else if (((rtb_RoundingFunction1 > 0.0) && (rtb_RoundingFunction >= 0.0))
                  || ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <=
                    0.0))) {
-        /* Transition: '<S21>:76' */
-        /* Transition: '<S21>:77' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertung_;
+        /* Transition: '<S22>:76' */
+        /* Transition: '<S22>:77' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertung_;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S21>:24' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction) / fabs
           (rtb_RoundingFunction1)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
       } else {
-        /* Transition: '<S21>:78' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
+        /* Transition: '<S22>:78' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S21>:71' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction1) / fabs
           (rtb_RoundingFunction)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
@@ -2719,31 +2949,38 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      default:
-      /* During 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S21>:71' */
-      /* Transition: '<S21>:73' */
-      /* Transition: '<S21>:70' */
-      if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0)) {
-        /* Transition: '<S21>:60' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+      /* During 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
+      /* Transition: '<S22>:73' */
+      /* Transition: '<S22>:70' */
+      if (Gesamtsystem_B.alpha_soll != -1.0) {
+        /* Transition: '<S22>:86' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsy_IN_Ausrichtung_gegeben;
 
-        /* Entry 'Ausrichtung_ohne_Aenderung': '<S21>:52' */
+        /* Entry 'Ausrichtung_gegeben': '<S22>:85' */
+        Gesamtsystem_B.alpha_neu = Gesamtsystem_B.alpha_soll;
+      } else if ((rtb_RoundingFunction1 == 0.0) && (rtb_RoundingFunction == 0.0))
+      {
+        /* Transition: '<S22>:60' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = G_IN_Ausrichtung_ohne_Aenderung;
+
+        /* Entry 'Ausrichtung_ohne_Aenderung': '<S22>:52' */
         Gesamtsystem_B.alpha_neu = rtb_RoundingFunction2 - 15.0;
       } else if (((rtb_RoundingFunction1 > 0.0) && (rtb_RoundingFunction >= 0.0))
                  || ((rtb_RoundingFunction1 < 0.0) && (rtb_RoundingFunction <=
                    0.0))) {
-        /* Transition: '<S21>:76' */
-        /* Transition: '<S21>:77' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertung_;
+        /* Transition: '<S22>:76' */
+        /* Transition: '<S22>:77' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertung_;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S21>:24' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_0_2': '<S22>:24' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction) / fabs
           (rtb_RoundingFunction1)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
       } else {
-        /* Transition: '<S21>:78' */
-        Gesamtsystem_DWork.is_c14_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
+        /* Transition: '<S22>:78' */
+        Gesamtsystem_DWork.is_c12_Gesamtsystem = IN_Trigonometrische_Auswertun_b;
 
-        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S21>:71' */
+        /* Entry 'Trigonometrische_Auswertung_in_Grad_fuer_Quadrant_1_3': '<S22>:71' */
         Gesamtsystem_B.alpha_neu = atan(fabs(rtb_RoundingFunction1) / fabs
           (rtb_RoundingFunction)) * 360.0 / 6.2831853071795862;
         Gesamtsystem_B.alpha_neu = rt_roundd_snf(Gesamtsystem_B.alpha_neu);
@@ -2752,18 +2989,18 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* End of Chart: '<S16>/Winkelausgabe fuer Ausrichtung' */
+  /* End of Chart: '<S17>/Winkelausgabe fuer Ausrichtung' */
 
-  /* Sum: '<S16>/Winkeldifferenz' incorporates:
-   *  Gain: '<S16>/Quadranten- verschiebung'
+  /* Sum: '<S17>/Winkeldifferenz' incorporates:
+   *  Gain: '<S17>/Quadranten- verschiebung'
    *  MATLAB Function: '<S2>/Konvertierung Nexonar -> Fahrzeug Folgende Werte koennen für Nexonar eingestellt werden: - r_Versatz_Nexo: Radialer Versatz des Nexonars zur Rotationsachse des Fahrzeugs - phi_Versatz_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Rotationspunkt des Fahrzeugs) - psi_Offset_Nexo: Winkelversatz des Nexonars gegenüber der x-Achse (Mittelpunkt: Nexonar-Empfangstelle)'
-   *  Sum: '<S16>/Winkelverschiebung'
+   *  Sum: '<S17>/Winkelverschiebung'
    */
   Gesamtsystem_B.Winkeldifferenz = (Gesamtsystem_P.Quadrantenverschiebung_Gain *
     Gesamtsystem_B.Quadrant + Gesamtsystem_B.alpha_neu) - (rtb_RoundingFunction2
     - 15.0);
 
-  /* Chart: '<S11>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
+  /* Chart: '<S12>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
   /* Gateway: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Drehweg-Optimierung
      mit Gang-Ausrichtung
@@ -2783,179 +3020,179 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
        [Einstellungen moeglich]/Drehweg-Optimierung
        mit Gang-Ausrichtung
        [Init: Stillstandintervall = ±15°] */
-    /* Transition: '<S13>:38' */
+    /* Transition: '<S14>:38' */
     Gesamtsystem_DWork.is_c8_Gesamtsystem = Gesamtsyste_IN_Einstellung_Init;
 
-    /* Entry 'Einstellung_Init': '<S13>:44' */
+    /* Entry 'Einstellung_Init': '<S14>:44' */
     Gesamtsystem_DWork.Stillstandintervall = 15.0;
     Gesamtsystem_B.pwm_mindern[0] = 0.0;
     Gesamtsystem_B.pwm_mindern[1] = 0.0;
   } else {
     switch (Gesamtsystem_DWork.is_c8_Gesamtsystem) {
      case IN_Drehstillstand_mit_Ausrichtu:
-      /* During 'Drehstillstand_mit_Ausrichtungsregelung': '<S13>:26' */
-      /* Transition: '<S13>:96' */
-      /* Transition: '<S13>:98' */
-      /* Transition: '<S13>:65' */
+      /* During 'Drehstillstand_mit_Ausrichtungsregelung': '<S14>:26' */
+      /* Transition: '<S14>:96' */
+      /* Transition: '<S14>:98' */
+      /* Transition: '<S14>:65' */
       Gesamtsystem_DWork.alpha_diff_intern = 180.0 * Gesamtsystem_B.Gang +
         Gesamtsystem_B.Winkeldifferenz;
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) > 180.0) {
-        /* Transition: '<S13>:9' */
+        /* Transition: '<S14>:9' */
         if (Gesamtsystem_DWork.alpha_diff_intern > 0.0) {
-          /* Transition: '<S13>:15' */
+          /* Transition: '<S14>:15' */
           Gesamtsystem_DWork.alpha_diff_intern += -360.0;
         } else {
-          /* Transition: '<S13>:18' */
+          /* Transition: '<S14>:18' */
           Gesamtsystem_DWork.alpha_diff_intern += 360.0;
         }
       } else {
-        /* Transition: '<S13>:69' */
+        /* Transition: '<S14>:69' */
       }
 
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) <=
           Gesamtsystem_DWork.Stillstandintervall) {
-        /* Transition: '<S13>:27' */
+        /* Transition: '<S14>:27' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Drehstillstand_mit_Ausrichtu;
         enter_atomic_Drehstillstand_mit();
       } else {
-        /* Transition: '<S13>:94' */
+        /* Transition: '<S14>:94' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Weiterleitung_bei_Drehzustan;
 
-        /* Entry 'Weiterleitung_bei_Drehzustand': '<S13>:11' */
+        /* Entry 'Weiterleitung_bei_Drehzustand': '<S14>:11' */
         Gesamtsystem_B.alpha_diff_opt = Gesamtsystem_DWork.alpha_diff_intern;
       }
       break;
 
      case Gesamtsyste_IN_Einstellung_Init:
-      /* During 'Einstellung_Init': '<S13>:44' */
-      /* Transition: '<S13>:46' */
-      /* Transition: '<S13>:65' */
+      /* During 'Einstellung_Init': '<S14>:44' */
+      /* Transition: '<S14>:46' */
+      /* Transition: '<S14>:65' */
       Gesamtsystem_DWork.alpha_diff_intern = 180.0 * Gesamtsystem_B.Gang +
         Gesamtsystem_B.Winkeldifferenz;
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) > 180.0) {
-        /* Transition: '<S13>:9' */
+        /* Transition: '<S14>:9' */
         if (Gesamtsystem_DWork.alpha_diff_intern > 0.0) {
-          /* Transition: '<S13>:15' */
+          /* Transition: '<S14>:15' */
           Gesamtsystem_DWork.alpha_diff_intern += -360.0;
         } else {
-          /* Transition: '<S13>:18' */
+          /* Transition: '<S14>:18' */
           Gesamtsystem_DWork.alpha_diff_intern += 360.0;
         }
       } else {
-        /* Transition: '<S13>:69' */
+        /* Transition: '<S14>:69' */
       }
 
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) <=
           Gesamtsystem_DWork.Stillstandintervall) {
-        /* Transition: '<S13>:27' */
+        /* Transition: '<S14>:27' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Drehstillstand_mit_Ausrichtu;
         enter_atomic_Drehstillstand_mit();
       } else {
-        /* Transition: '<S13>:94' */
+        /* Transition: '<S14>:94' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Weiterleitung_bei_Drehzustan;
 
-        /* Entry 'Weiterleitung_bei_Drehzustand': '<S13>:11' */
+        /* Entry 'Weiterleitung_bei_Drehzustand': '<S14>:11' */
         Gesamtsystem_B.alpha_diff_opt = Gesamtsystem_DWork.alpha_diff_intern;
       }
       break;
 
      default:
-      /* During 'Weiterleitung_bei_Drehzustand': '<S13>:11' */
-      /* Transition: '<S13>:97' */
-      /* Transition: '<S13>:98' */
-      /* Transition: '<S13>:65' */
+      /* During 'Weiterleitung_bei_Drehzustand': '<S14>:11' */
+      /* Transition: '<S14>:97' */
+      /* Transition: '<S14>:98' */
+      /* Transition: '<S14>:65' */
       Gesamtsystem_DWork.alpha_diff_intern = 180.0 * Gesamtsystem_B.Gang +
         Gesamtsystem_B.Winkeldifferenz;
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) > 180.0) {
-        /* Transition: '<S13>:9' */
+        /* Transition: '<S14>:9' */
         if (Gesamtsystem_DWork.alpha_diff_intern > 0.0) {
-          /* Transition: '<S13>:15' */
+          /* Transition: '<S14>:15' */
           Gesamtsystem_DWork.alpha_diff_intern += -360.0;
         } else {
-          /* Transition: '<S13>:18' */
+          /* Transition: '<S14>:18' */
           Gesamtsystem_DWork.alpha_diff_intern += 360.0;
         }
       } else {
-        /* Transition: '<S13>:69' */
+        /* Transition: '<S14>:69' */
       }
 
       if (fabs(Gesamtsystem_DWork.alpha_diff_intern) <=
           Gesamtsystem_DWork.Stillstandintervall) {
-        /* Transition: '<S13>:27' */
+        /* Transition: '<S14>:27' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Drehstillstand_mit_Ausrichtu;
         enter_atomic_Drehstillstand_mit();
       } else {
-        /* Transition: '<S13>:94' */
+        /* Transition: '<S14>:94' */
         Gesamtsystem_DWork.is_c8_Gesamtsystem = IN_Weiterleitung_bei_Drehzustan;
 
-        /* Entry 'Weiterleitung_bei_Drehzustand': '<S13>:11' */
+        /* Entry 'Weiterleitung_bei_Drehzustand': '<S14>:11' */
         Gesamtsystem_B.alpha_diff_opt = Gesamtsystem_DWork.alpha_diff_intern;
       }
       break;
     }
   }
 
-  /* End of Chart: '<S11>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
+  /* End of Chart: '<S12>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
 
-  /* Abs: '<S15>/Abs x_diff' */
+  /* Abs: '<S16>/Abs x_diff' */
   rtb_RoundingFunction2 = fabs(rtb_RoundingFunction1);
 
-  /* MATLAB Function: '<S15>/Betrag pwm_x' incorporates:
-   *  Abs: '<S15>/Abs x_diff'
+  /* MATLAB Function: '<S16>/Betrag pwm_x' incorporates:
+   *  Abs: '<S16>/Abs x_diff'
    */
-  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/Betrag pwm_x': '<S17>:1' */
+  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/Betrag pwm_x': '<S18>:1' */
   if ((Gesamtsystem_B.Zielradius < rtb_RoundingFunction2) &&
       (rtb_RoundingFunction2 < 60.0 + Gesamtsystem_B.Zielradius)) {
-    /* '<S17>:1:3' */
-    /* '<S17>:1:4' */
-    rtb_RoundingFunction2 = 60.0;
-  } else if (rtb_RoundingFunction2 <= Gesamtsystem_B.Zielradius) {
-    /* '<S17>:1:5' */
-    /* '<S17>:1:6' */
-    rtb_RoundingFunction2 = 0.0;
-  } else if (rtb_RoundingFunction2 >= 100.0 + Gesamtsystem_B.Zielradius) {
-    /* '<S17>:1:7' */
-    /* '<S17>:1:8' */
-    rtb_RoundingFunction2 = 100.0;
-  } else {
-    /* '<S17>:1:10' */
-  }
-
-  /* End of MATLAB Function: '<S15>/Betrag pwm_x' */
-
-  /* Abs: '<S15>/Abs y_diff' */
-  rtb_RoundingFunction = fabs(rtb_RoundingFunction);
-
-  /* MATLAB Function: '<S15>/Betrag pwm_y' incorporates:
-   *  Abs: '<S15>/Abs y_diff'
-   */
-  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/Betrag pwm_y': '<S18>:1' */
-  if ((Gesamtsystem_B.Zielradius < rtb_RoundingFunction) &&
-      (rtb_RoundingFunction < 60.0 + Gesamtsystem_B.Zielradius)) {
     /* '<S18>:1:3' */
     /* '<S18>:1:4' */
-    rtb_RoundingFunction = 60.0;
-  } else if (rtb_RoundingFunction <= Gesamtsystem_B.Zielradius) {
+    rtb_RoundingFunction2 = 60.0;
+  } else if (rtb_RoundingFunction2 <= Gesamtsystem_B.Zielradius) {
     /* '<S18>:1:5' */
     /* '<S18>:1:6' */
-    rtb_RoundingFunction = 0.0;
-  } else if (rtb_RoundingFunction >= 100.0 + Gesamtsystem_B.Zielradius) {
+    rtb_RoundingFunction2 = 0.0;
+  } else if (rtb_RoundingFunction2 >= 100.0 + Gesamtsystem_B.Zielradius) {
     /* '<S18>:1:7' */
     /* '<S18>:1:8' */
-    rtb_RoundingFunction = 100.0;
+    rtb_RoundingFunction2 = 100.0;
   } else {
     /* '<S18>:1:10' */
   }
 
-  /* End of MATLAB Function: '<S15>/Betrag pwm_y' */
+  /* End of MATLAB Function: '<S16>/Betrag pwm_x' */
 
-  /* MATLAB Function: '<S15>/PWM-Vektorbetrag' */
-  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/PWM-Vektorbetrag': '<S19>:1' */
-  /* '<S19>:1:3' */
+  /* Abs: '<S16>/Abs y_diff' */
+  rtb_RoundingFunction = fabs(rtb_RoundingFunction);
+
+  /* MATLAB Function: '<S16>/Betrag pwm_y' incorporates:
+   *  Abs: '<S16>/Abs y_diff'
+   */
+  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/Betrag pwm_y': '<S19>:1' */
+  if ((Gesamtsystem_B.Zielradius < rtb_RoundingFunction) &&
+      (rtb_RoundingFunction < 60.0 + Gesamtsystem_B.Zielradius)) {
+    /* '<S19>:1:3' */
+    /* '<S19>:1:4' */
+    rtb_RoundingFunction = 60.0;
+  } else if (rtb_RoundingFunction <= Gesamtsystem_B.Zielradius) {
+    /* '<S19>:1:5' */
+    /* '<S19>:1:6' */
+    rtb_RoundingFunction = 0.0;
+  } else if (rtb_RoundingFunction >= 100.0 + Gesamtsystem_B.Zielradius) {
+    /* '<S19>:1:7' */
+    /* '<S19>:1:8' */
+    rtb_RoundingFunction = 100.0;
+  } else {
+    /* '<S19>:1:10' */
+  }
+
+  /* End of MATLAB Function: '<S16>/Betrag pwm_y' */
+
+  /* MATLAB Function: '<S16>/PWM-Vektorbetrag' */
+  /* MATLAB Function 'Nexonar-System/Navigationssystem [Einstellungen moeglich]/Positionsregelungssystem (Soll-Ist-Abgleich & PWM-Auswertung)/PWM-Vektorbetrag': '<S20>:1' */
+  /* '<S20>:1:3' */
   rtb_RoundingFunction = rt_roundd_snf(sqrt(rtb_RoundingFunction2 *
     rtb_RoundingFunction2 + rtb_RoundingFunction * rtb_RoundingFunction));
 
-  /* Saturate: '<S15>/PWM-Wertebereich' */
+  /* Saturate: '<S16>/PWM-Wertebereich' */
   if (rtb_RoundingFunction > Gesamtsystem_P.PWMWertebereich_UpperSat) {
     Gesamtsystem_B.PWMWertebereich = Gesamtsystem_P.PWMWertebereich_UpperSat;
   } else if (rtb_RoundingFunction < Gesamtsystem_P.PWMWertebereich_LowerSat) {
@@ -2964,24 +3201,24 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     Gesamtsystem_B.PWMWertebereich = rtb_RoundingFunction;
   }
 
-  /* End of Saturate: '<S15>/PWM-Wertebereich' */
+  /* End of Saturate: '<S16>/PWM-Wertebereich' */
 
-  /* Chart: '<S11>/Fahrsystem' */
+  /* Chart: '<S12>/Fahrsystem' */
   /* Gateway: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Fahrsystem */
   /* During: Nexonar-System/Navigationssystem
      [Einstellungen moeglich]/Fahrsystem */
-  if (Gesamtsystem_DWork.is_active_c11_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c7_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Fahrsystem */
-    Gesamtsystem_DWork.is_active_c11_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c7_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Navigationssystem
        [Einstellungen moeglich]/Fahrsystem */
-    /* Transition: '<S14>:91' */
-    Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_Start_Warten;
+    /* Transition: '<S15>:91' */
+    Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsystem_IN_Start_Warten;
   } else {
-    switch (Gesamtsystem_DWork.is_c11_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c7_Gesamtsystem) {
      case Gesam_IN_Drehen_links_gesteuert:
       Gesamtsystem_Drehen_links_max();
       break;
@@ -2991,53 +3228,53 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesa_IN_Drehen_rechts_gesteuert:
-      /* During 'Drehen_rechts_gesteuert': '<S14>:51' */
-      /* Transition: '<S14>:63' */
-      /* Transition: '<S14>:75' */
+      /* During 'Drehen_rechts_gesteuert': '<S15>:51' */
+      /* Transition: '<S15>:63' */
+      /* Transition: '<S15>:75' */
       if ((fabs(Gesamtsystem_B.alpha_diff_opt) > 0.0) &&
           (Gesamtsystem_B.PWMWertebereich > 0.0)) {
-        /* Transition: '<S14>:58' */
+        /* Transition: '<S15>:58' */
         if (fabs(Gesamtsystem_B.alpha_diff_opt) > 40.0) {
-          /* Transition: '<S14>:21' */
+          /* Transition: '<S15>:21' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:45' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:45' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyste_IN_Drehen_links_max;
 
-            /* Entry 'Drehen_links_max': '<S14>:8' */
+            /* Entry 'Drehen_links_max': '<S15>:8' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:57' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:57' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyst_IN_Drehen_rechts_max;
 
-            /* Entry 'Drehen_rechts_max': '<S14>:9' */
+            /* Entry 'Drehen_rechts_max': '<S15>:9' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 1.0;
             Gesamtsystem_B.r_l_out_r = 0.0;
           }
         } else {
-          /* Transition: '<S14>:53' */
+          /* Transition: '<S15>:53' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:54' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:54' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesam_IN_Drehen_links_gesteuert;
 
-            /* Entry 'Drehen_links_gesteuert': '<S14>:43' */
+            /* Entry 'Drehen_links_gesteuert': '<S15>:43' */
             Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:55' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:55' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesa_IN_Drehen_rechts_gesteuert;
 
-            /* Entry 'Drehen_rechts_gesteuert': '<S14>:51' */
+            /* Entry 'Drehen_rechts_gesteuert': '<S15>:51' */
             rtb_RoundingFunction = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_l = rtb_RoundingFunction;
             Gesamtsystem_B.pwm_out_r = rtb_RoundingFunction;
@@ -3046,24 +3283,24 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
           }
         }
       } else {
-        /* Transition: '<S14>:82' */
+        /* Transition: '<S15>:82' */
         if (Gesamtsystem_B.pwm_mindern[1] == 1.0) {
-          /* Transition: '<S14>:85' */
+          /* Transition: '<S15>:85' */
           rtb_RoundingFunction = 1.0 - Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = Gesamtsystem_B.Gang;
         } else if (Gesamtsystem_B.pwm_mindern[1] == 0.0) {
-          /* Transition: '<S14>:86' */
+          /* Transition: '<S15>:86' */
           rtb_RoundingFunction = Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = 1.0 - Gesamtsystem_B.Gang;
         } else {
-          /* Transition: '<S14>:87' */
+          /* Transition: '<S15>:87' */
           rtb_RoundingFunction = 0.0;
           rtb_RoundingFunction2 = 0.0;
         }
 
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
 
-        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
+        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
         rtb_RoundingFunction1 = Gesamtsystem_B.PWMWertebereich / 100.0;
         Gesamtsystem_B.pwm_out_l = Gesamtsystem_B.PWMWertebereich -
           rt_roundd_snf(rtb_RoundingFunction1 * rtb_RoundingFunction1 *
@@ -3078,53 +3315,53 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsyst_IN_Drehen_rechts_max:
-      /* During 'Drehen_rechts_max': '<S14>:9' */
-      /* Transition: '<S14>:61' */
-      /* Transition: '<S14>:75' */
+      /* During 'Drehen_rechts_max': '<S15>:9' */
+      /* Transition: '<S15>:61' */
+      /* Transition: '<S15>:75' */
       if ((fabs(Gesamtsystem_B.alpha_diff_opt) > 0.0) &&
           (Gesamtsystem_B.PWMWertebereich > 0.0)) {
-        /* Transition: '<S14>:58' */
+        /* Transition: '<S15>:58' */
         if (fabs(Gesamtsystem_B.alpha_diff_opt) > 40.0) {
-          /* Transition: '<S14>:21' */
+          /* Transition: '<S15>:21' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:45' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:45' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyste_IN_Drehen_links_max;
 
-            /* Entry 'Drehen_links_max': '<S14>:8' */
+            /* Entry 'Drehen_links_max': '<S15>:8' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:57' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:57' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyst_IN_Drehen_rechts_max;
 
-            /* Entry 'Drehen_rechts_max': '<S14>:9' */
+            /* Entry 'Drehen_rechts_max': '<S15>:9' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 1.0;
             Gesamtsystem_B.r_l_out_r = 0.0;
           }
         } else {
-          /* Transition: '<S14>:53' */
+          /* Transition: '<S15>:53' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:54' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:54' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesam_IN_Drehen_links_gesteuert;
 
-            /* Entry 'Drehen_links_gesteuert': '<S14>:43' */
+            /* Entry 'Drehen_links_gesteuert': '<S15>:43' */
             Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:55' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:55' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesa_IN_Drehen_rechts_gesteuert;
 
-            /* Entry 'Drehen_rechts_gesteuert': '<S14>:51' */
+            /* Entry 'Drehen_rechts_gesteuert': '<S15>:51' */
             Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.r_l_out_l = 1.0;
@@ -3132,24 +3369,24 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
           }
         }
       } else {
-        /* Transition: '<S14>:82' */
+        /* Transition: '<S15>:82' */
         if (Gesamtsystem_B.pwm_mindern[1] == 1.0) {
-          /* Transition: '<S14>:85' */
+          /* Transition: '<S15>:85' */
           rtb_RoundingFunction = 1.0 - Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = Gesamtsystem_B.Gang;
         } else if (Gesamtsystem_B.pwm_mindern[1] == 0.0) {
-          /* Transition: '<S14>:86' */
+          /* Transition: '<S15>:86' */
           rtb_RoundingFunction = Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = 1.0 - Gesamtsystem_B.Gang;
         } else {
-          /* Transition: '<S14>:87' */
+          /* Transition: '<S15>:87' */
           rtb_RoundingFunction = 0.0;
           rtb_RoundingFunction2 = 0.0;
         }
 
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
 
-        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
+        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
         rtb_RoundingFunction1 = Gesamtsystem_B.PWMWertebereich / 100.0;
         Gesamtsystem_B.pwm_out_l = Gesamtsystem_B.PWMWertebereich -
           rt_roundd_snf(rtb_RoundingFunction1 * rtb_RoundingFunction1 *
@@ -3164,53 +3401,53 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case IN_Fahren_mit_Ausrichtungsregel:
-      /* During 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
-      /* Transition: '<S14>:74' */
-      /* Transition: '<S14>:75' */
+      /* During 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
+      /* Transition: '<S15>:74' */
+      /* Transition: '<S15>:75' */
       if ((fabs(Gesamtsystem_B.alpha_diff_opt) > 0.0) &&
           (Gesamtsystem_B.PWMWertebereich > 0.0)) {
-        /* Transition: '<S14>:58' */
+        /* Transition: '<S15>:58' */
         if (fabs(Gesamtsystem_B.alpha_diff_opt) > 40.0) {
-          /* Transition: '<S14>:21' */
+          /* Transition: '<S15>:21' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:45' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:45' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyste_IN_Drehen_links_max;
 
-            /* Entry 'Drehen_links_max': '<S14>:8' */
+            /* Entry 'Drehen_links_max': '<S15>:8' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:57' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:57' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesamtsyst_IN_Drehen_rechts_max;
 
-            /* Entry 'Drehen_rechts_max': '<S14>:9' */
+            /* Entry 'Drehen_rechts_max': '<S15>:9' */
             Gesamtsystem_B.pwm_out_l = 100.0;
             Gesamtsystem_B.pwm_out_r = 100.0;
             Gesamtsystem_B.r_l_out_l = 1.0;
             Gesamtsystem_B.r_l_out_r = 0.0;
           }
         } else {
-          /* Transition: '<S14>:53' */
+          /* Transition: '<S15>:53' */
           if (Gesamtsystem_B.alpha_diff_opt > 0.0) {
-            /* Transition: '<S14>:54' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:54' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesam_IN_Drehen_links_gesteuert;
 
-            /* Entry 'Drehen_links_gesteuert': '<S14>:43' */
+            /* Entry 'Drehen_links_gesteuert': '<S15>:43' */
             Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.r_l_out_l = 0.0;
             Gesamtsystem_B.r_l_out_r = 1.0;
           } else {
-            /* Transition: '<S14>:55' */
-            Gesamtsystem_DWork.is_c11_Gesamtsystem =
+            /* Transition: '<S15>:55' */
+            Gesamtsystem_DWork.is_c7_Gesamtsystem =
               Gesa_IN_Drehen_rechts_gesteuert;
 
-            /* Entry 'Drehen_rechts_gesteuert': '<S14>:51' */
+            /* Entry 'Drehen_rechts_gesteuert': '<S15>:51' */
             Gesamtsystem_B.pwm_out_l = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.pwm_out_r = 59.0 + fabs(Gesamtsystem_B.alpha_diff_opt);
             Gesamtsystem_B.r_l_out_l = 1.0;
@@ -3218,24 +3455,24 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
           }
         }
       } else {
-        /* Transition: '<S14>:82' */
+        /* Transition: '<S15>:82' */
         if (Gesamtsystem_B.pwm_mindern[1] == 1.0) {
-          /* Transition: '<S14>:85' */
+          /* Transition: '<S15>:85' */
           rtb_RoundingFunction = 1.0 - Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = Gesamtsystem_B.Gang;
         } else if (Gesamtsystem_B.pwm_mindern[1] == 0.0) {
-          /* Transition: '<S14>:86' */
+          /* Transition: '<S15>:86' */
           rtb_RoundingFunction = Gesamtsystem_B.Gang;
           rtb_RoundingFunction2 = 1.0 - Gesamtsystem_B.Gang;
         } else {
-          /* Transition: '<S14>:87' */
+          /* Transition: '<S15>:87' */
           rtb_RoundingFunction = 0.0;
           rtb_RoundingFunction2 = 0.0;
         }
 
-        Gesamtsystem_DWork.is_c11_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
+        Gesamtsystem_DWork.is_c7_Gesamtsystem = IN_Fahren_mit_Ausrichtungsregel;
 
-        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S14>:94' */
+        /* Entry 'Fahren_mit_Ausrichtungsregelung': '<S15>:94' */
         rtb_RoundingFunction1 = Gesamtsystem_B.PWMWertebereich / 100.0;
         Gesamtsystem_B.pwm_out_l = Gesamtsystem_B.PWMWertebereich -
           rt_roundd_snf(rtb_RoundingFunction1 * rtb_RoundingFunction1 *
@@ -3255,23 +3492,49 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* End of Chart: '<S11>/Fahrsystem' */
+  /* End of Chart: '<S12>/Fahrsystem' */
   /* End of Outputs for SubSystem: '<S2>/Navigationssystem [Einstellungen moeglich]' */
+
+  /* Product: '<S2>/Product' */
+  rtb_DeadZone = Gesamtsystem_B.Value * Gesamtsystem_B.pwm_out_l;
+
+  /* DeadZone: '<S10>/Leistungsoffset Motor_links' */
+  if (rtb_DeadZone > Gesamtsystem_P.LeistungsoffsetMotor_links_End) {
+    rtb_DeadZone -= Gesamtsystem_P.LeistungsoffsetMotor_links_End;
+  } else if (rtb_DeadZone >= Gesamtsystem_P.LeistungsoffsetMotor_links_Star) {
+    rtb_DeadZone = 0.0;
+  } else {
+    rtb_DeadZone -= Gesamtsystem_P.LeistungsoffsetMotor_links_Star;
+  }
+
+  /* End of DeadZone: '<S10>/Leistungsoffset Motor_links' */
 
   /* S-Function (c280xpwm): '<S10>/PWM Vorgabe fuer Motor_links ' */
 
   /*-- Update CMPB value for ePWM1 --*/
   {
-    EPwm1Regs.CMPB = (uint16_T)((uint32_T)EPwm1Regs.TBPRD *
-      Gesamtsystem_B.pwm_out_l * 0.01);
+    EPwm1Regs.CMPB = (uint16_T)((uint32_T)EPwm1Regs.TBPRD * rtb_DeadZone * 0.01);
   }
+
+  /* Product: '<S2>/Product1' */
+  rtb_DeadZone = Gesamtsystem_B.Value * Gesamtsystem_B.pwm_out_r;
+
+  /* DeadZone: '<S10>/Leistungsoffset Motor_rechts' */
+  if (rtb_DeadZone > Gesamtsystem_P.LeistungsoffsetMotor_rechts_End) {
+    rtb_DeadZone -= Gesamtsystem_P.LeistungsoffsetMotor_rechts_End;
+  } else if (rtb_DeadZone >= Gesamtsystem_P.LeistungsoffsetMotor_rechts_Sta) {
+    rtb_DeadZone = 0.0;
+  } else {
+    rtb_DeadZone -= Gesamtsystem_P.LeistungsoffsetMotor_rechts_Sta;
+  }
+
+  /* End of DeadZone: '<S10>/Leistungsoffset Motor_rechts' */
 
   /* S-Function (c280xpwm): '<S10>/PWM Vorgabe fuer Motor_rechts' */
 
   /*-- Update CMPB value for ePWM2 --*/
   {
-    EPwm2Regs.CMPB = (uint16_T)((uint32_T)EPwm2Regs.TBPRD *
-      Gesamtsystem_B.pwm_out_r * 0.01);
+    EPwm2Regs.CMPB = (uint16_T)((uint32_T)EPwm2Regs.TBPRD * rtb_DeadZone * 0.01);
   }
 
   /* S-Function (c280xgpio_do): '<S10>/Drehrichtungsvorgabe fuer Motor_links' */
@@ -3290,7 +3553,7 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       GpioDataRegs.GPACLEAR.bit.GPIO21 = 1;
   }
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter7' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter7' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values7;
@@ -3300,9 +3563,9 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter7' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter7' */
 
-  /* S-Function (scominttobit): '<S12>/Integer to Bit Converter8' */
+  /* S-Function (scominttobit): '<S13>/Integer to Bit Converter8' */
   /* Integer to Bit Conversion */
   bitIdx = 8L;
   u = (uint32_T)Gesamtsystem_B.valid_values8;
@@ -3312,26 +3575,26 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     bitIdx--;
   }
 
-  /* End of S-Function (scominttobit): '<S12>/Integer to Bit Converter8' */
+  /* End of S-Function (scominttobit): '<S13>/Integer to Bit Converter8' */
 
-  /* Chart: '<S12>/Chart1' */
+  /* Chart: '<S13>/Chart1' */
   /* Gateway: Nexonar-System/Nexonar-Positionsbestimmung/Chart1 */
   /* During: Nexonar-System/Nexonar-Positionsbestimmung/Chart1 */
-  if (Gesamtsystem_DWork.is_active_c16_Gesamtsystem == 0U) {
+  if (Gesamtsystem_DWork.is_active_c1_Gesamtsystem == 0U) {
     /* Entry: Nexonar-System/Nexonar-Positionsbestimmung/Chart1 */
-    Gesamtsystem_DWork.is_active_c16_Gesamtsystem = 1U;
+    Gesamtsystem_DWork.is_active_c1_Gesamtsystem = 1U;
 
     /* Entry Internal: Nexonar-System/Nexonar-Positionsbestimmung/Chart1 */
-    /* Transition: '<S22>:3' */
-    Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_x0;
+    /* Transition: '<S23>:3' */
+    Gesamtsystem_DWork.is_c1_Gesamtsystem = Gesamtsystem_IN_x0;
   } else {
-    switch (Gesamtsystem_DWork.is_c16_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c1_Gesamtsystem) {
      case Gesamtsystem_IN_Daten_einlesen:
-      /* During 'Daten_einlesen': '<S22>:17' */
-      /* Transition: '<S22>:24' */
-      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_x1_1;
+      /* During 'Daten_einlesen': '<S23>:17' */
+      /* Transition: '<S23>:24' */
+      Gesamtsystem_DWork.is_c1_Gesamtsystem = Gesamtsystem_IN_x1_1;
 
-      /* Entry 'x1_1': '<S22>:26' */
+      /* Entry 'x1_1': '<S23>:26' */
       Gesamtsystem_B.int16z_bin[0] = rtb_IntegertoBitConverter7[0];
       Gesamtsystem_B.int16z_bin[1] = rtb_IntegertoBitConverter7[1];
       Gesamtsystem_B.int16z_bin[2] = rtb_IntegertoBitConverter7[2];
@@ -3351,22 +3614,22 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_x0:
-      /* During 'x0': '<S22>:2' */
-      /* Transition: '<S22>:7' */
-      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x0': '<S23>:2' */
+      /* Transition: '<S23>:7' */
+      Gesamtsystem_DWork.is_c1_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
 
      default:
-      /* During 'x1_1': '<S22>:26' */
-      /* Transition: '<S22>:25' */
-      Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
+      /* During 'x1_1': '<S23>:26' */
+      /* Transition: '<S23>:25' */
+      Gesamtsystem_DWork.is_c1_Gesamtsystem = Gesamtsystem_IN_Daten_einlesen;
       break;
     }
   }
 
-  /* End of Chart: '<S12>/Chart1' */
+  /* End of Chart: '<S13>/Chart1' */
 
-  /* DiscretePulseGenerator: '<S27>/Pulse Generator' */
+  /* DiscretePulseGenerator: '<S28>/Pulse Generator' */
   rtb_RoundingFunction2 = (Gesamtsystem_DWork.clockTickCounter <
     Gesamtsystem_P.PulseGenerator_Duty) && (Gesamtsystem_DWork.clockTickCounter >=
     0L) ? Gesamtsystem_P.PulseGenerator_Amp : 0.0;
@@ -3377,45 +3640,45 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     Gesamtsystem_DWork.clockTickCounter++;
   }
 
-  /* End of DiscretePulseGenerator: '<S27>/Pulse Generator' */
+  /* End of DiscretePulseGenerator: '<S28>/Pulse Generator' */
 
-  /* Outputs for Triggered SubSystem: '<S27>/I2C Reinitialisierung' incorporates:
-   *  TriggerPort: '<S29>/Trigger'
+  /* Outputs for Triggered SubSystem: '<S28>/I2C Reinitialisierung' incorporates:
+   *  TriggerPort: '<S30>/Trigger'
    */
   zcEvent = rt_ZCFcn(FALLING_ZERO_CROSSING,
                      &Gesamtsystem_PrevZCSigState.I2CReinitialisierung_Trig_ZCE,
                      (rtb_RoundingFunction2));
   if (zcEvent != NO_ZCEVENT) {
-    /* MATLAB Function: '<S29>/I2C Reinitialisierung' */
-    /* MATLAB Function 'Nexonar-System/Nexonar-Positionsbestimmung/I2C Reset (behebt Stabilitätsprobleme der I2C-Verbindung)/I2C Reinitialisierung/I2C Reinitialisierung': '<S31>:1' */
+    /* MATLAB Function: '<S30>/I2C Reinitialisierung' */
+    /* MATLAB Function 'Nexonar-System/Nexonar-Positionsbestimmung/I2C Reset (behebt Stabilitätsprobleme der I2C-Verbindung)/I2C Reinitialisierung/I2C Reinitialisierung': '<S32>:1' */
     init_i2c();
   }
 
-  /* End of Outputs for SubSystem: '<S27>/I2C Reinitialisierung' */
+  /* End of Outputs for SubSystem: '<S28>/I2C Reinitialisierung' */
 
-  /* Outputs for Triggered SubSystem: '<S27>/I2C Reset' incorporates:
-   *  TriggerPort: '<S30>/Trigger'
+  /* Outputs for Triggered SubSystem: '<S28>/I2C Reset' incorporates:
+   *  TriggerPort: '<S31>/Trigger'
    */
   zcEvent = rt_ZCFcn(RISING_ZERO_CROSSING,
                      &Gesamtsystem_PrevZCSigState.I2CReset_Trig_ZCE,
                      (rtb_RoundingFunction2));
   if (zcEvent != NO_ZCEVENT) {
-    /* MATLAB Function: '<S30>/I2C Reset' */
-    /* MATLAB Function 'Nexonar-System/Nexonar-Positionsbestimmung/I2C Reset (behebt Stabilitätsprobleme der I2C-Verbindung)/I2C Reset/I2C Reset': '<S32>:1' */
+    /* MATLAB Function: '<S31>/I2C Reset' */
+    /* MATLAB Function 'Nexonar-System/Nexonar-Positionsbestimmung/I2C Reset (behebt Stabilitätsprobleme der I2C-Verbindung)/I2C Reset/I2C Reset': '<S33>:1' */
     reset_i2c();
   }
 
-  /* End of Outputs for SubSystem: '<S27>/I2C Reset' */
+  /* End of Outputs for SubSystem: '<S28>/I2C Reset' */
 
-  /* MATLABSystem: '<S3>/Moving Average' */
+  /* MATLABSystem: '<S3>/Moving Average2' */
   if (Gesamtsystem_DWork.obj.ForgettingFactor !=
-      Gesamtsystem_P.MovingAverage_ForgettingFactor) {
+      Gesamtsystem_P.MovingAverage2_ForgettingFactor) {
     if (Gesamtsystem_DWork.obj.isInitialized == 1L) {
       Gesamtsystem_DWork.obj.TunablePropsChanged = true;
     }
 
     Gesamtsystem_DWork.obj.ForgettingFactor =
-      Gesamtsystem_P.MovingAverage_ForgettingFactor;
+      Gesamtsystem_P.MovingAverage2_ForgettingFactor;
   }
 
   if (Gesamtsystem_DWork.obj.TunablePropsChanged) {
@@ -3454,34 +3717,37 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
   rtb_RoundingFunction = Gesamtsystem_DWork.obj.pStatistic->plambda;
   rtb_RoundingFunction1 = (1.0 - 1.0 / rtb_RoundingFunction2) *
     rtb_RoundingFunction1 + 1.0 / rtb_RoundingFunction2 *
-    Gesamtsystem_B.RateTransition2;
+    Gesamtsystem_B.RateTransition3_j;
   Gesamtsystem_DWork.obj.pStatistic->pwN = rtb_RoundingFunction *
     rtb_RoundingFunction2 + 1.0;
   Gesamtsystem_DWork.obj.pStatistic->pmN = rtb_RoundingFunction1;
-  Gesamtsystem_B.MovingAverage = rtb_RoundingFunction1;
+  Gesamtsystem_B.MovingAverage2 = rtb_RoundingFunction1;
 
-  /* End of MATLABSystem: '<S3>/Moving Average' */
+  /* End of MATLABSystem: '<S3>/Moving Average2' */
 
-  /* UnitDelay: '<S3>/Unit Delay' */
-  Gesamtsystem_B.UnitDelay = Gesamtsystem_DWork.UnitDelay_DSTATE;
+  /* UnitDelay: '<S3>/Unit Delay2' */
+  Gesamtsystem_B.UnitDelay2 = Gesamtsystem_DWork.UnitDelay2_DSTATE_l;
 
-  /* Chart: '<S3>/Sortieralgorithmus' */
-  if (Gesamtsystem_DWork.temporalCounter_i1 < 511U) {
-    Gesamtsystem_DWork.temporalCounter_i1++;
+  /* RateTransition: '<S3>/TmpRTBAtSortieralgorithmus2Inport3' */
+  if (Gesamtsystem_M->Timing.RateInteraction.TID1_2) {
+    Gesamtsystem_B.TmpRTBAtSortieralgorithmus2Inpo =
+      Gesamtsystem_DWork.TmpRTBAtSortieralgorithmus2Inpo;
   }
 
-  /* Gateway: Subsystem/Sortieralgorithmus */
-  /* During: Subsystem/Sortieralgorithmus */
-  if (Gesamtsystem_DWork.is_active_c15_Gesamtsystem == 0U) {
-    /* Entry: Subsystem/Sortieralgorithmus */
-    Gesamtsystem_DWork.is_active_c15_Gesamtsystem = 1U;
+  /* End of RateTransition: '<S3>/TmpRTBAtSortieralgorithmus2Inport3' */
 
-    /* Entry Internal: Subsystem/Sortieralgorithmus */
-    /* Transition: '<S37>:182' */
-    Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_setupVariable;
-    Gesamtsystem_DWork.temporalCounter_i1 = 0U;
+  /* Chart: '<S3>/Sortieralgorithmus2' */
+  /* Gateway: Subsystem/Sortieralgorithmus2 */
+  /* During: Subsystem/Sortieralgorithmus2 */
+  if (Gesamtsystem_DWork.is_active_c42_Gesamtsystem == 0U) {
+    /* Entry: Subsystem/Sortieralgorithmus2 */
+    Gesamtsystem_DWork.is_active_c42_Gesamtsystem = 1U;
 
-    /* Entry 'setupVariable': '<S37>:175' */
+    /* Entry Internal: Subsystem/Sortieralgorithmus2 */
+    /* Transition: '<S38>:182' */
+    Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_setupVariable;
+
+    /* Entry 'setupVariable': '<S38>:175' */
     Gesamtsystem_DWork.magacin0 = 0.0;
     Gesamtsystem_DWork.magacin1 = 0.0;
     Gesamtsystem_DWork.magacin2 = 0.0;
@@ -3494,91 +3760,91 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     Gesamtsystem_DWork.cubeCounter = 0.0;
     Gesamtsystem_B.signal = 0.0;
   } else {
-    switch (Gesamtsystem_DWork.is_c15_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c42_Gesamtsystem) {
      case Gesamtsystem_IN_Black:
-      /* During 'Black': '<S37>:187' */
-      /* Transition: '<S37>:188' */
-      Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
+      /* During 'Black': '<S38>:187' */
+      /* Transition: '<S38>:188' */
+      Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
 
-      /* Entry 'DetectedCube': '<S37>:180' */
+      /* Entry 'DetectedCube': '<S38>:180' */
       Gesamtsystem_DWork.cubeCounter++;
       break;
 
      case Gesamtsystem_IN_BlueCube:
-      /* During 'BlueCube': '<S37>:185' */
-      /* Transition: '<S37>:189' */
-      Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
+      /* During 'BlueCube': '<S38>:185' */
+      /* Transition: '<S38>:189' */
+      Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
 
-      /* Entry 'DetectedCube': '<S37>:180' */
+      /* Entry 'DetectedCube': '<S38>:180' */
       Gesamtsystem_DWork.cubeCounter++;
       break;
 
      case Gesamtsystem_IN_DetectedCube:
-      /* During 'DetectedCube': '<S37>:180' */
-      if (Gesamtsystem_B.UnitDelay == 0.0F) {
-        /* Transition: '<S37>:168' */
-        Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_cubeLoaded;
+      /* During 'DetectedCube': '<S38>:180' */
+      if (Gesamtsystem_B.UnitDelay2 == 0.0F) {
+        /* Transition: '<S38>:168' */
+        Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_cubeLoaded;
 
-        /* Entry 'cubeLoaded': '<S37>:183' */
+        /* Entry 'cubeLoaded': '<S38>:183' */
         Gesamtsystem_B.magacin = -1.0;
       }
       break;
 
      case Gesamtsystem_IN_RedCube:
-      /* During 'RedCube': '<S37>:186' */
-      /* Transition: '<S37>:190' */
-      Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
+      /* During 'RedCube': '<S38>:186' */
+      /* Transition: '<S38>:190' */
+      Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_DetectedCube;
 
-      /* Entry 'DetectedCube': '<S37>:180' */
+      /* Entry 'DetectedCube': '<S38>:180' */
       Gesamtsystem_DWork.cubeCounter++;
       break;
 
      case Gesamtsystem_IN_cubeLoaded:
-      /* During 'cubeLoaded': '<S37>:183' */
-      if ((Gesamtsystem_B.MovingAverage < 700.0) ||
-          (Gesamtsystem_B.MovingAverage > 1500.0)) {
-        /* Transition: '<S37>:169' */
-        Gesamtsystem_DWork.is_c15_Gesamtsystem = IN_photoelectricBarrierActivate;
+      /* During 'cubeLoaded': '<S38>:183' */
+      if ((Gesamtsystem_B.MovingAverage2 < 700.0) ||
+          (Gesamtsystem_B.MovingAverage2 > 1500.0)) {
+        /* Transition: '<S38>:169' */
+        Gesamtsystem_DWork.is_c42_Gesamtsystem = IN_photoelectricBarrierActivate;
 
-        /* Entry 'photoelectricBarrierActivated': '<S37>:184' */
+        /* Entry 'photoelectricBarrierActivated': '<S38>:184' */
       } else {
         Gesamtsystem_B.magacin = -1.0;
       }
       break;
 
      case IN_photoelectricBarrierActivate:
-      /* During 'photoelectricBarrierActivated': '<S37>:184' */
-      if (Gesamtsystem_B.MovingAverage > 2150.0) {
-        /* Transition: '<S37>:172' */
-        Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_Black;
+      /* During 'photoelectricBarrierActivated': '<S38>:184' */
+      if (Gesamtsystem_B.MovingAverage2 > 2150.0) {
+        /* Transition: '<S38>:172' */
+        Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_Black;
 
-        /* Entry 'Black': '<S37>:187' */
+        /* Entry 'Black': '<S38>:187' */
         Gesamtsystem_B.magacin = 6.0;
-      } else if (Gesamtsystem_B.MovingAverage < 1000.0) {
-        /* Transition: '<S37>:171' */
-        Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_RedCube;
+      } else if (Gesamtsystem_B.MovingAverage2 < 1000.0) {
+        /* Transition: '<S38>:171' */
+        Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_RedCube;
 
-        /* Entry 'RedCube': '<S37>:186' */
+        /* Entry 'RedCube': '<S38>:186' */
         Gesamtsystem_B.magacin = Gesamtsystem_findPlaceForRed();
       } else {
-        if ((Gesamtsystem_B.MovingAverage >= 1000.0) &&
-            (Gesamtsystem_B.MovingAverage <= 2150.0)) {
-          /* Transition: '<S37>:170' */
-          Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_BlueCube;
+        if ((Gesamtsystem_B.MovingAverage2 >= 1000.0) &&
+            (Gesamtsystem_B.MovingAverage2 <= 2150.0)) {
+          /* Transition: '<S38>:170' */
+          Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_BlueCube;
 
-          /* Entry 'BlueCube': '<S37>:185' */
+          /* Entry 'BlueCube': '<S38>:185' */
           Gesamtsystem_B.magacin = Gesamtsystem_findPlaceForBlue();
         }
       }
       break;
 
      default:
-      /* During 'setupVariable': '<S37>:175' */
-      if (Gesamtsystem_DWork.temporalCounter_i1 >= 300U) {
-        /* Transition: '<S37>:181' */
-        Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_cubeLoaded;
+      /* During 'setupVariable': '<S38>:175' */
+      if (Gesamtsystem_B.TmpRTBAtSortieralgorithmus2Inpo > 0.0F) {
+        /* Transition: '<S38>:181' */
+        Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_cubeLoaded;
 
-        /* Entry 'cubeLoaded': '<S37>:183' */
+        /* Entry 'cubeLoaded': '<S38>:183' */
         Gesamtsystem_B.magacin = -1.0;
       } else {
         Gesamtsystem_DWork.magacin0 = 0.0;
@@ -3597,87 +3863,117 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* End of Chart: '<S3>/Sortieralgorithmus' */
+  /* End of Chart: '<S3>/Sortieralgorithmus2' */
 
-  /* Lookup_n-D: '<S3>/1-D Lookup Table' */
+  /* Lookup_n-D: '<S3>/1-D Lookup Table2' */
   rtb_RoundingFunction2 = look1_binlxpw(Gesamtsystem_B.magacin,
-    Gesamtsystem_P.uDLookupTable_bp01Data,
-    Gesamtsystem_P.uDLookupTable_tableData, 7UL);
+    Gesamtsystem_P.uDLookupTable2_bp01Data,
+    Gesamtsystem_P.uDLookupTable2_tableData, 7UL);
 
-  /* Chart: '<S3>/Chart1' incorporates:
-   *  DataTypeConversion: '<S3>/Data Type Conversion'
-   */
-  if (Gesamtsystem_DWork.temporalCounter_i1_p < 511U) {
-    Gesamtsystem_DWork.temporalCounter_i1_p++;
+  /* RateTransition: '<S3>/TmpRTBAtChart7Inport4' */
+  if (Gesamtsystem_M->Timing.RateInteraction.TID1_2) {
+    Gesamtsystem_B.TmpRTBAtChart7Inport4 =
+      Gesamtsystem_DWork.TmpRTBAtChart7Inport4_Buffer0;
   }
 
-  /* Gateway: Subsystem/Chart1 */
-  /* During: Subsystem/Chart1 */
-  if (Gesamtsystem_DWork.is_active_c4_Gesamtsystem == 0U) {
-    /* Entry: Subsystem/Chart1 */
-    Gesamtsystem_DWork.is_active_c4_Gesamtsystem = 1U;
+  /* End of RateTransition: '<S3>/TmpRTBAtChart7Inport4' */
 
-    /* Entry Internal: Subsystem/Chart1 */
-    /* Transition: '<S34>:70' */
-    Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_firstEntry;
-    Gesamtsystem_DWork.temporalCounter_i1_p = 0U;
+  /* Chart: '<S3>/Chart7' incorporates:
+   *  DataTypeConversion: '<S3>/Data Type Conversion2'
+   */
+  if (Gesamtsystem_DWork.temporalCounter_i1_i < 255U) {
+    Gesamtsystem_DWork.temporalCounter_i1_i = ((int16_T)
+      Gesamtsystem_DWork.temporalCounter_i1_i + 1) & 255U;
+  }
 
-    /* Entry 'firstEntry': '<S34>:69' */
-    Gesamtsystem_B.angle = 300.0;
+  /* Gateway: Subsystem/Chart7 */
+  /* During: Subsystem/Chart7 */
+  if (Gesamtsystem_DWork.is_active_c38_Gesamtsystem == 0U) {
+    /* Entry: Subsystem/Chart7 */
+    Gesamtsystem_DWork.is_active_c38_Gesamtsystem = 1U;
+
+    /* Entry Internal: Subsystem/Chart7 */
+    /* Transition: '<S35>:70' */
+    Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_startPosition;
+
+    /* Entry 'startPosition': '<S35>:157' */
+    Gesamtsystem_B.angle = 0.0;
   } else {
-    switch (Gesamtsystem_DWork.is_c4_Gesamtsystem) {
+    switch (Gesamtsystem_DWork.is_c38_Gesamtsystem) {
      case Gesamtsys_IN_betterLeftPosition:
-      /* During 'betterLeftPosition': '<S34>:151' */
-      /* Transition: '<S34>:153' */
-      Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+      /* During 'betterLeftPosition': '<S35>:151' */
+      /* Transition: '<S35>:153' */
+      Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+
+      /* Entry 'waitForCube': '<S35>:29' */
       break;
 
      case Gesamtsy_IN_betterRightPosition:
-      /* During 'betterRightPosition': '<S34>:150' */
-      /* Transition: '<S34>:155' */
-      Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+      /* During 'betterRightPosition': '<S35>:150' */
+      /* Transition: '<S35>:155' */
+      Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+
+      /* Entry 'waitForCube': '<S35>:29' */
       break;
 
      case Gesamtsystem_IN_closeGate:
-      /* During 'closeGate': '<S34>:73' */
-      if (Gesamtsystem_B.UnitDelay == 0.0F) {
-        /* Transition: '<S34>:98' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+      /* During 'closeGate': '<S35>:73' */
+      if (Gesamtsystem_B.UnitDelay2 == 0.0F) {
+        /* Transition: '<S35>:98' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+
+        /* Entry 'waitForCube': '<S35>:29' */
       } else {
-        Gesamtsystem_B.signal_e = 0.0;
+        Gesamtsystem_B.signal_p = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_closeKlappe_b:
+      /* During 'closeKlappe': '<S35>:159' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_i >= 230U) {
+        /* Transition: '<S35>:161' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+
+        /* Entry 'waitForCube': '<S35>:29' */
+      } else {
+        Gesamtsystem_B.signal_p = 0.0;
       }
       break;
 
      case Gesamtsystem_IN_firstEntry:
-      /* During 'firstEntry': '<S34>:69' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_p >= 500U) {
-        /* Transition: '<S34>:71' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_waitForCube;
+      /* During 'firstEntry': '<S35>:69' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_i >= 70U) {
+        /* Transition: '<S35>:160' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_closeKlappe_b;
+        Gesamtsystem_DWork.temporalCounter_i1_i = 0U;
+
+        /* Entry 'closeKlappe': '<S35>:159' */
+        Gesamtsystem_B.signal_p = 0.0;
       }
       break;
 
      case Gesamtsystem_IN_goToMagacin:
-      /* During 'goToMagacin': '<S34>:3' */
+      /* During 'goToMagacin': '<S35>:3' */
       if (((real32_T)Gesamtsystem_B.RateTransition3 > Gesamtsystem_B.angle - 2.0)
           && ((real32_T)Gesamtsystem_B.RateTransition3 < Gesamtsystem_B.angle +
               2.0)) {
-        /* Transition: '<S34>:66' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_openGate;
-        Gesamtsystem_DWork.temporalCounter_i1_p = 0U;
+        /* Transition: '<S35>:66' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_openGate;
+        Gesamtsystem_DWork.temporalCounter_i1_i = 0U;
 
-        /* Entry 'openGate': '<S34>:72' */
-        Gesamtsystem_B.signal_e = 1.0;
+        /* Entry 'openGate': '<S35>:72' */
+        Gesamtsystem_B.signal_p = 1.0;
         Gesamtsystem_B.movingCube = 0.0F;
       }
       break;
 
      case Gesamtsystem_IN_goToZero:
-      /* During 'goToZero': '<S34>:59' */
+      /* During 'goToZero': '<S35>:59' */
       if (((real32_T)Gesamtsystem_B.RateTransition3 > -2.0F) && ((real32_T)
            Gesamtsystem_B.RateTransition3 < 2.0F)) {
-        /* Transition: '<S34>:61' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_wait_b;
-        Gesamtsystem_DWork.temporalCounter_i1_p = 0U;
+        /* Transition: '<S35>:61' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_wait_b;
+        Gesamtsystem_DWork.temporalCounter_i1_i = 0U;
       } else {
         Gesamtsystem_B.angle = 0.0;
         Gesamtsystem_B.movingCube = 1.0F;
@@ -3685,50 +3981,63 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       break;
 
      case Gesamtsystem_IN_openGate:
-      /* During 'openGate': '<S34>:72' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_p >= 50U) {
-        /* Transition: '<S34>:75' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_closeGate;
+      /* During 'openGate': '<S35>:72' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_i >= 50U) {
+        /* Transition: '<S35>:75' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_closeGate;
 
-        /* Entry 'closeGate': '<S34>:73' */
-        Gesamtsystem_B.signal_e = 0.0;
+        /* Entry 'closeGate': '<S35>:73' */
+        Gesamtsystem_B.signal_p = 0.0;
       } else {
-        Gesamtsystem_B.signal_e = 1.0;
+        Gesamtsystem_B.signal_p = 1.0;
         Gesamtsystem_B.movingCube = 0.0F;
       }
       break;
 
-     case Gesamtsystem_IN_wait_b:
-      /* During 'wait': '<S34>:101' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_p >= 40U) {
-        /* Transition: '<S34>:102' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_goToMagacin;
+     case Gesamtsystem_IN_startPosition:
+      /* During 'startPosition': '<S35>:157' */
+      if (Gesamtsystem_B.TmpRTBAtChart7Inport4 > 0.0F) {
+        /* Transition: '<S35>:158' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_firstEntry;
+        Gesamtsystem_DWork.temporalCounter_i1_i = 0U;
 
-        /* Entry 'goToMagacin': '<S34>:3' */
+        /* Entry 'firstEntry': '<S35>:69' */
+        Gesamtsystem_B.angle = 300.0;
+        Gesamtsystem_B.signal_p = -1.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_wait_b:
+      /* During 'wait': '<S35>:101' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_i >= 40U) {
+        /* Transition: '<S35>:102' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_goToMagacin;
+
+        /* Entry 'goToMagacin': '<S35>:3' */
         Gesamtsystem_B.angle = rtb_RoundingFunction2;
       }
       break;
 
      default:
-      /* During 'waitForCube': '<S34>:29' */
+      /* During 'waitForCube': '<S35>:29' */
       if (Gesamtsystem_B.angle == 85.0) {
-        /* Transition: '<S34>:154' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsy_IN_betterRightPosition;
+        /* Transition: '<S35>:154' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsy_IN_betterRightPosition;
 
-        /* Entry 'betterRightPosition': '<S34>:150' */
+        /* Entry 'betterRightPosition': '<S35>:150' */
         Gesamtsystem_B.angle = 220.0;
       } else if (Gesamtsystem_B.angle == -40.0) {
-        /* Transition: '<S34>:152' */
-        Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsys_IN_betterLeftPosition;
+        /* Transition: '<S35>:152' */
+        Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsys_IN_betterLeftPosition;
 
-        /* Entry 'betterLeftPosition': '<S34>:151' */
+        /* Entry 'betterLeftPosition': '<S35>:151' */
         Gesamtsystem_B.angle = -170.0;
       } else {
         if (rtb_RoundingFunction2 != -1.0) {
-          /* Transition: '<S34>:60' */
-          Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_goToZero;
+          /* Transition: '<S35>:60' */
+          Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_goToZero;
 
-          /* Entry 'goToZero': '<S34>:59' */
+          /* Entry 'goToZero': '<S35>:59' */
           Gesamtsystem_B.angle = 0.0;
           Gesamtsystem_B.movingCube = 1.0F;
         }
@@ -3737,138 +4046,41 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
     }
   }
 
-  /* End of Chart: '<S3>/Chart1' */
+  /* End of Chart: '<S3>/Chart7' */
 
-  /* Chart: '<S3>/Chart' */
-  if (Gesamtsystem_DWork.temporalCounter_i1_a < 511U) {
-    Gesamtsystem_DWork.temporalCounter_i1_a++;
-  }
-
-  /* Gateway: Subsystem/Chart */
-  /* During: Subsystem/Chart */
-  if (Gesamtsystem_DWork.is_active_c3_Gesamtsystem == 0U) {
-    /* Entry: Subsystem/Chart */
-    Gesamtsystem_DWork.is_active_c3_Gesamtsystem = 1U;
-
-    /* Entry Internal: Subsystem/Chart */
-    /* Transition: '<S33>:14' */
-    Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_init;
-    Gesamtsystem_DWork.temporalCounter_i1_a = 0U;
-
-    /* Entry 'init': '<S33>:13' */
-    Gesamtsystem_B.gateDirection = 0.0;
-    Gesamtsystem_B.gatePWM_i = 50.0;
-  } else {
-    switch (Gesamtsystem_DWork.is_c3_Gesamtsystem) {
-     case Gesamtsystem_IN_close:
-      /* During 'close': '<S33>:3' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_a >= 40U) {
-        /* Transition: '<S33>:7' */
-        Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_wait;
-
-        /* Entry 'wait': '<S33>:4' */
-        Gesamtsystem_B.gatePWM_i = 0.0;
-        Gesamtsystem_B.gateDirection = 1.0;
-        Gesamtsystem_B.movingCube_p = 0.0F;
-      } else {
-        Gesamtsystem_B.gateDirection = 0.0;
-      }
-      break;
-
-     case Gesamtsystem_IN_init:
-      /* During 'init': '<S33>:13' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_a >= 300U) {
-        /* Transition: '<S33>:15' */
-        Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_wait;
-
-        /* Entry 'wait': '<S33>:4' */
-        Gesamtsystem_B.gatePWM_i = 0.0;
-        Gesamtsystem_B.gateDirection = 1.0;
-        Gesamtsystem_B.movingCube_p = 0.0F;
-      } else {
-        Gesamtsystem_B.gateDirection = 0.0;
-        Gesamtsystem_B.gatePWM_i = 50.0;
-      }
-      break;
-
-     case Gesamtsystem_IN_open:
-      /* During 'open': '<S33>:1' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_a >= 40U) {
-        /* Transition: '<S33>:6' */
-        Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_close;
-        Gesamtsystem_DWork.temporalCounter_i1_a = 0U;
-
-        /* Entry 'close': '<S33>:3' */
-        Gesamtsystem_B.gateDirection = 0.0;
-      } else {
-        Gesamtsystem_B.gatePWM_i = 70.0;
-        Gesamtsystem_B.movingCube_p = 1.0F;
-      }
-      break;
-
-     default:
-      /* During 'wait': '<S33>:4' */
-      if (Gesamtsystem_B.signal_e == 1.0) {
-        /* Transition: '<S33>:5' */
-        Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_open;
-        Gesamtsystem_DWork.temporalCounter_i1_a = 0U;
-
-        /* Entry 'open': '<S33>:1' */
-        Gesamtsystem_B.gatePWM_i = 70.0;
-        Gesamtsystem_B.movingCube_p = 1.0F;
-      } else {
-        Gesamtsystem_B.gatePWM_i = 0.0;
-        Gesamtsystem_B.gateDirection = 1.0;
-        Gesamtsystem_B.movingCube_p = 0.0F;
-      }
-      break;
-    }
-  }
-
-  /* End of Chart: '<S3>/Chart' */
-
-  /* S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor1' */
-  {
-    if (Gesamtsystem_B.gateDirection)
-      GpioDataRegs.GPASET.bit.GPIO16 = 1;
-    else
-      GpioDataRegs.GPACLEAR.bit.GPIO16 = 1;
-  }
-
-  /* Sum: '<S39>/Sum' incorporates:
-   *  DataTypeConversion: '<S3>/Data Type Conversion'
+  /* Sum: '<S41>/Sum' incorporates:
+   *  DataTypeConversion: '<S3>/Data Type Conversion2'
    */
-  rtb_RoundingFunction2 = Gesamtsystem_B.angle - (real32_T)
-    Gesamtsystem_B.RateTransition3;
+  rtb_DeadZone = Gesamtsystem_B.angle - (real32_T)Gesamtsystem_B.RateTransition3;
 
-  /* DeadZone: '<S39>/Dead Zone' */
-  if (rtb_RoundingFunction2 > Gesamtsystem_P.DeadZone_End) {
-    rtb_RoundingFunction2 -= Gesamtsystem_P.DeadZone_End;
-  } else if (rtb_RoundingFunction2 >= Gesamtsystem_P.DeadZone_Start) {
-    rtb_RoundingFunction2 = 0.0;
+  /* DeadZone: '<S41>/Dead Zone' */
+  if (rtb_DeadZone > Gesamtsystem_P.DeadZone_End) {
+    rtb_DeadZone -= Gesamtsystem_P.DeadZone_End;
+  } else if (rtb_DeadZone >= Gesamtsystem_P.DeadZone_Start) {
+    rtb_DeadZone = 0.0;
   } else {
-    rtb_RoundingFunction2 -= Gesamtsystem_P.DeadZone_Start;
+    rtb_DeadZone -= Gesamtsystem_P.DeadZone_Start;
   }
 
-  /* End of DeadZone: '<S39>/Dead Zone' */
+  /* End of DeadZone: '<S41>/Dead Zone' */
 
-  /* Gain: '<S39>/Verstaerkung' */
-  rtb_RoundingFunction2 *= Gesamtsystem_P.Verstaerkung_Gain;
+  /* Gain: '<S41>/Verstaerkung' */
+  rtb_RoundingFunction2 = Gesamtsystem_P.Verstaerkung_Gain * rtb_DeadZone;
 
-  /* MATLAB Function: '<S39>/Richtung' */
-  /* MATLAB Function 'Subsystem/P-Regler mit Output/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01/Richtung': '<S41>:1' */
+  /* MATLAB Function: '<S41>/Richtung' */
+  /* MATLAB Function 'Subsystem/P-Regler mit Output2/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01/Richtung': '<S43>:1' */
   if (rtb_RoundingFunction2 > 0.0) {
-    /* '<S41>:1:3' */
-    /* '<S41>:1:4' */
+    /* '<S43>:1:3' */
+    /* '<S43>:1:4' */
     Gesamtsystem_B.y = 1.0;
   } else {
-    /* '<S41>:1:6' */
+    /* '<S43>:1:6' */
     Gesamtsystem_B.y = 0.0;
   }
 
-  /* End of MATLAB Function: '<S39>/Richtung' */
+  /* End of MATLAB Function: '<S41>/Richtung' */
 
-  /* S-Function (c280xgpio_do): '<S36>/Drehrichtungsvorgabe für einen Motor' */
+  /* S-Function (c280xgpio_do): '<S37>/Drehrichtungsvorgabe für einen Motor' */
   {
     if (Gesamtsystem_B.y)
       GpioDataRegs.GPASET.bit.GPIO19 = 1;
@@ -3876,105 +4088,338 @@ void Gesamtsystem_step1(void)          /* Sample time: [0.01s, 0.0s] */
       GpioDataRegs.GPACLEAR.bit.GPIO19 = 1;
   }
 
-  /* Abs: '<S39>/Abs' */
+  /* Abs: '<S41>/Abs' */
   rtb_RoundingFunction2 = fabs(rtb_RoundingFunction2);
 
-  /* MATLAB Function: '<S39>/Betrag' */
-  /* MATLAB Function 'Subsystem/P-Regler mit Output/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01/Betrag': '<S40>:1' */
+  /* MATLAB Function: '<S41>/Betrag' */
+  /* MATLAB Function 'Subsystem/P-Regler mit Output2/P-Regler mit Regelfehler Begrenzung Initial: k = 0.1, limiit = +//- 100 Sampletime 0.01/Betrag': '<S42>:1' */
   if ((0.5 < rtb_RoundingFunction2) && (rtb_RoundingFunction2 < 60.0)) {
-    /* '<S40>:1:3' */
-    /* '<S40>:1:4' */
-    rtb_y_l = 60.0;
+    /* '<S42>:1:3' */
+    /* '<S42>:1:4' */
+    rtb_y_o = 60.0;
   } else if (rtb_RoundingFunction2 <= 0.5) {
-    /* '<S40>:1:5' */
-    /* '<S40>:1:6' */
-    rtb_y_l = 0.0;
+    /* '<S42>:1:5' */
+    /* '<S42>:1:6' */
+    rtb_y_o = 0.0;
   } else if (rtb_RoundingFunction2 >= 100.0) {
-    /* '<S40>:1:7' */
-    /* '<S40>:1:8' */
-    rtb_y_l = 100.0;
+    /* '<S42>:1:7' */
+    /* '<S42>:1:8' */
+    rtb_y_o = 100.0;
   } else {
-    /* '<S40>:1:10' */
-    rtb_y_l = rtb_RoundingFunction2;
+    /* '<S42>:1:10' */
+    rtb_y_o = rtb_RoundingFunction2;
   }
 
-  /* End of MATLAB Function: '<S39>/Betrag' */
+  /* End of MATLAB Function: '<S41>/Betrag' */
 
-  /* S-Function (c280xpwm): '<S36>/PWM Vorgabe für einen Motor ' */
+  /* S-Function (c280xpwm): '<S37>/PWM Vorgabe für einen Motor ' */
 
   /*-- Update CMPB value for ePWM4 --*/
   {
-    EPwm4Regs.CMPB = (uint16_T)((uint32_T)EPwm4Regs.TBPRD * rtb_y_l * 0.01);
+    EPwm4Regs.CMPB = (uint16_T)((uint32_T)EPwm4Regs.TBPRD * rtb_y_o * 0.01);
   }
 
-  /* S-Function (c280xpwm): '<S3>/PWM Vorgabe für einen Motor 1' */
-
-  /*-- Update CMPB value for ePWM6 --*/
-  {
-    EPwm6Regs.CMPB = (uint16_T)((uint32_T)EPwm6Regs.TBPRD *
-      Gesamtsystem_B.gatePWM_i * 0.01);
+  /* Chart: '<S3>/Chart6' */
+  if (Gesamtsystem_DWork.temporalCounter_i1_d < 127U) {
+    Gesamtsystem_DWork.temporalCounter_i1_d = ((int16_T)
+      Gesamtsystem_DWork.temporalCounter_i1_d + 1) & 255U;
   }
 
-  /* Chart: '<S3>/Chart2' incorporates:
-   *  DataTypeConversion: '<S3>/Data Type Conversion1'
-   */
-  if (Gesamtsystem_DWork.temporalCounter_i1_av < 127U) {
-    Gesamtsystem_DWork.temporalCounter_i1_av = ((int16_T)
-      Gesamtsystem_DWork.temporalCounter_i1_av + 1) & 255U;
-  }
+  /* Gateway: Subsystem/Chart6 */
+  /* During: Subsystem/Chart6 */
+  if (Gesamtsystem_DWork.is_active_c37_Gesamtsystem == 0U) {
+    /* Entry: Subsystem/Chart6 */
+    Gesamtsystem_DWork.is_active_c37_Gesamtsystem = 1U;
 
-  /* Gateway: Subsystem/Chart2 */
-  /* During: Subsystem/Chart2 */
-  if (Gesamtsystem_DWork.is_active_c6_Gesamtsystem == 0U) {
-    /* Entry: Subsystem/Chart2 */
-    Gesamtsystem_DWork.is_active_c6_Gesamtsystem = 1U;
+    /* Entry Internal: Subsystem/Chart6 */
+    /* Transition: '<S34>:16' */
+    Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_wait;
 
-    /* Entry Internal: Subsystem/Chart2 */
-    /* Transition: '<S35>:11' */
-    Gesamtsystem_DWork.is_c6_Gesamtsystem = Gesamtsystem_IN_wait_ba;
-
-    /* Entry 'wait': '<S35>:4' */
+    /* Entry 'wait': '<S34>:4' */
+    Gesamtsystem_B.gateDirection_k = 0.0;
+    Gesamtsystem_B.gatePWM_e = 60.0;
+    Gesamtsystem_B.movingCube_p = 0.0F;
   } else {
-    switch (Gesamtsystem_DWork.is_c6_Gesamtsystem) {
-     case Gesamtsystem_IN_close:
-      /* During 'close': '<S35>:3' */
-      Gesamtsystem_B.gatePWM = 0.0;
+    switch (Gesamtsystem_DWork.is_c37_Gesamtsystem) {
+     case Gesamtsystem_IN_CloseRegular:
+      /* During 'CloseRegular': '<S34>:22' */
+      Gesamtsystem_B.gatePWM_e = 100.0;
+      Gesamtsystem_B.gateDirection_k = 0.0;
       break;
 
-     case Gesamtsystem_IN_open_b:
-      /* During 'open': '<S35>:1' */
-      if (Gesamtsystem_DWork.temporalCounter_i1_av >= 100U) {
-        /* Transition: '<S35>:6' */
-        Gesamtsystem_DWork.is_c6_Gesamtsystem = Gesamtsystem_IN_close;
+     case Gesamtsystem_IN_close:
+      /* During 'close': '<S34>:3' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_d >= 40U) {
+        /* Transition: '<S34>:7' */
+        Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_wait;
 
-        /* Entry 'close': '<S35>:3' */
-        Gesamtsystem_B.gatePWM = 0.0;
+        /* Entry 'wait': '<S34>:4' */
+        Gesamtsystem_B.gateDirection_k = 0.0;
+        Gesamtsystem_B.gatePWM_e = 60.0;
+        Gesamtsystem_B.movingCube_p = 0.0F;
       } else {
-        Gesamtsystem_B.gatePWM = 50.0;
+        Gesamtsystem_B.gateDirection_k = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_closeKlappe:
+      /* During 'closeKlappe': '<S34>:17' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_d >= 100U) {
+        /* Transition: '<S34>:19' */
+        Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_wait;
+
+        /* Entry 'wait': '<S34>:4' */
+        Gesamtsystem_B.gateDirection_k = 0.0;
+        Gesamtsystem_B.gatePWM_e = 60.0;
+        Gesamtsystem_B.movingCube_p = 0.0F;
+      } else {
+        Gesamtsystem_B.gatePWM_e = 100.0;
+        Gesamtsystem_B.gateDirection_k = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_open:
+      /* During 'open': '<S34>:1' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_d >= 50U) {
+        /* Transition: '<S34>:6' */
+        Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_close;
+        Gesamtsystem_DWork.temporalCounter_i1_d = 0U;
+
+        /* Entry 'close': '<S34>:3' */
+        Gesamtsystem_B.gateDirection_k = 0.0;
+      } else {
+        Gesamtsystem_B.gateDirection_k = 1.0;
+        Gesamtsystem_B.gatePWM_e = 100.0;
+        Gesamtsystem_B.movingCube_p = 1.0F;
       }
       break;
 
      default:
-      /* During 'wait': '<S35>:4' */
-      if ((real32_T)Gesamtsystem_B.signal == 1.0F) {
-        /* Transition: '<S35>:5' */
-        Gesamtsystem_DWork.is_c6_Gesamtsystem = Gesamtsystem_IN_open_b;
-        Gesamtsystem_DWork.temporalCounter_i1_av = 0U;
+      /* During 'wait': '<S34>:4' */
+      if (Gesamtsystem_B.signal_p == 1.0) {
+        /* Transition: '<S34>:5' */
+        Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_open;
+        Gesamtsystem_DWork.temporalCounter_i1_d = 0U;
 
-        /* Entry 'open': '<S35>:1' */
-        Gesamtsystem_B.gatePWM = 50.0;
+        /* Entry 'open': '<S34>:1' */
+        Gesamtsystem_B.gateDirection_k = 1.0;
+        Gesamtsystem_B.gatePWM_e = 100.0;
+        Gesamtsystem_B.movingCube_p = 1.0F;
+      } else if (Gesamtsystem_B.signal_p == -1.0) {
+        /* Transition: '<S34>:18' */
+        Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_closeKlappe;
+        Gesamtsystem_DWork.temporalCounter_i1_d = 0U;
+
+        /* Entry 'closeKlappe': '<S34>:17' */
+        Gesamtsystem_B.gatePWM_e = 100.0;
+        Gesamtsystem_B.gateDirection_k = 0.0;
+      } else {
+        Gesamtsystem_B.gateDirection_k = 0.0;
+        Gesamtsystem_B.gatePWM_e = 60.0;
+        Gesamtsystem_B.movingCube_p = 0.0F;
       }
       break;
     }
   }
 
-  /* End of Chart: '<S3>/Chart2' */
+  /* End of Chart: '<S3>/Chart6' */
 
-  /* Update for UnitDelay: '<S3>/Unit Delay' incorporates:
-   *  Sum: '<S3>/Sum'
+  /* S-Function (c280xpwm): '<S39>/PWM Vorgabe für einen Motor 1' */
+
+  /*-- Update CMPB value for ePWM6 --*/
+  {
+    EPwm6Regs.CMPB = (uint16_T)((uint32_T)EPwm6Regs.TBPRD *
+      Gesamtsystem_B.gatePWM_e * 0.01);
+  }
+
+  /* S-Function (c280xgpio_do): '<S39>/Drehrichtungsvorgabe für einen Motor1' */
+  {
+    if (Gesamtsystem_B.gateDirection_k)
+      GpioDataRegs.GPASET.bit.GPIO16 = 1;
+    else
+      GpioDataRegs.GPACLEAR.bit.GPIO16 = 1;
+  }
+
+  /* Update for UnitDelay: '<S3>/Unit Delay2' incorporates:
+   *  Sum: '<S3>/Sum2'
    */
-  Gesamtsystem_DWork.UnitDelay_DSTATE = Gesamtsystem_B.movingCube +
+  Gesamtsystem_DWork.UnitDelay2_DSTATE_l = Gesamtsystem_B.movingCube +
     Gesamtsystem_B.movingCube_p;
+}
+
+/* Model step function for TID2 */
+void Gesamtsystem_step2(void)          /* Sample time: [0.1s, 0.0s] */
+{
+  /* S-Function (c280xgpio_di): '<S3>/Digital Input2' */
+  {
+    Gesamtsystem_B.DigitalInput2 = GpioDataRegs.GPADAT.bit.GPIO24;
+  }
+
+  /* Chart: '<S3>/Chart8' */
+  if (Gesamtsystem_DWork.temporalCounter_i1_g < 31U) {
+    Gesamtsystem_DWork.temporalCounter_i1_g = ((int16_T)
+      Gesamtsystem_DWork.temporalCounter_i1_g + 1) & 255U;
+  }
+
+  /* Gateway: Subsystem/Chart8 */
+  /* During: Subsystem/Chart8 */
+  if (Gesamtsystem_DWork.is_active_c39_Gesamtsystem == 0U) {
+    /* Entry: Subsystem/Chart8 */
+    Gesamtsystem_DWork.is_active_c39_Gesamtsystem = 1U;
+
+    /* Entry Internal: Subsystem/Chart8 */
+    /* Transition: '<S36>:16' */
+    Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_entry;
+
+    /* Entry 'entry': '<S36>:20' */
+    Gesamtsystem_DWork.tasterCounter = 0.0;
+    Gesamtsystem_B.panzerMotor = 0.0;
+    Gesamtsystem_B.lampe = 0.0;
+  } else {
+    switch (Gesamtsystem_DWork.is_c39_Gesamtsystem) {
+     case Gesamtsystem_IN_Lampe:
+      /* During 'Lampe': '<S36>:35' */
+      Gesamtsystem_B.lampe = 1.0;
+      break;
+
+     case Gesamtsystem_IN_Stillstand:
+      /* During 'Stillstand': '<S36>:25' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_g >= 10U) {
+        /* Transition: '<S36>:36' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_Lampe;
+
+        /* Entry 'Lampe': '<S36>:35' */
+        Gesamtsystem_B.lampe = 1.0;
+      } else {
+        Gesamtsystem_B.gatePWM = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_end:
+      /* During 'end': '<S36>:23' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_g >= 5U) {
+        /* Transition: '<S36>:26' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_Stillstand;
+        Gesamtsystem_DWork.temporalCounter_i1_g = 0U;
+
+        /* Entry 'Stillstand': '<S36>:25' */
+        Gesamtsystem_B.gatePWM = 0.0;
+      } else {
+        Gesamtsystem_B.gatePWM = 100.0;
+        Gesamtsystem_B.gateDirection = 1.0;
+        Gesamtsystem_B.panzerMotor = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_entry:
+      /* During 'entry': '<S36>:20' */
+      /* Transition: '<S36>:21' */
+      Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_wait_ba;
+
+      /* Entry 'wait': '<S36>:4' */
+      Gesamtsystem_B.gatePWM = 0.0;
+      Gesamtsystem_B.gateDirection = 0.0;
+      break;
+
+     case Gesamtsystem_IN_open_b:
+      /* During 'open': '<S36>:1' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_g >= 5U) {
+        /* Transition: '<S36>:6' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_wait1;
+        Gesamtsystem_DWork.temporalCounter_i1_g = 0U;
+
+        /* Entry 'wait1': '<S36>:3' */
+        Gesamtsystem_B.gatePWM = 0.0;
+      }
+      break;
+
+     case Gesamtsystem_IN_wait_ba:
+      /* During 'wait': '<S36>:4' */
+      if ((Gesamtsystem_B.DigitalInput2 > 0.0F) &&
+          (Gesamtsystem_DWork.tasterCounter >= 2.0)) {
+        /* Transition: '<S36>:24' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_end;
+        Gesamtsystem_DWork.temporalCounter_i1_g = 0U;
+
+        /* Entry 'end': '<S36>:23' */
+        Gesamtsystem_B.gatePWM = 100.0;
+        Gesamtsystem_B.gateDirection = 1.0;
+        Gesamtsystem_B.panzerMotor = 0.0;
+      } else if ((Gesamtsystem_B.DigitalInput2 > 0.0F) &&
+                 (Gesamtsystem_DWork.tasterCounter == 0.0)) {
+        /* Transition: '<S36>:5' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_open_b;
+        Gesamtsystem_DWork.temporalCounter_i1_g = 0U;
+
+        /* Entry 'open': '<S36>:1' */
+        Gesamtsystem_DWork.tasterCounter++;
+        Gesamtsystem_B.gatePWM = 100.0;
+        Gesamtsystem_B.gateDirection = 0.0;
+        Gesamtsystem_B.panzerMotor = 1.0;
+      } else if ((Gesamtsystem_B.DigitalInput2 > 0.0F) &&
+                 (Gesamtsystem_DWork.tasterCounter == 1.0)) {
+        /* Transition: '<S36>:31' */
+        Gesamtsystem_DWork.tasterCounter = 2.0;
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_wait_ba;
+
+        /* Entry 'wait': '<S36>:4' */
+        Gesamtsystem_B.gatePWM = 0.0;
+        Gesamtsystem_B.gateDirection = 0.0;
+      } else {
+        Gesamtsystem_B.gatePWM = 0.0;
+        Gesamtsystem_B.gateDirection = 0.0;
+      }
+      break;
+
+     default:
+      /* During 'wait1': '<S36>:3' */
+      if (Gesamtsystem_DWork.temporalCounter_i1_g >= 20U) {
+        /* Transition: '<S36>:22' */
+        Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_wait_ba;
+
+        /* Entry 'wait': '<S36>:4' */
+        Gesamtsystem_B.gatePWM = 0.0;
+        Gesamtsystem_B.gateDirection = 0.0;
+      } else {
+        Gesamtsystem_B.gatePWM = 0.0;
+      }
+      break;
+    }
+  }
+
+  /* End of Chart: '<S3>/Chart8' */
+
+  /* S-Function (c280xgpio_do): '<S3>/Digital Output' */
+  {
+    if (Gesamtsystem_B.lampe)
+      GpioDataRegs.GPBSET.bit.GPIO58 = 1;
+    else
+      GpioDataRegs.GPBCLEAR.bit.GPIO58 = 1;
+  }
+
+  /* S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor3' */
+  {
+    if (Gesamtsystem_B.gateDirection)
+      GpioDataRegs.GPASET.bit.GPIO15 = 1;
+    else
+      GpioDataRegs.GPACLEAR.bit.GPIO15 = 1;
+  }
+
+  /* S-Function (c280xpwm): '<S3>/ePWM2' */
+
+  /*-- Update CMPB value for ePWM5 --*/
+  {
+    EPwm5Regs.CMPB = (uint16_T)((uint32_T)EPwm5Regs.TBPRD *
+      Gesamtsystem_B.gatePWM * 0.01);
+  }
+
+  /* Update for RateTransition: '<S3>/TmpRTBAtSortieralgorithmus2Inport3' */
+  Gesamtsystem_DWork.TmpRTBAtSortieralgorithmus2Inpo =
+    Gesamtsystem_B.DigitalInput2;
+
+  /* Update for RateTransition: '<S3>/TmpRTBAtChart7Inport4' */
+  Gesamtsystem_DWork.TmpRTBAtChart7Inport4_Buffer0 =
+    Gesamtsystem_B.DigitalInput2;
 }
 
 /* Model initialize function */
@@ -3998,12 +4443,18 @@ void Gesamtsystem_initialize(void)
     boolean_T flag;
     int16_T i;
 
-    /* Start for S-Function (c28xisr_c2000): '<S12>/C28x Hardware Interrupt' incorporates:
-     *  SubSystem: '<S12>/Triggered Subsystem'
-     */
-    /* Start for function-call system: '<S12>/Triggered Subsystem' */
+    /* Start for S-Function (c280xgpio_di): '<S2>/Uebergabeschalter' */
+    EALLOW;
+    GpioCtrlRegs.GPAMUX2.all &= 0xFFFCFFFF;
+    GpioCtrlRegs.GPADIR.all &= 0xFEFFFFFF;
+    EDIS;
 
-    /* Start for S-Function (c280xi2c_rx): '<S28>/I2C Receive' */
+    /* Start for S-Function (c28xisr_c2000): '<S13>/C28x Hardware Interrupt' incorporates:
+     *  SubSystem: '<S13>/Triggered Subsystem'
+     */
+    /* Start for function-call system: '<S13>/Triggered Subsystem' */
+
+    /* Start for S-Function (c280xi2c_rx): '<S29>/I2C Receive' */
 
     /* Initialize Gesamtsystem_B.I2CReceive_o1[0] */
     {
@@ -4019,13 +4470,13 @@ void Gesamtsystem_initialize(void)
       Gesamtsystem_B.I2CReceive_o1[9] = (uint8_T)0.0;
     }
 
-    /* Start for RateTransition: '<S12>/Rate Transition' */
+    /* Start for RateTransition: '<S13>/Rate Transition' */
     for (i = 0; i < 20; i++) {
       Gesamtsystem_B.RateTransition[i] =
         Gesamtsystem_P.RateTransition_InitialCondition;
     }
 
-    /* End of Start for RateTransition: '<S12>/Rate Transition' */
+    /* End of Start for RateTransition: '<S13>/Rate Transition' */
 
     /* Start for S-Function (c280xpwm): '<S10>/PWM Vorgabe fuer Motor_links ' */
 
@@ -4243,15 +4694,33 @@ void Gesamtsystem_initialize(void)
     GpioCtrlRegs.GPADIR.all |= 0x200000;
     EDIS;
 
-    /* Start for S-Function (c280xadc): '<S3>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv' */
+    /* Start for S-Function (c280xgpio_di): '<S3>/Digital Input2' */
+    EALLOW;
+    GpioCtrlRegs.GPAMUX2.all &= 0xFFFCFFFF;
+    GpioCtrlRegs.GPADIR.all &= 0xFEFFFFFF;
+    EDIS;
+
+    /* Start for S-Function (c280xgpio_do): '<S3>/Digital Output' */
+    EALLOW;
+    GpioCtrlRegs.GPBMUX2.all &= 0xFFCFFFFF;
+    GpioCtrlRegs.GPBDIR.all |= 0x4000000;
+    EDIS;
+
+    /* Start for S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor3' */
+    EALLOW;
+    GpioCtrlRegs.GPAMUX1.all &= 0x3FFFFFFF;
+    GpioCtrlRegs.GPADIR.all |= 0x8000;
+    EDIS;
+
+    /* Start for S-Function (c280xadc): '<S3>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
     if (adcInitFlag == 0) {
       InitAdc();
       adcInitFlag = 1;
     }
 
-    config_ADC_A (3U, 4165U, 0U, 0U, 0U);
+    config_ADC_A (2U, 33U, 0U, 0U, 0U);
 
-    /* Start for MATLABSystem: '<S3>/Moving Average' */
+    /* Start for MATLABSystem: '<S3>/Moving Average2' */
     Gesamtsystem_DWork.obj.matlabCodegenIsDeleted = true;
     Gesamtsystem_DWork.obj.isInitialized = 0L;
     Gesamtsystem_DWork.obj.NumChannels = -1L;
@@ -4262,7 +4731,7 @@ void Gesamtsystem_initialize(void)
     }
 
     Gesamtsystem_DWork.obj.ForgettingFactor =
-      Gesamtsystem_P.MovingAverage_ForgettingFactor;
+      Gesamtsystem_P.MovingAverage2_ForgettingFactor;
     Gesamtsystem_DWork.obj.isSetupComplete = false;
     Gesamtsystem_DWork.obj.isInitialized = 1L;
     Gesamtsystem_DWork.obj.NumChannels = 1L;
@@ -4278,21 +4747,23 @@ void Gesamtsystem_initialize(void)
     Gesamtsystem_DWork.obj.isSetupComplete = true;
     Gesamtsystem_DWork.obj.TunablePropsChanged = false;
 
-    /* End of Start for MATLABSystem: '<S3>/Moving Average' */
+    /* End of Start for MATLABSystem: '<S3>/Moving Average2' */
 
-    /* Start for S-Function (c280xgpio_do): '<S3>/Drehrichtungsvorgabe für einen Motor1' */
-    EALLOW;
-    GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFFFC;
-    GpioCtrlRegs.GPADIR.all |= 0x10000;
-    EDIS;
+    /* Start for RateTransition: '<S3>/TmpRTBAtSortieralgorithmus2Inport3' */
+    Gesamtsystem_B.TmpRTBAtSortieralgorithmus2Inpo =
+      Gesamtsystem_P.TmpRTBAtSortieralgorithmus2Inpo;
 
-    /* Start for S-Function (c280xgpio_do): '<S36>/Drehrichtungsvorgabe für einen Motor' */
+    /* Start for RateTransition: '<S3>/TmpRTBAtChart7Inport4' */
+    Gesamtsystem_B.TmpRTBAtChart7Inport4 =
+      Gesamtsystem_P.TmpRTBAtChart7Inport4_InitialCo;
+
+    /* Start for S-Function (c280xgpio_do): '<S37>/Drehrichtungsvorgabe für einen Motor' */
     EALLOW;
     GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFF3F;
     GpioCtrlRegs.GPADIR.all |= 0x80000;
     EDIS;
 
-    /* Start for S-Function (c280xpwm): '<S36>/PWM Vorgabe für einen Motor ' */
+    /* Start for S-Function (c280xpwm): '<S37>/PWM Vorgabe für einen Motor ' */
 
     /*** Initialize ePWM4 modules ***/
     {
@@ -4394,7 +4865,7 @@ void Gesamtsystem_initialize(void)
       EDIS;
     }
 
-    /* Start for S-Function (c280xpwm): '<S3>/PWM Vorgabe für einen Motor 1' */
+    /* Start for S-Function (c280xpwm): '<S39>/PWM Vorgabe für einen Motor 1' */
 
     /*** Initialize ePWM6 modules ***/
     {
@@ -4496,7 +4967,115 @@ void Gesamtsystem_initialize(void)
       EDIS;
     }
 
-    /* Start for S-Function (c280xgpio_do): '<S38>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
+    /* Start for S-Function (c280xgpio_do): '<S39>/Drehrichtungsvorgabe für einen Motor1' */
+    EALLOW;
+    GpioCtrlRegs.GPAMUX2.all &= 0xFFFFFFFC;
+    GpioCtrlRegs.GPADIR.all |= 0x10000;
+    EDIS;
+
+    /* Start for S-Function (c280xpwm): '<S3>/ePWM2' */
+
+    /*** Initialize ePWM5 modules ***/
+    {
+      /*-- Setup Time-Base (TB) Submodule --*/
+      EPwm5Regs.TBPRD = 64000;
+
+      /* // Time-Base Control Register
+         EPwm5Regs.TBCTL.bit.CTRMODE    = 0;          // Counter Mode
+         EPwm5Regs.TBCTL.bit.SYNCOSEL   = 3;          // Sync output select
+         EPwm5Regs.TBCTL.bit.PRDLD      = 0;          // Shadow select
+         EPwm5Regs.TBCTL.bit.PHSEN      = 0;          // Phase load enable
+         EPwm5Regs.TBCTL.bit.PHSDIR     = 0;          // Phase Direction
+         EPwm5Regs.TBCTL.bit.HSPCLKDIV  = 0;          // High speed time pre-scale
+         EPwm5Regs.TBCTL.bit.CLKDIV     = 0;          // Timebase clock pre-scale
+       */
+      EPwm5Regs.TBCTL.all = (EPwm5Regs.TBCTL.all & ~0x3FBF) | 0x30;
+
+      /* // Time-Base Phase Register
+         EPwm5Regs.TBPHS.half.TBPHS     = 0;          // Phase offset register
+       */
+      EPwm5Regs.TBPHS.all = (EPwm5Regs.TBPHS.all & ~0xFFFF0000) | 0x0;
+      EPwm5Regs.TBCTR = 0x0000;        /* Clear counter*/
+
+      /*-- Setup Counter_Compare (CC) Submodule --*/
+      /* // Counter-Compare Control Register
+         EPwm5Regs.CMPCTL.bit.SHDWAMODE = 0;  // Compare A block operating mode.
+         EPwm5Regs.CMPCTL.bit.SHDWBMODE = 0;  // Compare B block operating mode.
+         EPwm5Regs.CMPCTL.bit.LOADAMODE = 0;          // Active compare A
+         EPwm5Regs.CMPCTL.bit.LOADBMODE = 0;          // Active compare A
+       */
+      EPwm5Regs.CMPCTL.all = (EPwm5Regs.CMPCTL.all & ~0x5F) | 0x0;
+      EPwm5Regs.CMPA.half.CMPA = 32000;
+      EPwm5Regs.CMPB = 32000;
+
+      /*-- Setup Action-Qualifier (AQ) Submodule --*/
+      EPwm5Regs.AQCTLA.all = 36;
+      EPwm5Regs.AQCTLB.all = 264;
+
+      /* // Action-Qualifier Software Force Register
+         EPwm5Regs.AQSFRC.bit.RLDCSF    = 0;          // Reload from Shadow options
+       */
+      EPwm5Regs.AQSFRC.all = (EPwm5Regs.AQSFRC.all & ~0xC0) | 0x0;
+
+      /* // Action-Qualifier Continuous S/W Force Register Set
+         EPwm5Regs.AQCSFRC.bit.CSFA     = 0;          // Continuous Software Force on output A
+         EPwm5Regs.AQCSFRC.bit.CSFB     = 0;          // Continuous Software Force on output B
+       */
+      EPwm5Regs.AQCSFRC.all = (EPwm5Regs.AQCSFRC.all & ~0xF) | 0x0;
+
+      /*-- Setup Dead-Band Generator (DB) Submodule --*/
+      /* // Dead-Band Generator Control Register
+         EPwm5Regs.DBCTL.bit.OUT_MODE   = 0;          // Dead Band Output Mode Control
+         EPwm5Regs.DBCTL.bit.IN_MODE    = 0;          // Dead Band Input Select Mode Control
+         EPwm5Regs.DBCTL.bit.POLSEL     = 0;          // Polarity Select Control
+       */
+      EPwm5Regs.DBCTL.all = (EPwm5Regs.DBCTL.all & ~0x3F) | 0x0;
+      EPwm5Regs.DBRED = 0;
+      EPwm5Regs.DBFED = 0;
+
+      /*-- Setup Event-Trigger (ET) Submodule --*/
+      /* // Event-Trigger Selection and Event-Trigger Pre-Scale Register
+         EPwm5Regs.ETSEL.bit.SOCAEN     = 0;          // Start of conversion A Enable
+         EPwm5Regs.ETSEL.bit.SOCASEL    = 1;          // Start of conversion A Select
+         EPwm5Regs.ETPS.bit.SOCAPRD     = 1;          // EPWM5SOCA Period Select
+         EPwm5Regs.ETSEL.bit.SOCBEN     = 0;          // Start of conversion B Enable
+         EPwm5Regs.ETSEL.bit.SOCBSEL    = 1;          // Start of conversion B Select
+         EPwm5Regs.ETPS.bit.SOCBPRD     = 1;          // EPWM5SOCB Period Select
+         EPwm5Regs.ETSEL.bit.INTEN      = 0;          // EPWM5INTn Enable
+         EPwm5Regs.ETSEL.bit.INTSEL     = 1;          // EPWM5INTn Select
+         EPwm5Regs.ETPS.bit.INTPRD      = 1;          // EPWM5INTn Period Select
+       */
+      EPwm5Regs.ETSEL.all = (EPwm5Regs.ETSEL.all & ~0xFF0F) | 0x1101;
+      EPwm5Regs.ETPS.all = (EPwm5Regs.ETPS.all & ~0x3303) | 0x1101;
+
+      /*-- Setup PWM-Chopper (PC) Submodule --*/
+      /* // PWM-Chopper Control Register
+         EPwm5Regs.PCCTL.bit.CHPEN      = 0;          // PWM chopping enable
+         EPwm5Regs.PCCTL.bit.CHPFREQ    = 0;          // Chopping clock frequency
+         EPwm5Regs.PCCTL.bit.OSHTWTH    = 0;          // One-shot pulse width
+         EPwm5Regs.PCCTL.bit.CHPDUTY    = 0;          // Chopping clock Duty cycle
+       */
+      EPwm5Regs.PCCTL.all = (EPwm5Regs.PCCTL.all & ~0x7FF) | 0x0;
+
+      /*-- Set up Trip-Zone (TZ) Submodule --*/
+      EALLOW;
+      EPwm5Regs.TZSEL.all = 0;
+
+      /* // Trip-Zone Control Register
+         EPwm5Regs.TZCTL.bit.TZA        = 3;          // TZ1 to TZ6 Trip Action On EPWM5A
+         EPwm5Regs.TZCTL.bit.TZB        = 3;          // TZ1 to TZ6 Trip Action On EPWM5B
+       */
+      EPwm5Regs.TZCTL.all = (EPwm5Regs.TZCTL.all & ~0xF) | 0xF;
+
+      /* // Trip-Zone Enable Interrupt Register
+         EPwm5Regs.TZEINT.bit.OST       = 0;          // Trip Zones One Shot Int Enable
+         EPwm5Regs.TZEINT.bit.CBC       = 0;          // Trip Zones Cycle By Cycle Int Enable
+       */
+      EPwm5Regs.TZEINT.all = (EPwm5Regs.TZEINT.all & ~0x6) | 0x0;
+      EDIS;
+    }
+
+    /* Start for S-Function (c280xgpio_do): '<S40>/grüne LED3 auf dem µC gibt 1//0 codiert die Drehrichtung an' */
     EALLOW;
     GpioCtrlRegs.GPBMUX1.all &= 0xFFFFFFCF;
     GpioCtrlRegs.GPBDIR.all |= 0x4;
@@ -4505,68 +5084,81 @@ void Gesamtsystem_initialize(void)
       UNINITIALIZED_ZCSIG;
     Gesamtsystem_PrevZCSigState.I2CReset_Trig_ZCE = UNINITIALIZED_ZCSIG;
 
-    /* InitializeConditions for RateTransition: '<S12>/Rate Transition' */
+    /* InitializeConditions for RateTransition: '<S13>/Rate Transition' */
     for (i = 0; i < 20; i++) {
       Gesamtsystem_DWork.RateTransition_Buffer[i] =
         Gesamtsystem_P.RateTransition_InitialCondition;
     }
 
-    /* End of InitializeConditions for RateTransition: '<S12>/Rate Transition' */
+    /* End of InitializeConditions for RateTransition: '<S13>/Rate Transition' */
 
-    /* InitializeConditions for DiscretePulseGenerator: '<S27>/Pulse Generator' */
+    /* InitializeConditions for DiscretePulseGenerator: '<S28>/Pulse Generator' */
     Gesamtsystem_DWork.clockTickCounter = 0L;
 
-    /* InitializeConditions for Memory: '<S43>/Memory' */
+    /* InitializeConditions for Memory: '<S45>/Memory' */
     Gesamtsystem_DWork.Memory_PreviousInput = Gesamtsystem_P.EdgeDetector1_ic;
 
-    /* InitializeConditions for UnitDelay: '<S42>/Unit Delay3' */
+    /* InitializeConditions for UnitDelay: '<S44>/Unit Delay3' */
     Gesamtsystem_DWork.UnitDelay3_DSTATE =
       Gesamtsystem_P.UnitDelay3_InitialCondition;
 
-    /* InitializeConditions for UnitDelay: '<S42>/Unit Delay4' */
+    /* InitializeConditions for UnitDelay: '<S44>/Unit Delay4' */
     Gesamtsystem_DWork.UnitDelay4_DSTATE =
       Gesamtsystem_P.UnitDelay4_InitialCondition;
 
-    /* InitializeConditions for UnitDelay: '<S42>/Unit Delay5' */
+    /* InitializeConditions for UnitDelay: '<S44>/Unit Delay5' */
     Gesamtsystem_DWork.UnitDelay5_DSTATE =
       Gesamtsystem_P.UnitDelay5_InitialCondition;
 
-    /* InitializeConditions for UnitDelay: '<S42>/Unit Delay1' */
+    /* InitializeConditions for UnitDelay: '<S44>/Unit Delay1' */
     Gesamtsystem_DWork.UnitDelay1_DSTATE =
       Gesamtsystem_P.UnitDelay1_InitialCondition;
 
-    /* InitializeConditions for Memory: '<S44>/Memory' */
-    Gesamtsystem_DWork.Memory_PreviousInput_a = Gesamtsystem_P.EdgeDetector2_ic;
+    /* InitializeConditions for Memory: '<S46>/Memory' */
+    Gesamtsystem_DWork.Memory_PreviousInput_n = Gesamtsystem_P.EdgeDetector2_ic;
 
-    /* InitializeConditions for UnitDelay: '<S42>/Unit Delay2' */
+    /* InitializeConditions for UnitDelay: '<S44>/Unit Delay2' */
     Gesamtsystem_DWork.UnitDelay2_DSTATE =
       Gesamtsystem_P.UnitDelay2_InitialCondition;
 
-    /* InitializeConditions for UnitDelay: '<S3>/Unit Delay' */
-    Gesamtsystem_DWork.UnitDelay_DSTATE =
-      Gesamtsystem_P.UnitDelay_InitialCondition;
+    /* InitializeConditions for UnitDelay: '<S3>/Unit Delay2' */
+    Gesamtsystem_DWork.UnitDelay2_DSTATE_l =
+      Gesamtsystem_P.UnitDelay2_InitialCondition_h;
 
-    /* SystemInitialize for S-Function (c28xisr_c2000): '<S12>/C28x Hardware Interrupt' incorporates:
-     *  SubSystem: '<S12>/Triggered Subsystem'
+    /* InitializeConditions for RateTransition: '<S3>/TmpRTBAtSortieralgorithmus2Inport3' */
+    Gesamtsystem_DWork.TmpRTBAtSortieralgorithmus2Inpo =
+      Gesamtsystem_P.TmpRTBAtSortieralgorithmus2Inpo;
+
+    /* InitializeConditions for RateTransition: '<S3>/TmpRTBAtChart7Inport4' */
+    Gesamtsystem_DWork.TmpRTBAtChart7Inport4_Buffer0 =
+      Gesamtsystem_P.TmpRTBAtChart7Inport4_InitialCo;
+
+    /* SystemInitialize for Chart: '<S2>/Motorsteuerung bei der Uebergabe' */
+    Gesamtsystem_DWork.temporalCounter_i1 = 0U;
+    Gesamtsystem_DWork.is_active_c9_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c9_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for S-Function (c28xisr_c2000): '<S13>/C28x Hardware Interrupt' incorporates:
+     *  SubSystem: '<S13>/Triggered Subsystem'
      */
-    /* System initialize for function-call system: '<S12>/Triggered Subsystem' */
+    /* System initialize for function-call system: '<S13>/Triggered Subsystem' */
     {
       int16_T i;
 
-      /* InitializeConditions for Delay: '<S28>/Delay' */
+      /* InitializeConditions for Delay: '<S29>/Delay' */
       for (i = 0; i < 10; i++) {
         Gesamtsystem_DWork.Delay_DSTATE[i] =
           Gesamtsystem_P.Delay_InitialCondition;
       }
 
-      /* End of InitializeConditions for Delay: '<S28>/Delay' */
+      /* End of InitializeConditions for Delay: '<S29>/Delay' */
     }
 
-    /* End of SystemInitialize for S-Function (c28xisr_c2000): '<S12>/C28x Hardware Interrupt' */
+    /* End of SystemInitialize for S-Function (c28xisr_c2000): '<S13>/C28x Hardware Interrupt' */
 
-    /* SystemInitialize for Chart: '<S12>/Chart8' */
-    Gesamtsystem_DWork.is_active_c25_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c25_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S13>/Chart8' */
+    Gesamtsystem_DWork.is_active_c17_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
     for (i = 0; i < 20; i++) {
       Gesamtsystem_DWork.values_out1[i] = 0;
     }
@@ -4584,98 +5176,97 @@ void Gesamtsystem_initialize(void)
     Gesamtsystem_B.valid_values7 = 0;
     Gesamtsystem_B.valid_values8 = 0;
 
-    /* End of SystemInitialize for Chart: '<S12>/Chart8' */
+    /* End of SystemInitialize for Chart: '<S13>/Chart8' */
 
-    /* SystemInitialize for Chart: '<S12>/Chart6' */
-    Gesamtsystem_DWork.is_active_c24_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c24_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S13>/Chart6' */
+    Gesamtsystem_DWork.is_active_c16_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
-    /* SystemInitialize for Chart: '<S12>/Chart2' */
-    Gesamtsystem_DWork.is_active_c17_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c17_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S13>/Chart2' */
+    Gesamtsystem_DWork.is_active_c13_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
-    /* SystemInitialize for Chart: '<S12>/Chart4' */
-    Gesamtsystem_DWork.is_active_c21_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c21_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S13>/Chart4' */
+    Gesamtsystem_DWork.is_active_c14_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
     /* SystemInitialize for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
     Gesamtsystem_DWork.is_Parken = Gesamtsystem_IN_NO_ACTIVE_CHILD;
     Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_NO_ACTIVE_CHILD;
     Gesamtsystem_DWork.is_Uebergabe = Gesamtsystem_IN_NO_ACTIVE_CHILD;
-    Gesamtsystem_DWork.temporalCounter_i1_k = 0U;
+    Gesamtsystem_DWork.temporalCounter_i1_m = 0U;
     Gesamtsystem_DWork.is_active_c5_Gesamtsystem = 0U;
     Gesamtsystem_DWork.is_c5_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
     /* SystemInitialize for Atomic SubSystem: '<S2>/Navigationssystem [Einstellungen moeglich]' */
-    /* SystemInitialize for Chart: '<S16>/Quadrantenteiler' */
-    Gesamtsystem_DWork.is_active_c13_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c13_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
-
-    /* SystemInitialize for Chart: '<S16>/Winkelausgabe fuer Ausrichtung' */
-    Gesamtsystem_DWork.is_active_c14_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c14_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
-
-    /* SystemInitialize for Chart: '<S11>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
-    Gesamtsystem_DWork.is_active_c8_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c8_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
-
-    /* SystemInitialize for Chart: '<S11>/Fahrsystem' */
+    /* SystemInitialize for Chart: '<S17>/Quadrantenteiler' */
     Gesamtsystem_DWork.is_active_c11_Gesamtsystem = 0U;
     Gesamtsystem_DWork.is_c11_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
+    /* SystemInitialize for Chart: '<S17>/Winkelausgabe fuer Ausrichtung' */
+    Gesamtsystem_DWork.is_active_c12_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c12_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<S12>/Drehweg-Optimierung mit Gang-Ausrichtung [Init: Stillstandintervall = ±15°]' */
+    Gesamtsystem_DWork.is_active_c8_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c8_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+
+    /* SystemInitialize for Chart: '<S12>/Fahrsystem' */
+    Gesamtsystem_DWork.is_active_c7_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c7_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+
     /* End of SystemInitialize for SubSystem: '<S2>/Navigationssystem [Einstellungen moeglich]' */
 
-    /* SystemInitialize for Chart: '<S12>/Chart1' */
-    Gesamtsystem_DWork.is_active_c16_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c16_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S13>/Chart1' */
+    Gesamtsystem_DWork.is_active_c1_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c1_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
     for (i = 0; i < 16; i++) {
-      /* SystemInitialize for Chart: '<S12>/Chart6' */
+      /* SystemInitialize for Chart: '<S13>/Chart6' */
       Gesamtsystem_B.int16x_bin[i] = 0.0F;
 
-      /* SystemInitialize for Chart: '<S12>/Chart2' */
+      /* SystemInitialize for Chart: '<S13>/Chart2' */
       Gesamtsystem_B.int16y_bin[i] = 0.0F;
 
-      /* SystemInitialize for Chart: '<S12>/Chart4' */
+      /* SystemInitialize for Chart: '<S13>/Chart4' */
       Gesamtsystem_B.int16a1_bin[i] = 0.0F;
 
-      /* SystemInitialize for Chart: '<S12>/Chart1' */
+      /* SystemInitialize for Chart: '<S13>/Chart1' */
       Gesamtsystem_B.int16z_bin[i] = 0.0F;
     }
 
-    /* InitializeConditions for MATLABSystem: '<S3>/Moving Average' */
+    /* SystemInitialize for Chart: '<S3>/Chart8' */
+    Gesamtsystem_DWork.temporalCounter_i1_g = 0U;
+    Gesamtsystem_DWork.is_active_c39_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c39_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+
+    /* InitializeConditions for MATLABSystem: '<S3>/Moving Average2' */
     if (Gesamtsystem_DWork.obj.pStatistic->isInitialized == 1L) {
       Gesamtsystem_DWork.obj.pStatistic->pwN = 1.0;
       Gesamtsystem_DWork.obj.pStatistic->pmN = 0.0;
     }
 
-    /* End of InitializeConditions for MATLABSystem: '<S3>/Moving Average' */
+    /* End of InitializeConditions for MATLABSystem: '<S3>/Moving Average2' */
 
-    /* SystemInitialize for Chart: '<S3>/Sortieralgorithmus' */
-    Gesamtsystem_DWork.temporalCounter_i1 = 0U;
-    Gesamtsystem_DWork.is_active_c15_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c15_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S3>/Sortieralgorithmus2' */
+    Gesamtsystem_DWork.is_active_c42_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c42_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
-    /* SystemInitialize for Chart: '<S3>/Chart1' */
-    Gesamtsystem_DWork.temporalCounter_i1_p = 0U;
-    Gesamtsystem_DWork.is_active_c4_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c4_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S3>/Chart7' */
+    Gesamtsystem_DWork.temporalCounter_i1_i = 0U;
+    Gesamtsystem_DWork.is_active_c38_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c38_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
 
-    /* SystemInitialize for Chart: '<S3>/Chart' */
-    Gesamtsystem_DWork.temporalCounter_i1_a = 0U;
-    Gesamtsystem_DWork.is_active_c3_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c3_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
-
-    /* SystemInitialize for Chart: '<S3>/Chart2' */
-    Gesamtsystem_DWork.temporalCounter_i1_av = 0U;
-    Gesamtsystem_DWork.is_active_c6_Gesamtsystem = 0U;
-    Gesamtsystem_DWork.is_c6_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
+    /* SystemInitialize for Chart: '<S3>/Chart6' */
+    Gesamtsystem_DWork.temporalCounter_i1_d = 0U;
+    Gesamtsystem_DWork.is_active_c37_Gesamtsystem = 0U;
+    Gesamtsystem_DWork.is_c37_Gesamtsystem = Gesamtsystem_IN_NO_ACTIVE_CHILD;
   }
 }
 
 /* Model terminate function */
 void Gesamtsystem_terminate(void)
 {
-  /* Terminate for MATLABSystem: '<S3>/Moving Average' */
+  /* Terminate for MATLABSystem: '<S3>/Moving Average2' */
   matlabCodegenHandle_matlabCodeg(&Gesamtsystem_DWork.obj);
 }
 

@@ -22,6 +22,9 @@ void config_ePWM_GPIO (void)
   /*-- Configure pin assignments for ePWM6 --*/
   GpioCtrlRegs.GPAMUX1.bit.GPIO11 = 1; /* Configure GPIOGPIO11 as EPWM6B*/
 
+  /*-- Configure pin assignments for ePWM5 --*/
+  GpioCtrlRegs.GPAMUX1.bit.GPIO9 = 1;  /* Configure GPIOGPIO9 as EPWM5B*/
+
   /*--- Configure pin assignments for TZn ---*/
   EDIS;
 }
