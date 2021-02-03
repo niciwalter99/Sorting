@@ -9,7 +9,7 @@
  *
  * Model version                  : 1.73
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Fri Jan 29 10:55:56 2021
+ * C/C++ source code generated on : Wed Feb  3 02:16:31 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -60,10 +60,10 @@ typedef struct {
 
 #endif                                 /*typedef_dsp_simulink_MovingAverage_So_T*/
 
-/* Parameters for system: '<S11>/NEGATIVE Edge' */
+/* Parameters for system: '<S12>/NEGATIVE Edge' */
 typedef struct P_NEGATIVEEdge_SortierAlgorit_T_ P_NEGATIVEEdge_SortierAlgorit_T;
 
-/* Parameters for system: '<S11>/POSITIVE Edge' */
+/* Parameters for system: '<S12>/POSITIVE Edge' */
 typedef struct P_POSITIVEEdge_SortierAlgorit_T_ P_POSITIVEEdge_SortierAlgorit_T;
 
 /* Parameters (default storage) */
