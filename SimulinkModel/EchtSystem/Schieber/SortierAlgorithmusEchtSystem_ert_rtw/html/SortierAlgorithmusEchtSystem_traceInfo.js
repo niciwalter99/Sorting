@@ -225,12 +225,12 @@ function RTW_rtwnameSIDMap() {
 	this.sidHashMap["SortierAlgorithmusEchtSystem:218:168"] = {rtwname: "<S5>:168"};
 	this.rtwnameHashMap["<S5>:169"] = {sid: "SortierAlgorithmusEchtSystem:218:169"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:218:169"] = {rtwname: "<S5>:169"};
-	this.rtwnameHashMap["<S5>:172"] = {sid: "SortierAlgorithmusEchtSystem:218:172"};
-	this.sidHashMap["SortierAlgorithmusEchtSystem:218:172"] = {rtwname: "<S5>:172"};
 	this.rtwnameHashMap["<S5>:170"] = {sid: "SortierAlgorithmusEchtSystem:218:170"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:218:170"] = {rtwname: "<S5>:170"};
 	this.rtwnameHashMap["<S5>:171"] = {sid: "SortierAlgorithmusEchtSystem:218:171"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:218:171"] = {rtwname: "<S5>:171"};
+	this.rtwnameHashMap["<S5>:172"] = {sid: "SortierAlgorithmusEchtSystem:218:172"};
+	this.sidHashMap["SortierAlgorithmusEchtSystem:218:172"] = {rtwname: "<S5>:172"};
 	this.rtwnameHashMap["<S5>:190"] = {sid: "SortierAlgorithmusEchtSystem:218:190"};
 	this.sidHashMap["SortierAlgorithmusEchtSystem:218:190"] = {rtwname: "<S5>:190"};
 	this.rtwnameHashMap["<S5>:188"] = {sid: "SortierAlgorithmusEchtSystem:218:188"};

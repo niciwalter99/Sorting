@@ -10,6 +10,9 @@ void config_ePWM_GPIO (void)
 {
   EALLOW;
 
+  /*-- Configure pin assignments for ePWM3 --*/
+  GpioCtrlRegs.GPAMUX1.bit.GPIO5 = 1;  /* Configure GPIOGPIO5 as EPWM3B*/
+
   /*-- Configure pin assignments for ePWM1 --*/
   GpioCtrlRegs.GPAMUX1.bit.GPIO1 = 1;  /* Configure GPIOGPIO1 as EPWM1B*/
 
