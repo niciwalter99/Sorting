@@ -2,7 +2,11 @@
 ## Makefile generated for Simulink model 'Gesamtsystem'. 
 ## 
 ## Makefile     : Gesamtsystem.mk
+<<<<<<< HEAD
 ## Generated on : Wed Feb 03 23:25:09 2021
+=======
+## Generated on : Thu Feb 04 12:52:13 2021
+>>>>>>> 077771d24e4c318273e0371c0d043702becb9fc9
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
