@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'Gesamtsystem'.
  *
- * Model version                  : 1.84
+ * Model version                  : 1.85
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 23:13:45 2021
+ * C/C++ source code generated on : Wed Feb  3 23:24:48 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -149,8 +149,6 @@ RT_MODEL_Gesamtsystem *const Gesamtsystem_M = &Gesamtsystem_M_;
 
 /* Forward declaration for local functions */
 static void Gesam_enter_atomic_wert_erkannt(void);
-static void Gesamtsystem_Anfahrpunkt_8(void);
-static void Gesamtsystem_Anfahrpunkt_9(void);
 static void Gesamtsystem_Wechsel_1(void);
 static void Gesamtsystem_Wechsel_3(void);
 static void Gesamtsystem_Wechsel_11(void);
@@ -443,36 +441,6 @@ real_T rt_roundd_snf(real_T u)
   }
 
   return y;
-}
-
-/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Anfahrpunkt_8(void)
-{
-  /* During 'Anfahrpunkt_8': '<S9>:1389' */
-  if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
-       Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
-        Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-    /* Transition: '<S9>:1362' */
-    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_8;
-
-    /* Entry 'Wechsel_8': '<S9>:1390' */
-    Gesamtsystem_DWork.Counter++;
-  }
-}
-
-/* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
-static void Gesamtsystem_Anfahrpunkt_9(void)
-{
-  /* During 'Anfahrpunkt_9': '<S9>:1391' */
-  if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
-       Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
-        Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
-    /* Transition: '<S9>:1364' */
-    Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_9;
-
-    /* Entry 'Wechsel_9': '<S9>:1392' */
-    Gesamtsystem_DWork.Counter++;
-  }
 }
 
 /* Function for Chart: '<S2>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert' */
@@ -797,11 +765,29 @@ static void Gesamtsystem_Sammeln(void)
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_8:
-      Gesamtsystem_Anfahrpunkt_8();
+      /* During 'Anfahrpunkt_8': '<S9>:1389' */
+      if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
+           Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
+            Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
+        /* Transition: '<S9>:1362' */
+        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_8;
+
+        /* Entry 'Wechsel_8': '<S9>:1390' */
+        Gesamtsystem_DWork.Counter++;
+      }
       break;
 
      case Gesamtsystem_IN_Anfahrpunkt_9:
-      Gesamtsystem_Anfahrpunkt_9();
+      /* During 'Anfahrpunkt_9': '<S9>:1391' */
+      if ((fabs(Gesamtsystem_B.x_soll - Gesamtsystem_B.x_Wagen) <=
+           Gesamtsystem_B.Zielradius) && (fabs(Gesamtsystem_B.y_soll -
+            Gesamtsystem_B.y_Wagen) <= Gesamtsystem_B.Zielradius)) {
+        /* Transition: '<S9>:1364' */
+        Gesamtsystem_DWork.is_Sammeln = Gesamtsystem_IN_Wechsel_9;
+
+        /* Entry 'Wechsel_9': '<S9>:1392' */
+        Gesamtsystem_DWork.Counter++;
+      }
       break;
 
      case Gesamtsystem_IN_Wechsel_1_b:

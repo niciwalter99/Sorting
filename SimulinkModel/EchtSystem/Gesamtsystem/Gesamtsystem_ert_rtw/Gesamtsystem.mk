@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'Gesamtsystem'. 
 ## 
 ## Makefile     : Gesamtsystem.mk
-## Generated on : Wed Feb 03 23:13:52 2021
+## Generated on : Wed Feb 03 23:25:09 2021
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2018b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2018b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/Nici/Desktop/msup/Sorting/SimulinkModel/EchtSystem/Gesamtsystem
+START_DIR                 = C:/Users/User/Desktop/Uni/MSuP/Informatik/Sorting/SimulinkModel/EchtSystem/Gesamtsystem
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
