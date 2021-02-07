@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'Gesamtsystem'.
  *
-<<<<<<< HEAD
- * Model version                  : 1.85
+ * Model version                  : 1.87
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 23:24:48 2021
-=======
- * Model version                  : 1.86
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Thu Feb  4 14:50:44 2021
->>>>>>> 077771d24e4c318273e0371c0d043702becb9fc9
+ * C/C++ source code generated on : Fri Feb  5 13:11:48 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -53,15 +47,25 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   0,
 
+  /* Expression: 1
+   * Referenced by: '<S16>/Binaerer Wertebereich'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: '<S16>/Binaerer Wertebereich'
+   */
+  0.0,
+
   /* Expression: 90
    * Referenced by: '<S22>/Quadranten- verschiebung'
    */
   90.0,
 
-  /* Expression: 100
+  /* Expression: 90
    * Referenced by: '<S21>/PWM-Wertebereich'
    */
-  100.0,
+  90.0,
 
   /* Expression: 0
    * Referenced by: '<S21>/PWM-Wertebereich'
@@ -103,6 +107,11 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   { 1.0, 0.0 },
 
+  /* Expression: 0
+   * Referenced by: '<S5>/Delay'
+   */
+  0.0,
+
   /* Expression: 1
    * Referenced by: '<S9>/Inkrement'
    */
@@ -123,10 +132,10 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   0.0,
 
-  /* Expression: 5
+  /* Expression: 0
    * Referenced by: '<S15>/Leistungsoffset Motor_links'
    */
-  5.0,
+  0.0,
 
   /* Expression: 0
    * Referenced by: '<S15>/Leistungsoffset Motor_rechts'
@@ -208,16 +217,6 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   1.0,
 
-  /* Expression: 0
-   * Referenced by: synthesized block
-   */
-  0.0,
-
-  /* Expression: 0
-   * Referenced by: synthesized block
-   */
-  0.0,
-
   /* Computed Parameter: xinmm_Gain
    * Referenced by: '<S17>/x in mm'
    */
@@ -233,23 +232,23 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   0.1F,
 
-  /* Computed Parameter: UnitDelay1_InitialCondition
-   * Referenced by: '<S49>/Unit Delay1'
-   */
-  0.0F,
-
   /* Computed Parameter: UnitDelay2_InitialCondition
-   * Referenced by: '<S49>/Unit Delay2'
-   */
-  0.0F,
-
-  /* Computed Parameter: UnitDelay2_InitialCondition_m
    * Referenced by: '<S4>/Unit Delay2'
    */
   0.0F,
 
   /* Computed Parameter: TmpRTBAtSortieralgorithmus2Inpo
    * Referenced by: synthesized block
+   */
+  0.0F,
+
+  /* Computed Parameter: UnitDelay1_InitialCondition
+   * Referenced by: '<S49>/Unit Delay1'
+   */
+  0.0F,
+
+  /* Computed Parameter: UnitDelay2_InitialCondition_h
+   * Referenced by: '<S49>/Unit Delay2'
    */
   0.0F,
 
@@ -260,6 +259,11 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
 
   /* Computed Parameter: Delay_DelayLength
    * Referenced by: '<S34>/Delay'
+   */
+  1U,
+
+  /* Computed Parameter: Delay_DelayLength_i
+   * Referenced by: '<S5>/Delay'
    */
   1U,
 
@@ -278,7 +282,7 @@ Parameters_Gesamtsystem Gesamtsystem_P = {
    */
   0,
 
-  /* Computed Parameter: Delay_InitialCondition_g
+  /* Computed Parameter: Delay_InitialCondition_m
    * Referenced by: '<S34>/Delay'
    */
   0U,

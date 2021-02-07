@@ -1,0 +1,53 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   5 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c4_GesamtsystemAlt"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c4_GesamtsystemAlt"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "psi_Offset_Nexo"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "psi_Offset_Nexo"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "r_Versatz_Nexo"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "r_Versatz_Nexo"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "phi_Versatz_Nexo"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "phi_Versatz_Nexo"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

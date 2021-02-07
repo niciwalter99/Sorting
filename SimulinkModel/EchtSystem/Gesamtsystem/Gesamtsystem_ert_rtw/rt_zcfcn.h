@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'Gesamtsystem'.
  *
-<<<<<<< HEAD
- * Model version                  : 1.85
+ * Model version                  : 1.87
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 23:24:48 2021
-=======
- * Model version                  : 1.86
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Thu Feb  4 14:50:44 2021
->>>>>>> 077771d24e4c318273e0371c0d043702becb9fc9
+ * C/C++ source code generated on : Fri Feb  5 13:11:48 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000

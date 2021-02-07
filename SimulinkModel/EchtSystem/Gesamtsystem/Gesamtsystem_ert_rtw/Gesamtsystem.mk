@@ -2,11 +2,7 @@
 ## Makefile generated for Simulink model 'Gesamtsystem'. 
 ## 
 ## Makefile     : Gesamtsystem.mk
-<<<<<<< HEAD
-## Generated on : Wed Feb 03 23:25:09 2021
-=======
-## Generated on : Thu Feb 04 12:52:13 2021
->>>>>>> 077771d24e4c318273e0371c0d043702becb9fc9
+## Generated on : Fri Feb 05 13:17:52 2021
 ## MATLAB Coder version: 4.1 (R2018b)
 ## 
 ## Build Info:
@@ -220,7 +216,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/Gesamtsystem_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include/comm_rt -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/inc -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/src -I$(MATLAB_ROOT)/toolbox/rtw/targets/common/can/blocks/tlc_c -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/shared/EXTERN~1/include
+INCLUDES_BUILDINFO = -I$(START_DIR) -I$(START_DIR)/Gesamtsystem_ert_rtw -IC:/Users/User/DOWNLO~1 -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include -I$(MATLAB_ROOT)/toolbox/dsp/extern/src/export/include/src -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include -I$(MATLAB_ROOT)/toolbox/comm/extern/comm_rt/export/include/comm_rt -I$(MATLAB_ROOT)/toolbox/shared/dsp/vision/matlab/include -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/inc -I$(MATLAB_ROOT)/toolbox/shared/can/src/scanutil -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/SUPPOR~1/tic2000/src -I$(MATLAB_ROOT)/toolbox/rtw/targets/common/can/blocks/tlc_c -IC:/PROGRA~3/MATLAB/SUPPOR~1/R2018b/toolbox/target/shared/EXTERN~1/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -282,7 +278,7 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
-CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1
+CFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1 -DF28335 -DBOOT_FROM_FLASH=1
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -291,7 +287,7 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
-CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1
+CPPFLAGS_SKIPFORSIL = -v28 --float_support=fpu32 -ml -DF28335 -DBOOT_FROM_FLASH=1 -DF28335 -DBOOT_FROM_FLASH=1
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
@@ -300,7 +296,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+CPP_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -308,7 +304,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -316,7 +312,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -324,7 +320,7 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -l"rts2800_fpu32.lib" --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0 --define F28335 --define PWM_DMAACCESS=0 --define BOOT_FROM_FLASH=1 --define BOOT_USING_BL=0
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 

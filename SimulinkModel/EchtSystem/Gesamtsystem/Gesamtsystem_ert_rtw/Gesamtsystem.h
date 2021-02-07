@@ -7,15 +7,9 @@
  *
  * Code generated for Simulink model 'Gesamtsystem'.
  *
-<<<<<<< HEAD
- * Model version                  : 1.85
+ * Model version                  : 1.87
  * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Wed Feb  3 23:24:48 2021
-=======
- * Model version                  : 1.86
- * Simulink Coder version         : 9.0 (R2018b) 24-May-2018
- * C/C++ source code generated on : Thu Feb  4 14:50:44 2021
->>>>>>> 077771d24e4c318273e0371c0d043702becb9fc9
+ * C/C++ source code generated on : Fri Feb  5 13:11:48 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Texas Instruments->C2000
@@ -91,14 +85,11 @@ typedef struct {
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T Takter001s;                   /* '<S9>/Takter (0.01s)' */
   real_T AnalogDigitalWandlungSampletime;/* '<S4>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
-  real_T AnalogDigitalWandlungSampleti_h;/* '<S4>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
-  real_T AnalogDigitalWandlungSampleti_c;/* '<S4>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
-  real_T RateTransition3;              /* '<S45>/Rate Transition3' */
-  real_T RateTransition3_f;            /* '<S4>/Rate Transition3' */
-  real_T TmpRTBAtProductInport1;
-  real_T TmpRTBAtProductInport1_e;     /* '<S4>/Chart8' */
+  real_T AnalogDigitalWandlungSampleti_e;/* '<S4>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
+  real_T AnalogDigitalWandlungSampleti_a;/* '<S4>/Analog-Digital-Wandlung Sampletime = 0.00002 s Wichtig! Für korrekte Winkelmessung nicht die Sampletime vergrößern Weitere Ports können hinzugefügt werden (Farbsensor, Sharp-Sensoren) Wichtig! Dieser Block ist sehr Rechenintensiv2' */
+  real_T RateTransition3;              /* '<S4>/Rate Transition3' */
+  real_T RateTransition3_o;            /* '<S45>/Rate Transition3' */
   real_T RL;                           /* '<S49>/MATLAB Function2' */
   real_T magacin;                      /* '<S4>/Sortieralgorithmus2' */
   real_T signal;                       /* '<S4>/Sortieralgorithmus2' */
@@ -109,13 +100,12 @@ typedef struct {
   real_T gateDirection;                /* '<S4>/Chart8' */
   real_T panzerMotor;                  /* '<S4>/Chart8' */
   real_T lampe;                        /* '<S4>/Chart8' */
-  real_T schieber;                     /* '<S4>/Chart8' */
-  real_T klappe;                       /* '<S4>/Chart8' */
   real_T angle;                        /* '<S4>/Chart7' */
-  real_T signal_h;                     /* '<S4>/Chart7' */
-  real_T gatePWM_g;                    /* '<S4>/Chart6' */
-  real_T gateDirection_a;              /* '<S4>/Chart6' */
+  real_T signal_o;                     /* '<S4>/Chart7' */
+  real_T gatePWM_c;                    /* '<S4>/Chart6' */
+  real_T gateDirection_i;              /* '<S4>/Chart6' */
   real_T MovingAverage2;               /* '<S4>/Moving Average2' */
+  real_T BinaererWertebereich;         /* '<S16>/Binaerer Wertebereich' */
   real_T Winkeldifferenz;              /* '<S22>/Winkeldifferenz' */
   real_T PWMWertebereich;              /* '<S21>/PWM-Wertebereich' */
   real_T alpha_neu;                    /* '<S22>/Winkelausgabe fuer Ausrichtung' */
@@ -136,13 +126,13 @@ typedef struct {
   real_T Wartezeit;                    /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
   real_T ZM_r_l_out;                   /* '<S6>/Zylindermotor-Ansteuerung Folgende Werte sind einstellbar: - Drehstaerke (in %) (-> ZM_pwm_out in "Ausfuerung") - Drehrichtung (rechts = 0, links = 1) (-> ZM_r_l_out in "Init_und_Warten") - Drehdauer (-> zwischen "Ausfuehrung" und "Beendet") - Ausfuehrungspunkt (in mm) [durch Wechsel der Soll-Position] (-> zwischen "Init_und_Start" und "Ausfuehrung) Wichtig! Der Ausfuerungspunkt haengt von den EXAKTEN Soll-Werten aus der Fahrablaufsteuerung im Nexonar-System ab.' */
   real_T Timer;                        /* '<S5>/Zeitverzoegerungsblock Die eigentliche Zeitmessung startet, wenn der Notschalter zum ersten Mal gedrückt wird' */
-  real_T aus_an;                       /* '<S5>/Beendigung-Ansteuerung' */
-  real32_T DigitalInput2;              /* '<S4>/Digital Input2' */
+  real_T Endsignal;                    /* '<S5>/Beendigung-Ansteuerung' */
   real32_T UnitDelay2;                 /* '<S4>/Unit Delay2' */
   real32_T TmpRTBAtSortieralgorithmus2Inpo;/* '<S4>/Digital Input2' */
+  real32_T DigitalInput2;              /* '<S4>/Digital Input2' */
   real32_T TmpRTBAtChart7Inport4;      /* '<S4>/Digital Input2' */
   real32_T movingCube;                 /* '<S4>/Chart7' */
-  real32_T movingCube_m;               /* '<S4>/Chart6' */
+  real32_T movingCube_d;               /* '<S4>/Chart6' */
   real32_T int16x_bin[16];             /* '<S17>/Chart6' */
   real32_T int16a1_bin[16];            /* '<S17>/Chart4' */
   real32_T int16y_bin[16];             /* '<S17>/Chart2' */
@@ -162,8 +152,8 @@ typedef struct {
   boolean_T SignaleingangfuerHeckschalter;/* '<S12>/Signaleingang fuer Heckschalter' */
   rtB_MATLABFunction1_Gesamtsyste sf_MATLABFunction3;/* '<S49>/MATLAB Function3' */
   rtB_MATLABFunction1_Gesamtsyste sf_MATLABFunction1;/* '<S49>/MATLAB Function1' */
-  rtB_POSITIVEEdge_Gesamtsystem POSITIVEEdge_p;/* '<S51>/POSITIVE Edge' */
-  rtB_NEGATIVEEdge_Gesamtsystem NEGATIVEEdge_i;/* '<S51>/NEGATIVE Edge' */
+  rtB_POSITIVEEdge_Gesamtsystem POSITIVEEdge_m;/* '<S51>/POSITIVE Edge' */
+  rtB_NEGATIVEEdge_Gesamtsystem NEGATIVEEdge_n;/* '<S51>/NEGATIVE Edge' */
   rtB_POSITIVEEdge_Gesamtsystem POSITIVEEdge;/* '<S50>/POSITIVE Edge' */
   rtB_NEGATIVEEdge_Gesamtsystem NEGATIVEEdge;/* '<S50>/NEGATIVE Edge' */
 } BlockIO_Gesamtsystem;
@@ -173,13 +163,10 @@ typedef struct {
   dsp_simulink_MovingAverage_Gesa obj; /* '<S4>/Moving Average2' */
   dsp_private_ExponentialMovingAv gobj_0;/* '<S4>/Moving Average2' */
   dsp_private_ExponentialMovingAv gobj_1;/* '<S4>/Moving Average2' */
-  real_T Delay_DSTATE;                 /* '<S9>/Delay' */
+  real_T Delay_DSTATE;                 /* '<S5>/Delay' */
+  real_T Delay_DSTATE_i;               /* '<S9>/Delay' */
   real_T UnitDelay5_DSTATE;            /* '<S49>/Unit Delay5' */
-  real_T TmpRTBAtProductInport1_Buffer0;/* synthesized block */
-  real_T TmpRTBAtProductInport1_Buffer_l;/* synthesized block */
   real_T magacin6;                     /* '<S4>/Sortieralgorithmus2' */
-  real_T magacin2_LastCube;            /* '<S4>/Sortieralgorithmus2' */
-  real_T magacin1_LastCube;            /* '<S4>/Sortieralgorithmus2' */
   real_T magacin0;                     /* '<S4>/Sortieralgorithmus2' */
   real_T magacin1;                     /* '<S4>/Sortieralgorithmus2' */
   real_T magacin2;                     /* '<S4>/Sortieralgorithmus2' */
@@ -197,9 +184,9 @@ typedef struct {
   real_T x_least;                      /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
   real_T x_Uebergabe;                  /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
   real_T y_Uebergabe;                  /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
+  real32_T UnitDelay2_DSTATE;          /* '<S4>/Unit Delay2' */
   real32_T UnitDelay1_DSTATE;          /* '<S49>/Unit Delay1' */
-  real32_T UnitDelay2_DSTATE;          /* '<S49>/Unit Delay2' */
-  real32_T UnitDelay2_DSTATE_f;        /* '<S4>/Unit Delay2' */
+  real32_T UnitDelay2_DSTATE_a;        /* '<S49>/Unit Delay2' */
   real32_T TmpRTBAtSortieralgorithmus2Inpo;/* synthesized block */
   real32_T TmpRTBAtChart7Inport4_Buffer0;/* synthesized block */
   int32_T clockTickCounter;            /* '<S33>/Pulse Generator' */
@@ -207,27 +194,27 @@ typedef struct {
   int32_T counter;                     /* '<S17>/Chart8' */
   int32_T x_found;                     /* '<S17>/Chart8' */
   uint32_T temporalCounter_i1;         /* '<S3>/Steuersystem fuer Heckschalter' */
-  uint32_T temporalCounter_i1_a;       /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
+  uint32_T temporalCounter_i1_o;       /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
   volatile int16_T RateTransition_ActiveBufIdx;/* '<S17>/Rate Transition' */
   volatile int16_T RateTransition_semaphoreTaken;/* '<S17>/Rate Transition' */
   int16_T values_out1[20];             /* '<S17>/Chart8' */
   int16_T search;                      /* '<S17>/Chart8' */
-  uint16_T Delay_DSTATE_m[10];         /* '<S34>/Delay' */
+  uint16_T Delay_DSTATE_h[10];         /* '<S34>/Delay' */
   boolean_T UnitDelay3_DSTATE;         /* '<S49>/Unit Delay3' */
   boolean_T UnitDelay4_DSTATE;         /* '<S49>/Unit Delay4' */
   volatile uint16_T RateTransition_Buffer[40];/* '<S17>/Rate Transition' */
   uint16_T is_active_c42_Gesamtsystem; /* '<S4>/Sortieralgorithmus2' */
   uint16_T is_c42_Gesamtsystem;        /* '<S4>/Sortieralgorithmus2' */
-  uint16_T temporalCounter_i1_i;       /* '<S4>/Sortieralgorithmus2' */
+  uint16_T temporalCounter_i1_op;      /* '<S4>/Sortieralgorithmus2' */
   uint16_T is_active_c39_Gesamtsystem; /* '<S4>/Chart8' */
   uint16_T is_c39_Gesamtsystem;        /* '<S4>/Chart8' */
-  uint16_T temporalCounter_i1_p;       /* '<S4>/Chart8' */
+  uint16_T temporalCounter_i1_a;       /* '<S4>/Chart8' */
   uint16_T is_active_c38_Gesamtsystem; /* '<S4>/Chart7' */
   uint16_T is_c38_Gesamtsystem;        /* '<S4>/Chart7' */
-  uint16_T temporalCounter_i1_e;       /* '<S4>/Chart7' */
+  uint16_T temporalCounter_i1_g;       /* '<S4>/Chart7' */
   uint16_T is_active_c37_Gesamtsystem; /* '<S4>/Chart6' */
   uint16_T is_c37_Gesamtsystem;        /* '<S4>/Chart6' */
-  uint16_T temporalCounter_i1_h;       /* '<S4>/Chart6' */
+  uint16_T temporalCounter_i1_ok;      /* '<S4>/Chart6' */
   uint16_T is_active_c9_Gesamtsystem;  /* '<S3>/Steuersystem fuer Heckschalter' */
   uint16_T is_c9_Gesamtsystem;         /* '<S3>/Steuersystem fuer Heckschalter' */
   uint16_T is_active_c17_Gesamtsystem; /* '<S17>/Chart8' */
@@ -257,13 +244,13 @@ typedef struct {
   uint16_T is_Sammeln;                 /* '<S3>/Fahrablaufsteuerung [Init: Zielradius = 10mm] Gang = 0: vorwaerts Gang = 1: rueckwaerts Folgende Werte fuer den Ablauf sind einstellbar: - Zielkoordinatenwerte - Gangwert (außer bei "Ende")' */
   uint16_T is_active_c6_Gesamtsystem;  /* '<S6>/Zylindermotor-Ansteuerung Folgende Werte sind einstellbar: - Drehstaerke (in %) (-> ZM_pwm_out in "Ausfuerung") - Drehrichtung (rechts = 0, links = 1) (-> ZM_r_l_out in "Init_und_Warten") - Drehdauer (-> zwischen "Ausfuehrung" und "Beendet") - Ausfuehrungspunkt (in mm) [durch Wechsel der Soll-Position] (-> zwischen "Init_und_Start" und "Ausfuehrung) Wichtig! Der Ausfuerungspunkt haengt von den EXAKTEN Soll-Werten aus der Fahrablaufsteuerung im Nexonar-System ab.' */
   uint16_T is_c6_Gesamtsystem;         /* '<S6>/Zylindermotor-Ansteuerung Folgende Werte sind einstellbar: - Drehstaerke (in %) (-> ZM_pwm_out in "Ausfuerung") - Drehrichtung (rechts = 0, links = 1) (-> ZM_r_l_out in "Init_und_Warten") - Drehdauer (-> zwischen "Ausfuehrung" und "Beendet") - Ausfuehrungspunkt (in mm) [durch Wechsel der Soll-Position] (-> zwischen "Init_und_Start" und "Ausfuehrung) Wichtig! Der Ausfuerungspunkt haengt von den EXAKTEN Soll-Werten aus der Fahrablaufsteuerung im Nexonar-System ab.' */
-  uint16_T temporalCounter_i1_pe;      /* '<S6>/Zylindermotor-Ansteuerung Folgende Werte sind einstellbar: - Drehstaerke (in %) (-> ZM_pwm_out in "Ausfuerung") - Drehrichtung (rechts = 0, links = 1) (-> ZM_r_l_out in "Init_und_Warten") - Drehdauer (-> zwischen "Ausfuehrung" und "Beendet") - Ausfuehrungspunkt (in mm) [durch Wechsel der Soll-Position] (-> zwischen "Init_und_Start" und "Ausfuehrung) Wichtig! Der Ausfuerungspunkt haengt von den EXAKTEN Soll-Werten aus der Fahrablaufsteuerung im Nexonar-System ab.' */
+  uint16_T temporalCounter_i1_ac;      /* '<S6>/Zylindermotor-Ansteuerung Folgende Werte sind einstellbar: - Drehstaerke (in %) (-> ZM_pwm_out in "Ausfuerung") - Drehrichtung (rechts = 0, links = 1) (-> ZM_r_l_out in "Init_und_Warten") - Drehdauer (-> zwischen "Ausfuehrung" und "Beendet") - Ausfuehrungspunkt (in mm) [durch Wechsel der Soll-Position] (-> zwischen "Init_und_Start" und "Ausfuehrung) Wichtig! Der Ausfuerungspunkt haengt von den EXAKTEN Soll-Werten aus der Fahrablaufsteuerung im Nexonar-System ab.' */
   uint16_T is_active_c15_Gesamtsystem; /* '<S5>/Zeitverzoegerungsblock Die eigentliche Zeitmessung startet, wenn der Notschalter zum ersten Mal gedrückt wird' */
   uint16_T is_c15_Gesamtsystem;        /* '<S5>/Zeitverzoegerungsblock Die eigentliche Zeitmessung startet, wenn der Notschalter zum ersten Mal gedrückt wird' */
   uint16_T is_active_c3_Gesamtsystem;  /* '<S5>/Beendigung-Ansteuerung' */
   uint16_T is_c3_Gesamtsystem;         /* '<S5>/Beendigung-Ansteuerung' */
   boolean_T Memory_PreviousInput;      /* '<S50>/Memory' */
-  boolean_T Memory_PreviousInput_g;    /* '<S51>/Memory' */
+  boolean_T Memory_PreviousInput_k;    /* '<S51>/Memory' */
   boolean_T objisempty;                /* '<S4>/Moving Average2' */
 } D_Work_Gesamtsystem;
 
@@ -290,10 +277,16 @@ struct Parameters_Gesamtsystem_ {
   boolean_T EdgeDetector2_ic;          /* Mask Parameter: EdgeDetector2_ic
                                         * Referenced by: '<S51>/Memory'
                                         */
+  real_T BinaererWertebereich_UpperSat;/* Expression: 1
+                                        * Referenced by: '<S16>/Binaerer Wertebereich'
+                                        */
+  real_T BinaererWertebereich_LowerSat;/* Expression: 0
+                                        * Referenced by: '<S16>/Binaerer Wertebereich'
+                                        */
   real_T Quadrantenverschiebung_Gain;  /* Expression: 90
                                         * Referenced by: '<S22>/Quadranten- verschiebung'
                                         */
-  real_T PWMWertebereich_UpperSat;     /* Expression: 100
+  real_T PWMWertebereich_UpperSat;     /* Expression: 90
                                         * Referenced by: '<S21>/PWM-Wertebereich'
                                         */
   real_T PWMWertebereich_LowerSat;     /* Expression: 0
@@ -311,19 +304,22 @@ struct Parameters_Gesamtsystem_ {
   real_T posedge_Value[2];             /* Expression: [1 0]
                                         * Referenced by: '<S50>/pos. edge'
                                         */
-  real_T eitheredge_Value_n[2];        /* Expression: [1 1]
+  real_T eitheredge_Value_h[2];        /* Expression: [1 1]
                                         * Referenced by: '<S51>/either edge'
                                         */
-  real_T negedge_Value_f[2];           /* Expression: [0 1]
+  real_T negedge_Value_n[2];           /* Expression: [0 1]
                                         * Referenced by: '<S51>/neg. edge'
                                         */
-  real_T posedge_Value_m[2];           /* Expression: [1 0]
+  real_T posedge_Value_i[2];           /* Expression: [1 0]
                                         * Referenced by: '<S51>/pos. edge'
+                                        */
+  real_T Delay_InitialCondition;       /* Expression: 0
+                                        * Referenced by: '<S5>/Delay'
                                         */
   real_T Inkrement_Value;              /* Expression: 1
                                         * Referenced by: '<S9>/Inkrement'
                                         */
-  real_T Delay_InitialCondition;       /* Expression: 0
+  real_T Delay_InitialCondition_j;     /* Expression: 0
                                         * Referenced by: '<S9>/Delay'
                                         */
   real_T Zeitinsec_Gain;               /* Expression: 0.01
@@ -332,7 +328,7 @@ struct Parameters_Gesamtsystem_ {
   real_T LeistungsoffsetMotor_links_Star;/* Expression: 0
                                           * Referenced by: '<S15>/Leistungsoffset Motor_links'
                                           */
-  real_T LeistungsoffsetMotor_links_End;/* Expression: 5
+  real_T LeistungsoffsetMotor_links_End;/* Expression: 0
                                          * Referenced by: '<S15>/Leistungsoffset Motor_links'
                                          */
   real_T LeistungsoffsetMotor_rechts_Sta;/* Expression: 0
@@ -365,7 +361,7 @@ struct Parameters_Gesamtsystem_ {
   real_T UnitDelay5_InitialCondition;  /* Expression: 0
                                         * Referenced by: '<S49>/Unit Delay5'
                                         */
-  real_T WinkelFlankePolulo3416V022Pol_i;/* Expression: 0.076
+  real_T WinkelFlankePolulo3416V022Pol_l;/* Expression: 0.076
                                           * Referenced by: '<S49>/Winkel // Flanke Polulo 34:1 6V | 0,22 Polulo 74:1 6V | 0,1 Polulo 98:1 6V | 0,076 Polulo 171:1 6V | 0,1'
                                           */
   real_T uDLookupTable2_tableData[8];  /* Expression: [-1,-440,-295,-170,-40,85,220,430]
@@ -383,12 +379,6 @@ struct Parameters_Gesamtsystem_ {
   real_T Verstaerkung_Gain;            /* Expression: 1
                                         * Referenced by: '<S46>/Verstaerkung'
                                         */
-  real_T TmpRTBAtProductInport1_InitialC;/* Expression: 0
-                                          * Referenced by: synthesized block
-                                          */
-  real_T TmpRTBAtProductInport1_Initia_j;/* Expression: 0
-                                          * Referenced by: synthesized block
-                                          */
   real32_T xinmm_Gain;                 /* Computed Parameter: xinmm_Gain
                                         * Referenced by: '<S17>/x in mm'
                                         */
@@ -398,23 +388,26 @@ struct Parameters_Gesamtsystem_ {
   real32_T alphain_Gain;               /* Computed Parameter: alphain_Gain
                                         * Referenced by: '<S17>/alpha in °'
                                         */
-  real32_T UnitDelay1_InitialCondition;/* Computed Parameter: UnitDelay1_InitialCondition
-                                        * Referenced by: '<S49>/Unit Delay1'
-                                        */
   real32_T UnitDelay2_InitialCondition;/* Computed Parameter: UnitDelay2_InitialCondition
-                                        * Referenced by: '<S49>/Unit Delay2'
+                                        * Referenced by: '<S4>/Unit Delay2'
                                         */
-  real32_T UnitDelay2_InitialCondition_m;/* Computed Parameter: UnitDelay2_InitialCondition_m
-                                          * Referenced by: '<S4>/Unit Delay2'
-                                          */
   real32_T TmpRTBAtSortieralgorithmus2Inpo;/* Computed Parameter: TmpRTBAtSortieralgorithmus2Inpo
                                             * Referenced by: synthesized block
                                             */
+  real32_T UnitDelay1_InitialCondition;/* Computed Parameter: UnitDelay1_InitialCondition
+                                        * Referenced by: '<S49>/Unit Delay1'
+                                        */
+  real32_T UnitDelay2_InitialCondition_h;/* Computed Parameter: UnitDelay2_InitialCondition_h
+                                          * Referenced by: '<S49>/Unit Delay2'
+                                          */
   real32_T TmpRTBAtChart7Inport4_InitialCo;/* Computed Parameter: TmpRTBAtChart7Inport4_InitialCo
                                             * Referenced by: synthesized block
                                             */
   uint16_T Delay_DelayLength;          /* Computed Parameter: Delay_DelayLength
                                         * Referenced by: '<S34>/Delay'
+                                        */
+  uint16_T Delay_DelayLength_i;        /* Computed Parameter: Delay_DelayLength_i
+                                        * Referenced by: '<S5>/Delay'
                                         */
   uint16_T Delay_DelayLength_p;        /* Computed Parameter: Delay_DelayLength_p
                                         * Referenced by: '<S9>/Delay'
@@ -425,7 +418,7 @@ struct Parameters_Gesamtsystem_ {
   boolean_T UnitDelay4_InitialCondition;/* Computed Parameter: UnitDelay4_InitialCondition
                                          * Referenced by: '<S49>/Unit Delay4'
                                          */
-  uint16_T Delay_InitialCondition_g;   /* Computed Parameter: Delay_InitialCondition_g
+  uint16_T Delay_InitialCondition_m;   /* Computed Parameter: Delay_InitialCondition_m
                                         * Referenced by: '<S34>/Delay'
                                         */
   uint16_T RateTransition_InitialCondition;/* Computed Parameter: RateTransition_InitialCondition

@@ -1,0 +1,46 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   4 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c8_GesamtsystemAlt"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c8_GesamtsystemAlt"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "alpha_diff_intern"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "alpha_diff_intern"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "Stillstandintervall"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "Stillstandintervall"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
