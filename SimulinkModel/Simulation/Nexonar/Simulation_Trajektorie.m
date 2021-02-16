@@ -5,7 +5,7 @@
 % Schritt vor: Pfeiltaste rechts
 
 % Abmaße des Fahrzeugs (in mm) mit Sicherheit-Größenskalierung
-Messfaktor = 1.1;
+Messfaktor = 1;
 Wagen_Heck = 200 * Messfaktor; % Abstand zwischen Heck und Radachse
 Wagen_Laenge = 470 * Messfaktor;
 Wagen_Breite = 220 * Messfaktor;
@@ -49,15 +49,21 @@ for Counter = 1:daten.data.numElements
 end
 
 % Eckpositionen der Felder (in mm)
+% [Diese Positionen wurden aus der Workshop-Aufgabenstellung auf Seite 8
+% entnommen]
 Testfeld = polyshape([0 1920 1920 0],[-350 -350 1060 1060]);
 Parkfeld_links = polyshape([0 600 600 0],[-350 -350 0 0]);
 Parkfeld_rechts = polyshape([1320 1920 1920 1320],[-350 -350 0 0]);
 Zielfeld = polyshape([742.5 1177.5 1177.5 742.5],[-350 -350 0 0]);
+% [Diese Positionen sind abgemessen]
 Baufeld = polyshape([1220 1620 1620 1650 1650 1150 1150 1230],...
     [370 370 290 290 790 790 670 670]);
 Aufzug = polyshape([1270 1480 1480 1270],[340 340 370 370]);
 
 % Eckpositionen und Ausrichtung der Würfel (in mm)
+% [Die Größe der Flächen wurden aus der Workshop-Aufgabenstellung auf
+% Seite 7 entnommen]
+% [Die Mittelpositionen sind abgemessen]
 Wuerfel = {polyshape([349.5 410.5 410.5 349.5],[219.5 219.5 280.5 280.5]),...
     polyshape([504.5 565.5 565.5 504.5],[864.5 864.5 925.5 925.5]),...
     polyshape([819.5 880.5 880.5 819.5],[309.5 309.5 370.5 370.5]),...
