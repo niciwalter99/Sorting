@@ -1,0 +1,68 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c17_GesamtsystemAltV2"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c17_GesamtsystemAltV2"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "values_out1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "values_out1"\
+      SrcLocation  ""\
+      Dimensions   [20]\
+    }\
+    ChartData {\
+      Name         "zaehler"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "zaehler"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "search"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "search"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "counter"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "counter"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "x_found"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "x_found"\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
